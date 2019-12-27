@@ -820,7 +820,6 @@ img.user {
     background: rgba(0, 0, 0, .3);
     z-index: 999;
 }
-
 a {
     text-decoration: none;
     color: #000000;
@@ -860,6 +859,12 @@ a {
 }
 /* 背景切换结束 */
 /* 美食模块 */
+.nav_left {
+    width: 590px;
+}
+.nav_right {
+    width: 400px;
+}
 .meishi_container {
     width: 1190px;
     margin-top: 10px;
@@ -867,9 +872,6 @@ a {
 }
 .cata-food-index {
     margin-right: 10px;
-}
-.cata-food-index {
-    width: 590px;
 }
 .cata-index {
     background: #fff;
@@ -963,6 +965,7 @@ a {
 }
 .cata-index .cata-con {
     padding: 0 10px 10px;
+    overflow: hidden;
 }
 .cata-shop-item {
     height: 190px;
@@ -1406,7 +1409,7 @@ a {
     font-size: 0;
 }
 .last-four-cata .bottom-list {
-    width: 100%;
+    width: 200%;
     margin: 0;
     overflow: hidden;
 }
@@ -1510,6 +1513,7 @@ a {
     filter: alpha(opacity=50);
     background: linear-gradient(0deg,#432f23 4%,#c69379 97%);
 }
+
 .shop-item-pic .pic-desc {
     position: absolute;
     width: 100%;
@@ -1535,9 +1539,28 @@ a {
     font-size: 0;
 }
 .last-four-cata .bottom-list {
-    width: 100%;
+    width: 200%;
     margin: 0;
     overflow: hidden;
+}
+.last-four-cata .detail-list {
+    width: 200%;
+    overflow: hidden;
+    animation: moving 10s linear infinite;
+}
+/*定义动画*/
+@keyframes moving {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-1200px);
+    }
+}
+/*鼠标经过暂停动画*/
+.detail-list:hover {  
+    cursor: pointer;
+    animation-play-state: paused;
 }
 .last-four-cata .scene-list .list-item {
     width: 370px;
@@ -1596,6 +1619,7 @@ a {
 }
 /* 电梯导航 */
 .cata-nav {
+    display: none;
     position: fixed;
     top: 170px;
     left: 50%;

@@ -1,367 +1,369 @@
-    * {
-        padding: 0;
-        margin: 0;
-    }
-    
-    ul,
-    ol,
-    li {
-        list-style: none;
-    }
-    
-    .w {
-        width: 1190px;
-        margin: 0 auto;
-    }
-    
-    .fl {
-        float: left;
-    }
-    
-    .fr {
-        float: right;
-    }
-    .clearfix:after { 
-        content:""; 
-        display:block; 
-        height:0; 
-        clear:both; 
-        visibility:hidden
-      }
-      
-      .clearfix {
-        *zoom:1;
-      } /* IE6 ,7 专有 */
-    
-    a {
-        text-decoration: none;
-    }
-    
-    body {
-        background-color: #EFEFEF;
-        height: 2000px;
-    }
-    
-    .style_orange {
-        color: #ff6633!important;
-    }
-    
-    a:hover {
-        color: #ff6633!important;
-    }
-    /* 顶部区域 */
-    
-    .top {
-        height: 37px;
-        background-color: #f6f6f6;
-    }
-    
-    .xctop {
-        position: relative;
-    }
-    
-    .nav>li {
-        float: left;
-        position: relative;
-    }
-    
-    .nav>li>a {
-        display: inline-block;
-        line-height: 37px;
-        font-size: 12px;
-        color: #333;
-        padding: 0 17px;
-        border-left: 1px solid transparent;
-        border-right: 1px solid transparent;
-        box-sizing: border-box;
-    }
-    
-    .nav>li>a[class=current]:hover {
-        line-height: 36px;
-    }
-    
-    .nav>li>a[class=current]:hover .i_arrow {
-        width: 10px;
-        height: 10px;
-        margin-left: 6px;
-        background: url(../img/icon2.png) no-repeat;
-        background-size: 10px 10px
-    }
-    
-    .nav .spacer {
-        color: #c7c7c7;
-        line-height: 37px;
-    }
-    /* 下拉菜单 */
-    
-    .current {
-        background-color: #fff;
-        border-left: 1px solid #e1e1e1!important;
-        border-right: 1px solid #e1e1e1!important;
-    }
-    
-    .down_menu {
-        display: none;
-        position: absolute;
-        left: 0;
-        top: 37px;
-        width: 98px;
-        background-color: #fff;
-        border: 1px solid #e1e1e1;
-        border-top: none;
-        z-index: 100;
-    }
-    
-    .canying {
-        width: 120px;
-    }
-    /* 超级大菜单 */
-    .last_item {
-        position: relative;
-    }
-    .big_menu {
-        display: none;
-        position: absolute;
-        left: -1090px;
-        top: 37px;
-        width: 1190px;
-        height: 373px;
-        border: 1px solid #e1e1e1;
-        border-top: none;
-        box-sizing: border-box;
-        background-color: #fff;
-        z-index: 200;
-    }
-    .maplist {
-        margin: 15px 0;
-    }
-    
-    .maplist li {
-        float: left;
-        width: 24%;
-        border-right: 1px solid #eee;
-        box-sizing: border-box;
-        padding: 0 30px;
-        min-height: 340px;
-    }
-    
-    .maplist li:last-child {
-        border-right: none;
-    }
-    
-    .list_title {
-        color: #c7c7c7;
-        font-size: 13px;
-        display: inline-block;
-        line-height: 28px;
-    }
-    
-    .list_container a {
-        color: #555;
-        font-size: 12px;
-        line-height: 25px;
-    }
-    
-    .list_item span {
-        padding: 0 6px;
-        color: #c7c7c7;
-    }
-    
-    .app_title {
-        font-size: 14px;
-        padding-left: 15px;
-    }
-    
-    .app_container {
-        float: left;
-        width: 70px;
-        text-align: center;
-        padding: 15px 10px;
-    }
-    
-    .list_pic a {
-        color: #c7c7c7;
-        font-size: 12px;
-    }
-    
-    .list_pic span {
-        color: #c7c7c7;
-        font-size: 10px;
-    }
-    
-    .app_icon {
-        display: inline-block;
-        width: 60px;
-        height: 60px;
-    }
-    
-    .dp_app {
-        background: url(../img/dp-app.png) no-repeat;
-        background-size: auto 60px;
-    }
-    
-    .gj_app {
-        background: url(../img/dpgj-app.png) no-repeat;
-        background-size: auto 60px;
-    }
-    
-    .qrcode_container:first-child {
-        padding-left: 0;
-    }
-    
-    .qrcode_container {
-        float: left;
-        text-align: center;
-        padding: 20px 0 20px 25px;
-        width: 100px;
-    }
-    
-    .qrcode_icon {
-        padding: 5px 10px;
-        display: block;
-        height: 100px;
-        width: 100px;
-        box-sizing: border-box;
-    }
-    
-    .wx_qrcode {
-        background: url(../img/wx-qrcode.png) center no-repeat;
-        background-size: 100px 100px;
-    }
-    
-    .qq_qrcode {
-        background: url(../img/qq-qrcode.png) center no-repeat;
-        background-size: 100px 100px;
-    }
-    
-    .down_menu li {
-        height: 30px;
-        line-height: 30px;
-    }
-    
-    .down_menu li:hover {
-        background-color: #f6f6f6!important;
-    }
-    
-    .down_menu li a {
-        display: inline-block;
-        width: 100%;
-        height: 30px;
-        font-size: 12px;
-        color: #333;
-        padding-left: 17px;
-        box-sizing: border-box;
-    }
-    
-    .register {
-        padding-left: 0!important;
-    }
-    
-    .icon {
-        display: inline-block;
-        vertical-align: middle;
-        overflow: hidden;
-        float: none
-    }
-    
-    .i_arrow {
-        width: 10px;
-        height: 10px;
-        margin-left: 6px;
-        background: url(../img/icon1.png) no-repeat;
-        background-size: 10px 10px
-    }
-    /* logo区域 */
-    
-    .logo_container {
-        width: 100%;
-        min-width: 1190px;
-        padding: 20px 0 5px;
-        height: 70px;
-        font-size: 12px;
-        background-color: rgba(255,255,255,0.8);
-    }
-    .logo_content {
-        position: relative;
-    }
-    .logo {
-        float: left;
-        width: 165px;
-        height: 48px;
-        background: url(../img/logo.png) no-repeat;
-        background-size: 165px auto;
-    }
-    
-    .city {
-        position: relative;
-        float: left;
-        width: 100px;
-        height: 42px;
-        font-size: 15px;
-        line-height: 42px;
-        padding: 0 10px;
-        margin: 0 0 0 25px;
-        text-decoration: none;
-        z-index: 11;
-        cursor: pointer;
-        vertical-align: middle;
-    }
-    .city:hover .cs{
-        color: rgba(0, 0, 0, 1);
-    }
-    /* 城市  边框线隐藏 */
-    .city_current {
-        border: 1px solid #e3e3e3;
-        border-bottom: none;
-        cursor: pointer;
-    }
-    .logo_content {
-        position: relative;
-    }
-    .city::before {
-        content: "|";
-        position: absolute;
-        left: -10px;
-        color: #e1e1e1
-    }
-    
-    .city .map_icon {
-        display: inline-block;
-        background-position: left center;
-        position: relative;
-        width: 30px;
-        height: 35px;
-        vertical-align: middle;
-        background: url(../img/index.png) no-repeat;
-        background-size: 35px auto;
-        top: -1px;
-    }
-    /* 引入字体图标 */
-    @font-face {  /*电脑中没有的字体, 我们需要声明*/
-        font-family:'icomoon';
-        src: url('../fonts/icomoon.eot?7kkyc2');
-        src: url('../fonts/icomoon.eot?7kkyc2#iefix') format('embedded-opentype'),
-        url('../fonts/icomoon.ttf?7kkyc2') format('truetype'),
-        url('../fonts/icomoon.woff?7kkyc2') format('woff'),
-        url('../fonts/icomoon.svg?7kkyc2#icomoon') format('svg');
-        font-weight: normal;
-        font-style: normal;
-    }
+* {
+    padding: 0;
+    margin: 0;
+}
 
-    .icon_city,
-    .icon_current {
-        font-family:"icomoon";
-        font-style: normal;
-        font-size: 18px;
-    }
-    .icon_city::before {
-        content: "\ea52";
-    }
-    .icon_current::before {
-        content: "\ea53";
-        vertical-align: middle;
-    }
-/* input输入框 */
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+.w {
+    width: 1190px;
+    margin: 0 auto;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+.clearfix:after { 
+    content:""; 
+    display:block; 
+    height:0; 
+    clear:both; 
+    visibility:hidden
+  }
+  
+  .clearfix {
+    *zoom:1;
+  } /* IE6 ,7 专有 */
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: #EFEFEF;
+}
+
+.style_orange {
+    color: #ff6633!important;
+}
+
+a:hover {
+    color: #ff6633!important;
+}
+/* 顶部区域 */
+
+.top {
+    height: 37px;
+    background-color: #f6f6f6;
+}
+
+.xctop {
+    position: relative;
+}
+
+.nav>li {
+    float: left;
+    position: relative;
+}
+
+.nav>li>a {
+    display: inline-block;
+    line-height: 37px;
+    font-size: 12px;
+    color: #333;
+    padding: 0 17px;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    box-sizing: border-box;
+}
+
+.nav>li>a[class=current]:hover {
+    line-height: 36px;
+}
+
+.nav>li>a[class=current]:hover .i_arrow {
+    width: 10px;
+    height: 10px;
+    margin-left: 6px;
+    background: url(../img/icon2.png) no-repeat;
+    background-size: 10px 10px
+}
+
+.nav .spacer {
+    color: #c7c7c7;
+    line-height: 37px;
+}
+/* 下拉菜单 */
+
+.current {
+    background-color: #fff;
+    border-left: 1px solid #e1e1e1!important;
+    border-right: 1px solid #e1e1e1!important;
+}
+
+.down_menu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 37px;
+    width: 98px;
+    background-color: #fff;
+    border: 1px solid #e1e1e1;
+    border-top: none;
+    z-index: 100;
+}
+
+.canying {
+    width: 120px;
+}
+/* 超级大菜单 */
+.last_item {
+    position: relative;
+}
+.big_menu {
+    display: none;
+    position: absolute;
+    left: -1090px;
+    top: 37px;
+    width: 1190px;
+    height: 373px;
+    border: 1px solid #e1e1e1;
+    border-top: none;
+    box-sizing: border-box;
+    background-color: #fff;
+    z-index: 200;
+}
+.maplist {
+    margin: 15px 0;
+}
+
+.maplist li {
+    float: left;
+    width: 24%;
+    border-right: 1px solid #eee;
+    box-sizing: border-box;
+    padding: 0 30px;
+    min-height: 340px;
+}
+
+.maplist li:last-child {
+    border-right: none;
+}
+
+.list_title {
+    color: #c7c7c7;
+    font-size: 13px;
+    display: inline-block;
+    line-height: 28px;
+}
+
+.list_container a {
+    color: #555;
+    font-size: 12px;
+    line-height: 25px;
+}
+
+.list_item span {
+    padding: 0 6px;
+    color: #c7c7c7;
+}
+
+.app_title {
+    font-size: 14px;
+    padding-left: 15px;
+}
+
+.app_container {
+    float: left;
+    width: 70px;
+    text-align: center;
+    padding: 15px 10px;
+}
+
+.list_pic a {
+    color: #c7c7c7;
+    font-size: 12px;
+}
+
+.list_pic span {
+    color: #c7c7c7;
+    font-size: 10px;
+}
+
+.app_icon {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+}
+
+.dp_app {
+    background: url(../img/dp-app.png) no-repeat;
+    background-size: auto 60px;
+}
+
+.gj_app {
+    background: url(../img/dpgj-app.png) no-repeat;
+    background-size: auto 60px;
+}
+
+.qrcode_container:first-child {
+    padding-left: 0;
+}
+
+.qrcode_container {
+    float: left;
+    text-align: center;
+    padding: 20px 0 20px 25px;
+    width: 100px;
+}
+
+.qrcode_icon {
+    padding: 5px 10px;
+    display: block;
+    height: 100px;
+    width: 100px;
+    box-sizing: border-box;
+}
+
+.wx_qrcode {
+    background: url(../img/wx-qrcode.png) center no-repeat;
+    background-size: 100px 100px;
+}
+
+.qq_qrcode {
+    background: url(../img/qq-qrcode.png) center no-repeat;
+    background-size: 100px 100px;
+}
+
+.down_menu li {
+    height: 30px;
+    line-height: 30px;
+}
+
+.down_menu li:hover {
+    background-color: #f6f6f6!important;
+}
+
+.down_menu li a {
+    display: inline-block;
+    width: 100%;
+    height: 30px;
+    font-size: 12px;
+    color: #333;
+    padding-left: 17px;
+    box-sizing: border-box;
+}
+
+.register {
+    padding-left: 0!important;
+}
+
+.icon {
+    display: inline-block;
+    vertical-align: middle;
+    overflow: hidden;
+    float: none
+}
+
+.i_arrow {
+    width: 10px;
+    height: 10px;
+    margin-left: 6px;
+    background: url(../img/icon1.png) no-repeat;
+    background-size: 10px 10px
+}
+/* logo区域 */
+
+.logo_container {
+    width: 100%;
+    min-width: 1190px;
+    padding: 20px 0 5px;
+    height: 70px;
+    font-size: 12px;
+    background-color: rgba(255,255,255,0.8);
+}
+.logo_content {
+    position: relative;
+}
+.logo {
+    float: left;
+    width: 165px;
+    height: 48px;
+    background: url(../img/logo.png) no-repeat;
+    background-size: 165px auto;
+}
+
+.city {
+    position: relative;
+    float: left;
+    width: 100px;
+    height: 42px;
+    font-size: 15px;
+    line-height: 42px;
+    padding: 0 10px;
+    margin: 0 0 0 25px;
+    text-decoration: none;
+    z-index: 11;
+    cursor: pointer;
+    vertical-align: middle;
+}
+.cs {
+    color:rgba(0, 0, 0, 1) ;
+}
+.city:hover .cs{
+    color: rgba(0, 0, 0, 1);
+}
+/* 城市  边框线隐藏 */
+.city_current {
+    border: 1px solid #e3e3e3;
+    border-bottom: none;
+    cursor: pointer;
+}
+.logo_content {
+    position: relative;
+}
+.city::before {
+    content: "|";
+    position: absolute;
+    left: -10px;
+    color: #e1e1e1
+}
+
+.city .map_icon {
+    display: inline-block;
+    background-position: left center;
+    position: relative;
+    width: 30px;
+    height: 35px;
+    vertical-align: middle;
+    background: url(../img/index.png) no-repeat;
+    background-size: 35px auto;
+    top: -1px;
+}
+/* 引入字体图标 */
+@font-face {  /*电脑中没有的字体, 我们需要声明*/
+    font-family:'icomoon';
+    src: url('../fonts/icomoon.eot?7kkyc2');
+    src: url('../fonts/icomoon.eot?7kkyc2#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?7kkyc2') format('truetype'),
+    url('../fonts/icomoon.woff?7kkyc2') format('woff'),
+    url('../fonts/icomoon.svg?7kkyc2#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.icon_city,
+.icon_current {
+    font-family:"icomoon";
+    font-style: normal;
+    font-size: 18px;
+}
+.icon_city::before {
+    content: "\ea52";
+}
+.icon_current::before {
+    content: "\ea53";
+    vertical-align: middle;
+}
+/*nput输入框 */
 .search_box {
 
 }
@@ -605,7 +607,6 @@
     font-size: 12px;
     box-sizing: border-box;
 }
-
 /* 网站特殊效果应用模块 */
 /* 图片高亮效果 */
 .simg::before {
@@ -646,6 +647,10 @@
     transform: scale(1.1);
 }
 .scale:hover .cata-pic-gray {
+    background: linear-gradient(-180deg,orange,#f63);
+}
+/* 其他盒子不需要放大 只需要背景色渐变效果 */
+.liner:hover .pic-mark {
     background: linear-gradient(-180deg,orange,#f63);
 }
 /*滚动条效果渐变*/

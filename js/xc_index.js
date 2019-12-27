@@ -236,21 +236,6 @@ $(function () {
         $('.xc_team').css('backgroundColor', '#f63');
     })
 
-    // 谢谢观看显示功能
-    // $('.module-tab-nav li').eq(2).click(function () {
-    //     // 谢谢观看淡入
-    //     var num = 0
-    //     var timer3 = setInterval(function () {
-    //         if (num >= 1) {
-    //             clearInterval(timer3)
-    //             num = 0
-    //         } else {
-    //             num += 0.5
-    //             $('.module-tab-box-ma .qianduan img').css('opacity', num)
-    //         }
-    //     }, 500)
-    // })
-
     // 选项卡切换功能
     $('.hd li').click(function () {
         $(this).css({ 'height': 255 })
@@ -262,4 +247,75 @@ $(function () {
         $('.module-banner-tab-list-box').eq(index).show().siblings().hide();
     })
 
+    // 电梯导航功能
+    var flag = true;
+    // 1.显示隐藏电梯导航
+    var toolTop = $(".meishi_container").offset().top;
+    toggleTool();
+
+    function toggleTool() {
+        if ($(document).scrollTop() >= toolTop - 20) {
+            $(".cata-nav").fadeIn();
+        } else {
+            $(".cata-nav").fadeOut();
+        };
+    }
+
+    $(window).scroll(function () {
+        toggleTool();
+        // 3. 页面滚动到某个内容区域，左侧电梯导航小li相应添加和删除current类名
+        if (flag) {
+            $(".floor .w").each(function(i, ele) {
+                if ($(document).scrollTop() >= $(ele).offset().top) {
+                    console.log(i);
+                    $(".cata-nav li").eq(i).children('a').addClass("current-nav");
+                    $(".cata-nav li").eq(i).siblings('li').children('a').removeClass("current-nav");
+                }
+            })
+        }
+    });
+
+    // 2. 点击电梯导航页面可以滚动到相应内容区域
+    $(".cata-nav li").click(function () {
+        flag = false;
+        console.log($(this).index());
+        // 当我们每次点击小li 就需要计算出页面要去往的位置 
+        // 选出对应索引号的内容区的盒子 计算它的.offset().top
+        var current = $(".floor .w").eq($(this).index()).offset().top;
+        // 页面动画滚动效果
+        $("body, html").stop().animate({
+            scrollTop: current
+        }, function () {
+            flag = true;
+        });
+        // 点击之后，让当前的小li 添加current 类名 ，姐妹移除current类名
+        $(this).children('a').addClass("current-nav");
+        $(this).siblings('li').children('a').removeClass("current-nav");
+    })
+
+    // 返回顶部功能
+    $(".nav-end").click(function() {
+        $("body, html").stop().animate({
+            scrollTop: 0
+        });
+        
+    })
+
+    // 美食模块和丽人模块动画显示功能
+    var meishiTop = $(".meishi_container").offset().top;
+    $(window).scroll(function () {
+        if ($(document).scrollTop() >= meishiTop){
+            $('.nav_right').animate({
+                width:'590px'
+            },1000,function(){
+                $('.cata-con').animate({
+                    height:'410px'
+                },1000,function(){
+                    $('.cata-shop-item').eq(6).css('display','none')
+                    $('.cata-shop-item').eq(7).css('display','none')
+                    $('.cata-shop-item').eq(8).css('display','none')
+                })
+            })
+        }
+    });
 })
