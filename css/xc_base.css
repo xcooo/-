@@ -605,149 +605,65 @@
     font-size: 12px;
     box-sizing: border-box;
 }
-/* 网站底部 */
-.footer-container {
-    width: 100%;
-    min-width: 1190px;
-    background: #F8F8F8;
-    font-size: 12px;
-    margin-top: 20px;
+
+/* 网站特殊效果应用模块 */
+/* 图片高亮效果 */
+.simg::before {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 100%;
+    top: 0;
+    left: -200px;
+    overflow: hidden;        
+    background: -webkit-linear-gradient(left,rgba(255,255,255,0) 0,rgba(255,255,255,.2) 50%,rgba(255,255,255,0) 100%);
+    transform: skewX(-25deg);
 }
-.footer-container .index-footer {
-    width: 1190px;
-    margin: 0 auto;
-    padding: 30px 0;
+.simg:hover:before {
+    left: 150%;
+    transition: left 1s ease 0s
 }
-.footer-container .index-footer .footer-links {
-    padding: 20px 0 15px 15px;
-    border-bottom: 1px solid #e3e3e3;
-    color:#777;
+/* 盒子抖动效果 */
+.dou {
+    transition: all 0.3s;
 }
- .links-item {
-    width: 27%;
-    float: left;
+.dou:hover {
+    transform: translate3d(0,-2px,0);
+	box-shadow: 0 15px 30px rgba(0,0,0,.1);
 }
-.footer-container  .tab-item {
-    float: left;
-}
-.footer-container .index-footer .link-panel {
+.main {
     margin-top: 10px;
+    height: 510px;
+    position: relative;
+    z-index: 1;
 }
-.footer-container .index-footer .link-li {
-    line-height: 25px;
+/* 图片放大效果 */
+/*盒子需要 溢出隐藏*/
+.scale img {/* 因为图片缩放了， 实际图片做动画， 所以过渡要给img加*/
+    transition: all 0.5s;
 }
-.footer-links a {
-    color: #777;
+.scale:hover img { /*鼠标经过section的时候， 里面的img缩放*/
+    transform: scale(1.1);
 }
-.qrcode-img {
-    margin-right: 40px;
-    text-align: center;
+.scale:hover .cata-pic-gray {
+    background: linear-gradient(-180deg,orange,#f63);
 }
-.app-qrcode {
-    display: inline-block;
-    height: 100px;
-    width: 100px;
-    background: url(../img/qq-qrcode.png) no-repeat;
-    background-size: auto;
-    background-size: 100px auto;
+/*滚动条效果渐变*/
+::-webkit-scrollbar{
+    width:8px;
+    height:8px
 }
-.links-item:last-child {
-    width: auto;
+::-webkit-scrollbar-track{
+    background-color:transparent;
+    -webkit-border-radius:2em;
+    -moz-border-radius:2em;
+    border-radius:2em
 }
-.links-item .link-title {
-    font-size: 15px;
-    line-height: 20px;
-    font-weight: 700;
+::-webkit-scrollbar-thumb{
+    background-color:#F90;
+    background-image:-webkit-linear-gradient(45deg,rgba(255,255,255,.4) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.4) 50%,rgba(255,255,255,.4) 75%,transparent 75%,transparent);
+-webkit-border-radius:2em;-moz-border-radius:2em;border-radius:2em
 }
-.footer-declare {
-    margin-top: 20px;
-    text-align: center;
-}
-.company-desc {
-    height: 25px;
-    line-height: 25px;
-    color: #999;
-}
-.all-right {
-    display: inline-block;
-    padding: 0 5px;
-}
-.a-link {
-    color:#999;
-}
-.all-right {
-    display: inline-block;
-    padding: 0 5px;
-}
-.certify {
-    margin-top: 10px;
-}
-.certify a {
-    line-height: 35px;
-    height: 35px;
-    display: inline-block;
-}
-.footer-container .certify .certify-img {
-    height: 35px;
-    display: inline-block;
-    background-size: auto 35px;
-    background-repeat: no-repeat;
-}
-.certify .wgxxjb {
-    background: url(../img/footer1.png) no-repeat;
-    background-size: auto;
-    width: 95px;
-}
-.certify .yhxxjb {
-    background: url(../img/footer2.jpg) no-repeat;
-    background-size: auto 35px;
-    width: 72px;
-}
-.certify .shzx {
-    background: url(../img/footer3.png);
-    background-repeat: repeat;
-    background-size: auto 35px;
-    width: 88px;
-}
-.certify .gongshang {
-    background: url(../img/footer4.jpg);
-    background-repeat: repeat;
-    background-size: auto 36px;
-    width: 36px;
-}
-.certify .kxwz {
-    background: url(../img/footer5.png);
-    background-repeat: repeat;
-    background-size: auto;
-    width: 97px;
-}
-.certify .renzheng {
-    background: url(../img/footer6.png);
-    background-repeat: repeat;
-    background-size: auto;
-    width: 40px;
-}
-.certify .cxwz {
-    background: url(../img/footer7.png);
-    background-repeat: repeat;
-    background-size: auto;
-    width: 100px;
-}
-.certify .police {
-    background: url(../img/footer8.png);
-    background-repeat: repeat;
-    background-size: auto;
-    width: 87px;
-}
-.certify .xfwq {
-    background: url(../img/footer9.png);
-    background-repeat: repeat;
-    background-size: auto;
-    width: 150px;
-}
-.certify .wlwh {
-    background: url(../img/footer10.jpg);
-    background-repeat: repeat;
-    background-size: auto;
-    width: 93px;
-}
+::-webkit-scrollbar-corner{
+    background-color:transparent
+} 

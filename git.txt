@@ -1,0 +1,5 @@
+git init
+git add .
+git commit -m '项目立项'
+git remote add origin https://github.com/xcooo/dzdp.git
+git push -u origin master
