@@ -87,11 +87,8 @@ $(function () {
 
 
     // 公共顶部登录功能 (包含首页登录显示)
+    // 渲染数据
     load_index()
-
-    // 1.检测到本地存储数据, 如果有数据, 则加载
-    // 2.立即登录隐藏    注册模块隐藏  退出模块显示
-    // 3.如果点击退出登录 清空本地数据 立即登陆 注册模块显示  退出模块隐藏
 
     // 读取本地存储的函数
     function getData_index() {
@@ -100,7 +97,7 @@ $(function () {
         return data;
     }
 
-    // 渲染数据
+    // 渲染数据的函数
     function load_index() {
         // 读取本地存储的数据
         var data = getData_index();
@@ -112,7 +109,6 @@ $(function () {
             $('.register_main').hide();
             // 我要退出模块显示
             $('.logout_main').show();
-
 
             // 首页已完成数据渲染
             // 获取当前目录
@@ -168,6 +164,7 @@ $(function () {
         }
         
     });
+    
     $('.register_main').click(function(){
         // 注册表单显示
         if ($(this).html() == '免费注册') {

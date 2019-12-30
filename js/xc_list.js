@@ -1,6 +1,7 @@
 $(function () {
     // 渲染页面数据
     load_login()
+
     // 全部分类显示隐藏功能
     // 必须要给显示的父级元素添加事件
     $('.dropdown').mouseenter(function () {
@@ -11,17 +12,29 @@ $(function () {
     })
 
     // 选项卡功能
-    // 1. 鼠标点击
+    // 鼠标点击
     $('.container-title div').click(function () {
         $(this).addClass('active').siblings().removeClass()
-        // 2. 得到当前小li 的索引号
+        // 得到当前小li 的索引号
         var index = $(this).index();
-        // 3.让我们右侧的盒子相应索引号的图片显示出来就好了
+        // 让我们右侧的盒子相应索引号的图片显示出来就好了
         $('.activity-lists-wraper ul').eq(index).show().siblings().hide();
     })
 
+    // 下拉事件  选项卡变为固定定位
+    var wrapTop = $(".s-fix-wrap").offset().top;
+    $(window).scroll(function () {
+        if ($(document).scrollTop() >= wrapTop) {
+            // 变为固定定位
+            $('.s-fix-wrap').css({'position':'fixed','left':169,'top':0,'zIndex':200,'width':870})
+            $('.activity-lists-wraper').css({'marginTop':95.5})
+        }else {
+            $('.s-fix-wrap').css({'width': 871,'backgroundColor':'#F6F6F6','position':'static','width':870})
+            $('.activity-lists-wraper').css({'marginTop':0})
+        }
+    });
 
-    // 5.点击登陆按钮 显示表单和背景
+    // 点击登陆按钮 显示表单和背景
     $('.l3').click(function () {
         if ($(this).html() == '立即登录') {
             $('.login_bg').slideDown(500, function () {

@@ -298,12 +298,17 @@
     background: #fff;
 }
 .s-fix-wrap {
-    width: 871px;
+    /* position: fixed;
+    left:168px;
+    top:0;
+    z-index: 222; */
+    width: 870px;
+    background-color: #F6F6F6;
 }
 /* 活动区域 */
 .activity-container .container-title {
+    width: 870px;
     font-size: 0;
-    width: 890px;
     white-space: nowrap;
     border-bottom: .5px solid#cecece;
     padding-top: 0;
@@ -329,6 +334,7 @@
     display: inline-block;
 }
 .activity-container .filter-types {
+    width: 870px;
     color: #6d6d6d;
     line-height: 57px;
     height: 60px;
@@ -457,7 +463,7 @@
 .footer-container {
     width: 100%;
     min-width: 1190px;
-    background: #ccc;
+    background: #f6f6f6;
     font-size: 12px;
     margin-top: 20px;
 }

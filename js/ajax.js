@@ -1,6 +1,6 @@
 $(function () {
     // 注册登陆输入框逻辑实现
-    // 1.获得焦点  文字位置和大小发生变化
+    // 获得焦点  文字位置和大小发生变化
     $('.sub-main-w3 input').focus(function () {
         $(this).siblings('.input_tip').css({ 'top': 42, 'left': 5, 'fontSize': '10px' })
     })
@@ -8,7 +8,7 @@ $(function () {
         $(this).css({ 'top': 42, 'left': 5, 'fontSize': '10px' })
     })
 
-    // 2.失去焦点  文字位置和大小变回原来的位置 并判断输入框是否有文字
+    // 失去焦点  文字位置和大小变回原来的位置 并判断输入框是否有文字
     $('.sub-main-w3 input').blur(function () {
         if ($(this).val().length != 0) {
             $(this).siblings('.input_tip').css({ 'top': 42, 'left': 5, 'fontSize': '10px' })
@@ -16,7 +16,7 @@ $(function () {
             $(this).siblings('.input_tip').css({ 'top': 54, 'left': 15, 'fontSize': '15px' })
         }
     })
-    // 3.注册登陆表单切换功能
+    // 注册登陆表单切换功能
     $('.sub-main-w3 a').click(function () {
         // 1.如果当前是登陆框, 点击之后则跳到注册框
         if ($(this).children('em').html() == '立即注册') {
@@ -28,13 +28,13 @@ $(function () {
             $('.sub_register').stop().slideUp()
         }
     })
-    //  4.点击背景退出登陆注册表单
+    //  点击背景退出登陆注册表单
     $('#bg').click(function () {
         $('.sub-main-w3').slideUp(1000)
         $(this).slideUp()
     })
     // 登录注册表单请求
-    // 5.实现前端注册逻辑
+    // 实现前端注册逻辑
     var error_name = true; // 非法用户名
     var error_pwd = true;   // 非法密码
     var error_check_pwd = true; // 密码不一致
@@ -125,7 +125,7 @@ $(function () {
         }
     });
 
-    // 6.注册前端 与 后台交互
+    // 注册前端 与 后台交互
     $('.sub_register form').submit(function (e) {
         if (error_name == false && error_pwd == false && error_check == false) {
             e.preventDefault()
@@ -177,7 +177,7 @@ $(function () {
 
     });
 
-    // 7.实现前端登陆逻辑
+    // 实现前端登陆逻辑
     $('.sub_login form').submit(function (e) {
         e.preventDefault()
         // 取到用户输入的内容
