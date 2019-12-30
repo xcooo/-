@@ -17,7 +17,7 @@ $(function () {
     $('.menu-item').mouseleave(function () {
         $(this).children('.sec-cate').hide()
     })
-    
+
     // 切换背景功能
     load();
     // 1.鼠标点击背景, 背景模块显示
@@ -85,13 +85,13 @@ $(function () {
         localStorage.setItem("index", JSON.stringify(src));
     }
 
-    
-    // 公共顶部登录功能
-    // 1.检测到本地存储数据, 如果有数据, 则加载
-    
-    // 2.立即登录隐藏    注册模块隐藏  退出模块显示
 
-    // 3.如果点击退出登录 立即登陆 注册模块显示  退出模块隐藏
+    // 公共顶部登录功能 (包含首页登录显示)
+    load_index()
+
+    // 1.检测到本地存储数据, 如果有数据, 则加载
+    // 2.立即登录隐藏    注册模块隐藏  退出模块显示
+    // 3.如果点击退出登录 清空本地数据 立即登陆 注册模块显示  退出模块隐藏
 
     // 读取本地存储的函数
     function getData_index() {
@@ -103,9 +103,79 @@ $(function () {
     // 渲染数据
     function load_index() {
         // 读取本地存储的数据
-        var data = getData_index()
+        var data = getData_index();
         if (data) {
+            // 公共顶部完成数据渲染
+            // 登录按钮换成本地存储的数据
+            $('.login_main').html(data);
+            // 注册模块隐藏
+            $('.register_main').hide();
+            // 我要退出模块显示
+            $('.logout_main').show();
 
-        } 
-    }
+
+            // 首页已完成数据渲染
+            // 获取当前目录
+            var strPath = location.href.substring(0, location.href.lastIndexOf('/'));
+            // 设置头像img
+            $('.avatar img').attr("src", strPath + '/img/xc.jpg');
+            // 文字发生变化
+            // 设置本地存储的数据
+            $('.hello').html(data);
+        }else {
+            // 默认
+            removeData_top()
+        }
+    };
+
+    // 封装删除公共顶部本地数据的函数
+    function removeData_top() {
+        localStorage.removeItem('data');
+        // 我要退出模块淡出
+        $('.logout_main').hide();
+        // 添加默认文字
+        var html_list = '你好，请登录';
+        $('.login_main').html(html_list);
+        // 顶部登录注册显示
+        $('.login_main').show();
+        $('.register_main').show();
+
+         // 首页已完成数据渲染
+        // 获取当前目录
+        var strPath = location.href.substring(0, location.href.lastIndexOf('/'));
+        // 还原默认头像
+        $('.avatar img').attr("src", strPath + '/img/tx.png');
+        // 首页文字添加默认文字
+        var html_list = '你好';
+        $('.hello').html(html_list);
+    };
+
+    // 如果点击退出登录 清空本地数据
+    $('.logout_main').click(function(){
+        removeData_top();
+        // 需要刷新页面
+        location.reload()
+    })
+
+    // 点击 登录 或者 注册按钮需要显示登陆注册表单
+    $('.login_main').click(function(){
+        // 登录表单显示
+        if ($(this).html() == '你好，请登录') {
+            $('.login_bg').slideDown(500, function () {
+                // 显示登录表单
+                $('.sub_login').fadeIn()
+            })
+        }
+        
+    });
+    $('.register_main').click(function(){
+        // 注册表单显示
+        if ($(this).html() == '免费注册') {
+            $('.login_bg').slideDown(500, function () {
+                // 显示注册表单
+                $('.sub_register').fadeIn()
+            })
+        }
+    })
+
 })

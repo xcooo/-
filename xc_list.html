@@ -11,14 +11,16 @@
     <link rel="stylesheet" href="css/xc_base.css">
     <!-- 引入列表页css文件 -->
     <link rel="stylesheet" href="css/xc_list.css">
+    <!-- 引入登陆css文件 -->
+    <link rel="stylesheet" href="css/login.css">
     <!-- 引入jquery文件 -->
     <script src="js/jquery.min.js"></script>
     <!-- 引入公用js文件 -->
     <script src="js/xc_common.js"></script>
     <!-- 引入列表页js文件 -->
     <script src="js/xc_list.js"></script>
-    <!-- 引入登陆css文件 -->
-    <link rel="stylesheet" href="css/login.css">
+    <!-- 引入异步加载文件 -->
+    <script src="js/ajax.js"></script>
 </head>
 
 <body>
@@ -28,7 +30,7 @@
             <div class="top-page_r fr">
                 <ul class="nav">
                     <li class="user_login">
-                        <a href="javascript:;" class="">你好，请登录</a>
+                        <a href="javascript:;" class="login_main">你好，请登录</a>
                         <a href="javascript:;" class="register_main style_orange">免费注册</a>
                         <a href="javascript:;" class="logout_main style_orange">我要退出</a>
                     </li>
@@ -298,7 +300,7 @@
         <div class="sub-main-w3 sub_register">
             <!-- 注册成功的模块 -->
             <div class="register_success">注册成功, 正在跳转到登陆页 !</div>
-            <form   AUTOCOMPLETE="OFF" id="myform">
+            <form AUTOCOMPLETE="OFF" id="myform">
                 <h2>欢迎注册 - 大众点评
                     <i class="fa fa-long-arrow-down"></i>
                 </h2>
@@ -354,7 +356,7 @@
         <!-- 登陆 -->
         <div class="sub-main-w3 sub_login">
             <div class="login_success">您已经到达登陆页, 使用注册的账号 !</div>
-            <form  AUTOCOMPLETE="OFF" id="myform">
+            <form AUTOCOMPLETE="OFF" id="myform">
                 <h2>欢迎登陆 - 大众点评
                     <i class="fa fa-long-arrow-down"></i>
                 </h2>
@@ -380,11 +382,11 @@
                 <div class="wthree-text">
                     <ul>
                         <li>
-						<label class="anim">
-							<!-- <input type="checkbox" class="checkbox" required=""> -->
-							<span>提示: 登录完成自动跳转</span>
-						</label>
-					</li>
+                            <label class="anim">
+                                <!-- <input type="checkbox" class="checkbox" required=""> -->
+                                <span>提示: 登录完成会自动跳转</span>
+                            </label>
+                        </li>
                         <li>
                             <a href="#">没有账号?&nbsp;<em>立即注册</em></a>
                         </li>
