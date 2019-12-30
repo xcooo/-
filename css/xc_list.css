@@ -47,9 +47,9 @@
 }
 /* 列表页主体开始 */
 .list_containers {
+    width: 1190px;
     margin: 15px auto 0;
-    background-color: #f8f8f8;
-    font-family: PingFangSC-Regular,Microsoft YaHei,Hiragino Sans GB,Helvetica;
+    /* background-color: #f8f8f8; */
 }
 .right-container {
     width: 295px;
@@ -106,6 +106,19 @@
 }
 .unlogin-infos .l3:hover {
     color: #fff!important;
+}
+.logout {
+    display: none;
+    display: inline-block;
+    width: 70px;
+    height: 25px;
+    line-height: 25px;
+    border-radius: 2px;
+    background-color:orange;
+    color:#fff;
+    font-size: 14px;
+    margin-top: 12px;
+    cursor: pointer;
 }
 .unlogin-infos .l4 {
     font-size: 12px;
@@ -282,6 +295,7 @@
 }
 .activity-container {
     overflow-x: hidden;
+    background: #fff;
 }
 .s-fix-wrap {
     width: 871px;
@@ -443,7 +457,7 @@
 .footer-container {
     width: 100%;
     min-width: 1190px;
-    background: #f0f0f0;
+    background: #ccc;
     font-size: 12px;
     margin-top: 20px;
 }
@@ -469,4 +483,12 @@
     text-align: center;
     font-size: 12px;
     color: #8c8c8c;
+}
+/* 登陆注册表单 */
+
+.list_login {
+    width: 1190px;
+    position: absolute;
+    left: 150px;
+    z-index: 500;
 }

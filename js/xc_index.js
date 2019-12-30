@@ -1,72 +1,4 @@
 $(function () {
-    // 切换背景功能
-    load();
-    // 1.鼠标点击背景, 背景模块显示
-    $('.expand').click(function () {
-        $('.bg').slideDown().fadeIn(500);
-        $('.set-bg').slideDown(500).fadeIn(500);
-    });
-    // 2.点击关闭按钮 背景模块隐藏
-    $('#closeBtn').click(function () {
-        $('.bg').slideUp(500).fadeOut(500);
-        $('.set-bg').slideUp(500).fadeOut(500);
-    });
-    // 5.点击bg-title  恢复默认背景
-    $('.bg-title').click(function () {
-        // 清空本地存储
-        localStorage.removeItem('index')
-        // 页面刷新重载
-        load();
-        $('.bg').slideUp(500).fadeOut(500);
-        $('.set-bg').slideUp(500).fadeOut(500);
-        location.reload(true);
-    })
-    // 3.经过某个图片时, 突出显示
-    $('.wrap li').hover(function () {
-        $(this).siblings().stop().fadeTo(400, 0.5);
-    }, function () {
-        // 鼠标离开, 其它li 透明度改为1
-        $(this).siblings().stop().fadeTo(400, 1);
-    });
-    // 4.点击某个图片时, 就更换为背景图
-    $('.wrap>ul').on('click', 'li', function () {
-        var index = $(this).index()
-        src = $(this).find('img').prop('src');
-        // 获取本地存储的数据
-        var data = getDate()
-        // 保存到本地存储
-        saveDate(src);
-        // 移除默认背景颜色
-        $('body').removeClass('bgImg')
-        // 重新渲染页面
-        load();
-        $('.bg').slideUp(500).fadeOut(500);
-        $('.set-bg').slideUp(500).fadeOut(500);
-    });
-    // 渲染加载数据
-    function load() {
-        // 读取本地存储的数据
-        var data = getDate();
-        if (data) {
-            // 设置本地存储的图片
-            $('body').css('background', 'url(' + data + ') top center fixed')
-            $('body').css('background-size', 'cover')
-        } else {
-            // 添加默认图片
-            // $('body').css('backgroundImage', 'url(../images/bg0.jpg)')
-            $('body').css('bacfroundColor', '#EFEFEF')
-        }
-    }
-    // 读取本地存储的数据 
-    function getDate() {
-        var data = localStorage.getItem("index");
-        return data;
-    }
-    // 保存本地存储数据
-    function saveDate(src) {
-        localStorage.setItem("index", JSON.stringify(src));
-    }
-
     // 轮播图功能
     // 1.动态生成小圆圈  有几张图片 我就生成几个小圆圈
     var ul = document.querySelector('.focusImg');
@@ -265,9 +197,8 @@ $(function () {
         toggleTool();
         // 3. 页面滚动到某个内容区域，左侧电梯导航小li相应添加和删除current类名
         if (flag) {
-            $(".floor .w").each(function(i, ele) {
+            $(".floor .w").each(function (i, ele) {
                 if ($(document).scrollTop() >= $(ele).offset().top) {
-                    console.log(i);
                     $(".cata-nav li").eq(i).children('a').addClass("current-nav");
                     $(".cata-nav li").eq(i).siblings('li').children('a').removeClass("current-nav");
                 }
@@ -294,28 +225,45 @@ $(function () {
     })
 
     // 返回顶部功能
-    $(".nav-end").click(function() {
+    $(".nav-end").click(function () {
         $("body, html").stop().animate({
             scrollTop: 0
         });
-        
+
     })
 
-    // 美食模块和丽人模块动画显示功能
-    var meishiTop = $(".meishi_container").offset().top;
+    // 美食模块动画显示功能
+    var meishiTop = $(".focus_bottom").offset().top;
     $(window).scroll(function () {
-        if ($(document).scrollTop() >= meishiTop){
-            $('.nav_right').animate({
-                width:'590px'
-            },1000,function(){
-                $('.cata-con').animate({
-                    height:'410px'
-                },1000,function(){
-                    $('.cata-shop-item').eq(6).css('display','none')
-                    $('.cata-shop-item').eq(7).css('display','none')
-                    $('.cata-shop-item').eq(8).css('display','none')
+        if ($(document).scrollTop() >= meishiTop) {
+            $('.meishi_right').animate({
+                width: '590px'
+            }, 1000, function () {
+                $('.meishi_left .cata-con').animate({
+                    height: '400px'
+                }, 1000, function () {
+                    $('.cata-shop-item').eq(6).css('display', 'none')
+                    $('.cata-shop-item').eq(7).css('display', 'none')
+                    $('.cata-shop-item').eq(8).css('display', 'none')
                 })
             })
         }
     });
+
+    // 丽人模块动画功能
+    var lirenTop = $(".pic-two .pic-con").offset().top;
+    $(window).scroll(function () {
+        if ($(document).scrollTop() >= lirenTop) {
+            $('.liren_left').animate({
+                width: '590px',
+            }, 1000, function () {
+                $('.liren_right').animate({
+                    width: '590px',
+                    height: '470px'
+                }, 1200)
+            })
+        }
+    });
+
+    // 实现全局登录注册的功能
 })

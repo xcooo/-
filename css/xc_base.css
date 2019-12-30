@@ -270,6 +270,13 @@ a:hover {
     background: url(../img/icon1.png) no-repeat;
     background-size: 10px 10px
 }
+.register_main {
+    padding-left: 0!important;
+}
+.top .user_login .logout_main {
+    display: none;
+    padding-left: 0!important;
+}
 /* logo区域 */
 
 .logo_container {

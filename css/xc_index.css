@@ -1278,6 +1278,12 @@ a {
     color: #f63;
 }
 /* 丽人模块 */
+.liren_left {
+    /* width: 590px; */
+}
+.liren_right {
+    width: 400px;
+}
 .meishi_container{
     margin-top: 20px!important;
 }
