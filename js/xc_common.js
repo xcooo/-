@@ -2,6 +2,15 @@ $(function () {
     console.log("%c%c网站名称%c大众点评", "line-height:28px;", "line-height:28px;padding:4px;background:#222;color:#fff;font-size:16px;margin-right:15px", "color:#3fa9f5;line-height:28px;font-size:16px;");
     console.log("%c%c网站地址%cwww.dianping.com", "line-height:28px;", "line-height:28px;padding:4px;background:#222;color:#fff;font-size:16px;margin-right:15px", "color:#ff9900;line-height:28px;font-size:16px;");
     console.log("%c%c开发团队%c自己猜啊", "line-height:28px;", "line-height:28px;padding:4px;background:#222;color:#fff;font-size:16px;margin-right:15px", "color:#008000;line-height:28px;font-size:16px;");
+    // 预加载
+    setTimeout(function () {
+        $('body').addClass('loaded');
+        $('#loader-wrapper .load_title').remove();
+    }, 1000)
+
+    POWERMODE.colorful = true;  // 冒光特效
+    POWERMODE.shake = false;    // 抖动特效
+    document.body.addEventListener('input', POWERMODE); // 为所有 input 标签都加上特效
     // 下拉菜单显示隐藏功能
     $('.nav>.item').mouseenter(function () {
         $(this).children('a').addClass('current').siblings('ul,.big_menu').stop().slideDown()
@@ -85,14 +94,20 @@ $(function () {
         localStorage.setItem("index", JSON.stringify(src));
     }
 
-
     // 公共顶部登录功能 (包含首页登录显示)
     // 渲染数据
     load_index()
 
-    // 读取本地存储的函数
+    // 读取本地存储的函数 登录名是否存在
     function getData_index() {
         var data = localStorage.getItem("data");
+        var data = JSON.parse(data);
+        return data;
+    }
+
+    // 读取本地图片数据
+    function getData_img() {
+        var data = localStorage.getItem("xcimg");
         var data = JSON.parse(data);
         return data;
     }
@@ -111,14 +126,17 @@ $(function () {
             $('.logout_main').show();
 
             // 首页已完成数据渲染
-            // 获取当前目录
-            var strPath = location.href.substring(0, location.href.lastIndexOf('/'));
-            // 设置头像img
-            $('.avatar img').attr("src", strPath + '/img/xc.jpg');
+            // 获取当前本地图片
+            xcimg = getData_img()
+            // 设置本地头像img
+            $('.avatar img').attr("src", xcimg);
             // 文字发生变化
             // 设置本地存储的数据
             $('.hello').html(data);
-        }else {
+
+            // 个人中心文字发生变化
+            $('.user_info').html(data)
+        } else {
             // 默认
             removeData_top()
         }
@@ -130,13 +148,13 @@ $(function () {
         // 我要退出模块淡出
         $('.logout_main').hide();
         // 添加默认文字
-        var html_list = '你好，请登录';
-        $('.login_main').html(html_list);
+        var html_lists = '你好，请登录';
+        $('.login_main').html(html_lists);
         // 顶部登录注册显示
         $('.login_main').show();
         $('.register_main').show();
 
-         // 首页已完成数据渲染
+        // 首页已完成数据渲染
         // 获取当前目录
         var strPath = location.href.substring(0, location.href.lastIndexOf('/'));
         // 还原默认头像
@@ -144,28 +162,38 @@ $(function () {
         // 首页文字添加默认文字
         var html_list = '你好';
         $('.hello').html(html_list);
+
+        // 个人中心文字改为默认文字
+        $('.user_info').html(html_list)
     };
 
     // 如果点击退出登录 清空本地数据
-    $('.logout_main').click(function(){
+    $('.logout_main').click(function () {
         removeData_top();
         // 需要刷新页面
         location.reload()
     })
 
-    // 点击 登录 或者 注册按钮需要显示登陆注册表单
-    $('.login_main').click(function(){
+    //  点击背景退出登陆注册表单
+    $('#bg').click(function () {
+        $('.sub-main-w3').slideUp(500)
+        $(this).stop().slideUp()
+    })
+
+    // 点击 登录 或者 注册按钮需要显示登陆注册表单  '你好，请登录'
+    $('.login_main').click(function () {
         // 登录表单显示
         if ($(this).html() == '你好，请登录') {
-            $('.login_bg').slideDown(500, function () {
+            $('.login_bg').stop().slideDown(500, function () {
                 // 显示登录表单
-                $('.sub_login').fadeIn()
+                $('.login_bg').stop().slideDown()
+                $('.sub_login').stop().fadeIn()
             })
         }
-        
+
     });
-    
-    $('.register_main').click(function(){
+
+    $('.register_main').click(function () {
         // 注册表单显示
         if ($(this).html() == '免费注册') {
             $('.login_bg').slideDown(500, function () {

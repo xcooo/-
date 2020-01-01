@@ -365,7 +365,11 @@
     font-size: 0;
     width: 890px;
     min-height: 280px;
+    
+    /* height: 1300px;
+    overflow: hidden; */
 }
+
 .activity-container .activity-lists li {
     font-size: 16px;
     width: 280px;

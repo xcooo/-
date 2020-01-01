@@ -28,13 +28,9 @@ $(function () {
             $('.sub_register').stop().slideUp()
         }
     })
-    //  点击背景退出登陆注册表单
-    $('#bg').click(function () {
-        $('.sub-main-w3').slideUp(1000)
-        $(this).slideUp()
-    })
+
     // 登录注册表单请求
-    // 实现前端注册逻辑
+    // 实现前端注册验证逻辑
     var error_name = true; // 非法用户名
     var error_pwd = true;   // 非法密码
     var error_check_pwd = true; // 密码不一致
@@ -116,8 +112,7 @@ $(function () {
     // 是否同意已经被勾选
     allow.click(function () {
         if ($(this).is(':checked')) {
-            $(this).siblings('span').html('已同意本站注册协议').addClass('success');
-            // console.log($(this)[0].checked);  
+            $(this).siblings('span').html('已同意本站注册协议').addClass('success'); 
             error_check = false;
         } else {
             $(this).siblings('span').html('请勾选同意').addClass('error').removeClass();
@@ -129,7 +124,6 @@ $(function () {
     $('.sub_register form').submit(function (e) {
         if (error_name == false && error_pwd == false && error_check == false) {
             e.preventDefault()
-            // alert(1)
             // 取到用户输入的内容
             var user = $(".sub_register #nc").val()
             var pwd = $(".sub_register #pwd").val()

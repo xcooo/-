@@ -34,6 +34,10 @@
 	background-image: linear-gradient(to right, rgba(1, 194, 230, 0.4) 0%, rgba(17, 96, 255, 0.4) 100%);
 	background-repeat: repeat;
 }
+.module-tab-nav {
+    position: relative;
+    overflow: hidden;
+}
 .module-banner-tab-list ul li:last-child {
     height: 370px;
 }
@@ -97,6 +101,14 @@
     box-sizing: border-box;
     overflow: hidden;
     opacity: 0;
+    padding-top: 20px;
+    padding-right: 0;
+}
+.module-banner-tab-list-box {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.module-banner-tab-list-box:nth-child(2){
+    background-color: rgba(69, 39, 112, 0.5);
 }
 .module-tab-box-ma {
 	width: 700px;
@@ -123,6 +135,70 @@
     font-weight: 700;
     color: #f63;
 }
+.module-tab-title .list-dis {
+    text-align: center;
+    color: #f63;
+    font-size: 20px;
+}
+.card_list {
+    position: relative;
+    width: 750px;
+    height: 380px;
+    overflow: hidden;
+}
+.module-tab-text .card {
+    float: left;
+    width: 29.33%;
+    height: 190.5px;
+    background: linear-gradient(to bottom right, #232526, #414345);
+    text-align: center;
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-right: 27px;
+    margin-top: 9px;
+    overflow: hidden;
+}
+.module-tab-text .member {
+    color: #fff;
+    margin-bottom: 0;
+}
+.module-tab-text .card a {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 5px solid #ffc500;
+    overflow: hidden;
+}
+.module-tab-text .card a img {
+    width: 100%;
+    height: 100%;
+}
+.module-tab-text .card img:hover{
+    transform: rotate(360deg);  /*deg度数*/
+}
+.module-tab-text .card hr {
+    color: #ffc500;
+    border: 1px solid;
+}
+.module-tab-text .card .name {
+    font-size: 18px;
+    color: #ffc500;
+    margin-top: -14px;
+}
+.module-tab-text .card .job {
+    color: #fff;
+    margin-top: 12px;
+    font-size: 18px;
+}
+.module-tab-text .card:nth-child(1) .job {
+    margin-top: 3px;
+}
+.module-tab-text .card .skill{
+    color: #ccc;
+    margin-top: -8px;
+}
 .module-tab-title h4 {
 	margin: 0 0 20px 0;
 	font-size: 16px;
@@ -141,11 +217,11 @@
 }
 .module-tab-title p {
 	color: #666;
-	font-size: 14px;
+	font-size: 15px;
 	line-height: 24px;
 }
 .module-tab-text {
-	margin: 20px 0;
+	margin: 14px 0;
 }
 .module-tab-text h4 {
 	margin: 0 0 20px 0;
@@ -163,6 +239,13 @@
 	margin-bottom: -2px;
 	margin-right: 8px;
 }
+.jian {
+    color: #fff!important;
+}
+.module-tab-title .art {
+    color: #f8f8f8;
+}
+
 .module-tab-more h4 {
     margin: 0 0 20px 0;
 	font-size: 16px;
@@ -208,7 +291,15 @@
 	color: #08acee;
 }
 .module-tab-link {
-	position: relative;
+    position: relative;
+    background-color: rgba(255,255,255,1);
+}
+.module-tab-link span {
+    padding-left: 10px;
+}
+.add_mod {
+    float: right;
+    margin-right: 1px;
 }
 .module-tab-link:after {
 	content: '';
@@ -233,6 +324,7 @@
     width: 16px;
     height: 16px;
     vertical-align: middle;
+    margin-left: 8px;
 }
 .icon-bds {
 	background: url(../img/icon-item009-1.svg) no-repeat center;
@@ -246,9 +338,9 @@
 	cursor: pointer;
 	color: #fff;
 	font-size: 14px;
-	background: #108cee;
+    background: #108cee;
+    padding: 0 20px;
 	text-align: center;
-	width: 160px;
 	display: inline-block;
 	line-height: 40px;
 	margin-top: 11px;
@@ -258,6 +350,9 @@
     /* -webkit-text-fill-color: transparent; */
     background-size: 200% 100%;
     animation: bganimate 5s infinite linear;
+}
+.module-tab-more .expand {
+    margin-top: 0px;
 }
 @keyframes bganimate {
     0%{
@@ -598,7 +693,10 @@ img.user {
     font-size: 12px;
     margin-top: 5px;
 }
-
+.user-opt .xc_team {
+    outline: none;
+    border: none;
+}
 .opt-btn:hover {
     color: #fff!important;
 }

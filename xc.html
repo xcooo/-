@@ -37,8 +37,10 @@
     <link rel="stylesheet" href="css/xc_base.css">
     <!-- 引入首页css文件 -->
     <link rel="stylesheet" href="css/xc_index.css">
-    <!-- 引入login文件 -->
+    <!-- 引入登录注册login文件 -->
     <link rel="stylesheet" href="css/login.css">
+    <!-- 引入预加载文件 -->
+    <link rel="stylesheet" href="css/loader.css">
     <!-- 引入jquery文件 -->
     <script src="js/jquery.min.js"></script>
     <!-- 引入公用js文件 -->
@@ -50,6 +52,13 @@
 </head>
 
 <body>
+    <!-- 背景粒子特效模块 -->
+    <div class="animation-wrapper">
+        <div class="particle particle-1"></div>
+        <div class="particle particle-2"></div>
+        <div class="particle particle-3"></div>
+        <div class="particle particle-4"></div>
+    </div>
 
     <!-- 顶部区域 -->
     <div class="top">
@@ -1187,7 +1196,6 @@
         </div>
     </div>
 
-
     <!-- 登陆表单 -->
     <div class="w list_login">
         <div id="bg" class="login_bg">
@@ -1312,15 +1320,15 @@
                 <!-- 左侧区域 -->
                 <div class="module-banner-tab-list hd">
                     <ul class="module-tab-nav">
-                        <li>
+                        <li class="simg">
                             <i class="icon icon-warehouse01"></i>
-                            <p>项目简介</p>
-                        </li>
-                        <li>
-                            <i class="icon icon-warehouse02"></i>
                             <p>小组成员</p>
                         </li>
-                        <li>
+                        <li class="simg">
+                            <i class="icon icon-warehouse02"></i>
+                            <p>项目总纲</p>
+                        </li>
+                        <li class="simg">
                             <i class="icon icon-warehouse03"></i>
                             <p>谢谢欣赏</p>
                         </li>
@@ -1330,89 +1338,125 @@
                 <div class="bd_right">
                     <div class="module-banner-tab-list-box bd">
                         <ul class="module-tab-box-ma">
-                            <div class="module-tab-title">
-                                <h4>项目简介</h4>
-                                <p>前端23期&nbsp;&nbsp;-张志小组成员合作项目 -- <em>大众点评</em></p>
+                            <!-- <div class="module-tab-title">
+                                <p class="list-dis">谨按入队时间排序&nbsp;&nbsp;&nbsp; 技术排名不分先后</p>
+                            </div> -->
+                            <div class="module-tab-more">
+                                <a href="javascript:;" class="expand">提示: 设置背景模式效果更佳 !</a>
                             </div>
                             <div class="module-tab-text clearfix">
-                                <h4>模块展示</h4>
-                                <ul class="clearfix">
-                                    <li class="module-tab-link">
-                                        <a href="xc.html">
-                                            <i class="icons icon-bdm"></i>
-                                            <span>大众点评 - 首页</span>
+                                <h4 class="member">小组成员</h4>
+                                <ul class="card_list">
+                                    <li class="card dou">
+                                        <a href="javascript:;" class="dou">
+                                            <img src="./img/xc.jpg" alt="">
                                         </a>
+                                        <div class="name">张志</div>
+                                        
+                                        <hr>
+                                        <div class="job">- 项目总监 -</div>
+                                        <div class="skill">干啥啥不行， 吃啥啥不剩</div>
                                     </li>
-                                    <li class="module-tab-link">
-                                        <a href="javascript:;">
-                                            <i class="icons icon-bds"></i>
-                                            <span>大众点评 - 列表页</span>
+                                    <li class="card dou">
+                                        <a href="javascript:;" class="dou">
+                                            <img src="./img/xc.jpg" alt="">
                                         </a>
+                                        <div class="name">王小明</div>
+                                        <hr>
+                                        <div class="job">- 产品经理 -</div>
                                     </li>
-                                    <li class="module-tab-link">
-                                        <a href="javascript:;">
-                                            <i class="icons icon-bdx"></i>
-                                            <span>大众点评 - 详情页</span>
+                                    <li class="card dou">
+                                        <a href="javascript:;" class="dou">
+                                            <img src="./img/xc.jpg" alt="">
                                         </a>
+                                        <div class="name">李怀瑾</div>
+                                        <hr>
+                                        <div class="job">- 产品经理 -</div>
+                                    </li>
+                                    <li class="card dou">
+                                        <a href="javascript:;" class="dou">
+                                            <img src="./img/xc.jpg" alt="">
+                                        </a>
+                                        <div class="name">臧思源</div>
+                                        <hr>
+                                        <div class="job">- 产品经理 -</div>
+                                    </li>
+                                    <li class="card dou">
+                                        <a href="javascript:;" class="dou">
+                                            <img src="./img/xc.jpg" alt="">
+                                        </a>
+                                        <div class="name">刘茂林</div>
+                                        <hr>
+                                        <div class="job">- 产品经理 -</div>
+                                    </li>
+                                    <li class="card dou">
+                                        <a href="javascript:;" class="dou">
+                                            <img src="./img/xc.jpg" alt="">
+                                        </a>
+                                        <div class="name">辛诚</div>
+                                        <hr>
+                                        <div class="job">- 程序猿 -</div>
                                     </li>
                                 </ul>
                             </div>
-                            <div class="module-tab-more">
+                            <!-- <div class="module-tab-more">
                                 <h4>温馨提示</h4>
-                                <p>嫌弃该网站设计不好看 ? &nbsp;请切换为背景模式 ! ! !</p>
+                                <p>浏览本网站 &nbsp;切换为背景模式效果更佳 ! ! !</p>
                                 <a href="javascript:;" class="expand">背景模式</a>
-                            </div>
+                            </div> -->
                         </ul>
                     </div>
                     <div class="module-banner-tab-list-box bd">
                         <ul class="module-tab-box-ma">
                             <div class="module-tab-title">
-                                <h4>小组宣言</h4>
-                                <p>我们不生产代码, 我们只是代码的搬运工</p>
+                                <h4 class="jian">项目简介</h4>
+                                <p class="art">😀 一款吃喝玩乐的电商平台, 主要为用户提供免费的商品而搭建 (反正数据都是假的 ^o^)</p>
+                                <p class="art">😄 基于 Node + Mongodb 实现</p>
+                                <p class="art">😄 基于 Windows 平台进行本地展示</p>
                             </div>
                             <div class="module-tab-text clearfix">
-                                <h4>我的小伙伴</h4>
+                                <h4 class="jian">模块展示</h4>
                                 <ul class="clearfix">
                                     <li class="module-tab-link">
                                         <a href="javascript:;">
                                             <i class="icons icon-bdm"></i>
-                                            <span>张志</span>
+                                            <span>首页</span>
                                         </a>
                                     </li>
                                     <li class="module-tab-link">
                                         <a href="javascript:;">
                                             <i class="icons icon-bds"></i>
-                                            <span>王小明</span>
+                                            <span>登录注册页</span>
                                         </a>
                                     </li>
                                     <li class="module-tab-link">
                                         <a href="javascript:;">
                                             <i class="icons icon-bdx"></i>
-                                            <span>李怀瑾</span>
+                                            <span>商品展示区</span>
                                         </a>
                                     </li>
                                     <li class="module-tab-link">
                                         <a href="javascript:;">
                                             <i class="icons icon-bdm"></i>
-                                            <span>臧思源</span>
+                                            <span>商品详情页</span>
                                         </a>
                                     </li>
                                     <li class="module-tab-link">
                                         <a href="javascript:;">
                                             <i class="icons icon-bds"></i>
-                                            <span>刘茂林</span>
+                                            <span>商品付款页</span>
                                         </a>
                                     </li>
                                     <li class="module-tab-link">
                                         <a href="javascript:;">
                                             <i class="icons icon-bdx"></i>
-                                            <span>辛诚</span>
+                                            <span>个人中心</span>
                                         </a>
                                     </li>
                                 </ul>
                             </div>
                             <div class="module-tab-more">
-                                <a href="javascript:;">添加成员</a>
+                                <a href="javascript:;" class="add_mod">查看更多</a>
                             </div>
                         </ul>
                     </div>
@@ -1511,7 +1555,8 @@
                         <div class="use-day">登录大众点评，发现品质生活</div>
                         <div class="user-opt">
                             <div class="user-opt-nologin">
-                                <a href="javascript:;" class="opt-btn xc_team">项目简介</a>
+                                <button class="opt-btn xc_team">项目简介</button>
+                                <!-- <a href="javascript:;" class="opt-btn xc_team">项目简介</a> -->
                                 <a href="javascript:;" class="opt-btn regsiter expand">背景模式</a>
                             </div>
                         </div>
@@ -3484,8 +3529,16 @@
         </div>
     </div>
 
+    <!--页面加载end-->
+    <!-- <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+        <div class="load_title">正在加载前端23期<br><span>大众点评</span></div>
+    </div> -->
+
     <!-- footer end -->
-    <script src="js/jquery.lazyload.js"></script>
+    <script src="js/jquery.lazyload.js"></script>  
     <script src="js/jquery.scrollstop.js"></script>
     <script type="text/javascript" charset="utf-8">
         $(function () {
@@ -3506,9 +3559,13 @@
         });
     </script>
 
+    <!-- 登录注册表单js文件 -->
     <!-- effect js -->
     <script src="js/canva_moving_effect.js"></script>
     <!-- //effect js -->
+
+    <!-- 引入input冒光文件 -->
+    <script src="js/activate-power-mode.js "></script>
 </body>
 
 </html>

@@ -91,17 +91,23 @@ $(function () {
         }, 15);
     }
 
-    // 团队介绍
+    // 团队介绍  添加节流阀  防止频繁点击
+    var flag = true;
     $('.xc_team').click(function () {
         if ($(this).html() == '项目简介') {
+            flag = false;
             // 轮播图模块宽度变为0
-            $('.focus').animate({
+            $('.focus').stop().animate({
                 width: 0
             }, 1000, function () {
                 // 轮播图模块隐藏
                 $('.focus').css('display', 'none')
                 // dropdown下拉菜单隐藏
-                $('.dropdown .dd').slideUp(500)
+                $('.dropdown .dd').stop().slideUp(500, function () {
+                    $('.xc_team').html('关闭详情');
+                    $('.xc_team').css('backgroundColor', 'pink');
+                    flag = true
+                })
             })
             // 底层选项卡淡入
             var num = 0
@@ -114,31 +120,33 @@ $(function () {
                     $('.module-banner-tab-list-box').css('opacity', num)
                 }
             }, 500)
+        }
+        if (flag) {
+            if ($('.xc_team').html() == '关闭详情') {
+                // 底层选项卡淡出
+                var timer2 = setInterval(function () {
+                    num = $('.module-banner-tab-list-box').css('opacity')
+                    if (num > 0) {
+                        num -= 0.5
+                        $('.module-banner-tab-list-box').css('opacity', num)
+                    } else {
+                        clearInterval(timer2)
+                    }
+                }, 500)
+                // dropdown下拉菜单隐藏
+                $('.dropdown .dd').stop().slideDown(500, function () {
+                    // 轮播图模块隐藏
+                    $('.focus').css('display', 'block')
+                    // 轮播图模块宽度变为原来的位置
+                    $('.focus').stop().animate({
+                        width: '770px'
+                    }, 1000, function () {
+                        $('.xc_team').html('项目简介');
+                        $('.xc_team').css('backgroundColor', '#f63');
+                    })
+                })
 
-            $(this).html('关闭详情');
-            $(this).css('backgroundColor', 'pink');
-        } else if ($(this).html() == '关闭详情') {
-            // 底层选项卡淡出
-            var timer2 = setInterval(function () {
-                num = $('.module-banner-tab-list-box').css('opacity')
-                if (num > 0) {
-                    num -= 0.5
-                    $('.module-banner-tab-list-box').css('opacity', num)
-                } else {
-                    clearInterval(timer2)
-                }
-            }, 500)
-            // dropdown下拉菜单隐藏
-            $('.dropdown .dd').slideDown(500, function () {
-                // 轮播图模块隐藏
-                $('.focus').css('display', 'block')
-                // 轮播图模块宽度变为原来的位置
-                $('.focus').animate({
-                    width: '770px'
-                }, 1000)
-            })
-            $(this).html('项目简介');
-            $(this).css('backgroundColor', '#f63');
+            }
         }
 
     })
@@ -147,7 +155,7 @@ $(function () {
     $('.qianduan').click(function () {
         // 底层选项卡淡出
         var timer2 = setInterval(function () {
-            var num = $('.module-banner-tab-list-box').css('opacity')
+            num = $('.module-banner-tab-list-box').css('opacity')
             if (num > 0) {
                 num -= 0.5
                 $('.module-banner-tab-list-box').css('opacity', num)
@@ -156,16 +164,17 @@ $(function () {
             }
         }, 500)
         // dropdown下拉菜单隐藏
-        $('.dropdown .dd').slideDown(500, function () {
+        $('.dropdown .dd').stop().slideDown(500, function () {
             // 轮播图模块隐藏
             $('.focus').css('display', 'block')
             // 轮播图模块宽度变为原来的位置
-            $('.focus').animate({
+            $('.focus').stop().animate({
                 width: '770px'
-            }, 1000)
+            }, 1000, function () {
+                $('.xc_team').html('项目简介');
+                $('.xc_team').css('backgroundColor', '#f63');
+            })
         })
-        $('.xc_team').html('项目简介');
-        $('.xc_team').css('backgroundColor', '#f63');
     })
 
     // 选项卡切换功能
@@ -175,7 +184,7 @@ $(function () {
         $(this).addClass('on').siblings().removeClass()
         // 1. 得到当前小li 的索引号
         var index = $(this).index();;
-        // 2.让我们右侧的盒子相应索引号的图片显示出来就好了
+        // 2.让我们右侧的盒子 相应索引号的图片显示出来就好了
         $('.module-banner-tab-list-box').eq(index).show().siblings().hide();
     })
 
@@ -229,7 +238,6 @@ $(function () {
         $("body, html").stop().animate({
             scrollTop: 0
         });
-
     })
 
     // 美食模块动画显示功能
@@ -264,5 +272,10 @@ $(function () {
             })
         }
     });
+
+    // 头像旋转
+    $('.card a img').mouseenter(function () {
+        $(this).css('rotate', '360deg')
+    })
 
 })
