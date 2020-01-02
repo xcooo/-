@@ -1,4 +1,6 @@
 $(function () {
+    // 定义主机
+    var hosts = 'http://localhost:5000'
     // 注册登陆输入框逻辑实现
     // 获得焦点  文字位置和大小发生变化
     $('.sub-main-w3 input').focus(function () {
@@ -112,7 +114,7 @@ $(function () {
     // 是否同意已经被勾选
     allow.click(function () {
         if ($(this).is(':checked')) {
-            $(this).siblings('span').html('已同意本站注册协议').addClass('success'); 
+            $(this).siblings('span').html('已同意本站注册协议').addClass('success');
             error_check = false;
         } else {
             $(this).siblings('span').html('请勾选同意').addClass('error').removeClass();
@@ -144,7 +146,7 @@ $(function () {
                 "repassword": repassword
             }
             $.ajax({
-                url: "http://localhost:5000/user/reg",
+                url: hosts + "/user/reg",
                 type: "POST",
                 data: params,
                 // data: JSON.stringify(params),
@@ -178,6 +180,7 @@ $(function () {
         var username = $('.sub_login #nc_login').val()
         var password = $('.sub_login #pwd_login').val()
 
+        // 暂时先注释起来
         // if (!username) {
         //     $(this).siblings('.input_tip').html('用户名不符合要求').addClass('error')
         //     return;
@@ -193,7 +196,7 @@ $(function () {
         }
 
         $.ajax({
-            url: "http://localhost:5000/user/login",
+            url: hosts + "/user/login",
             type: "post",
             data: params,
             // contentType: "application/json",
@@ -272,4 +275,110 @@ $(function () {
     function formReset() {
         $('#myform').val = ''
     }
+
+    // 修改密码
+    $('.pwd_form form').submit(function (e) {
+        e.preventDefault()
+        // 取到用户输入的内容
+        var users = $('.pwd_form #users_name').html()
+        var oldpassword = $('.pwd_form #userpassword').val()
+        var newpassword = $('.pwd_form #userpassword1').val()
+
+        // 暂时先注释起来
+        // if (!username) {
+        //     $(this).siblings('.input_tip').html('用户名不符合要求').addClass('error')
+        //     return;
+        // }
+        // if (!password || password.length < 6) {
+        //     $(this).siblings('.input_tip').html('密码不少于6位').addClass('error')
+        //     return;
+        // }
+
+        var params = {
+            'username': users,
+            "oldpassword": oldpassword,
+            "newpassword": newpassword,
+        }
+
+        $.ajax({
+            url: "http://localhost:5000/user/updatePssword",
+            type: "post",
+            data: params,
+            // contentType: "application/json",
+            success: function (resp) {
+                if (resp.code == "0") {
+                    var num = 3;
+                    var timer = setInterval(function () {
+                        if (num == 0) {
+                            // 删除本地数据
+                            removeData()
+                            // 需要重新登录
+                            // 获取当前目录
+                            var strPath = location.href.substring(0, location.href.lastIndexOf('/'));
+                            location.assign(strPath + '/xc_list.html')
+                            // 清除定时器
+                            clearInterval(timer)
+                            num = 3
+                        } else {
+                            num--
+                            $('.modifly_pwd').val('修改成功, ' + num + '秒后返回登录页').css('backgroundColor', 'green')
+                        }
+                    }, 3000)
+                } else {
+                    // 说明用户名或密码错误
+                    $('.modifly_pwd').val('原密码错误').css('backgroundColor', 'red')
+
+                }
+            }
+        })
+    })
+
+    // 修改昵称
+    $('.nc_form form').submit(function (e) {
+        e.preventDefault()
+        // 取到用户输入的内容
+        var oldname = $('.nc_form #oldname').html()
+        var newUsername = $('.nc_form #newname').val()
+
+        // 暂时先注释起来
+        // if (!username) {
+        //     $(this).siblings('.input_tip').html('用户名不符合要求').addClass('error')
+        //     return;
+        // }
+        // if (!password || password.length < 6) {
+        //     $(this).siblings('.input_tip').html('密码不少于6位').addClass('error')
+        //     return;
+        // }
+
+        var params = {
+            'username':  oldname,
+            "newUsername": newUsername,
+        }
+
+        $.ajax({
+            url: hosts + "/user/updateName",
+            type: "post",
+            data: params,
+            // contentType: "application/json",
+            success: function (resp) {
+                if (resp.code == "0") {
+                    // 准备新昵称
+                    var name = $('.nc_form #newname').val()
+                    // 获取本地存储
+                    getData()
+                    // 删除本地存储
+                    removeData()
+                    // 保存本地存储
+                    saveData(name)
+                    // 重新渲染页面
+                    load_login()
+                    // 刷新页面
+                    location.reload()
+                } else {
+                    // 说明用户名已存在
+                    $('.modifly_name').val('用户名已存在').css('backgroundColor', 'red')
+                }
+            }
+        })
+    })
 })

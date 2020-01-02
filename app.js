@@ -7,6 +7,8 @@ const bodyParser = require('body-parser');
 // 引入数据库模块
 const mongoose = require('mongoose')
 
+//全局设置
+mongoose.set('useFindAndModify', false)
 // 数据库连接
 mongoose.connect('mongodb://localhost/xcooo', { useNewUrlParser: true, useUnifiedTopology: true })
     // 连接成功
@@ -38,7 +40,7 @@ module.exports = Dzdp
 // 创建网站服务器
 const app = express()
 
-// 设置跨域访问
+// 设置跨域访问  需要写在最上面
 app.all('*', function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header('Access-Control-Allow-Headers', 'Content-Type, Content-Length, Authorization, Accept, X-Requested-With , yourHeaderFeild');
@@ -58,12 +60,16 @@ app.use(session({
 // 配置body-parse模块
 const body = app.use(bodyParser.urlencoded({ extended: true }));
 
-// 注册登陆路由分发
-const reg = require('./route/reg')
-const login = require('./route/login')
+// 路由分发
+const reg = require('./route/reg')  // 注册
+const login = require('./route/login') // 登录
+const updatePassword = require('./route/updatePassword') // 修改密码
+const updateName = require('./route/updateName') // 修改昵称
 
 app.use('/user', reg)
 app.use('/user', login)
+app.use('/user',updatePassword)
+app.use('/user',updateName)
 
 // 监听端口
 app.listen(5000, () => {

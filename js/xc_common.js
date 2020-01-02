@@ -11,6 +11,7 @@ $(function () {
     POWERMODE.colorful = true;  // 冒光特效
     POWERMODE.shake = false;    // 抖动特效
     document.body.addEventListener('input', POWERMODE); // 为所有 input 标签都加上特效
+    document.body.addEventListener('click', POWERMODE);
     // 下拉菜单显示隐藏功能
     $('.nav>.item').mouseenter(function () {
         $(this).children('a').addClass('current').siblings('ul,.big_menu').stop().slideDown()
@@ -136,12 +137,14 @@ $(function () {
 
             // 个人中心文字发生变化
             $('.user_info').html(data)
+            // 修改密码中心文字变化
+            $('.users_name').html(data)
         } else {
             // 默认
             removeData_top()
         }
     };
-
+    
     // 封装删除公共顶部本地数据的函数
     function removeData_top() {
         localStorage.removeItem('data');
@@ -164,7 +167,9 @@ $(function () {
         $('.hello').html(html_list);
 
         // 个人中心文字改为默认文字
-        $('.user_info').html(html_list)
+        var name_list = '无名';
+        $('.user_info').html(name_list)
+        $('.users_name').html(name_list)
     };
 
     // 如果点击退出登录 清空本地数据

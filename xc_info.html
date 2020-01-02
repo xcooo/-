@@ -359,7 +359,7 @@
                     <a href="javascript:;" class="avatar uexpand">
                         <img src="./img/xc.jpg" alt="">
                     </a>
-                    <div class="user_info post_hea">星城</div>
+                    <div class="user_info post_hea">无名</div>
                 </div>
                 <div class="info_left_bottom">
                     <ul class="info_left_lists">
@@ -468,7 +468,7 @@
                                 <div class="baby_shop">
                                     <p class="state">19788222222222552222</p>
                                     <p class="goods">
-                                        <a href="javascript:;">五头耗牛</a>
+                                        <a href="javascript:;">五头牦牛</a>
                                     </p>
                                     <div class="goods_count">
                                         <span>600</span>
@@ -534,10 +534,12 @@
                             </div>
                         </li>
                         <li class="zh_info">
-                            <div class="zh_form">
-                                <p>登录账号: <a href="javascript:;">星城</a></p>
-                                <p>修改昵称: <input type="text" name="username" class="name"></p>
-                                <p><input type="submit" value="立即提交" class="surename"></p>
+                            <div class="zh_form nc_form">
+                                <form id="myform">
+                                    <p>登录账号: <a href="javascript:;" name='users_name' class="users_name" id='oldname'>无名</a></p>
+                                    <p>修改昵称: <input type="text" name="username2" class="name" id="newname" placeholder="用户名只支持中文(2-8)位"></p>
+                                    <p><input type="submit" value="立即修改" class="surename modifly_name"></p>
+                                </form>
                             </div>
                         </li>
                     </ul>
@@ -556,11 +558,15 @@
                             </div>
                         </li>
                         <li class="zh_info">
-                            <div class="zh_form">
-                                <p>登录账号: <a href="javascript:;">星城</a></p>
-                                <p>原密码: <input type="text" name="userpassword" class="old_password"></p>
-                                <p>修改密码: <input type="text" name="userpassword1" class="password"></p>
-                                <p><input type="submit" value="立即提交" class="surename"></p>
+                            <div class="zh_form pwd_form">
+                                <form id="myform">
+                                    <p>登录账号: <a href="javascript:;" name='users_name' class="users_name" id="users_name">无名</a></p>
+                                    <p>原密码: <input type="password" name="userpassword" class="old_password"
+                                            id="userpassword"></p>
+                                    <p>新密码: <input type="password" name="userpassword1" class="newpassword"
+                                            id="userpassword1"></p>
+                                    <p><input type="submit" value="立即修改" class="surename modifly_pwd"></p>
+                                </form>
                             </div>
                         </li>
                     </ul>
@@ -606,7 +612,7 @@
                         </li>
                         <li class="zh_info">
                             <div class="zh_form">
-                                <p>赞助账号: <a href="javascript:;">星城</a></p>
+                                <p>赞助账号: <a href="javascript:;" class="users_name">无名</a></p>
                                 <p>赞助金额: <input type="text" name="userpassword" class="cz_mon"></p>
                                 <p>赞助方式:
                                     <label for="" class="ali">

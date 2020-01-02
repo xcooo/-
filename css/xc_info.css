@@ -460,7 +460,6 @@
 }
 .surename {
     margin-left: 92px;
-    width: 100px;
     height: 30px;
     line-height: 30px;
     background-color: #337AB7;
@@ -468,11 +467,21 @@
     border: none;
     color: #fff;
     outline: none;
+    padding:0 10px;
 }
 .surename:hover {
     opacity: 0.6;
 }
 .old_password {
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    margin-left: 35px;
+    outline: none;
+    color: #555;
+    padding-left: 10px;
+}
+.newpassword {
     width: 200px;
     height: 30px;
     border-radius: 5px;
@@ -728,4 +737,3 @@
 .wraptx li a:hover img{
     border: 3px solid rgba(0, 204, 0); 
 }
-

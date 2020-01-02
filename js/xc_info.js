@@ -17,7 +17,7 @@ $(function () {
     // 鼠标经过图像,  更换头像的文字下滑 背景变灰
     $('.mod_img').mouseenter(function () {
         $(this).css('opacity', 0.8)
-        $('.uexpand ').css({ 'color': '#fff' })
+        $('.uexpand ').css({ 'color': 'orange' })
         $('.uexpand ').stop().animate({
             top: '47%'
         }, 500)
@@ -33,7 +33,6 @@ $(function () {
     // 选项卡切换功能
     $('.info_left li').click(function () {
         var index = $(this).index();
-        console.log($('.info_right .panel').eq(1));
         $('.info_right .info_right_lists').eq(index).show().siblings().hide()
     })
 
@@ -127,7 +126,7 @@ $(function () {
         $('.hello').html(html_list);
 
         // 个人中心文字改为默认文字
-        $('.user_info').html(html_list)
+        $('.user_info').html(html_lists)
     };
 
     // 用户退出个人中心 重定向到首页

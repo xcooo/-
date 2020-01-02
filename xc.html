@@ -63,6 +63,9 @@
     <!-- 顶部区域 -->
     <div class="top">
         <div class="w clearfix xctop">
+            <div class="fl timer">
+                <span id="momk"></span><span id="momk" style="color: #ff0000;"></span>
+            </div>
             <div class="top-page_r fr">
                 <ul class="nav">
                     <li class="user_login">
@@ -1349,17 +1352,17 @@
                                 <ul class="card_list">
                                     <li class="card dou">
                                         <a href="javascript:;" class="dou">
-                                            <img src="./img/xc.jpg" alt="">
+                                            <img src="./img/tx/10.jpg" alt="">
                                         </a>
                                         <div class="name">张志</div>
-                                        
+
                                         <hr>
                                         <div class="job">- 项目总监 -</div>
                                         <div class="skill">干啥啥不行， 吃啥啥不剩</div>
                                     </li>
                                     <li class="card dou">
                                         <a href="javascript:;" class="dou">
-                                            <img src="./img/xc.jpg" alt="">
+                                            <img src="./img/tx/4.jpg" alt="">
                                         </a>
                                         <div class="name">王小明</div>
                                         <hr>
@@ -1367,7 +1370,7 @@
                                     </li>
                                     <li class="card dou">
                                         <a href="javascript:;" class="dou">
-                                            <img src="./img/xc.jpg" alt="">
+                                            <img src="./img/tx/11.jpg" alt="">
                                         </a>
                                         <div class="name">李怀瑾</div>
                                         <hr>
@@ -1375,7 +1378,7 @@
                                     </li>
                                     <li class="card dou">
                                         <a href="javascript:;" class="dou">
-                                            <img src="./img/xc.jpg" alt="">
+                                            <img src="./img/tx/7.jpg" alt="">
                                         </a>
                                         <div class="name">臧思源</div>
                                         <hr>
@@ -1383,7 +1386,7 @@
                                     </li>
                                     <li class="card dou">
                                         <a href="javascript:;" class="dou">
-                                            <img src="./img/xc.jpg" alt="">
+                                            <img src="./img/tx/5.jpg" alt="">
                                         </a>
                                         <div class="name">刘茂林</div>
                                         <hr>
@@ -1457,6 +1460,10 @@
                             </div>
                             <div class="module-tab-more">
                                 <a href="javascript:;" class="add_mod">查看更多</a>
+                            </div>
+                            <div class="module-tab-text clearfix">
+                                <h4 class="jian">预留区域</h4>
+
                             </div>
                         </ul>
                     </div>
@@ -3538,7 +3545,7 @@
     </div> -->
 
     <!-- footer end -->
-    <script src="js/jquery.lazyload.js"></script>  
+    <script src="js/jquery.lazyload.js"></script>
     <script src="js/jquery.scrollstop.js"></script>
     <script type="text/javascript" charset="utf-8">
         $(function () {
@@ -3566,6 +3573,37 @@
 
     <!-- 引入input冒光文件 -->
     <script src="js/activate-power-mode.js "></script>
+
+    <!-- 头部时间模块 -->
+    <script type="text/javascript">
+        function NewDate(str) {
+            str = str.split('-');
+            var date = new Date();
+            date.setUTCFullYear(str[0], str[1] - 1, str[2]);
+            date.setUTCHours(0, 0, 0, 0);
+            return date;
+        }
+        function momxc() {
+            var birthDay = NewDate("2019-12-30");
+            var today = new Date();
+            var timeold = today.getTime() - birthDay.getTime();
+            var sectimeold = timeold / 1000
+            var secondsold = Math.floor(sectimeold);
+            var msPerDay = 24 * 60 * 60 * 1000; var e_daysold = timeold / msPerDay;
+            var daysold = Math.floor(e_daysold);
+            var e_hrsold = (daysold - e_daysold) * -24;
+            var hrsold = Math.floor(e_hrsold);
+            var e_minsold = (hrsold - e_hrsold) * -60;
+            var minsold = Math.floor((hrsold - e_hrsold) * -60); var seconds = Math.floor((minsold - e_minsold) * -60).toString();
+            document.getElementById("momk").innerHTML = "本站勉强存活：" + daysold + "天" + hrsold + "小时" + minsold + "分" + seconds + "秒";
+            setTimeout(momxc, 1000);
+        }
+        momxc();
+    </script>
+    <style>
+        #momk{animation:change 10s infinite;font-weight:800;text-align: left;margin-left: 10px;margin-top: 16px;font-size: 14px;}
+        @keyframes change{0%{color:#5cb85c;}25%{color:#556bd8;}50%{color:#e40707;}75%{color:#66e616;}100% {color:#67bd31;}}
+    </style>
 </body>
 
 </html>
