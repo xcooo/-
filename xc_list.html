@@ -13,10 +13,14 @@
     <link rel="stylesheet" href="css/xc_list.css">
     <!-- 引入登陆css文件 -->
     <link rel="stylesheet" href="css/login.css">
+    <!-- 引入轮播图css文件 -->
+    <link rel="stylesheet" href="css/banner.css">
     <!--页面加载start-->
     <link rel="stylesheet" type="text/css" href="css/loader.css">
     <!-- 引入jquery文件 -->
     <script src="js/jquery.min.js"></script>
+    <!-- 轮播图js文件 -->
+    <script src="js/banner.js"></script>
     <!-- 引入公用js文件 -->
     <script src="js/xc_common.js"></script>
     <!-- 引入列表页js文件 -->
@@ -24,7 +28,9 @@
     <!-- 引入异步加载文件 -->
     <script src="js/ajax.js"></script>
 
+
 </head>
+
 <body>
     <!-- 背景粒子特效模块 -->
     <div class="animation-wrapper">
@@ -1371,14 +1377,22 @@
                                         <span class="strong">价值258元双人餐-小洞天本味火锅(长嘉汇店)</span>
                                     </div>
                                 </a>
-                            </li>                     
+                            </li>
                         </ul>
                     </div>
                 </div>
 
                 <!-- 左边区域 -->
                 <div class="left-container">
-                    <div class="slides-container">
+                    <!-- 轮播图区域开始 -->
+                    <div class="banner" id="banner1" style="margin: 50px auto;">
+                        <div class="banner-view"></div>
+                        <div class="banner-btn"></div>
+                        <div class="banner-number"></div>
+                        <div class="banner-progres"></div>
+                    </div>
+                    <!-- 轮播图区域结束 -->
+                    <!-- <div class="slides-container">
                         <ul>
                             <li>
                                 <a href="#">
@@ -1386,732 +1400,733 @@
                                 </a>
                             </li>
                         </ul>
-                        <div class="slides-dots">
-                            <span class="slides-dot active"></span>
-                        </div>
-                    </div>
-                    <!-- 活动模块 -->
-                    <div class="activity-container clearfix">
-                        <div>
-                            <div class="s-fix-fill"></div>
-                            <div class="s-fix-wrap">
-                                <div class="tabs container-title">
-                                    <div class="active">
-                                        <span>全部(73)</span>
-                                    </div>
-                                    <div>
-                                        <span>美食(31)</span>
-                                    </div>
-                                    <div>
-                                        <span>丽人(5)</span>
-                                    </div>
-                                    <div>
-                                        <span>玩乐(5)</span>
-                                    </div>
-                                    <div>
-                                        <span>婚嫁(1)</span>
-                                    </div>
-                                    <div>
-                                        <span>亲子(29)</span>
-                                    </div>
-                                    <div>
-                                        <span>培训(1)</span>
-                                    </div>
-                                    <div>
-                                        <span>生活服务(2)</span>
-                                    </div>
-                                </div>
-                                <div class="tabs filter-types">
-                                    <div>聚会</div>
-                                    <div>V聚会</div>
-                                    <div>电子券</div>
-                                    <div>好礼到家</div>
-                                    <div>天天抽奖</div>
-                                </div>
+
+                        <div class="slides-dots"> -->
+                    <span class="slides-dot active"></span>
+                </div>
+            </div>
+            <!-- 活动模块 -->
+            <div class="activity-container clearfix">
+                <div>
+                    <div class="s-fix-fill"></div>
+                    <div class="s-fix-wrap">
+                        <div class="tabs container-title">
+                            <div class="active">
+                                <span>全部(73)</span>
+                            </div>
+                            <div>
+                                <span>美食(31)</span>
+                            </div>
+                            <div>
+                                <span>丽人(5)</span>
+                            </div>
+                            <div>
+                                <span>玩乐(5)</span>
+                            </div>
+                            <div>
+                                <span>婚嫁(1)</span>
+                            </div>
+                            <div>
+                                <span>亲子(29)</span>
+                            </div>
+                            <div>
+                                <span>培训(1)</span>
+                            </div>
+                            <div>
+                                <span>生活服务(2)</span>
                             </div>
                         </div>
-                        <div class="activity-lists-wraper">
-                            <!-- 全部 -->
-                            <ul class="activity-lists">
-                                <li>
-                                    <a href="javascript:;">
-                                        <div class="imgwrap">
-                                            <img class="lazy" data-original="./uploads/product44.jpg" alt="">
-                                            <div class="a-type">电子券</div>
-                                        </div>
-                                        <div class="infos">
-                                            <h4>人之茶糖水铺双人套餐免费抢</h4>
-                                            <div class="addi">
-                                                <span class="addr">东塘</span>
-                                                <span class="entry-num">2732人关注</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <div class="imgwrap">
-                                            <img class="lazy" data-original="./uploads/product29.png" alt="">
-                                            <div class="a-type">电子券</div>
-                                        </div>
-                                        <div class="infos">
-                                            <h4>金色印象影院式足体养生会馆双人足浴免费抢</h4>
-                                            <div class="addi">
-                                                <span class="addr">车站南路</span>
-                                                <span class="entry-num">42人关注</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <div class="imgwrap">
-                                            <img class="lazy" data-original="./uploads/product45.jpg" alt="">
-                                            <div class="a-type">电子券</div>
-                                        </div>
-                                        <div class="infos">
-                                            <h4>长沙佑康医院妇科私密养护/体检套餐二选一免费抢</h4>
-                                            <div class="addi">
-                                                <span class="addr">香樟路/民政学院</span>
-                                                <span class="entry-num">290人关注</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <div class="imgwrap">
-                                            <img class="lazy" data-original="./uploads/product46.jpg" alt="">
-                                            <div class="a-type">聚会</div>
-                                        </div>
-                                        <div class="infos">
-                                            <h4>尤拉植50份双人套餐免费抢</h4>
-                                            <div class="addi">
-                                                <span class="addr">中山亭</span>
-                                                <span class="entry-num">7555人关注</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <div class="imgwrap">
-                                            <img class="lazy" data-original="./uploads/product47.jpg" alt="">
-                                            <div class="a-type">电子券</div>
-                                        </div>
-                                        <div class="infos">
-                                            <h4>颐而康汽车南站店盛大开业 双人养生足浴免费抢</h4>
-                                            <div class="addi">
-                                                <span class="addr">香樟路/民政学院</span>
-                                                <span class="entry-num">1431人关注</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <div class="imgwrap">
-                                            <img class="lazy" data-original="./uploads/product48.jpg" alt="">
-                                            <div class="a-type">电子券</div>
-                                        </div>
-                                        <div class="infos">
-                                            <h4>重庆德庄火锅价值201元套餐免费抢</h4>
-                                            <div class="addi">
-                                                <span class="addr">坡子街</span>
-                                                <span class="entry-num">7579人关注</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <div class="imgwrap">
-                                            <img class="lazy" data-original="./uploads/product49.jpg" alt="">
-                                            <div class="a-type">电子券</div>
-                                        </div>
-                                        <div class="infos">
-                                            <h4>稻前寿司价值225元双人套餐免费抢</h4>
-                                            <div class="addi">
-                                                <span class="addr">汽车西站</span>
-                                                <span class="entry-num">6825人关注</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <div class="imgwrap">
-                                            <img class="lazy" data-original="./uploads/product30.png" alt="">
-                                            <div class="a-type">电子券</div>
-                                        </div>
-                                        <div class="infos">
-                                            <h4>费大厨辣椒炒肉（王府井店）双人霸王餐免费抢</h4>
-                                            <div class="addi">
-                                                <span class="addr">五一广场</span>
-                                                <span class="entry-num">7498人关注</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <div class="imgwrap">
-                                            <img class="lazy" data-original="./uploads/product50.jpg" alt="">
-                                            <div class="a-type">电子券</div>
-                                        </div>
-                                        <div class="infos">
-                                            <h4>大王山假日酒店欢乐自助餐厅价值576元双人套餐免费抢</h4>
-                                            <div class="addi">
-                                                <span class="addr">含浦</span>
-                                                <span class="entry-num">7832人关注</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <div class="imgwrap">
-                                            <img class="lazy" data-original="./uploads/product44.jpg" alt="">
-                                            <div class="a-type">电子券</div>
-                                        </div>
-                                        <div class="infos">
-                                            <h4>人之茶糖水铺双人套餐免费抢</h4>
-                                            <div class="addi">
-                                                <span class="addr">东塘</span>
-                                                <span class="entry-num">2732人关注</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <div class="imgwrap">
-                                            <img class="lazy" data-original="./uploads/product45.jpg" alt="">
-                                            <div class="a-type">电子券</div>
-                                        </div>
-                                        <div class="infos">
-                                            <h4>人之茶糖水铺双人套餐免费抢</h4>
-                                            <div class="addi">
-                                                <span class="addr">东塘</span>
-                                                <span class="entry-num">2732人关注</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <div class="imgwrap">
-                                            <img class="lazy" data-original="./uploads/product46.jpg" alt="">
-                                            <div class="a-type">电子券</div>
-                                        </div>
-                                        <div class="infos">
-                                            <h4>人之茶糖水铺双人套餐免费抢</h4>
-                                            <div class="addi">
-                                                <span class="addr">东塘</span>
-                                                <span class="entry-num">2732人关注</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <!-- 隐藏的部分 -->
-                                <li>
-                                    <a href="javascript:;">
-                                        <div class="imgwrap">
-                                            <img class="lazy" data-original="./uploads/product44.jpg" alt="">
-                                            <div class="a-type">电子券</div>
-                                        </div>
-                                        <div class="infos">
-                                            <h4>人之茶糖水铺双人套餐免费抢</h4>
-                                            <div class="addi">
-                                                <span class="addr">东塘</span>
-                                                <span class="entry-num">2732人关注</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <div class="imgwrap">
-                                            <img class="lazy" data-original="./uploads/product29.png" alt="">
-                                            <div class="a-type">电子券</div>
-                                        </div>
-                                        <div class="infos">
-                                            <h4>金色印象影院式足体养生会馆双人足浴免费抢</h4>
-                                            <div class="addi">
-                                                <span class="addr">车站南路</span>
-                                                <span class="entry-num">42人关注</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <div class="imgwrap">
-                                            <img class="lazy" data-original="./uploads/product45.jpg" alt="">
-                                            <div class="a-type">电子券</div>
-                                        </div>
-                                        <div class="infos">
-                                            <h4>长沙佑康医院妇科私密养护/体检套餐二选一免费抢</h4>
-                                            <div class="addi">
-                                                <span class="addr">香樟路/民政学院</span>
-                                                <span class="entry-num">290人关注</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <div class="imgwrap">
-                                            <img class="lazy" data-original="./uploads/product46.jpg" alt="">
-                                            <div class="a-type">聚会</div>
-                                        </div>
-                                        <div class="infos">
-                                            <h4>尤拉植50份双人套餐免费抢</h4>
-                                            <div class="addi">
-                                                <span class="addr">中山亭</span>
-                                                <span class="entry-num">7555人关注</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                            </ul>
-                            <!-- 美食 -->
-                            <ul class="activity-lists" style="display: none;">
-                                <li>
-                                    <a href="javascript:;">
-                                        <div class="imgwrap">
-                                            <img class="lazy" data-original="./uploads/product45.jpg" alt="">
-                                            <div class="a-type">电子券</div>
-                                        </div>
-                                        <div class="infos">
-                                            <h4>长沙佑康医院妇科私密养护/体检套餐二选一免费抢</h4>
-                                            <div class="addi">
-                                                <span class="addr">香樟路/民政学院</span>
-                                                <span class="entry-num">290人关注</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <div class="imgwrap">
-                                            <img class="lazy" data-original="./uploads/product29.png" alt="">
-                                            <div class="a-type">电子券</div>
-                                        </div>
-                                        <div class="infos">
-                                            <h4>金色印象影院式足体养生会馆双人足浴免费抢</h4>
-                                            <div class="addi">
-                                                <span class="addr">车站南路</span>
-                                                <span class="entry-num">42人关注</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <div class="imgwrap">
-                                            <img class="lazy" data-original="./uploads/product45.jpg" alt="">
-                                            <div class="a-type">电子券</div>
-                                        </div>
-                                        <div class="infos">
-                                            <h4>长沙佑康医院妇科私密养护/体检套餐二选一免费抢</h4>
-                                            <div class="addi">
-                                                <span class="addr">香樟路/民政学院</span>
-                                                <span class="entry-num">290人关注</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <div class="imgwrap">
-                                            <img class="lazy" data-original="./uploads/product46.jpg" alt="">
-                                            <div class="a-type">聚会</div>
-                                        </div>
-                                        <div class="infos">
-                                            <h4>尤拉植50份双人套餐免费抢</h4>
-                                            <div class="addi">
-                                                <span class="addr">中山亭</span>
-                                                <span class="entry-num">7555人关注</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                               
-                                <li>
-                                    <a href="javascript:;">
-                                        <div class="imgwrap">
-                                            <img class="lazy" data-original="./uploads/product46.jpg" alt="">
-                                            <div class="a-type">聚会</div>
-                                        </div>
-                                        <div class="infos">
-                                            <h4>尤拉植50份双人套餐免费抢</h4>
-                                            <div class="addi">
-                                                <span class="addr">中山亭</span>
-                                                <span class="entry-num">7555人关注</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <div class="imgwrap">
-                                            <img class="lazy" data-original="./uploads/product47.jpg" alt="">
-                                            <div class="a-type">电子券</div>
-                                        </div>
-                                        <div class="infos">
-                                            <h4>颐而康汽车南站店盛大开业 双人养生足浴免费抢</h4>
-                                            <div class="addi">
-                                                <span class="addr">香樟路/民政学院</span>
-                                                <span class="entry-num">1431人关注</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <div class="imgwrap">
-                                            <img class="lazy" data-original="./uploads/product48.jpg" alt="">
-                                            <div class="a-type">电子券</div>
-                                        </div>
-                                        <div class="infos">
-                                            <h4>重庆德庄火锅价值201元套餐免费抢</h4>
-                                            <div class="addi">
-                                                <span class="addr">坡子街</span>
-                                                <span class="entry-num">7579人关注</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <div class="imgwrap">
-                                            <img class="lazy" data-original="./uploads/product49.jpg" alt="">
-                                            <div class="a-type">电子券</div>
-                                        </div>
-                                        <div class="infos">
-                                            <h4>稻前寿司价值225元双人套餐免费抢</h4>
-                                            <div class="addi">
-                                                <span class="addr">汽车西站</span>
-                                                <span class="entry-num">6825人关注</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-                            <!-- 丽人 -->
-                            <ul class="activity-lists" style="display: none;">
-                                <li>
-                                    <a href="javascript:;">
-                                        <div class="imgwrap">
-                                            <img class="lazy" data-original="./uploads/product45.jpg" alt="">
-                                            <div class="a-type">电子券</div>
-                                        </div>
-                                        <div class="infos">
-                                            <h4>长沙佑康医院妇科私密养护/体检套餐二选一免费抢</h4>
-                                            <div class="addi">
-                                                <span class="addr">香樟路/民政学院</span>
-                                                <span class="entry-num">290人关注</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <div class="imgwrap">
-                                            <img class="lazy" data-original="./uploads/product46.jpg" alt="">
-                                            <div class="a-type">聚会</div>
-                                        </div>
-                                        <div class="infos">
-                                            <h4>尤拉植50份双人套餐免费抢</h4>
-                                            <div class="addi">
-                                                <span class="addr">中山亭</span>
-                                                <span class="entry-num">7555人关注</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <div class="imgwrap">
-                                            <img class="lazy" data-original="./uploads/product47.jpg" alt="">
-                                            <div class="a-type">电子券</div>
-                                        </div>
-                                        <div class="infos">
-                                            <h4>颐而康汽车南站店盛大开业 双人养生足浴免费抢</h4>
-                                            <div class="addi">
-                                                <span class="addr">香樟路/民政学院</span>
-                                                <span class="entry-num">1431人关注</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <div class="imgwrap">
-                                            <img class="lazy" data-original="./uploads/product48.jpg" alt="">
-                                            <div class="a-type">电子券</div>
-                                        </div>
-                                        <div class="infos">
-                                            <h4>重庆德庄火锅价值201元套餐免费抢</h4>
-                                            <div class="addi">
-                                                <span class="addr">坡子街</span>
-                                                <span class="entry-num">7579人关注</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <div class="imgwrap">
-                                            <img class="lazy" data-original="./uploads/product49.jpg" alt="">
-                                            <div class="a-type">电子券</div>
-                                        </div>
-                                        <div class="infos">
-                                            <h4>稻前寿司价值225元双人套餐免费抢</h4>
-                                            <div class="addi">
-                                                <span class="addr">汽车西站</span>
-                                                <span class="entry-num">6825人关注</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-                            <!-- 玩乐 -->
-                            <ul class="activity-lists" style="display: none;">
-                                <li>
-                                    <a href="javascript:;">
-                                        <div class="imgwrap">
-                                            <img class="lazy" data-original="./uploads/product45.jpg" alt="">
-                                            <div class="a-type">电子券</div>
-                                        </div>
-                                        <div class="infos">
-                                            <h4>长沙佑康医院妇科私密养护/体检套餐二选一免费抢</h4>
-                                            <div class="addi">
-                                                <span class="addr">香樟路/民政学院</span>
-                                                <span class="entry-num">290人关注</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <div class="imgwrap">
-                                            <img class="lazy" data-original="./uploads/product46.jpg" alt="">
-                                            <div class="a-type">聚会</div>
-                                        </div>
-                                        <div class="infos">
-                                            <h4>尤拉植50份双人套餐免费抢</h4>
-                                            <div class="addi">
-                                                <span class="addr">中山亭</span>
-                                                <span class="entry-num">7555人关注</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <div class="imgwrap">
-                                            <img class="lazy" data-original="./uploads/product47.jpg" alt="">
-                                            <div class="a-type">电子券</div>
-                                        </div>
-                                        <div class="infos">
-                                            <h4>颐而康汽车南站店盛大开业 双人养生足浴免费抢</h4>
-                                            <div class="addi">
-                                                <span class="addr">香樟路/民政学院</span>
-                                                <span class="entry-num">1431人关注</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <div class="imgwrap">
-                                            <img class="lazy" data-original="./uploads/product48.jpg" alt="">
-                                            <div class="a-type">电子券</div>
-                                        </div>
-                                        <div class="infos">
-                                            <h4>重庆德庄火锅价值201元套餐免费抢</h4>
-                                            <div class="addi">
-                                                <span class="addr">坡子街</span>
-                                                <span class="entry-num">7579人关注</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <div class="imgwrap">
-                                            <img class="lazy" data-original="./uploads/product49.jpg" alt="">
-                                            <div class="a-type">电子券</div>
-                                        </div>
-                                        <div class="infos">
-                                            <h4>稻前寿司价值225元双人套餐免费抢</h4>
-                                            <div class="addi">
-                                                <span class="addr">汽车西站</span>
-                                                <span class="entry-num">6825人关注</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-                            <!-- 婚嫁 -->
-                            <ul class="activity-lists" style="display: none;">
-                                <li>
-                                    <a href="javascript:;">
-                                        <div class="imgwrap">
-                                            <img class="lazy" data-original="./uploads/product49.jpg" alt="">
-                                            <div class="a-type">电子券</div>
-                                        </div>
-                                        <div class="infos">
-                                            <h4>稻前寿司价值225元双人套餐免费抢</h4>
-                                            <div class="addi">
-                                                <span class="addr">汽车西站</span>
-                                                <span class="entry-num">6825人关注</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-                            <!-- 亲子 -->
-                            <ul class="activity-lists" style="display: none;">
-                                <li>
-                                    <a href="javascript:;">
-                                        <div class="imgwrap">
-                                            <img class="lazy" data-original="./uploads/product45.jpg" alt="">
-                                            <div class="a-type">电子券</div>
-                                        </div>
-                                        <div class="infos">
-                                            <h4>长沙佑康医院妇科私密养护/体检套餐二选一免费抢</h4>
-                                            <div class="addi">
-                                                <span class="addr">香樟路/民政学院</span>
-                                                <span class="entry-num">290人关注</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <div class="imgwrap">
-                                            <img class="lazy" data-original="./uploads/product46.jpg" alt="">
-                                            <div class="a-type">聚会</div>
-                                        </div>
-                                        <div class="infos">
-                                            <h4>尤拉植50份双人套餐免费抢</h4>
-                                            <div class="addi">
-                                                <span class="addr">中山亭</span>
-                                                <span class="entry-num">7555人关注</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <div class="imgwrap">
-                                            <img class="lazy" data-original="./uploads/product47.jpg" alt="">
-                                            <div class="a-type">电子券</div>
-                                        </div>
-                                        <div class="infos">
-                                            <h4>颐而康汽车南站店盛大开业 双人养生足浴免费抢</h4>
-                                            <div class="addi">
-                                                <span class="addr">香樟路/民政学院</span>
-                                                <span class="entry-num">1431人关注</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <div class="imgwrap">
-                                            <img class="lazy" data-original="./uploads/product48.jpg" alt="">
-                                            <div class="a-type">电子券</div>
-                                        </div>
-                                        <div class="infos">
-                                            <h4>重庆德庄火锅价值201元套餐免费抢</h4>
-                                            <div class="addi">
-                                                <span class="addr">坡子街</span>
-                                                <span class="entry-num">7579人关注</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <div class="imgwrap">
-                                            <img class="lazy" data-original="./uploads/product49.jpg" alt="">
-                                            <div class="a-type">电子券</div>
-                                        </div>
-                                        <div class="infos">
-                                            <h4>稻前寿司价值225元双人套餐免费抢</h4>
-                                            <div class="addi">
-                                                <span class="addr">汽车西站</span>
-                                                <span class="entry-num">6825人关注</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-                            <!-- 培训 -->
-                            <ul class="activity-lists" style="display: none;">
-                                <li>
-                                    <a href="javascript:;">
-                                        <div class="imgwrap">
-                                            <img class="lazy" data-original="./uploads/product49.jpg" alt="">
-                                            <div class="a-type">电子券</div>
-                                        </div>
-                                        <div class="infos">
-                                            <h4>稻前寿司价值225元双人套餐免费抢</h4>
-                                            <div class="addi">
-                                                <span class="addr">汽车西站</span>
-                                                <span class="entry-num">6825人关注</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-                            <!-- 生活服务 -->
-                            <ul class="activity-lists" style="display: none;">
-                                <li>
-                                    <a href="javascript:;">
-                                        <div class="imgwrap">
-                                            <img class="lazy" data-original="./uploads/product48.jpg" alt="">
-                                            <div class="a-type">电子券</div>
-                                        </div>
-                                        <div class="infos">
-                                            <h4>重庆德庄火锅价值201元套餐免费抢</h4>
-                                            <div class="addi">
-                                                <span class="addr">坡子街</span>
-                                                <span class="entry-num">7579人关注</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <div class="imgwrap">
-                                            <img class="lazy" data-original="./uploads/product49.jpg" alt="">
-                                            <div class="a-type">电子券</div>
-                                        </div>
-                                        <div class="infos">
-                                            <h4>稻前寿司价值225元双人套餐免费抢</h4>
-                                            <div class="addi">
-                                                <span class="addr">汽车西站</span>
-                                                <span class="entry-num">6825人关注</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-                            <!-- 加载更多模块 -->
-                            <!-- <a href="javascript:;" class="load-more show">
-                                <span>加载更多</span>
-                            </a> -->
+                        <div class="tabs filter-types">
+                            <div>聚会</div>
+                            <div>V聚会</div>
+                            <div>电子券</div>
+                            <div>好礼到家</div>
+                            <div>天天抽奖</div>
                         </div>
                     </div>
                 </div>
+                <div class="activity-lists-wraper">
+                    <!-- 全部 -->
+                    <ul class="activity-lists">
+                        <li>
+                            <a href="javascript:;">
+                                <div class="imgwrap">
+                                    <img class="lazy" data-original="./uploads/product44.jpg" alt="">
+                                    <div class="a-type">电子券</div>
+                                </div>
+                                <div class="infos">
+                                    <h4>人之茶糖水铺双人套餐免费抢</h4>
+                                    <div class="addi">
+                                        <span class="addr">东塘</span>
+                                        <span class="entry-num">2732人关注</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <div class="imgwrap">
+                                    <img class="lazy" data-original="./uploads/product29.png" alt="">
+                                    <div class="a-type">电子券</div>
+                                </div>
+                                <div class="infos">
+                                    <h4>金色印象影院式足体养生会馆双人足浴免费抢</h4>
+                                    <div class="addi">
+                                        <span class="addr">车站南路</span>
+                                        <span class="entry-num">42人关注</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <div class="imgwrap">
+                                    <img class="lazy" data-original="./uploads/product45.jpg" alt="">
+                                    <div class="a-type">电子券</div>
+                                </div>
+                                <div class="infos">
+                                    <h4>长沙佑康医院妇科私密养护/体检套餐二选一免费抢</h4>
+                                    <div class="addi">
+                                        <span class="addr">香樟路/民政学院</span>
+                                        <span class="entry-num">290人关注</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <div class="imgwrap">
+                                    <img class="lazy" data-original="./uploads/product46.jpg" alt="">
+                                    <div class="a-type">聚会</div>
+                                </div>
+                                <div class="infos">
+                                    <h4>尤拉植50份双人套餐免费抢</h4>
+                                    <div class="addi">
+                                        <span class="addr">中山亭</span>
+                                        <span class="entry-num">7555人关注</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <div class="imgwrap">
+                                    <img class="lazy" data-original="./uploads/product47.jpg" alt="">
+                                    <div class="a-type">电子券</div>
+                                </div>
+                                <div class="infos">
+                                    <h4>颐而康汽车南站店盛大开业 双人养生足浴免费抢</h4>
+                                    <div class="addi">
+                                        <span class="addr">香樟路/民政学院</span>
+                                        <span class="entry-num">1431人关注</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <div class="imgwrap">
+                                    <img class="lazy" data-original="./uploads/product48.jpg" alt="">
+                                    <div class="a-type">电子券</div>
+                                </div>
+                                <div class="infos">
+                                    <h4>重庆德庄火锅价值201元套餐免费抢</h4>
+                                    <div class="addi">
+                                        <span class="addr">坡子街</span>
+                                        <span class="entry-num">7579人关注</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <div class="imgwrap">
+                                    <img class="lazy" data-original="./uploads/product49.jpg" alt="">
+                                    <div class="a-type">电子券</div>
+                                </div>
+                                <div class="infos">
+                                    <h4>稻前寿司价值225元双人套餐免费抢</h4>
+                                    <div class="addi">
+                                        <span class="addr">汽车西站</span>
+                                        <span class="entry-num">6825人关注</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <div class="imgwrap">
+                                    <img class="lazy" data-original="./uploads/product30.png" alt="">
+                                    <div class="a-type">电子券</div>
+                                </div>
+                                <div class="infos">
+                                    <h4>费大厨辣椒炒肉（王府井店）双人霸王餐免费抢</h4>
+                                    <div class="addi">
+                                        <span class="addr">五一广场</span>
+                                        <span class="entry-num">7498人关注</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <div class="imgwrap">
+                                    <img class="lazy" data-original="./uploads/product50.jpg" alt="">
+                                    <div class="a-type">电子券</div>
+                                </div>
+                                <div class="infos">
+                                    <h4>大王山假日酒店欢乐自助餐厅价值576元双人套餐免费抢</h4>
+                                    <div class="addi">
+                                        <span class="addr">含浦</span>
+                                        <span class="entry-num">7832人关注</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <div class="imgwrap">
+                                    <img class="lazy" data-original="./uploads/product44.jpg" alt="">
+                                    <div class="a-type">电子券</div>
+                                </div>
+                                <div class="infos">
+                                    <h4>人之茶糖水铺双人套餐免费抢</h4>
+                                    <div class="addi">
+                                        <span class="addr">东塘</span>
+                                        <span class="entry-num">2732人关注</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <div class="imgwrap">
+                                    <img class="lazy" data-original="./uploads/product45.jpg" alt="">
+                                    <div class="a-type">电子券</div>
+                                </div>
+                                <div class="infos">
+                                    <h4>人之茶糖水铺双人套餐免费抢</h4>
+                                    <div class="addi">
+                                        <span class="addr">东塘</span>
+                                        <span class="entry-num">2732人关注</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <div class="imgwrap">
+                                    <img class="lazy" data-original="./uploads/product46.jpg" alt="">
+                                    <div class="a-type">电子券</div>
+                                </div>
+                                <div class="infos">
+                                    <h4>人之茶糖水铺双人套餐免费抢</h4>
+                                    <div class="addi">
+                                        <span class="addr">东塘</span>
+                                        <span class="entry-num">2732人关注</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <!-- 隐藏的部分 -->
+                        <li>
+                            <a href="javascript:;">
+                                <div class="imgwrap">
+                                    <img class="lazy" data-original="./uploads/product44.jpg" alt="">
+                                    <div class="a-type">电子券</div>
+                                </div>
+                                <div class="infos">
+                                    <h4>人之茶糖水铺双人套餐免费抢</h4>
+                                    <div class="addi">
+                                        <span class="addr">东塘</span>
+                                        <span class="entry-num">2732人关注</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <div class="imgwrap">
+                                    <img class="lazy" data-original="./uploads/product29.png" alt="">
+                                    <div class="a-type">电子券</div>
+                                </div>
+                                <div class="infos">
+                                    <h4>金色印象影院式足体养生会馆双人足浴免费抢</h4>
+                                    <div class="addi">
+                                        <span class="addr">车站南路</span>
+                                        <span class="entry-num">42人关注</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <div class="imgwrap">
+                                    <img class="lazy" data-original="./uploads/product45.jpg" alt="">
+                                    <div class="a-type">电子券</div>
+                                </div>
+                                <div class="infos">
+                                    <h4>长沙佑康医院妇科私密养护/体检套餐二选一免费抢</h4>
+                                    <div class="addi">
+                                        <span class="addr">香樟路/民政学院</span>
+                                        <span class="entry-num">290人关注</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <div class="imgwrap">
+                                    <img class="lazy" data-original="./uploads/product46.jpg" alt="">
+                                    <div class="a-type">聚会</div>
+                                </div>
+                                <div class="infos">
+                                    <h4>尤拉植50份双人套餐免费抢</h4>
+                                    <div class="addi">
+                                        <span class="addr">中山亭</span>
+                                        <span class="entry-num">7555人关注</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                    </ul>
+                    <!-- 美食 -->
+                    <ul class="activity-lists" style="display: none;">
+                        <li>
+                            <a href="javascript:;">
+                                <div class="imgwrap">
+                                    <img class="lazy" data-original="./uploads/product45.jpg" alt="">
+                                    <div class="a-type">电子券</div>
+                                </div>
+                                <div class="infos">
+                                    <h4>长沙佑康医院妇科私密养护/体检套餐二选一免费抢</h4>
+                                    <div class="addi">
+                                        <span class="addr">香樟路/民政学院</span>
+                                        <span class="entry-num">290人关注</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <div class="imgwrap">
+                                    <img class="lazy" data-original="./uploads/product29.png" alt="">
+                                    <div class="a-type">电子券</div>
+                                </div>
+                                <div class="infos">
+                                    <h4>金色印象影院式足体养生会馆双人足浴免费抢</h4>
+                                    <div class="addi">
+                                        <span class="addr">车站南路</span>
+                                        <span class="entry-num">42人关注</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <div class="imgwrap">
+                                    <img class="lazy" data-original="./uploads/product45.jpg" alt="">
+                                    <div class="a-type">电子券</div>
+                                </div>
+                                <div class="infos">
+                                    <h4>长沙佑康医院妇科私密养护/体检套餐二选一免费抢</h4>
+                                    <div class="addi">
+                                        <span class="addr">香樟路/民政学院</span>
+                                        <span class="entry-num">290人关注</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <div class="imgwrap">
+                                    <img class="lazy" data-original="./uploads/product46.jpg" alt="">
+                                    <div class="a-type">聚会</div>
+                                </div>
+                                <div class="infos">
+                                    <h4>尤拉植50份双人套餐免费抢</h4>
+                                    <div class="addi">
+                                        <span class="addr">中山亭</span>
+                                        <span class="entry-num">7555人关注</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="javascript:;">
+                                <div class="imgwrap">
+                                    <img class="lazy" data-original="./uploads/product46.jpg" alt="">
+                                    <div class="a-type">聚会</div>
+                                </div>
+                                <div class="infos">
+                                    <h4>尤拉植50份双人套餐免费抢</h4>
+                                    <div class="addi">
+                                        <span class="addr">中山亭</span>
+                                        <span class="entry-num">7555人关注</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <div class="imgwrap">
+                                    <img class="lazy" data-original="./uploads/product47.jpg" alt="">
+                                    <div class="a-type">电子券</div>
+                                </div>
+                                <div class="infos">
+                                    <h4>颐而康汽车南站店盛大开业 双人养生足浴免费抢</h4>
+                                    <div class="addi">
+                                        <span class="addr">香樟路/民政学院</span>
+                                        <span class="entry-num">1431人关注</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <div class="imgwrap">
+                                    <img class="lazy" data-original="./uploads/product48.jpg" alt="">
+                                    <div class="a-type">电子券</div>
+                                </div>
+                                <div class="infos">
+                                    <h4>重庆德庄火锅价值201元套餐免费抢</h4>
+                                    <div class="addi">
+                                        <span class="addr">坡子街</span>
+                                        <span class="entry-num">7579人关注</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <div class="imgwrap">
+                                    <img class="lazy" data-original="./uploads/product49.jpg" alt="">
+                                    <div class="a-type">电子券</div>
+                                </div>
+                                <div class="infos">
+                                    <h4>稻前寿司价值225元双人套餐免费抢</h4>
+                                    <div class="addi">
+                                        <span class="addr">汽车西站</span>
+                                        <span class="entry-num">6825人关注</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- 丽人 -->
+                    <ul class="activity-lists" style="display: none;">
+                        <li>
+                            <a href="javascript:;">
+                                <div class="imgwrap">
+                                    <img class="lazy" data-original="./uploads/product45.jpg" alt="">
+                                    <div class="a-type">电子券</div>
+                                </div>
+                                <div class="infos">
+                                    <h4>长沙佑康医院妇科私密养护/体检套餐二选一免费抢</h4>
+                                    <div class="addi">
+                                        <span class="addr">香樟路/民政学院</span>
+                                        <span class="entry-num">290人关注</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <div class="imgwrap">
+                                    <img class="lazy" data-original="./uploads/product46.jpg" alt="">
+                                    <div class="a-type">聚会</div>
+                                </div>
+                                <div class="infos">
+                                    <h4>尤拉植50份双人套餐免费抢</h4>
+                                    <div class="addi">
+                                        <span class="addr">中山亭</span>
+                                        <span class="entry-num">7555人关注</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <div class="imgwrap">
+                                    <img class="lazy" data-original="./uploads/product47.jpg" alt="">
+                                    <div class="a-type">电子券</div>
+                                </div>
+                                <div class="infos">
+                                    <h4>颐而康汽车南站店盛大开业 双人养生足浴免费抢</h4>
+                                    <div class="addi">
+                                        <span class="addr">香樟路/民政学院</span>
+                                        <span class="entry-num">1431人关注</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <div class="imgwrap">
+                                    <img class="lazy" data-original="./uploads/product48.jpg" alt="">
+                                    <div class="a-type">电子券</div>
+                                </div>
+                                <div class="infos">
+                                    <h4>重庆德庄火锅价值201元套餐免费抢</h4>
+                                    <div class="addi">
+                                        <span class="addr">坡子街</span>
+                                        <span class="entry-num">7579人关注</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <div class="imgwrap">
+                                    <img class="lazy" data-original="./uploads/product49.jpg" alt="">
+                                    <div class="a-type">电子券</div>
+                                </div>
+                                <div class="infos">
+                                    <h4>稻前寿司价值225元双人套餐免费抢</h4>
+                                    <div class="addi">
+                                        <span class="addr">汽车西站</span>
+                                        <span class="entry-num">6825人关注</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- 玩乐 -->
+                    <ul class="activity-lists" style="display: none;">
+                        <li>
+                            <a href="javascript:;">
+                                <div class="imgwrap">
+                                    <img class="lazy" data-original="./uploads/product45.jpg" alt="">
+                                    <div class="a-type">电子券</div>
+                                </div>
+                                <div class="infos">
+                                    <h4>长沙佑康医院妇科私密养护/体检套餐二选一免费抢</h4>
+                                    <div class="addi">
+                                        <span class="addr">香樟路/民政学院</span>
+                                        <span class="entry-num">290人关注</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <div class="imgwrap">
+                                    <img class="lazy" data-original="./uploads/product46.jpg" alt="">
+                                    <div class="a-type">聚会</div>
+                                </div>
+                                <div class="infos">
+                                    <h4>尤拉植50份双人套餐免费抢</h4>
+                                    <div class="addi">
+                                        <span class="addr">中山亭</span>
+                                        <span class="entry-num">7555人关注</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <div class="imgwrap">
+                                    <img class="lazy" data-original="./uploads/product47.jpg" alt="">
+                                    <div class="a-type">电子券</div>
+                                </div>
+                                <div class="infos">
+                                    <h4>颐而康汽车南站店盛大开业 双人养生足浴免费抢</h4>
+                                    <div class="addi">
+                                        <span class="addr">香樟路/民政学院</span>
+                                        <span class="entry-num">1431人关注</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <div class="imgwrap">
+                                    <img class="lazy" data-original="./uploads/product48.jpg" alt="">
+                                    <div class="a-type">电子券</div>
+                                </div>
+                                <div class="infos">
+                                    <h4>重庆德庄火锅价值201元套餐免费抢</h4>
+                                    <div class="addi">
+                                        <span class="addr">坡子街</span>
+                                        <span class="entry-num">7579人关注</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <div class="imgwrap">
+                                    <img class="lazy" data-original="./uploads/product49.jpg" alt="">
+                                    <div class="a-type">电子券</div>
+                                </div>
+                                <div class="infos">
+                                    <h4>稻前寿司价值225元双人套餐免费抢</h4>
+                                    <div class="addi">
+                                        <span class="addr">汽车西站</span>
+                                        <span class="entry-num">6825人关注</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- 婚嫁 -->
+                    <ul class="activity-lists" style="display: none;">
+                        <li>
+                            <a href="javascript:;">
+                                <div class="imgwrap">
+                                    <img class="lazy" data-original="./uploads/product49.jpg" alt="">
+                                    <div class="a-type">电子券</div>
+                                </div>
+                                <div class="infos">
+                                    <h4>稻前寿司价值225元双人套餐免费抢</h4>
+                                    <div class="addi">
+                                        <span class="addr">汽车西站</span>
+                                        <span class="entry-num">6825人关注</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- 亲子 -->
+                    <ul class="activity-lists" style="display: none;">
+                        <li>
+                            <a href="javascript:;">
+                                <div class="imgwrap">
+                                    <img class="lazy" data-original="./uploads/product45.jpg" alt="">
+                                    <div class="a-type">电子券</div>
+                                </div>
+                                <div class="infos">
+                                    <h4>长沙佑康医院妇科私密养护/体检套餐二选一免费抢</h4>
+                                    <div class="addi">
+                                        <span class="addr">香樟路/民政学院</span>
+                                        <span class="entry-num">290人关注</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <div class="imgwrap">
+                                    <img class="lazy" data-original="./uploads/product46.jpg" alt="">
+                                    <div class="a-type">聚会</div>
+                                </div>
+                                <div class="infos">
+                                    <h4>尤拉植50份双人套餐免费抢</h4>
+                                    <div class="addi">
+                                        <span class="addr">中山亭</span>
+                                        <span class="entry-num">7555人关注</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <div class="imgwrap">
+                                    <img class="lazy" data-original="./uploads/product47.jpg" alt="">
+                                    <div class="a-type">电子券</div>
+                                </div>
+                                <div class="infos">
+                                    <h4>颐而康汽车南站店盛大开业 双人养生足浴免费抢</h4>
+                                    <div class="addi">
+                                        <span class="addr">香樟路/民政学院</span>
+                                        <span class="entry-num">1431人关注</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <div class="imgwrap">
+                                    <img class="lazy" data-original="./uploads/product48.jpg" alt="">
+                                    <div class="a-type">电子券</div>
+                                </div>
+                                <div class="infos">
+                                    <h4>重庆德庄火锅价值201元套餐免费抢</h4>
+                                    <div class="addi">
+                                        <span class="addr">坡子街</span>
+                                        <span class="entry-num">7579人关注</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <div class="imgwrap">
+                                    <img class="lazy" data-original="./uploads/product49.jpg" alt="">
+                                    <div class="a-type">电子券</div>
+                                </div>
+                                <div class="infos">
+                                    <h4>稻前寿司价值225元双人套餐免费抢</h4>
+                                    <div class="addi">
+                                        <span class="addr">汽车西站</span>
+                                        <span class="entry-num">6825人关注</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- 培训 -->
+                    <ul class="activity-lists" style="display: none;">
+                        <li>
+                            <a href="javascript:;">
+                                <div class="imgwrap">
+                                    <img class="lazy" data-original="./uploads/product49.jpg" alt="">
+                                    <div class="a-type">电子券</div>
+                                </div>
+                                <div class="infos">
+                                    <h4>稻前寿司价值225元双人套餐免费抢</h4>
+                                    <div class="addi">
+                                        <span class="addr">汽车西站</span>
+                                        <span class="entry-num">6825人关注</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- 生活服务 -->
+                    <ul class="activity-lists" style="display: none;">
+                        <li>
+                            <a href="javascript:;">
+                                <div class="imgwrap">
+                                    <img class="lazy" data-original="./uploads/product48.jpg" alt="">
+                                    <div class="a-type">电子券</div>
+                                </div>
+                                <div class="infos">
+                                    <h4>重庆德庄火锅价值201元套餐免费抢</h4>
+                                    <div class="addi">
+                                        <span class="addr">坡子街</span>
+                                        <span class="entry-num">7579人关注</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <div class="imgwrap">
+                                    <img class="lazy" data-original="./uploads/product49.jpg" alt="">
+                                    <div class="a-type">电子券</div>
+                                </div>
+                                <div class="infos">
+                                    <h4>稻前寿司价值225元双人套餐免费抢</h4>
+                                    <div class="addi">
+                                        <span class="addr">汽车西站</span>
+                                        <span class="entry-num">6825人关注</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- 加载更多模块 -->
+                    <!-- <a href="javascript:;" class="load-more show">
+                                <span>加载更多</span>
+                            </a> -->
+                </div>
             </div>
         </div>
+    </div>
+    </div>
     </div>
 
     <!-- 网站底部 -->
@@ -2140,7 +2155,7 @@
         <div id="loader"></div>
         <div class="loader-section section-left"></div>
         <div class="loader-section section-right"></div>
-        <div class="load_title">正在加载大众点评<br><span>前端23期</span></div>
+        <div class="load_title">正在加载 - 大众点评...<br><span></span></div>
     </div>
 
     <!-- footer end -->
@@ -2165,12 +2180,12 @@
         });
     </script>
 
-    <!-- effect js -->
+    <!-- 登录注册表单js文件 -->
     <script src="js/canva_moving_effect.js"></script>
-    <!-- //effect js -->
 
-    <!-- 引入input冒光文件 -->
+    <!-- 引入input烟花文件 -->
     <script src="js/activate-power-mode.js "></script>
+
 </body>
 
 </html>

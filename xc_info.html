@@ -14,7 +14,9 @@
     <!-- 引入登录注册login文件 -->
     <link rel="stylesheet" href="css/login.css">
     <!-- 引入预加载文件 -->
-    <link rel="stylesheet" href="css/loader.css">
+    <link rel="stylesheet" href="css/loader_info.css">
+    <!-- 引入首页css样式 -->
+    <link rel="stylesheet" href="css/xc_index.css">
     <!-- 引入jquery文件 -->
     <script src="js/jquery.min.js"></script>
     <!-- 引入公用js文件 -->
@@ -23,7 +25,7 @@
     <script src="js/ajax.js"></script>
     <!-- 引入个人中心文件 -->
     <script src="js/xc_info.js"></script>
-    <link rel="stylesheet" href="css/xc_index.css">
+
 </head>
 
 <body>
@@ -536,8 +538,10 @@
                         <li class="zh_info">
                             <div class="zh_form nc_form">
                                 <form id="myform">
-                                    <p>登录账号: <a href="javascript:;" name='users_name' class="users_name" id='oldname'>无名</a></p>
-                                    <p>修改昵称: <input type="text" name="username2" class="name" id="newname" placeholder="用户名只支持中文(2-8)位"></p>
+                                    <p>登录账号: <a href="javascript:;" name='users_name' class="users_name"
+                                            id='oldname'>无名</a></p>
+                                    <p>修改昵称: <input type="text" name="username2" class="name" id="newname"
+                                            placeholder="用户名只支持中文(2-8)位"></p>
                                     <p><input type="submit" value="立即修改" class="surename modifly_name"></p>
                                 </form>
                             </div>
@@ -560,12 +564,13 @@
                         <li class="zh_info">
                             <div class="zh_form pwd_form">
                                 <form id="myform">
-                                    <p>登录账号: <a href="javascript:;" name='users_name' class="users_name" id="users_name">无名</a></p>
+                                    <p>登录账号: <a href="javascript:;" name='users_name' class="users_name"
+                                            id="users_name">无名</a></p>
                                     <p>原密码: <input type="password" name="userpassword" class="old_password"
                                             id="userpassword"></p>
                                     <p>新密码: <input type="password" name="userpassword1" class="newpassword"
-                                            id="userpassword1"></p>
-                                    <p><input type="submit" value="立即修改" class="surename modifly_pwd"></p>
+                                            id="userpassword1" placeholder="新密码不少于6位"><a href="javascript:;" class="tips">😄 重置密码后需要重新登录</a></p>
+                                    <p><input type="submit" value="立即修改" class="surename modifly_pwd"></p>      
                                 </form>
                             </div>
                         </li>
@@ -613,13 +618,18 @@
                         <li class="zh_info">
                             <div class="zh_form">
                                 <p>赞助账号: <a href="javascript:;" class="users_name">无名</a></p>
-                                <p>赞助金额: <input type="text" name="userpassword" class="cz_mon"></p>
+                                <p>赞助提示: <a href="javascript:;" class="zz_tip">一分也是爱哦 !</a></p>
                                 <p>赞助方式:
                                     <label for="" class="ali">
-                                        <input type="radio">
-                                        <img src="./img/alipay.jpg" alt="">
-                                    </label> </p>
-                                <p><input type="submit" value="立即充值" class="surename"></p>
+
+                                        <img src="./img/alzf.png" alt="" class="alzf">
+                                    </label>
+                                    <label for="" class="ali">
+
+                                        <img src="./img/wxzf.png" alt="" class="alzf">
+                                    </label>
+                                </p>
+                                <!-- <p><input type="submit" value="立即赞助" class="surename"></p> -->
                             </div>
                         </li>
                     </ul>
@@ -715,7 +725,7 @@
     <div class="set-bg"></div>
 
     <!-- 网站底部 -->
-    <div class="footer-container">
+    <div class="footer-container user_info_footer">
         <div class="channel-footer">
             <p class="links">
                 <a href="javascript:;">关于我们</a>
@@ -736,12 +746,14 @@
     </div>
 
     <!--页面加载end-->
-    <!-- <div id="loader-wrapper">
+    <div id="loader-wrapper">
         <div id="loader"></div>
-        <div class="loader-section section-left"></div>
+        <!-- 背景遮盖层 -->
+        <div class="load_bg"></div>
+        <!-- <div class="loader-section section-left"></div>
         <div class="loader-section section-right"></div>
-        <div class="load_title">正在加载大众点评<br><span>前端23期</span></div>
-    </div> -->
+        <div class="load_title">正在加载大众点评<br><span>前端23期</span></div> -->
+    </div>
 
     <!-- 登录注册表单js文件 -->
     <!-- effect js -->

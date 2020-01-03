@@ -439,6 +439,14 @@
     box-sizing: border-box;
     position: relative;
 }
+.pwd_form .tips {
+    font-size: 14px;
+}
+.alzf {
+    width: 100px;
+    height: 100px;
+    vertical-align: top;
+}
 .zh_form p{
     margin-top: 20px;
     margin-left: 100px;
@@ -446,7 +454,7 @@
 }
 .zh_form a {
     margin-left: 20px;
-    color: #333333;
+    color: #1d7889;
 }
 .zh_form .name,
 .zh_form .password {
@@ -579,6 +587,14 @@
     font-size: 12px;
     margin-top: 20px;
 }
+.user_info_footer {
+    background-color: rgba(255,255,255,0.8)!important;
+}
+.user_info_footer  .channel-footer .link-items a,
+.user_info_footer  .channel-footer .links, 
+.user_info_footer  .channel-footer .rights {
+    color: #555;
+}
 .channel-footer {
     width: 1190px;
     margin: 10px auto 0;
@@ -591,16 +607,12 @@
 .channel-footer .links a {
     margin: 0 7px;
 }
-.channel-footer .links a, 
-.channel-footer .rights a {
-    color:#8c8c8c;
-}
 .channel-footer .link-items a, 
 .channel-footer .links, 
 .channel-footer .rights {
     text-align: center;
     font-size: 12px;
-    color: #8c8c8c;
+    color: #555;
 }
 /* 背景七色光 */
 .simgs::before {

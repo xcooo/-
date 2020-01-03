@@ -24,43 +24,51 @@ updateName.post('/updateName', async (req, res, next) => {
     // 2.判断账号密码是否为空
     if (!username) {
         resData.code = 1;
-        resData.message = '用户名不能为空';
+        resData.message = '用户名不能为空 !';
         return res.json(resData);
     }
     if (!newUsername) {
         resData.code = 2;
-        resData.message = '新用户名不能为空';
+        resData.message = '新用户名不能为空 !';
         return res.json(resData);
     }
     if (newUsername.length < 2) {
-        resData.code = 2;
-        resData.message = '新用户名不能少于2位 !';
+        resData.code = 3;
+        resData.message = '用户名不能少于2位 !';
         return res.json(resData);
     }
     if (newUsername.length > 8) {
-        resData.code = 2;
-        resData.message = '新用户名不能多于8位 !';
+        resData.code = 4;
+        resData.message = '用户名不能多于8位 !';
         return res.json(resData);
     }
     // 3.新用户名和旧用户名不能相同
     if (username == newUsername) {
-        resData.code = 4;
-        resData.message = '新用户名不能和用户名相同'
+        resData.code = 5;
+        resData.message = '新用户名不能和用户名相同 !'
         return res.json(resData);
     }
 
-    // 4.查询数据库是否存在该用户, 检查旧用户名是否正确
+    // 4.判断用户名是否为中文
+    var reg = /^[\u4e00-\u9fa5]{2,8}$/;
+    if(!reg.test(newUsername)){
+        resData.code = 6;
+        resData.message = '用户名只能是中文 !'
+        return res.json(resData);
+    }
+
+    // 5.查询数据库是否存在该用户, 检查旧用户名是否正确
     User.findOneAndUpdate({ name: username }, { name: newUsername })
         .then(userinfo => {
             if (!userinfo) {
                 // 如果不存在, 返回用户名或密码不正确
-                resData.code = 5;
+                resData.code = 7;
                 resData.message = '用户名或密码错误 !';
                 return res.json(resData);
             }
             console.log(userinfo.name + ' 昵称修改成功');
             // 返回成功的结果
-            res.status(200).send({ code: 0, message: '昵称修改成功' });
+            res.status(200).send({ code: 0, message: '昵称修改成功 !' });
         })
 
 })

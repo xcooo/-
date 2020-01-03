@@ -1,6 +1,14 @@
 $(function () {
     // 渲染页面数据
     load();
+
+    // 预加载
+    setTimeout(function () {
+        $('body').addClass('loaded');
+        $('.load_bg').fadeOut()
+        // $('#loader-wrapper .load_title').remove();
+    }, 1200)
+
     // 隔行变色
     $('.baby_lists_bottom .baby_shop:odd').css('backgroundColor', '#f8f8f8')
     $('.baby_lists_bottom .baby_shop:even').css('backgroundColor', '#eee')
@@ -74,6 +82,7 @@ $(function () {
     function load() {
         // 读取本地存储的数据
         var data = getData_user();
+        // 如果已经登录了, 才能进入个人中心
         if (data) {
             // 设置本地存储的图片
             var data = getDate()
@@ -84,6 +93,8 @@ $(function () {
             var strPath = location.href.substring(0, location.href.lastIndexOf('/'));
             // 设置头像img
             $('.avatar img').attr("src", strPath + '/img/tx.png');
+            // 只有登录的用户才能进入个人中心  需要重定向到登陆页
+            location.assign(strPath + '/xc_list.html')
         }
     }
     // 读取本地用户名数据
@@ -129,12 +140,13 @@ $(function () {
         $('.user_info').html(html_lists)
     };
 
-    // 用户退出个人中心 重定向到首页
+    // 用户退出个人中心 刷新页面
     $('.user_logout').click(function () {
         // 删除本地数据
         removeData_info()
         // 获取当前目录
-        var strPath = location.href.substring(0, location.href.lastIndexOf('/'));
-        location.assign(strPath + '/xc.html')
+        // var strPath = location.href.substring(0, location.href.lastIndexOf('/'));
+        // location.assign(strPath + '/xc_list.html')
+        location.reload()
     })
 })

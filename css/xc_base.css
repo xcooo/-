@@ -36,7 +36,7 @@ li {
 a {
     text-decoration: none;
 }
-
+a,a:hover,a:link,a:visited{text-decoration:none;cursor:url(../img/link.cur),pointer}
 body {
     background-color: #EFEFEF;
 }

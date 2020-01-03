@@ -2,6 +2,12 @@ $(function () {
     // 渲染页面数据
     load_login()
 
+    // 预加载
+    setTimeout(function () {
+        $('body').addClass('loaded');
+        $('#loader-wrapper .load_title').remove();
+    }, 1000)
+
     // 全部分类显示隐藏功能
     // 必须要给显示的父级元素添加事件
     $('.dropdown').mouseenter(function () {
@@ -49,7 +55,7 @@ $(function () {
     // })
 
     // 下拉事件  选项卡变为固定定位
-    var wrapTop = $(".s-fix-wrap").offset().top;
+    var wrapTop = $(".news-container").offset().top;
     $(window).scroll(function () {
         if ($(document).scrollTop() >= wrapTop) {
             // 变为固定定位
@@ -94,7 +100,7 @@ $(function () {
             // 设置去向个人中心的连接
             // 获取当前目录
             var strPath = location.href.substring(0, location.href.lastIndexOf('/'));
-            $('.l3').attr({'href':strPath +  '/xc_info.html','title':'点这里进入个人中心'})
+            $('.l3').attr({ 'href': strPath + '/xc_info.html', 'title': '点这里进入个人中心' })
             $('.logout').show()
             // 获取当前本地图片
             xcimg = getData_img()
@@ -114,7 +120,7 @@ $(function () {
         // 添加默认文字
         var html_list = '立即登录'
         $('.l3').html(html_list)
-        $('.l3').attr({'href':'javascript:;','title':'登录你的账号吧'})
+        $('.l3').attr({ 'href': 'javascript:;', 'title': '登录你的账号吧' })
         // 获取当前目录
         var strPath = location.href.substring(0, location.href.lastIndexOf('/'))
         // 还原默认头像
@@ -131,4 +137,22 @@ $(function () {
         // 需要刷新页面
         location.reload()
     })
+
+    var banner = new FragmentBanner({
+        container: "#banner1",//选择容器 必选
+        imgs: ['./uploads/list.jpg', './uploads/list2.jpg', './uploads/list3.jpg', './uploads/list4.jpg', './uploads/list5.jpg'],//图片集合 必选
+        size: {
+            width: 870,
+            height: 350
+        },//容器的大小 可选
+        //行数与列数 可选
+        grid: {
+            line: 12,
+            list: 14
+        },
+        index: 0,//图片集合的索引位置 可选
+        type: 2,//切换类型 1 ， 2 可选
+        boxTime: 5000,//小方块来回运动的时长 可选
+        fnTime: 10000//banner切换的时长 可选
+    });
 })

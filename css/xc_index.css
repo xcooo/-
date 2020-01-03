@@ -965,7 +965,7 @@ a {
     width: 590px;
 }
 .nav_right {
-    width: 400px;
+    width: 590px;
 }
 .meishi_container {
     width: 1190px;
@@ -1380,11 +1380,26 @@ a {
     color: #f63;
 }
 /* 丽人模块 */
+.cate_shop_left {
+    width: 0;
+    float: right;
+}
+.cate_shop_right {
+    width: 0;
+    float: right;
+}
+.liren_container .all_more {
+    display: none;
+}
 .liren_left {
-    /* width: 590px; */
+    width: 590px;
+    height: 45px;
+    overflow: hidden;
 }
 .liren_right {
-    width: 400px;
+    width: 590px;
+    height: 45px;
+    overflow: hidden;
 }
 .meishi_container{
     margin-top: 20px!important;
@@ -1645,6 +1660,9 @@ a {
 .scene-list {
     max-height: 548px;
     font-size: 0;
+}
+.last-four-cata .scene-list {
+    width: 100%!important;
 }
 .last-four-cata .bottom-list {
     width: 200%;

@@ -2,11 +2,6 @@ $(function () {
     console.log("%c%c网站名称%c大众点评", "line-height:28px;", "line-height:28px;padding:4px;background:#222;color:#fff;font-size:16px;margin-right:15px", "color:#3fa9f5;line-height:28px;font-size:16px;");
     console.log("%c%c网站地址%cwww.dianping.com", "line-height:28px;", "line-height:28px;padding:4px;background:#222;color:#fff;font-size:16px;margin-right:15px", "color:#ff9900;line-height:28px;font-size:16px;");
     console.log("%c%c开发团队%c自己猜啊", "line-height:28px;", "line-height:28px;padding:4px;background:#222;color:#fff;font-size:16px;margin-right:15px", "color:#008000;line-height:28px;font-size:16px;");
-    // 预加载
-    setTimeout(function () {
-        $('body').addClass('loaded');
-        $('#loader-wrapper .load_title').remove();
-    }, 1000)
 
     POWERMODE.colorful = true;  // 冒光特效
     POWERMODE.shake = false;    // 抖动特效

@@ -241,35 +241,34 @@ $(function () {
     })
 
     // 美食模块动画显示功能
-    var meishiTop = $(".focus_bottom").offset().top;
+    var meishiTop = $(".nav_left").offset().top;
     $(window).scroll(function () {
         if ($(document).scrollTop() >= meishiTop) {
-            $('.meishi_right').animate({
-                width: '590px'
-            }, 1000, function () {
-                $('.meishi_left .cata-con').animate({
-                    height: '400px'
-                }, 1000, function () {
-                    $('.cata-shop-item').eq(6).css('display', 'none')
-                    $('.cata-shop-item').eq(7).css('display', 'none')
-                    $('.cata-shop-item').eq(8).css('display', 'none')
-                })
+            $('.meishi_right .cata-con,.meishi_left .cata-con').animate({
+                height: '390px'
+            }, 1500, function () {
+                $('.cata-food-index .cata-shop-item').eq(6).css('display', 'none')
+                $('cata-food-index .cata-shop-item').eq(7).css('display', 'none')
+                $('cata-food-index .cata-shop-item').eq(8).css('display', 'none')
             })
         }
     });
 
     // 丽人模块动画功能
-    var lirenTop = $(".pic-two .pic-con").offset().top;
+    var lirenTop = $(".shop-item-pic").offset().top;
+    var xcTop = $('.cata-wedding-index').offset().top;
     $(window).scroll(function () {
         if ($(document).scrollTop() >= lirenTop) {
-            $('.liren_left').animate({
-                width: '590px',
-            }, 1000, function () {
-                $('.liren_right').animate({
-                    width: '590px',
-                    height: '470px'
-                }, 1200)
-            })
+            $('.liren_container .all_more').css('display','block')
+           $('.liren_left, .liren_right').animate({
+               height:'660px'
+           },1000,function(){
+               if( $(document).scrollTop() >= xcTop)
+               $('.cate_shop_left,.cate_shop_right').animate({
+                   width:'590px'
+               },1000)
+                
+           })
         }
     });
 
