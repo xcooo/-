@@ -1,0 +1,665 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+i {
+    font-style: normal;
+}
+
+a {
+    color: black;
+}
+/* 导航栏重置css样式 */
+.dropdown .dd {
+    display: none;
+}
+.tou {
+    width: 871px;
+    height: 257px;
+    padding: 18px 20px 0px 20px;
+    float: left;
+    margin-left: 168.5px;
+    background-color: rgba(255,255,255,0.8);
+    padding-right: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.huojian {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    top: 520px;
+    right: 24px;
+    background-color: #999999;
+    opacity: .5;
+    display: none;
+}
+
+.huojian img {
+    width: 100%;
+}
+
+.touzong {
+    overflow: hidden;
+}
+
+.yangzong {
+    overflow: hidden;
+}
+
+.yangzong .hongbao {
+    position: relative;
+    float: left;
+    width: 312px;
+    height: 275px;
+    margin-top: 10px;
+    margin-left: 8px;
+    background: url(../wxm_img/hongbao.png) no-repeat;
+    background-size: 100%;
+    overflow: hidden;
+}
+
+.yangzong .hongbao img {
+    display: block;
+    position: absolute;
+    top: 31px;
+    left: 172px;
+}
+
+.yangzong .cebian {
+    width: 282px;
+    padding: 15px;
+    position: absolute;
+    left: 1047px;
+    top: 645px;
+    background-color: #FFFFFF;
+}
+
+.yangzong .js {
+    width: 282px;
+    padding: 15px;
+    position: absolute;
+    margin-top: 20px;
+    left: 1047px;
+    top: 1180px;
+    background-color: #FFFFFF;
+}
+
+.yangzong .js ul li p {
+    font-size: 14px;
+}
+
+.yangzong .js ul {
+    height: 150px;
+    overflow: hidden;
+}
+
+.yangzong .js ul li {
+    margin-top: 10px;
+}
+
+
+
+.yangzong .js ul li p span {
+    font-size: 12px;
+    color: #A2A2A2;
+}
+
+.yangzong .js ul li p i {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: url(../wxm_img/精灵图1.png) 0 100px;
+}
+
+
+.yangzong .cebian ul {
+    margin-top: 10px;
+}
+
+.yangzong .cebian ul li a img {
+    float: left;
+    width: 93px;
+    height: 69px;
+}
+
+.yangzong .cebian ul li {
+    overflow: hidden;
+    padding: 5px 0;
+}
+
+.yangzong .cebian ul li p {
+    display: inline-block;
+    width: 157px;
+    float: left;
+    font-size: 14px;
+    margin-left: 15px;
+}
+
+.yangzong .cebian ul li p span {
+    color: #999999;
+}
+
+.yangzong .cebian ul li p span:nth-child(2) {
+    float: right;
+}
+
+.yangzong .cebian ul li p i {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: url(../wxm_img/精灵图1.png) 0 100px;
+}
+
+.tou1 {
+    position: relative;
+    margin-left: 8px;
+    width: 312px;
+    height: 257px;
+    float: left;
+    background-color: rgba(255,255,255,0.8);;
+    overflow: hidden;
+}
+
+.tou1 .img {
+    position: absolute;
+    padding: 18px;
+    top: 15px;
+    left: 20px;
+    width: 278px;
+    height: 216px;
+    border: 1px solid #EBEBEB;
+    box-sizing: border-box;
+}
+
+.tou1 .img span {
+    font-size: 14px;
+    color: #999999;
+}
+
+.tou1 .img span:nth-child(2) {
+    margin-left: 20px;
+}
+
+.tou1 .img span:nth-child(3) {
+    float: right;
+}
+
+.tou1 .img::after {
+    content: "";
+    height: 1px;
+    width: 278;
+}
+
+.tou .xinxi .ping2 {
+    width: 70px;
+}
+
+.tou .xinxi .ping {
+    margin-top: 10px;
+}
+
+.tou .xinxi .ping2 a {
+    position: relative;
+}
+
+.tou .xinxi p {
+    color: #999;
+    display: none;
+}
+
+.tou .xinxi .ping2 a::after {
+    content: "";
+    position: absolute;
+    left: 60px;
+    top: 5px;
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-bottom: 1px solid #A2A2A2;
+    border-right: 1px solid #A2A2A2;
+    transform: rotate(45deg);
+}
+
+.tou .xinxi button {
+    background-color: #FF6B37;
+    border: none;
+    padding: 10px;
+    color: white;
+}
+
+.nav_wxm {
+    padding: 6px 0;
+    background-color: rgba(255,255,255,0.6);
+    font-size: 14px;
+    color: #666;
+}
+.nav p {
+    font-size: 12px;
+}
+.nav p span a {
+    color: #282828;
+    font-size: 12px;
+}
+
+.xinxi h3 span {
+    display: inline-block;
+    position: relative;
+    background-color: #FFE9E1;
+    font-size: 14px;
+    color: #FF6633;
+}
+
+.xinxi a {
+    color: #666666;
+}
+
+.xinxi h3 span:hover i {
+    display: inline-block;
+}
+
+.xinxi h3 span i {
+    content: '';
+    width: 96px;
+    height: 96px;
+    display: none;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    background-image: url(../wxm_img/erweima.png);
+}
+
+.xinxi .ping i {
+    display: inline-block;
+    width: 24px;
+    height: 16px;
+    background: url(../wxm_img/精灵图.bmp) 0 -34px;
+}
+
+.xinxi .ping span {
+    margin-left: 20px;
+    font-size: 14px;
+    color: #666666;
+}
+
+.xinxi .ping,
+.xinxi .ping1,
+.xinxi,
+.xinxi .ping2 {
+    padding: 6px 0;
+}
+
+.xinxi .ping1 {
+    padding: 6px 0;
+    color: #666666;
+}
+
+.xinxi .ping1 p {
+    font-size: 13px;
+    color: #999999;
+}
+
+.xinxi .ping2 a {
+    font-size: 13px;
+    color: #999999;
+}
+
+.yang {
+    width: 871px;
+    margin-top: 10px;
+    padding: 15px 20px 15px 20px;
+    float: left;
+    margin-left: 168.5px;
+    background-color: rgb(218, 216, 216);
+    padding-right: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.yang .yang1 ul li {
+    float: left;
+    padding-right: 15px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.yang .yang1 {
+    overflow: hidden;
+}
+
+.yang .yang2 ul li {
+    float: left;
+    width: 186px;
+    height: 209px;
+    padding-right: 25px;
+}
+
+.yang .yang2 {
+    position: relative;
+    height: 422px;
+    overflow: hidden;
+}
+
+.yang .yang2 ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.yang .yang2 ul:not(:first-child) {
+    display: none;
+}
+
+.yang .yang2 ul li p {
+    font-size: 14px;
+}
+
+.yang .yang2 ul li img {
+    width: 186px;
+    height: 160px;
+}
+
+.curent {
+    background-color: #FF6633;
+}
+
+.dianping {
+    margin-left: 168.5px;
+    margin-right: 79.5px;
+    margin-top: 10px;
+    padding: 18px 18px 10px 20px;
+    background-color: #FFFFFF;
+    width: 871px;
+    box-sizing: border-box;
+}
+.dianping1 {
+    margin-bottom: -25px;
+}
+.dianping h2 {
+    color: #666;
+}
+.dianping .dianping1 h2 {
+    display: inline-block;
+    color: #555;
+}
+
+.dianping .renwei {
+    background-color: #F0F0F0;
+    display: flex;
+    width: 851px;
+    margin-top: 20px;
+}
+
+.dianping .renwei .renwei1 {
+    float: left;
+    width: 47px;
+    height: 100px;
+    padding: 5px 8px;
+    border-right: 1px solid #E6E6E6;
+    box-sizing: border-box;
+}
+
+.dianping .renwei .renwei1 span {
+    display: block;
+    margin-left: 5px;
+    color: #999999;
+    font-size: 14px;
+}
+
+.dianping .renwei .renwei2 {
+    float: left;
+    flex: 1;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.dianping .renwei .renwei2 ul li {
+    float: left;
+    margin-left: 25px;
+    margin-top: 10px;
+    background-color: white;
+    color: #FF6633;
+}
+
+.dianping .xuanze {
+    margin-top: 10px;
+}
+
+.dianping .xuanze input {
+    margin-left: 10px;
+}
+
+.dianping .xuanze .xuanze1 i {
+    float: right;
+    display: block;
+    font-style: normal;
+    border: 1px solid #DEDEDE;
+    padding: 0 8px;
+    font-size: 14px;
+}
+
+.dianping .xuanze ul {
+    width: 830px;
+}
+
+.dianping .xuanze ul li {
+    list-style: none;
+    position: relative;
+    width: 750px;
+    margin-top: 15px;
+    padding-left: 80px;
+    border-bottom: 1px dashed #F0F0F0;
+}
+
+.dianping .xuanze ul li .toutou img {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    left: 0px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.dianping .xuanze ul li p {
+    font-size: 14px;
+}
+
+.dianping .xuanze ul li .zhongzhong p span {
+    float: right;
+    color: #999999;
+    position: relative;
+}
+
+.dianping .xuanze ul li .zhongzhong p span:hover {
+    color: #FF6633;
+    cursor: pointer;
+}
+
+.dianping .xuanze ul li .zhongzhong p span::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: 63px;
+    top: 8px;
+    width: 5px;
+    height: 5px;
+    border-right: 1px solid #999;
+    border-bottom: 1px solid #999;
+    transform: rotate(45deg);
+}
+
+.dianping .xuanze .renjun {
+    display: inline;
+    font-size: 14px;
+    color: #999;
+    position: relative;
+    top: -22px;
+    left: 85px;
+    overflow: hidden;
+}
+
+.dianping .xuanze ul li .jingling p i {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: url(../wxm_img/精灵图1.png) 0 100px;
+}
+
+.dianping .xuanze .zhanshi {
+    margin-top: 15px;
+}
+
+.dianping .xuanze .zhanshi img {
+    display: inline-block;
+    width: 96px;
+    height: 96px;
+    margin-left: 10px;
+}
+
+.dianping .xuanze ul li .weiwei {
+    margin-bottom: 15px;
+}
+
+.dianping .xuanze ul li .weiwei p {
+    margin-top: 12px;
+    font-size: 12px;
+    color: #999;
+}
+
+.dianping .xuanze ul li .weiwei p span {
+    margin-left: 10px;
+}
+
+.dianping .xuanze ul li .weiwei p i {
+    float: right;
+    display: block;
+    margin-right: 10px;
+}
+
+.dianping .xuanze ul li .weiwei p i:hover {
+    color: #FF6633;
+    cursor: pointer;
+}
+
+.dianping .suibian {
+    position: relative;
+    width: 830px;
+    height: 245px;
+    background-image: url(../wxm_img/jingxuan.png);
+    background-size: contain;
+}
+
+.dianping .suibian .erwei {
+    background-color: #fff;
+    position: absolute;
+    left: 180px;
+    top: 55px;
+    width: 106px;
+    height: 145px;
+    text-align: center;
+}
+
+.dianping .suibian .erwei p {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.dianping .suibian {
+    margin-top: 10px;
+}
+
+.dianping .suibian .erwei span {
+    position: absolute;
+    top: 37px;
+    left: 38px;
+}
+
+.dianping .suibian .erwei i {
+    color: #FF6633;
+    font-size: 14px;
+}
+
+.dianping .suibian .erwei p img {
+    margin-top: 5px;
+}
+
+.dianping .tab {
+    margin-top: 15px;
+    overflow: hidden;
+}
+
+.dianping .tab ul li {
+    float: left;
+    padding-right: 15px;
+    font-size: 14px;
+    color: #333333;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.dianping .tab1 {
+    position: relative;
+    overflow: hidden;
+    height: 64px;
+    background-color: #f6f6f6;
+}
+
+.dianping .tab1 ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.dianping .tab1 ul:not(:first-child) {
+    display: none;
+}
+
+.dianping .tab1 ul li {
+    float: left;
+    font-size: 12px;
+    color: #333333;
+    padding-right: 15px;
+    margin-bottom: 18px;
+}
+
+.dianping .tab1 ul li a {
+    color: #333333;
+}
+/* 网站底部 */
+.footer-container {
+    width: 100%;
+    min-width: 1190px;
+    background: #f6f6f6;
+    font-size: 12px;
+    margin-top: 20px;
+}
+.user_info_footer {
+    background-color: rgba(255,255,255,0.8)!important;
+}
+.user_info_footer  .channel-footer .link-items a,
+.user_info_footer  .channel-footer .links, 
+.user_info_footer  .channel-footer .rights {
+    color: #555;
+}
+.channel-footer {
+    width: 1190px;
+    margin: 10px auto 0;
+    padding: 30px 0;
+}
+.channel-footer .links {
+    color:  #ebebeb;
+    margin-bottom: 10px;
+}
+.channel-footer .links a {
+    margin: 0 7px;
+}
+.channel-footer .link-items a, 
+.channel-footer .links, 
+.channel-footer .rights {
+    text-align: center;
+    font-size: 12px;
+    color: #555;
+}

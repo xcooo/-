@@ -116,6 +116,10 @@ $(function () {
             // 公共顶部完成数据渲染
             // 登录按钮换成本地存储的数据
             $('.login_main').html(data);
+            // 设置去向个人中心的连接
+            // 获取当前目录
+            var strPath = location.href.substring(0, location.href.lastIndexOf('/'));
+            $('.login_main, .user_center').attr({ 'href': strPath + '/xc_info.html' })
             // 注册模块隐藏
             $('.register_main').hide();
             // 我要退出模块显示
@@ -139,7 +143,7 @@ $(function () {
             removeData_top()
         }
     };
-    
+
     // 封装删除公共顶部本地数据的函数
     function removeData_top() {
         localStorage.removeItem('data');
@@ -201,6 +205,16 @@ $(function () {
                 $('.sub_register').fadeIn()
             })
         }
+    })
+
+    // 点击个人中心
+    $('.user_center').click(function () {
+        // 注册表单显示
+        $('.login_bg').slideDown(500, function () {
+            // 显示注册表单
+            $('.sub_register').fadeIn()
+        })
+
     })
 
 })

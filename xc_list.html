@@ -16,7 +16,7 @@
     <!-- 引入轮播图css文件 -->
     <link rel="stylesheet" href="css/banner.css">
     <!--页面加载start-->
-    <link rel="stylesheet" type="text/css" href="css/loader.css">
+    <link rel="stylesheet" href="css/loader.css">
     <!-- 引入jquery文件 -->
     <script src="js/jquery.min.js"></script>
     <!-- 轮播图js文件 -->
@@ -27,8 +27,6 @@
     <script src="js/xc_list.js"></script>
     <!-- 引入异步加载文件 -->
     <script src="js/ajax.js"></script>
-
-
 </head>
 
 <body>
@@ -52,14 +50,13 @@
                     </li>
                     <li class="spacer">|</li>
                     <li class="item">
-                        <a href="javascript:;">个人中心<i class="icon i_arrow"></i></a>
+                        <a href="javascript:;" class="user_center">个人中心<i class="icon i_arrow"></i></a>
                         <ul class='down_menu'>
-                            <li><a href="javascript:;">我的点评</a></li>
-                            <li><a href="javascript:;">我的收藏</a></li>
-                            <li><a href="javascript:;">我的团购</a></li>
-                            <li><a href="javascript:;">我的部落</a></li>
-                            <li><a href="javascript:;">我的订座</a></li>
-                            <li><a href="javascript:;">我的设置</a></li>
+                            <li><a href="javascript:;" class="user_center">我的资料</a></li>
+                            <li><a href="javascript:;" class="user_center">昵称修改</a></li>
+                            <li><a href="javascript:;" class="user_center">重置密码</a></li>
+                            <li><a href="javascript:;" class="user_center">修改头像</a></li>
+                            <li><a href="javascript:;" class="user_center">赞助本站</a></li>
                         </ul>
                     </li>
                     <li class="spacer">|</li>
@@ -1299,7 +1296,7 @@
                 <!-- 右边区域 -->
                 <div class="right-container">
                     <div class="user-container">
-                        <a href="javascript:;" class="avatar">
+                        <a href="javascript:;" class="avatar user-link">
                             <img src="./img/tx.png" alt="">
                         </a>
                         <div class="unlogin-infos">
@@ -1628,7 +1625,6 @@
                                 </div>
                             </a>
                         </li>
-                        <!-- 隐藏的部分 -->
                         <li>
                             <a href="javascript:;">
                                 <div class="imgwrap">
@@ -1691,6 +1687,7 @@
                         </li>
                         <li>
                     </ul>
+
                     <!-- 美食 -->
                     <ul class="activity-lists" style="display: none;">
                         <li>

@@ -51,7 +51,7 @@ $(function () {
         $('.set-tx').slideDown(500).fadeIn(500);
     });
     // 2.点击关闭按钮 背景模块隐藏
-    $('#closeBtn').click(function () {
+    $('#closeBtntx').click(function () {
         $('.bg_tx').slideUp(500).fadeOut(500);
         $('.set-tx').slideUp(500).fadeOut(500);
     });

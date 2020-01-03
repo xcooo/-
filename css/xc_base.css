@@ -644,6 +644,21 @@ a:hover {
     position: relative;
     z-index: 1;
 }
+/* 盒子阴影 */
+.box {
+    
+}
+.box:hover {
+    box-shadow: 0 7px 10px rgba(235, 14, 161, 0.8);
+}
+/* 边框效果 */
+/* .box_border {
+    border: 2px solid transparent;
+
+}
+.box_border:hover {
+    border: 2px solid #f63;
+} */
 /* 图片放大效果 */
 /*盒子需要 溢出隐藏*/
 .scale img {/* 因为图片缩放了， 实际图片做动画， 所以过渡要给img加*/

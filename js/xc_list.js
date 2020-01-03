@@ -40,19 +40,6 @@ $(function () {
             $('.load-more').hide()
         }
     })
-    // 调用加载更多模块函数
-    // $('.activity-lists-wraper .activity-lists').each(function (i, ele) {
-    //     // 获取当前所有ul的高度
-    //     var current_height = $(ele).css('height')
-    //     var current_height = Number(current_height.replace('px', ''))
-    //     console.log(current_height);
-
-    //     if (current_height > 1300) {
-    //         // 加载更多模块显示
-    //         $('.load-more').show()
-    //         $(ele).css({'':1300, 'overflow': 'hidden' })
-    //     }
-    // })
 
     // 下拉事件  选项卡变为固定定位
     var wrapTop = $(".news-container").offset().top;
@@ -138,6 +125,7 @@ $(function () {
         location.reload()
     })
 
+    // 轮播图封装调用
     var banner = new FragmentBanner({
         container: "#banner1",//选择容器 必选
         imgs: ['./uploads/list.jpg', './uploads/list2.jpg', './uploads/list3.jpg', './uploads/list4.jpg', './uploads/list5.jpg'],//图片集合 必选
@@ -155,4 +143,6 @@ $(function () {
         boxTime: 5000,//小方块来回运动的时长 可选
         fnTime: 10000//banner切换的时长 可选
     });
+
+
 })

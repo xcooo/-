@@ -69,20 +69,19 @@
             <div class="top-page_r fr">
                 <ul class="nav">
                     <li class="user_login">
-                        <a href="javascript:;" class="login_main login_menu">你好，请登录</a>
-                        <a href="javascript:;" class="register_main style_orange login_menu">免费注册</a>
+                        <a href="javascript:;" class="login_main">你好，请登录</a>
+                        <a href="javascript:;" class="register_main style_orange">免费注册</a>
                         <a href="javascript:;" class="logout_main style_orange">我要退出</a>
                     </li>
                     <li class="spacer">|</li>
                     <li class="item">
-                        <a href="javascript:;">个人中心<i class="icon i_arrow"></i></a>
+                        <a href="javascript:;" class="user_center">个人中心<i class="icon i_arrow"></i></a>
                         <ul class='down_menu'>
-                            <li><a href="javascript:;">我的点评</a></li>
-                            <li><a href="javascript:;">我的收藏</a></li>
-                            <li><a href="javascript:;">我的团购</a></li>
-                            <li><a href="javascript:;">我的部落</a></li>
-                            <li><a href="javascript:;">我的订座</a></li>
-                            <li><a href="javascript:;">我的设置</a></li>
+                            <li><a href="javascript:;" class="user_center">我的资料</a></li>
+                            <li><a href="javascript:;" class="user_center">昵称修改</a></li>
+                            <li><a href="javascript:;" class="user_center">重置密码</a></li>
+                            <li><a href="javascript:;" class="user_center">修改头像</a></li>
+                            <li><a href="javascript:;" class="user_center">赞助本站</a></li>
                         </ul>
                     </li>
                     <li class="spacer">|</li>
@@ -1192,7 +1191,7 @@
                 <div class="fl">
                     <a target="_blank" href="xc_list.html" class="cate-item other-cate">霸王餐</a>
                     <i class="hot-icon"></i>
-                    <a href="javascript:;" class="cate-item other-cate">社区论坛</a>
+                    <a href="zsy_vr.html" class="cate-item other-cate" target="_blank">VR全景体验</a>
                     <a href="javascript:;" class="cate-item other-cate">预约订座</a>
                 </div>
             </div>
@@ -1350,7 +1349,7 @@
                             <div class="module-tab-text clearfix">
                                 <h4 class="member">小组成员</h4>
                                 <ul class="card_list">
-                                    <li class="card dou">
+                                    <li class="card dou box_border">
                                         <a href="javascript:;" class="dou">
                                             <img src="./img/tx/10.jpg" alt="">
                                         </a>
@@ -1438,20 +1437,20 @@
                                             <span>个人中心</span>
                                         </a>
                                     </li>
-                                    <li class="module-tab-link" target="_blank">
-                                        <a href="javascript:;">
+                                    <li class="module-tab-link">
+                                        <a href="zsy_list.html" target="_blank">
                                             <i class="icons icon-bdm"></i>
-                                            <span>商品详情页</span>
+                                            <span>家装产品页</span>
                                         </a>
                                     </li>
-                                    <li class="module-tab-link" target="_blank">
-                                        <a href="javascript:;">
+                                    <li class="module-tab-link">
+                                        <a href="javascript:;" target="_blank">
                                             <i class="icons icon-bds"></i>
                                             <span>商品付款页</span>
                                         </a>
                                     </li>
-                                    <li class="module-tab-link" target="_blank">
-                                        <a href="javascript:;">
+                                    <li class="module-tab-link">
+                                        <a href="javascript:;" target="_blank">
                                             <i class="icons icon-bdx"></i>
                                             <span>个人中心</span>
                                         </a>
@@ -2751,7 +2750,7 @@
         </div>
 
         <!-- 学习培训 -->
-        <div class="last-four-cata w cata-poi">
+        <div class="last-four-cata w cata-poi study_mod">
             <div class="top-bar clearfix">
                 <div class="title-img edu-logo"></div>
                 <div class="title-text">学习培训</div>
@@ -3835,8 +3834,36 @@
         momxc();
     </script>
     <style>
-        #momk{animation:change 10s infinite;font-weight:800;text-align: left;margin-left: 10px;margin-top: 16px;font-size: 14px;}
-        @keyframes change{0%{color:#5cb85c;}25%{color:#556bd8;}50%{color:#e40707;}75%{color:#66e616;}100% {color:#67bd31;}}
+        #momk {
+            animation: change 10s infinite;
+            font-weight: 800;
+            text-align: left;
+            margin-left: 10px;
+            margin-top: 16px;
+            font-size: 14px;
+        }
+
+        @keyframes change {
+            0% {
+                color: #5cb85c;
+            }
+
+            25% {
+                color: #556bd8;
+            }
+
+            50% {
+                color: #e40707;
+            }
+
+            75% {
+                color: #66e616;
+            }
+
+            100% {
+                color: #67bd31;
+            }
+        }
     </style>
 </body>
 

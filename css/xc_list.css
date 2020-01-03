@@ -16,6 +16,14 @@
     top: -2px;
     background-size: 16px auto;
 }
+.user-link {
+    border: 5px solid #ffc500;
+    box-sizing: border-box;
+    border-radius: 50%;
+}
+.user-link:hover {
+    border: 5px solid #f63;
+}
 /* 导航栏重置css样式 */
 .dropdown .dd {
     display: none;
@@ -364,10 +372,7 @@
 .activity-container .activity-lists {
     font-size: 0;
     width: 890px;
-    min-height: 280px;
-    
-    /* height: 1300px;
-    overflow: hidden; */
+    min-height: 270px;
 }
 
 .activity-container .activity-lists li {

@@ -1,3 +1,4 @@
+
 /* 时间 */
 .timer #momk {
     line-height: 36.8px;
@@ -107,6 +108,7 @@
     opacity: 0;
     padding-top: 20px;
     padding-right: 0;
+    padding-bottom: 0;
 }
 .module-banner-tab-list-box {
     background-color: rgba(0, 0, 0, 0.5);
@@ -115,7 +117,8 @@
     background-color: rgba(69, 39, 112, 0.5);
 }
 .module-tab-box-ma {
-	width: 700px;
+    width: 780px;
+    height: 520px;
 	z-index: 1;
     position: absolute;
     font-size: 16px;
@@ -147,7 +150,7 @@
 .card_list {
     position: relative;
     width: 750px;
-    height: 380px;
+    height: 410px;
     overflow: hidden;
 }
 .module-tab-text .card {
@@ -174,6 +177,9 @@
     border-radius: 50%;
     border: 5px solid #ffc500;
     overflow: hidden;
+}
+.module-tab-text .card a:hover {
+    border: 5px solid #f63;
 }
 .module-tab-text .card a img {
     width: 100%;
@@ -225,6 +231,7 @@
 	line-height: 24px;
 }
 .module-tab-text {
+    width: 780px;
 	margin: 14px 0;
 }
 .module-tab-text h4 {
@@ -271,13 +278,16 @@
 	font-size: 14px;
 }
 .module-tab-text ul li {
-	width: 33%;
+	width: 29%!important;
 	float: left;
 	font-size: 14px;
 	line-height: 38px;
 	cursor: pointer;
 	color: #a2a2a2;
-	border: 1px solid #f4f4f4;
+	border: 2px solid #f4f4f4;
+}
+.module-tab-text ul li:hover {
+    border: 2px solid #f63;
 }
 /* .icons {
 	width: 16px;
@@ -294,7 +304,8 @@
 .module-tab-text ul li:hover a {
 	color: #08acee;
 }
-.module-tab-link {
+.module-tab-text .module-tab-link {
+    width: 210px!important;
     position: relative;
     background-color: rgba(255,255,255,1);
 }
@@ -339,6 +350,7 @@
 	background-size: cover;
 }
 .module-tab-more a {
+    margin-right: 78px;
 	cursor: pointer;
 	color: #fff;
 	font-size: 14px;
@@ -621,6 +633,12 @@
     display: inline-block;
     width: 100%;
     height: 100%;
+    border: 5px solid #ffc500;
+    box-sizing: border-box;
+    border-radius: 50%;
+}
+.user-link:hover {
+    border: 5px solid #f63;
 }
 .user-link img {
     width: 100%;
@@ -963,20 +981,23 @@ a {
 /* 美食模块 */
 .nav_left {
     width: 590px;
+    background-color: rgba(255,255,255,0.4);
+    box-shadow: 0 2px 6px rgba(100,100,100,.3);
 }
 .nav_right {
     width: 590px;
+    background-color: rgba(255,255,255,0.4);
+    box-shadow: 0 2px 6px rgba(100,100,100,.3);
 }
 .meishi_container {
     width: 1190px;
     margin-top: 10px;
-    background-color: #f8f8f8;
+    background-color: rgba(255, 255, 255, 0.8);
 }
 .cata-food-index {
     margin-right: 10px;
 }
 .cata-index {
-    background: #fff;
     display: inline-block;
     font-size: 0;
 }
@@ -1066,7 +1087,7 @@ a {
     right: 0;
 }
 .cata-index .cata-con {
-    padding: 0 10px 10px;
+    /* padding: 0 10px 10px; */
     overflow: hidden;
 }
 .cata-shop-item {
@@ -1237,7 +1258,7 @@ a {
     font-size: 0;
 }
 .cata-index {
-    background: #fff;
+
     display: inline-block;
     font-size: 0;
     padding-top: 10px;
@@ -1245,6 +1266,7 @@ a {
 .cata-wedding-index {
     display: block;
     width: 100%;
+    background-color: rgba(237,210,210,0.8);
 }
 .cata-title {
     height: 30px;
@@ -1388,6 +1410,9 @@ a {
     width: 0;
     float: right;
 }
+.liren_container {
+    background-color: rgba(255,255,255,.8);
+}
 .liren_container .all_more {
     display: none;
 }
@@ -1395,11 +1420,13 @@ a {
     width: 590px;
     height: 45px;
     overflow: hidden;
+    background-color: rgba(250,224,254,0.66);
 }
 .liren_right {
     width: 590px;
     height: 45px;
     overflow: hidden;
+    background-color: rgba(186,230,246,0.8);
 }
 .meishi_container{
     margin-top: 20px!important;
@@ -1572,8 +1599,11 @@ a {
     position: relative;
     margin: 20px auto 0;
     width: 1190px;
-    background-color:#fff;
+    background-color: rgba(255,255,255,0.9);
     overflow: hidden;
+}
+.study_mod {
+    background-color: rgba(255,255,255,0.9);
 }
 .last-four-cata .top-bar {
     height: 30px;

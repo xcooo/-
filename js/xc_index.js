@@ -265,7 +265,8 @@ $(function () {
            },1000,function(){
                if( $(document).scrollTop() >= xcTop)
                $('.cate_shop_left,.cate_shop_right').animate({
-                   width:'590px'
+                   width:'590px',  
+                   marginLeft:'100px'    
                },1000)
                 
            })
@@ -277,4 +278,14 @@ $(function () {
         $(this).css('rotate', '360deg')
     })
 
+    // 滑动到nav-header  顶部变为固定定位
+    var navTop = $(".logo_container").offset().top;
+    $(window).scroll(function () {
+        if ($(document).scrollTop() >= navTop) {
+            // 变为固定定位
+            $('.top').css({ 'position': 'fixed', 'left': 169, 'top': 0, 'zIndex': 200,'height':43,'opacity':0.95,'borderBottomLeftRadius':4,'borderBottoRightRadius':4})
+        } else {
+            $('.top').css({'position': 'static' ,'borderBottomLeftRadius':0,'borderBottoRightRadius':0})
+        }
+    });
 })
