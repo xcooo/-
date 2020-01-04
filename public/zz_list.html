@@ -1,0 +1,1880 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>大众点评 - 长沙美食生活网</title>
+    <link rel="shortcut icon" href="favicon.ico" type="images/x-icon" />
+    <!-- 引入公用css文件 -->
+    <link rel="stylesheet" href="css/xc_base.css">
+    <!-- 引入首页css文件 -->
+    <link rel="stylesheet" href="css/xc_index.css">
+    <link rel="stylesheet" href="css/zz.css">
+    <!-- 引入登录注册login文件 -->
+    <link rel="stylesheet" href="css/login.css">
+    <!-- 引入预加载文件 -->
+    <link rel="stylesheet" href="css/loader_info.css">
+    <!-- 引入jquery文件 -->
+    <script src="js/jquery.min.js"></script>
+    <!-- 引入公用js文件 -->
+    <script src="js/xc_common.js"></script>
+    <!-- 引入异步加载文件 -->
+    <script src="js/ajax.js"></script>
+    <!-- 引入张志js文件 -->
+    <script src="js/zz.js"></script>
+
+</head>
+
+<body>
+    <!-- 背景粒子特效模块 -->
+    <div class="animation-wrapper">
+        <div class="particle particle-1"></div>
+        <div class="particle particle-2"></div>
+        <div class="particle particle-3"></div>
+        <div class="particle particle-4"></div>
+    </div>
+
+    <!-- 顶部区域 -->
+    <div class="top">
+        <div class="w clearfix xctop">
+            <div class="top-page_r fr">
+                <ul class="nav">
+                    <li class="user_login">
+                        <a href="javascript:;" class="login_main">你好，请登录</a>
+                        <a href="javascript:;" class="register_main style_orange">免费注册</a>
+                        <a href="javascript:;" class="logout_main style_orange">我要退出</a>
+                    </li>
+                    <li class="spacer">|</li>
+                    <li class="item">
+                        <a href="javascript:;" class="user_center">个人中心<i class="icon i_arrow"></i></a>
+                        <ul class='down_menu'>
+                            <li><a href="javascript:;" class="user_center">我的资料</a></li>
+                            <li><a href="javascript:;" class="user_center">昵称修改</a></li>
+                            <li><a href="javascript:;" class="user_center">重置密码</a></li>
+                            <li><a href="javascript:;" class="user_center">修改头像</a></li>
+                            <li><a href="javascript:;" class="user_center">赞助本站</a></li>
+                        </ul>
+                    </li>
+                    <li class="spacer">|</li>
+                    <li class="item">
+                        <a href="#">商户服务<i class="icon i_arrow"></i></a>
+                        <ul class='down_menu canying'>
+                            <li><a href="#">商户中心</a></li>
+                            <li><a href="#">商户代理</a></li>
+                            <li><a href="#">招募餐饮代理</a></li>
+                            <li><a href="#">招募非餐饮代理</a></li>
+                            <li><a href="#">餐饮商户中心</a></li>
+                        </ul>
+                    </li>
+                    <li class="spacer">|</li>
+                    <li class="item" class="item">
+                        <a href="#">帮助中心<i class="icon i_arrow"></i></a>
+                        <ul class='down_menu'>
+                            <li><a href="#">平台规则</a></li>
+                            <li><a href="#">联系客服</a></li>
+                        </ul>
+                    </li>
+                    <li class="spacer">|</li>
+                    <li class="item last_item">
+                        <a href="#">网站导航<i class="icon i_arrow"></i></a>
+                        <!-- 超级大菜单 -->
+                        <div class="big_menu">
+                            <ul class="maplist">
+                                <li>
+                                    <div class="list_container">
+                                        <span class="list_title">电影赛事演出</span>
+                                        <p class="list_item">
+                                            <a href="#">电影 <span>|</span></a>
+                                            <a href="#">演出<span>|</span></a>
+                                            <a href="#">赛事</a>
+                                        </p>
+                                    </div>
+                                    <div class="list_container">
+                                        <span class="list_title">丽人</span>
+                                        <p class="list_item">
+                                            <a href="#">美发 <span>|</span></a>
+                                            <a href="#">美甲美睫<span>|</span></a>
+                                            <a href="#">美容</a>
+                                        </p>
+                                    </div>
+                                    <div class="list_container">
+                                        <span class="list_title">旅游</span>
+                                        <p class="list_item">
+                                            <a href="#">周边游 <span>|</span></a>
+                                            <a href="#">酒店<span>|</span></a>
+                                            <a href="#">景点</a>
+                                        </p>
+                                    </div>
+                                    <div class="list_container">
+                                        <span class="list_title">运动健身</span>
+                                        <p class="list_item">
+                                            <a href="#">健身中心 <span>|</span></a>
+                                            <a href="#">游泳馆<span>|</span></a>
+                                            <a href="#">桌游馆</a>
+                                        </p>
+                                    </div>
+                                    <div class="list_container">
+                                        <span class="list_title">美食</span>
+                                        <p class="list_item">
+                                            <a href="#">火锅 <span>|</span></a>
+                                            <a href="#">川菜<span>|</span></a>
+                                            <a href="#">烧烤</a>
+                                        </p>
+                                    </div>
+                                    <div class="list_container">
+                                        <span class="list_title">休闲娱乐</span>
+                                        <p class="list_item">
+                                            <a href="#">KTV <span>|</span></a>
+                                            <a href="#">足疗按摩<span>|</span></a>
+                                            <a href="#">密室</a>
+                                        </p>
+                                        <p class="list_item">
+                                            <a href="#">酒吧 <span>|</span></a>
+                                            <a href="#">洗浴<span>|</span></a>
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list_container">
+                                        <span class="list_title">结婚</span>
+                                        <p class="list_item">
+                                            <a href="#">婚纱摄影 <span>|</span></a>
+                                            <a href="#">婚纱跟拍<span>|</span></a>
+                                            <a href="#">婚车租赁</a>
+                                        </p>
+                                        <p class="list_item">
+                                            <a href="#">婚纱预定 <span>|</span></a>
+                                            <a href="#">新娘彩妆<span>|</span></a>
+                                            <a href="#">司仪主持</a>
+                                        </p>
+                                    </div>
+                                    <div class="list_container">
+                                        <span class="list_title">亲子</span>
+                                        <p class="list_item">
+                                            <a href="#">亲子摄影 <span>|</span></a>
+                                            <a href="#">幼儿教育<span>|</span></a>
+                                            <a href="#">孕产护理</a>
+                                        </p>
+                                        <p class="list_item">
+                                            <a href="#">亲子游乐</a>
+                                        </p>
+                                    </div>
+                                    <div class="list_container">
+                                        <span class="list_title">学习培训</span>
+                                        <p class="list_item">
+                                            <a href="#">外语 <span>|</span></a>
+                                            <a href="#">音乐<span>|</span></a>
+                                            <a href="#">留学</a>
+                                        </p>
+                                    </div>
+                                    <div class="list_container">
+                                        <span class="list_title">家装</span>
+                                        <p class="list_item">
+                                            <a href="#">装修设计 <span>|</span></a>
+                                            <a href="#">装修图库<span>|</span></a>
+                                            <a href="#">装修建材</a>
+                                        </p>
+                                        <p class="list_item">
+                                            <a href="#">厨卫洁具 <span>|</span></a>
+                                            <a href="#">家具家具</a>
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list_container">
+                                        <span class="list_title">生活服务</span>
+                                        <p class="list_item">
+                                            <a href="#">快照冲印 <span>|</span></a>
+                                            <a href="#">搬家<span>|</span></a>
+                                            <a href="#">开锁</a>
+                                        </p>
+                                        <p class="list_item">
+                                            <a href="#">家电维修 <span>|</span></a>
+                                            <a href="#">房屋维修<span>|</span></a>
+                                            <a href="#">家政服务</a>
+                                        </p>
+                                    </div>
+                                    <div class="list_container">
+                                        <span class="list_title">爱车</span>
+                                        <p class="list_item">
+                                            <a href="#">4s店<span>|</span></a>
+                                            <a href="#">汽车美容<span>|</span></a>
+                                            <a href="#">维修保养</a>
+                                        </p>
+                                    </div>
+                                    <div class="list_container">
+                                        <span class="list_title">医疗健康</span>
+                                        <p class="list_item">
+                                            <a href="#">口腔齿科<span>|</span></a>
+                                            <a href="#">体检中心<span>|</span></a>
+                                            <a href="#">医院</a>
+                                        </p>
+                                        <p class="list_item">
+                                            <a href="#">药店<span>|</span></a>
+                                            <a href="#">中医<span>|</span></a>
+                                            <a href="#">男科医院</a>
+                                        </p>
+                                    </div>
+                                    <div class="list_container">
+                                        <span class="list_title">宠物</span>
+                                        <p class="list_item">
+                                            <a href="#">宠物店<span>|</span></a>
+                                            <a href="#">宠物医院</a>
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list_container">
+                                        <span class="list_title app_title">手机应用</span>
+                                        <div class="list_pic">
+                                            <p class="app_container">
+                                                <a href="javascript:;">
+                                                    <i class="app_icon dp_app"></i>
+                                                    <span>大众点评</span>
+                                                </a>
+                                            </p>
+                                            <p class="app_container">
+                                                <a href="javascript:;">
+                                                    <i class="app_icon gj_app"></i>
+                                                    <span>点评管家</span>
+                                                </a>
+                                            </p>
+                                        </div>
+                                        <div class="list_pic">
+                                            <p class="qrcode_container">
+                                                <i class="qrcode_icon wx_qrcode"></i>
+                                                <span>大众点评微信公众号</span>
+                                            </p>
+                                            <p class="qrcode_container">
+                                                <i class="qrcode_icon qq_qrcode"></i>
+                                                <span>大众点评QQ公众号</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- logo区域 -->
+    <div class="logo_container clearfix">
+        <div class="w logo_content clearfix">
+            <a href="index.html" class="logo" title="大众点评" target="_blank"></a>
+            <a href="#" class="city J-city">
+                <span class="map_icon"></span>
+                <span class="cs">长沙</span>
+                <i class="icon_city"></i>
+            </a>
+            <!-- input输入框 -->
+            <div class="search_box">
+                <div class="search-bar">
+                    <span class="search-container">
+
+                        <span>
+                            <i class="i-search"></i>
+                            <input type="text" placeholder="搜索商户名、地址、菜名、外卖等">
+                        </span>
+                        <span class="search-bnt-panel">
+                            <a href="javascript:;" class="search-btn">搜索</a>
+                        </span>
+                    </span>
+                    <p class="hot-search">
+                        <a href="javascript:;" class="hot-search-tips">大家都在搜:</a>
+                        <a href="javascript:;" class="search-word">五一广场</a>
+                        <a href="javascript:;" class="search-word">黄兴步行街</a>
+                        <a href="javascript:;" class="search-word">火宫殿</a>
+                        <a href="javascript:;" class="search-word">保利mall</a>
+                        <a href="javascript:;" class="search-word">和馨园</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- 产品分类 -->
+    <div class="cate-container clearfix">
+        <div class="nav-header clearfix">
+            <div class="w navbar">
+                <div class="dropdown fl">
+                    <span class="all-cate">全部分类</span>
+                    <div class="dd">
+                        <ul>
+                            <li class="menu-item">
+                                <a href="javascript:;">美食</a>
+                                <a href="javascript:;">火锅</a>
+                                <a href="javascript:;">人气聚餐</a>
+                                <!-- 菜单右侧选项卡 -->
+                                <div class="sec-cate">
+                                    <div class="groups">
+                                        <div class="group">
+                                            <div class="sec-title">
+                                                <span class="channel-title">菜系</span>
+                                                <a href="javascript:;" class="more_cate">更多 <i
+                                                        class="icon-right icon-right-hover"></i></a>
+                                            </div>
+                                            <div class="sec-items">
+                                                <a href="#" class="second-item">火锅</a>
+                                                <a href="#" class="second-item">本帮江浙菜</a>
+                                                <a href="#" class="second-item">日本菜</a>
+                                                <a href="#" class="second-item">面包甜点</a>
+                                                <a href="#" class="second-item">咖啡厅</a>
+                                                <a href="#" class="second-item">自助餐</a>
+                                                <a href="#" class="second-item">小吃快餐</a>
+                                                <a href="#" class="second-item">西餐</a>
+                                                <a href="#" class="second-item">韩国料理</a>
+                                                <a href="#" class="second-item">粤菜</a>
+                                                <a href="#" class="second-item">烧烤</a>
+                                                <a href="#" class="second-item">东南亚菜</a>
+                                                <a href="#" class="second-item">川菜</a>
+                                                <a href="#" class="second-item">素菜</a>
+                                                <a href="#" class="second-item">东北菜</a>
+                                                <a href="#" class="second-item">湘菜</a>
+                                                <a href="#" class="second-item">云南菜</a>
+                                                <a href="#" class="second-item">新疆菜</a>
+                                                <a href="#" class="second-item">海鲜</a>
+                                                <a href="#" class="second-item">西北菜</a>
+                                                <a href="#" class="second-item">蟹宴</a>
+                                                <a href="#" class="second-item">台湾菜</a>
+                                                <a href="#" class="second-item">贵州菜</a>
+                                                <a href="#" class="second-item">面馆</a>
+                                                <a href="#" class="second-item">小龙虾</a>
+                                                <a href="#" class="second-item">江西菜</a>
+                                                <a href="#" class="second-item">家常菜</a>
+                                                <a href="#" class="second-item">其他</a>
+                                            </div>
+                                            <div class="group">
+                                                <div class="sec-title">
+                                                    <span class="channel-title">热门推荐</span>
+                                                </div>
+                                                <div class="sec-items">
+                                                    <a href="#" class="second-item">刺身</a>
+                                                    <a href="#" class="second-item">红烧肉</a>
+                                                    <a href="#" class="second-item">牛排</a>
+                                                    <a href="#" class="second-item">烤鱼</a>
+                                                    <a href="#" class="second-item">三文鱼</a>
+                                                    <a href="#" class="second-item">意大利面</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="menu-item">
+                                <a href="list.html">休闲娱乐</a>
+                                <a href="javascript:;">足疗</a>
+                                <a href="javascript:;">KTV</a>
+                                <!-- 菜单右侧选项卡 -->
+                                <div class="sec-cate">
+                                    <div class="groups">
+                                        <div class="group">
+                                            <div class="sec-title">
+                                                <span class="channel-title">足疗洗浴</span>
+                                            </div>
+                                            <div class="sec-items">
+                                                <a href="#" class="second-item">足疗按摩</a>
+                                                <a href="#" class="second-item">洗浴/汗蒸</a>
+                                            </div>
+                                            <div class="group">
+                                                <div class="sec-title">
+                                                    <span class="channel-title">玩乐</span>
+                                                </div>
+                                                <div class="sec-items">
+                                                    <a href="#" class="second-item">KTV</a>
+                                                    <a href="#" class="second-item">酒吧</a>
+                                                    <a href="#" class="second-item">密室逃脱</a>
+                                                    <a href="#" class="second-item">轰趴馆</a>
+                                                    <a href="#" class="second-item">茶馆</a>
+                                                    <a href="#" class="second-item">私人影院</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="menu-item">
+                                <a href="javascript:;">结婚</a>
+                                <a href="javascript:;">婚纱摄影</a>
+                                <a href="javascript:;">婚礼策划</a>
+                                <!-- 菜单右侧选项卡 -->
+                                <div class="sec-cate">
+                                    <div class="groups">
+                                        <div class="group">
+                                            <div class="sec-title">
+                                                <span class="channel-title">菜系</span>
+                                                <a href="javascript:;" class="more_cate">更多 <i
+                                                        class="icon-right icon-right-hover"></i></a>
+                                            </div>
+                                            <div class="sec-items">
+                                                <a href="#" class="second-item">火锅</a>
+                                                <a href="#" class="second-item">本帮江浙菜</a>
+                                                <a href="#" class="second-item">日本菜</a>
+                                                <a href="#" class="second-item">面包甜点</a>
+                                                <a href="#" class="second-item">咖啡厅</a>
+                                                <a href="#" class="second-item">自助餐</a>
+                                                <a href="#" class="second-item">小吃快餐</a>
+                                                <a href="#" class="second-item">西餐</a>
+                                                <a href="#" class="second-item">韩国料理</a>
+                                                <a href="#" class="second-item">粤菜</a>
+                                                <a href="#" class="second-item">烧烤</a>
+                                                <a href="#" class="second-item">东南亚菜</a>
+                                                <a href="#" class="second-item">川菜</a>
+                                                <a href="#" class="second-item">素菜</a>
+                                                <a href="#" class="second-item">东北菜</a>
+                                                <a href="#" class="second-item">湘菜</a>
+                                                <a href="#" class="second-item">云南菜</a>
+                                                <a href="#" class="second-item">新疆菜</a>
+                                                <a href="#" class="second-item">海鲜</a>
+                                                <a href="#" class="second-item">西北菜</a>
+                                                <a href="#" class="second-item">蟹宴</a>
+                                                <a href="#" class="second-item">台湾菜</a>
+                                                <a href="#" class="second-item">贵州菜</a>
+                                                <a href="#" class="second-item">面馆</a>
+                                                <a href="#" class="second-item">小龙虾</a>
+                                                <a href="#" class="second-item">江西菜</a>
+                                                <a href="#" class="second-item">家常菜</a>
+                                                <a href="#" class="second-item">其他</a>
+                                            </div>
+                                            <div class="group">
+                                                <div class="sec-title">
+                                                    <span class="channel-title">热门推荐</span>
+                                                </div>
+                                                <div class="sec-items">
+                                                    <a href="#" class="second-item">刺身</a>
+                                                    <a href="#" class="second-item">红烧肉</a>
+                                                    <a href="#" class="second-item">牛排</a>
+                                                    <a href="#" class="second-item">烤鱼</a>
+                                                    <a href="#" class="second-item">三文鱼</a>
+                                                    <a href="#" class="second-item">意大利面</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="menu-item">
+                                <a href="javascript:;">电影演出赛事</a>
+                                <a href="javascript:;">电影院</a>
+                                <!-- 菜单右侧选项卡 -->
+                                <div class="sec-cate">
+                                    <div class="groups">
+                                        <div class="group">
+                                            <div class="sec-title">
+                                                <span class="channel-title">菜系</span>
+                                                <a href="javascript:;" class="more_cate">更多 <i
+                                                        class="icon-right icon-right-hover"></i></a>
+                                            </div>
+                                            <div class="sec-items">
+                                                <a href="#" class="second-item">火锅</a>
+                                                <a href="#" class="second-item">本帮江浙菜</a>
+                                                <a href="#" class="second-item">日本菜</a>
+                                                <a href="#" class="second-item">面包甜点</a>
+                                                <a href="#" class="second-item">咖啡厅</a>
+                                                <a href="#" class="second-item">自助餐</a>
+                                                <a href="#" class="second-item">小吃快餐</a>
+                                                <a href="#" class="second-item">西餐</a>
+                                                <a href="#" class="second-item">韩国料理</a>
+                                                <a href="#" class="second-item">粤菜</a>
+                                                <a href="#" class="second-item">烧烤</a>
+                                                <a href="#" class="second-item">东南亚菜</a>
+                                                <a href="#" class="second-item">川菜</a>
+                                                <a href="#" class="second-item">素菜</a>
+                                                <a href="#" class="second-item">东北菜</a>
+                                                <a href="#" class="second-item">湘菜</a>
+                                                <a href="#" class="second-item">云南菜</a>
+                                                <a href="#" class="second-item">新疆菜</a>
+                                                <a href="#" class="second-item">海鲜</a>
+                                                <a href="#" class="second-item">西北菜</a>
+                                                <a href="#" class="second-item">蟹宴</a>
+                                                <a href="#" class="second-item">台湾菜</a>
+                                                <a href="#" class="second-item">贵州菜</a>
+                                                <a href="#" class="second-item">面馆</a>
+                                                <a href="#" class="second-item">小龙虾</a>
+                                                <a href="#" class="second-item">江西菜</a>
+                                                <a href="#" class="second-item">家常菜</a>
+                                                <a href="#" class="second-item">其他</a>
+                                            </div>
+                                            <div class="group">
+                                                <div class="sec-title">
+                                                    <span class="channel-title">热门推荐</span>
+                                                </div>
+                                                <div class="sec-items">
+                                                    <a href="#" class="second-item">刺身</a>
+                                                    <a href="#" class="second-item">红烧肉</a>
+                                                    <a href="#" class="second-item">牛排</a>
+                                                    <a href="#" class="second-item">烤鱼</a>
+                                                    <a href="#" class="second-item">三文鱼</a>
+                                                    <a href="#" class="second-item">意大利面</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="menu-item">
+                                <a href="javascript:;">丽人</a>
+                                <a href="javascript:;">美发</a>
+                                <a href="javascript:;">医学美容</a>
+                                <!-- 菜单右侧选项卡 -->
+                                <div class="sec-cate">
+                                    <div class="groups">
+                                        <div class="group">
+                                            <div class="sec-title">
+                                                <span class="channel-title">丽人</span>
+                                                <a href="javascript:;" class="more_cate">更多 <i
+                                                        class="icon-right icon-right-hover"></i></a>
+                                            </div>
+                                            <div class="sec-items">
+                                                <a href="#" class="second-item">美发</a>
+                                                <a href="#" class="second-item">美甲美睫</a>
+                                                <a href="#" class="second-item">美容/SPA</a>
+                                                <a href="#" class="second-item">养发</a>
+                                                <a href="#" class="second-item">瘦身纤体</a>
+                                                <a href="#" class="second-item">瑜伽</a>
+                                                <a href="#" class="second-item">舞蹈</a>
+                                                <a href="#" class="second-item">西餐</a>
+                                                <a href="#" class="second-item">韩式定妆</a>
+                                                <a href="#" class="second-item">祛痘</a>
+                                                <a href="#" class="second-item">纹身</a>
+                                                <a href="#" class="second-item">化妆品</a>
+                                            </div>
+                                            <div class="group">
+                                                <div class="sec-title">
+                                                    <span class="channel-title">医学美容</span>
+                                                    <a href="javascript:;" class="more_cate">更多 <i
+                                                            class="icon-right icon-right-hover"></i></a>
+                                                </div>
+                                                <div class="sec-items">
+                                                    <a href="#" class="second-item">水光补水</a>
+                                                    <a href="#" class="second-item">瘦脸</a>
+                                                    <a href="#" class="second-item">抗衰老</a>
+                                                    <a href="#" class="second-item">双眼皮</a>
+                                                    <a href="#" class="second-item">玻尿酸</a>
+                                                    <a href="#" class="second-item">美白冷敷</a>
+                                                    <a href="#" class="second-item">除皱瘦脸</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="menu-item">
+                                <a href="javascript:;">酒店</a>
+                                <a href="javascript:;">五星/豪华</a>
+                                <a href="javascript:;">经济连锁</a>
+                                <!-- 菜单右侧选项卡 -->
+                                <div class="sec-cate">
+                                    <div class="groups">
+                                        <div class="group">
+                                            <div class="sec-title">
+                                                <span class="channel-title">菜系</span>
+                                                <a href="javascript:;" class="more_cate">更多 <i
+                                                        class="icon-right icon-right-hover"></i></a>
+                                            </div>
+                                            <div class="sec-items">
+                                                <a href="#" class="second-item">火锅</a>
+                                                <a href="#" class="second-item">本帮江浙菜</a>
+                                                <a href="#" class="second-item">日本菜</a>
+                                                <a href="#" class="second-item">面包甜点</a>
+                                                <a href="#" class="second-item">咖啡厅</a>
+                                                <a href="#" class="second-item">自助餐</a>
+                                                <a href="#" class="second-item">小吃快餐</a>
+                                                <a href="#" class="second-item">西餐</a>
+                                                <a href="#" class="second-item">韩国料理</a>
+                                                <a href="#" class="second-item">粤菜</a>
+                                                <a href="#" class="second-item">烧烤</a>
+                                                <a href="#" class="second-item">东南亚菜</a>
+                                                <a href="#" class="second-item">川菜</a>
+                                                <a href="#" class="second-item">素菜</a>
+                                                <a href="#" class="second-item">东北菜</a>
+                                                <a href="#" class="second-item">湘菜</a>
+                                                <a href="#" class="second-item">云南菜</a>
+                                                <a href="#" class="second-item">新疆菜</a>
+                                                <a href="#" class="second-item">海鲜</a>
+                                                <a href="#" class="second-item">西北菜</a>
+                                                <a href="#" class="second-item">蟹宴</a>
+                                                <a href="#" class="second-item">台湾菜</a>
+                                                <a href="#" class="second-item">贵州菜</a>
+                                                <a href="#" class="second-item">面馆</a>
+                                                <a href="#" class="second-item">小龙虾</a>
+                                                <a href="#" class="second-item">江西菜</a>
+                                                <a href="#" class="second-item">家常菜</a>
+                                                <a href="#" class="second-item">其他</a>
+                                            </div>
+                                            <div class="group">
+                                                <div class="sec-title">
+                                                    <span class="channel-title">热门推荐</span>
+                                                </div>
+                                                <div class="sec-items">
+                                                    <a href="#" class="second-item">刺身</a>
+                                                    <a href="#" class="second-item">红烧肉</a>
+                                                    <a href="#" class="second-item">牛排</a>
+                                                    <a href="#" class="second-item">烤鱼</a>
+                                                    <a href="#" class="second-item">三文鱼</a>
+                                                    <a href="#" class="second-item">意大利面</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="menu-item">
+                                <a href="javascript:;">亲子</a>
+                                <a href="javascript:;">亲子摄影</a>
+                                <a href="javascript:;">早教中心</a>
+                                <!-- 菜单右侧选项卡 -->
+                                <div class="sec-cate">
+                                    <div class="groups">
+                                        <div class="group">
+                                            <div class="sec-title">
+                                                <span class="channel-title">丽人</span>
+                                                <a href="javascript:;" class="more_cate">更多 <i
+                                                        class="icon-right icon-right-hover"></i></a>
+                                            </div>
+                                            <div class="sec-items">
+                                                <a href="#" class="second-item">美发</a>
+                                                <a href="#" class="second-item">美甲美睫</a>
+                                                <a href="#" class="second-item">美容/SPA</a>
+                                                <a href="#" class="second-item">养发</a>
+                                                <a href="#" class="second-item">瘦身纤体</a>
+                                                <a href="#" class="second-item">瑜伽</a>
+                                                <a href="#" class="second-item">舞蹈</a>
+                                                <a href="#" class="second-item">西餐</a>
+                                                <a href="#" class="second-item">韩式定妆</a>
+                                                <a href="#" class="second-item">祛痘</a>
+                                                <a href="#" class="second-item">纹身</a>
+                                                <a href="#" class="second-item">化妆品</a>
+                                            </div>
+                                            <div class="group">
+                                                <div class="sec-title">
+                                                    <span class="channel-title">医学美容</span>
+                                                    <a href="javascript:;" class="more_cate">更多 <i
+                                                            class="icon-right icon-right-hover"></i></a>
+                                                </div>
+                                                <div class="sec-items">
+                                                    <a href="#" class="second-item">水光补水</a>
+                                                    <a href="#" class="second-item">瘦脸</a>
+                                                    <a href="#" class="second-item">抗衰老</a>
+                                                    <a href="#" class="second-item">双眼皮</a>
+                                                    <a href="#" class="second-item">玻尿酸</a>
+                                                    <a href="#" class="second-item">美白冷敷</a>
+                                                    <a href="#" class="second-item">除皱瘦脸</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="menu-item">
+                                <a href="javascript:;">周边游</a>
+                                <a href="javascript:;">景点</a>
+                                <a href="javascript:;">水上娱乐</a>
+                                <!-- 菜单右侧选项卡 -->
+                                <div class="sec-cate">
+                                    <div class="groups">
+                                        <div class="group">
+                                            <div class="sec-title">
+                                                <span class="channel-title">菜系</span>
+                                                <a href="javascript:;" class="more_cate">更多 <i
+                                                        class="icon-right icon-right-hover"></i></a>
+                                            </div>
+                                            <div class="sec-items">
+                                                <a href="#" class="second-item">火锅</a>
+                                                <a href="#" class="second-item">本帮江浙菜</a>
+                                                <a href="#" class="second-item">日本菜</a>
+                                                <a href="#" class="second-item">面包甜点</a>
+                                                <a href="#" class="second-item">咖啡厅</a>
+                                                <a href="#" class="second-item">自助餐</a>
+                                                <a href="#" class="second-item">小吃快餐</a>
+                                                <a href="#" class="second-item">西餐</a>
+                                                <a href="#" class="second-item">韩国料理</a>
+                                                <a href="#" class="second-item">粤菜</a>
+                                                <a href="#" class="second-item">烧烤</a>
+                                                <a href="#" class="second-item">东南亚菜</a>
+                                                <a href="#" class="second-item">川菜</a>
+                                                <a href="#" class="second-item">素菜</a>
+                                                <a href="#" class="second-item">东北菜</a>
+                                                <a href="#" class="second-item">湘菜</a>
+                                                <a href="#" class="second-item">云南菜</a>
+                                                <a href="#" class="second-item">新疆菜</a>
+                                                <a href="#" class="second-item">海鲜</a>
+                                                <a href="#" class="second-item">西北菜</a>
+                                                <a href="#" class="second-item">蟹宴</a>
+                                                <a href="#" class="second-item">台湾菜</a>
+                                                <a href="#" class="second-item">贵州菜</a>
+                                                <a href="#" class="second-item">面馆</a>
+                                                <a href="#" class="second-item">小龙虾</a>
+                                                <a href="#" class="second-item">江西菜</a>
+                                                <a href="#" class="second-item">家常菜</a>
+                                                <a href="#" class="second-item">其他</a>
+                                            </div>
+                                            <div class="group">
+                                                <div class="sec-title">
+                                                    <span class="channel-title">热门推荐</span>
+                                                </div>
+                                                <div class="sec-items">
+                                                    <a href="#" class="second-item">刺身</a>
+                                                    <a href="#" class="second-item">红烧肉</a>
+                                                    <a href="#" class="second-item">牛排</a>
+                                                    <a href="#" class="second-item">烤鱼</a>
+                                                    <a href="#" class="second-item">三文鱼</a>
+                                                    <a href="#" class="second-item">意大利面</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="menu-item">
+                                <a href="javascript:;">运动健身</a>
+                                <a href="javascript:;">健身中心</a>
+                                <!-- 菜单右侧选项卡 -->
+                                <div class="sec-cate">
+                                    <div class="groups">
+                                        <div class="group">
+                                            <div class="sec-title">
+                                                <span class="channel-title">丽人</span>
+                                                <a href="javascript:;" class="more_cate">更多 <i
+                                                        class="icon-right icon-right-hover"></i></a>
+                                            </div>
+                                            <div class="sec-items">
+                                                <a href="#" class="second-item">美发</a>
+                                                <a href="#" class="second-item">美甲美睫</a>
+                                                <a href="#" class="second-item">美容/SPA</a>
+                                                <a href="#" class="second-item">养发</a>
+                                                <a href="#" class="second-item">瘦身纤体</a>
+                                                <a href="#" class="second-item">瑜伽</a>
+                                                <a href="#" class="second-item">舞蹈</a>
+                                                <a href="#" class="second-item">西餐</a>
+                                                <a href="#" class="second-item">韩式定妆</a>
+                                                <a href="#" class="second-item">祛痘</a>
+                                                <a href="#" class="second-item">纹身</a>
+                                                <a href="#" class="second-item">化妆品</a>
+                                            </div>
+                                            <div class="group">
+                                                <div class="sec-title">
+                                                    <span class="channel-title">医学美容</span>
+                                                    <a href="javascript:;" class="more_cate">更多 <i
+                                                            class="icon-right icon-right-hover"></i></a>
+                                                </div>
+                                                <div class="sec-items">
+                                                    <a href="#" class="second-item">水光补水</a>
+                                                    <a href="#" class="second-item">瘦脸</a>
+                                                    <a href="#" class="second-item">抗衰老</a>
+                                                    <a href="#" class="second-item">双眼皮</a>
+                                                    <a href="#" class="second-item">玻尿酸</a>
+                                                    <a href="#" class="second-item">美白冷敷</a>
+                                                    <a href="#" class="second-item">除皱瘦脸</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="menu-item">
+                                <a href="javascript:;">购物</a>
+                                <a href="javascript:;">综合商场</a>
+                                <a href="javascript:;">服饰鞋包</a>
+                                <!-- 菜单右侧选项卡 -->
+                                <div class="sec-cate">
+                                    <div class="groups">
+                                        <div class="group">
+                                            <div class="sec-title">
+                                                <span class="channel-title">菜系</span>
+                                                <a href="javascript:;" class="more_cate">更多 <i
+                                                        class="icon-right icon-right-hover"></i></a>
+                                            </div>
+                                            <div class="sec-items">
+                                                <a href="#" class="second-item">火锅</a>
+                                                <a href="#" class="second-item">本帮江浙菜</a>
+                                                <a href="#" class="second-item">日本菜</a>
+                                                <a href="#" class="second-item">面包甜点</a>
+                                                <a href="#" class="second-item">咖啡厅</a>
+                                                <a href="#" class="second-item">自助餐</a>
+                                                <a href="#" class="second-item">小吃快餐</a>
+                                                <a href="#" class="second-item">西餐</a>
+                                                <a href="#" class="second-item">韩国料理</a>
+                                                <a href="#" class="second-item">粤菜</a>
+                                                <a href="#" class="second-item">烧烤</a>
+                                                <a href="#" class="second-item">东南亚菜</a>
+                                                <a href="#" class="second-item">川菜</a>
+                                                <a href="#" class="second-item">素菜</a>
+                                                <a href="#" class="second-item">东北菜</a>
+                                                <a href="#" class="second-item">湘菜</a>
+                                                <a href="#" class="second-item">云南菜</a>
+                                                <a href="#" class="second-item">新疆菜</a>
+                                                <a href="#" class="second-item">海鲜</a>
+                                                <a href="#" class="second-item">西北菜</a>
+                                                <a href="#" class="second-item">蟹宴</a>
+                                                <a href="#" class="second-item">台湾菜</a>
+                                                <a href="#" class="second-item">贵州菜</a>
+                                                <a href="#" class="second-item">面馆</a>
+                                                <a href="#" class="second-item">小龙虾</a>
+                                                <a href="#" class="second-item">江西菜</a>
+                                                <a href="#" class="second-item">家常菜</a>
+                                                <a href="#" class="second-item">其他</a>
+                                            </div>
+                                            <div class="group">
+                                                <div class="sec-title">
+                                                    <span class="channel-title">热门推荐</span>
+                                                </div>
+                                                <div class="sec-items">
+                                                    <a href="#" class="second-item">刺身</a>
+                                                    <a href="#" class="second-item">红烧肉</a>
+                                                    <a href="#" class="second-item">牛排</a>
+                                                    <a href="#" class="second-item">烤鱼</a>
+                                                    <a href="#" class="second-item">三文鱼</a>
+                                                    <a href="#" class="second-item">意大利面</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="menu-item">
+                                <a href="javascript:;">家装</a>
+                                <a href="javascript:;">装修设计</a>
+                                <a href="javascript:;">定制家居</a>
+                                <!-- 菜单右侧选项卡 -->
+                                <div class="sec-cate">
+                                    <div class="groups">
+                                        <div class="group">
+                                            <div class="sec-title">
+                                                <span class="channel-title">丽人</span>
+                                                <a href="javascript:;" class="more_cate">更多 <i
+                                                        class="icon-right icon-right-hover"></i></a>
+                                            </div>
+                                            <div class="sec-items">
+                                                <a href="#" class="second-item">美发</a>
+                                                <a href="#" class="second-item">美甲美睫</a>
+                                                <a href="#" class="second-item">美容/SPA</a>
+                                                <a href="#" class="second-item">养发</a>
+                                                <a href="#" class="second-item">瘦身纤体</a>
+                                                <a href="#" class="second-item">瑜伽</a>
+                                                <a href="#" class="second-item">舞蹈</a>
+                                                <a href="#" class="second-item">西餐</a>
+                                                <a href="#" class="second-item">韩式定妆</a>
+                                                <a href="#" class="second-item">祛痘</a>
+                                                <a href="#" class="second-item">纹身</a>
+                                                <a href="#" class="second-item">化妆品</a>
+                                            </div>
+                                            <div class="group">
+                                                <div class="sec-title">
+                                                    <span class="channel-title">医学美容</span>
+                                                    <a href="javascript:;" class="more_cate">更多 <i
+                                                            class="icon-right icon-right-hover"></i></a>
+                                                </div>
+                                                <div class="sec-items">
+                                                    <a href="#" class="second-item">水光补水</a>
+                                                    <a href="#" class="second-item">瘦脸</a>
+                                                    <a href="#" class="second-item">抗衰老</a>
+                                                    <a href="#" class="second-item">双眼皮</a>
+                                                    <a href="#" class="second-item">玻尿酸</a>
+                                                    <a href="#" class="second-item">美白冷敷</a>
+                                                    <a href="#" class="second-item">除皱瘦脸</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="menu-item">
+                                <a href="javascript:;">学习培训</a>
+                                <a href="javascript:;">外语</a>
+                                <a href="javascript:;">音乐</a>
+                                <!-- 菜单右侧选项卡 -->
+                                <div class="sec-cate">
+                                    <div class="groups">
+                                        <div class="group">
+                                            <div class="sec-title">
+                                                <span class="channel-title">菜系</span>
+                                                <a href="javascript:;" class="more_cate">更多 <i
+                                                        class="icon-right icon-right-hover"></i></a>
+                                            </div>
+                                            <div class="sec-items">
+                                                <a href="#" class="second-item">火锅</a>
+                                                <a href="#" class="second-item">本帮江浙菜</a>
+                                                <a href="#" class="second-item">日本菜</a>
+                                                <a href="#" class="second-item">面包甜点</a>
+                                                <a href="#" class="second-item">咖啡厅</a>
+                                                <a href="#" class="second-item">自助餐</a>
+                                                <a href="#" class="second-item">小吃快餐</a>
+                                                <a href="#" class="second-item">西餐</a>
+                                                <a href="#" class="second-item">韩国料理</a>
+                                                <a href="#" class="second-item">粤菜</a>
+                                                <a href="#" class="second-item">烧烤</a>
+                                                <a href="#" class="second-item">东南亚菜</a>
+                                                <a href="#" class="second-item">川菜</a>
+                                                <a href="#" class="second-item">素菜</a>
+                                                <a href="#" class="second-item">东北菜</a>
+                                                <a href="#" class="second-item">湘菜</a>
+                                                <a href="#" class="second-item">云��菜</a>
+                                                <a href="#" class="second-item">新疆菜</a>
+                                                <a href="#" class="second-item">海鲜</a>
+                                                <a href="#" class="second-item">西北菜</a>
+                                                <a href="#" class="second-item">蟹宴</a>
+                                                <a href="#" class="second-item">台湾菜</a>
+                                                <a href="#" class="second-item">贵州菜</a>
+                                                <a href="#" class="second-item">面馆</a>
+                                                <a href="#" class="second-item">小龙虾</a>
+                                                <a href="#" class="second-item">江西菜</a>
+                                                <a href="#" class="second-item">家常菜</a>
+                                                <a href="#" class="second-item">其他</a>
+                                            </div>
+                                            <div class="group">
+                                                <div class="sec-title">
+                                                    <span class="channel-title">热门推荐</span>
+                                                </div>
+                                                <div class="sec-items">
+                                                    <a href="#" class="second-item">刺身</a>
+                                                    <a href="#" class="second-item">红烧肉</a>
+                                                    <a href="#" class="second-item">牛排</a>
+                                                    <a href="#" class="second-item">烤鱼</a>
+                                                    <a href="#" class="second-item">三文鱼</a>
+                                                    <a href="#" class="second-item">意大利面</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="menu-item">
+                                <a href="javascript:;">学习生活</a>
+                                <a href="javascript:;">快照</a>
+                                <a href="javascript:;">家政</a>
+                                <!-- 菜单右侧选项卡 -->
+                                <div class="sec-cate">
+                                    <div class="groups">
+                                        <div class="group">
+                                            <div class="sec-title">
+                                                <span class="channel-title">菜系</span>
+                                                <a href="javascript:;" class="more_cate">更多 <i
+                                                        class="icon-right icon-right-hover"></i></a>
+                                            </div>
+                                            <div class="sec-items">
+                                                <a href="#" class="second-item">火锅</a>
+                                                <a href="#" class="second-item">本帮江浙菜</a>
+                                                <a href="#" class="second-item">日本菜</a>
+                                                <a href="#" class="second-item">面包甜点</a>
+                                                <a href="#" class="second-item">咖啡厅</a>
+                                                <a href="#" class="second-item">自助餐</a>
+                                                <a href="#" class="second-item">小吃快餐</a>
+                                                <a href="#" class="second-item">西餐</a>
+                                                <a href="#" class="second-item">韩国料理</a>
+                                                <a href="#" class="second-item">粤菜</a>
+                                                <a href="#" class="second-item">烧烤</a>
+                                                <a href="#" class="second-item">东南亚菜</a>
+                                                <a href="#" class="second-item">川菜</a>
+                                                <a href="#" class="second-item">素菜</a>
+                                                <a href="#" class="second-item">东北菜</a>
+                                                <a href="#" class="second-item">湘菜</a>
+                                                <a href="#" class="second-item">云南菜</a>
+                                                <a href="#" class="second-item">新疆菜</a>
+                                                <a href="#" class="second-item">海鲜</a>
+                                                <a href="#" class="second-item">西北菜</a>
+                                                <a href="#" class="second-item">蟹宴</a>
+                                                <a href="#" class="second-item">台湾菜</a>
+                                                <a href="#" class="second-item">贵州菜</a>
+                                                <a href="#" class="second-item">面馆</a>
+                                                <a href="#" class="second-item">小龙虾</a>
+                                                <a href="#" class="second-item">江西菜</a>
+                                                <a href="#" class="second-item">家常菜</a>
+                                                <a href="#" class="second-item">其他</a>
+                                            </div>
+                                            <div class="group">
+                                                <div class="sec-title">
+                                                    <span class="channel-title">热门推荐</span>
+                                                </div>
+                                                <div class="sec-items">
+                                                    <a href="#" class="second-item">刺身</a>
+                                                    <a href="#" class="second-item">红烧肉</a>
+                                                    <a href="#" class="second-item">牛排</a>
+                                                    <a href="#" class="second-item">烤鱼</a>
+                                                    <a href="#" class="second-item">三文鱼</a>
+                                                    <a href="#" class="second-item">意大利面</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="menu-item">
+                                <a href="javascript:;">医疗健康</a>
+                                <a href="javascript:;">齿科</a>
+                                <a href="javascript:;">体检中心</a>
+                                <!-- 菜单右侧选项卡 -->
+                                <div class="sec-cate">
+                                    <div class="groups">
+                                        <div class="group">
+                                            <div class="sec-title">
+                                                <span class="channel-title">丽人</span>
+                                                <a href="javascript:;" class="more_cate">更多 <i
+                                                        class="icon-right icon-right-hover"></i></a>
+                                            </div>
+                                            <div class="sec-items">
+                                                <a href="#" class="second-item">美发</a>
+                                                <a href="#" class="second-item">美甲美睫</a>
+                                                <a href="#" class="second-item">美容/SPA</a>
+                                                <a href="#" class="second-item">养发</a>
+                                                <a href="#" class="second-item">瘦身纤体</a>
+                                                <a href="#" class="second-item">瑜伽</a>
+                                                <a href="#" class="second-item">舞蹈</a>
+                                                <a href="#" class="second-item">西餐</a>
+                                                <a href="#" class="second-item">韩式定妆</a>
+                                                <a href="#" class="second-item">祛痘</a>
+                                                <a href="#" class="second-item">纹身</a>
+                                                <a href="#" class="second-item">化妆品</a>
+                                            </div>
+                                            <div class="group">
+                                                <div class="sec-title">
+                                                    <span class="channel-title">医学美容</span>
+                                                    <a href="javascript:;" class="more_cate">更多 <i
+                                                            class="icon-right icon-right-hover"></i></a>
+                                                </div>
+                                                <div class="sec-items">
+                                                    <a href="#" class="second-item">水光补水</a>
+                                                    <a href="#" class="second-item">瘦脸</a>
+                                                    <a href="#" class="second-item">抗衰老</a>
+                                                    <a href="#" class="second-item">双眼皮</a>
+                                                    <a href="#" class="second-item">玻尿酸</a>
+                                                    <a href="#" class="second-item">美白冷敷</a>
+                                                    <a href="#" class="second-item">除皱瘦脸</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="menu-item">
+                                <a href="javascript:;">爱车</a>
+                                <a href="javascript:;">美容洗车</a>
+                                <a href="javascript:;">维修保养</a>
+                                <!-- 菜单右侧选项卡 -->
+                                <div class="sec-cate">
+                                    <div class="groups">
+                                        <div class="group">
+                                            <div class="sec-title">
+                                                <span class="channel-title">菜系</span>
+                                                <a href="javascript:;" class="more_cate">更多 <i
+                                                        class="icon-right icon-right-hover"></i></a>
+                                            </div>
+                                            <div class="sec-items">
+                                                <a href="#" class="second-item">火锅</a>
+                                                <a href="#" class="second-item">本帮江浙菜</a>
+                                                <a href="#" class="second-item">日本菜</a>
+                                                <a href="#" class="second-item">面包甜点</a>
+                                                <a href="#" class="second-item">咖啡厅</a>
+                                                <a href="#" class="second-item">自助餐</a>
+                                                <a href="#" class="second-item">小吃快餐</a>
+                                                <a href="#" class="second-item">西餐</a>
+                                                <a href="#" class="second-item">韩国料理</a>
+                                                <a href="#" class="second-item">粤菜</a>
+                                                <a href="#" class="second-item">烧烤</a>
+                                                <a href="#" class="second-item">东南亚菜</a>
+                                                <a href="#" class="second-item">川菜</a>
+                                                <a href="#" class="second-item">素菜</a>
+                                                <a href="#" class="second-item">东北菜</a>
+                                                <a href="#" class="second-item">湘菜</a>
+                                                <a href="#" class="second-item">云南菜</a>
+                                                <a href="#" class="second-item">新疆菜</a>
+                                                <a href="#" class="second-item">海鲜</a>
+                                                <a href="#" class="second-item">西北菜</a>
+                                                <a href="#" class="second-item">蟹宴</a>
+                                                <a href="#" class="second-item">台湾菜</a>
+                                                <a href="#" class="second-item">贵州菜</a>
+                                                <a href="#" class="second-item">面馆</a>
+                                                <a href="#" class="second-item">小龙虾</a>
+                                                <a href="#" class="second-item">江西菜</a>
+                                                <a href="#" class="second-item">家常菜</a>
+                                                <a href="#" class="second-item">其他</a>
+                                            </div>
+                                            <div class="group">
+                                                <div class="sec-title">
+                                                    <span class="channel-title">热门推荐</span>
+                                                </div>
+                                                <div class="sec-items">
+                                                    <a href="#" class="second-item">刺身</a>
+                                                    <a href="#" class="second-item">红烧肉</a>
+                                                    <a href="#" class="second-item">牛排</a>
+                                                    <a href="#" class="second-item">烤鱼</a>
+                                                    <a href="#" class="second-item">三文鱼</a>
+                                                    <a href="#" class="second-item">意大利面</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="menu-item">
+                                <a href="javascript:;">宠物</a>
+                                <a href="javascript:;">宠物店</a>
+                                <a href="javascript:;">宠物医院</a>
+                                <!-- 菜单右侧选项卡 -->
+                                <div class="sec-cate">
+                                    <div class="groups">
+                                        <div class="group">
+                                            <div class="sec-title">
+                                                <span class="channel-title">丽人</span>
+                                                <a href="javascript:;" class="more_cate">更多 <i
+                                                        class="icon-right icon-right-hover"></i></a>
+                                            </div>
+                                            <div class="sec-items">
+                                                <a href="#" class="second-item">美发</a>
+                                                <a href="#" class="second-item">美甲美睫</a>
+                                                <a href="#" class="second-item">美容/SPA</a>
+                                                <a href="#" class="second-item">养发</a>
+                                                <a href="#" class="second-item">瘦身纤体</a>
+                                                <a href="#" class="second-item">瑜伽</a>
+                                                <a href="#" class="second-item">舞蹈</a>
+                                                <a href="#" class="second-item">西餐</a>
+                                                <a href="#" class="second-item">韩式定妆</a>
+                                                <a href="#" class="second-item">祛痘</a>
+                                                <a href="#" class="second-item">纹身</a>
+                                                <a href="#" class="second-item">化妆品</a>
+                                            </div>
+                                            <div class="group">
+                                                <div class="sec-title">
+                                                    <span class="channel-title">医学美容</span>
+                                                    <a href="javascript:;" class="more_cate">更多 <i
+                                                            class="icon-right icon-right-hover"></i></a>
+                                                </div>
+                                                <div class="sec-items">
+                                                    <a href="#" class="second-item">水光补水</a>
+                                                    <a href="#" class="second-item">瘦脸</a>
+                                                    <a href="#" class="second-item">抗衰老</a>
+                                                    <a href="#" class="second-item">双眼皮</a>
+                                                    <a href="#" class="second-item">玻尿酸</a>
+                                                    <a href="#" class="second-item">美白冷敷</a>
+                                                    <a href="#" class="second-item">除皱瘦脸</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="fl">
+                    <a href="javascript:;" class="cate-item other-cate">霸王餐</a>
+                    <i class="hot-icon"></i>
+                    <a href="javascript:;" class="cate-item other-cate">社区论坛</a>
+                    <a href="javascript:;" class="cate-item other-cate">预约订座</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="jing">
+        <span>长沙周边游</span>
+        <span> <a href="javascript:;"> > </a> </span>
+        <span>景点</span>
+    </div>
+    <!-- 导航 -->
+    <!-- <div class="daohan">
+        <div class="daohan1">
+            <div class="daohan01">
+                <ul>
+                    <li><a href="javascript:;">分类</a></li>
+                    <li><a href="javascript:;">不限</a></li>
+                    <li><a href="javascript:;">景点</a></li>
+                    <li><a href="javascript:;">水上娱乐</a></li>
+                    <li><a href="javascript:;">展览展馆</a></li>
+                    <li><a href="javascript:;">动植物园</a></li>
+                    <li><a href="javascript:;">滑雪</a></li>
+                    <li><a href="javascript:;">温泉</a></li>
+                    <li><a href="javascript:;">采摘/农家乐</a></li>
+                    <li><a href="javascript:;">旅游其他</a></li>
+                </ul>
+            </div>
+            <div class="daohan02">
+                <ul>
+                    <li><a href="javascript:;">不限</a></li>
+                    <li><a href="javascript:;">自然风光</a></li>
+                    <li><a href="javascript:;">游乐园</a></li>
+                    <li><a href="javascript:;">公园</a></li>
+                    <li><a href="javascript:;">名胜古迹</a></li>
+                    <li><a href="javascript:;">古镇</a></li>
+                    <li><a href="javascript:;">主题乐园</a></li>
+                    <li><a href="javascript:;">城市观光</a></li>
+                    <li><a href="javascript:;">观光街区</a></li>
+                    <li><a href="javascript:;">高空观景</a></li>
+                    <li><a href="javascript:;">创意园区</a></li>
+                    <li><a href="javascript:;">其他景点</a></li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="daohan2">
+            <div class="daohan21">
+                <ul>
+                    <li><a href="javascript:;">分类</a></li>
+                    <li><a href="javascript:;">不限</a></li>
+                    <li><a href="javascript:;">热门商区</a></li>
+                    <li><a href="javascript:;">行政区</a></li>
+                    <li><a href="javascript:;">地铁线</a></li>
+                </ul>
+            </div>
+            <div class="daohan22">
+                <ul>
+
+                    <li><a href="javascript:;">司门口</a></li>
+                    <li><a href="javascript:;">河西大学城</a></li>
+                    <li><a href="javascript:;">五一广场</a></li>
+                    <li><a href="javascript:;">桐梓坡</a></li>
+                    <li><a href="javascript:;">坡子街</a></li>
+                    <li><a href="javascript:;">银盆岭</a></li>
+                    <li><a href="javascript:;">火车站</a></li>
+                    <li><a href="javascript:;"> 解放西路</a></li>
+                    <li><a href="javascript:;"> 咸嘉湖</a></li>
+                    <li><a href="javascript:;"> 新民路</a></li>
+                    <li><a href="javascript:;"> 香樟路/民政学院</a></li>
+                    <li><a href="javascript:;">黄兴路步行街</a></li>
+                    <li><a href="javascript:;">中山亭</a></li>
+                    <li><a href="javascript:;"> 芙蓉南路沿线</a></li>
+                    <li><a href="javascript:;">天心阁/白沙井</a></li>
+                    <li><a href="javascript:;"> 马王堆</a></li>
+
+                </ul>
+            </div>
+
+        </div>
+    </div> -->
+    <div class="w">
+        <div class="lhj-listnav">
+            <h4>分类:</h4>
+            <span>不限</span>
+            <ul>
+                <li><a href="javascript:;">便民服务</a></li>
+                <li><a href="javascript:;">金融</a></li>
+                <li><a href="javascript:;">搬家运输</a></li>
+                <li><a href="javascript:;">洗涤护理</a></li>
+                <li><a href="javascript:;">商务服务</a></li>
+                <li><a href="javascript:;">家电数码维修</a></li>
+                <li><a href="javascript:;">文化传媒</a></li>
+                <li><a href="javascript:;">家政</a></li>
+                <li><a href="javascript:;">居家维修</a></li>
+                <li><a href="javascript:;">生活配送</a></li>
+                <li><a href="javascript:;">房屋地产</a></li>
+                <li><a href="javascript:;">文印图文</a></li>
+                <li><a href="javascript:;">旅行社</a></li>
+                <li><a href="javascript:;">回收</a></li>
+                <li><a href="javascript:;">公司企业</a></li>
+                <li><a href="javascript:;" class="pass-card">快照摄影</a></li>
+                <li><a href="javascript:;">售票点</a></li>
+                <li><a href="javascript:;">情趣生活</a></li>
+            </ul>
+            <ol>
+                <li><a href="javascript:;">自行车租赁</a></li>
+                <li><a href="javascript:;">老年生活</a></li>
+                <li><a href="javascript:;">丧葬</a></li>
+                <li><a href="javascript:;">演出票务</a></li>
+                <li><a href="javascript:;">政府机构</a></li>
+                <li><a href="javascript:;">网站</a></li>
+                <li><a href="javascript:;">心理咨询</a></li>
+                <li><a href="javascript:;">更多生活服务</a></li>
+            </ol>
+            <h5>更多</h5>
+        </div>
+        <div class="lhj-tabnav">
+            <h4>地点:</h4>
+            <span class="pass-card">不限</span>
+
+            <ul class="tabnav-list">
+                <li>热门商区</li>
+                <li>行政区</li>
+                <li>地铁线</li>
+            </ul>
+            <div class="lhj-tabnav-con">
+                <div class="item-s">
+                    <a href="javascript:;">司门口</a>
+                    <a href="javascript:;">河西大学城</a>
+                    <a href="javascript:;">五一广场</a>
+                    <a href="javascript:;">桐梓坡</a>
+                    <a href="javascript:;">坡子街</a>
+                    <a href="javascript:;">银盆岭</a>
+                    <a href="javascript:;">火车站</a>
+                    <a href="javascript:;">解放西路</a>
+                    <a href="javascript:;">咸嘉湖</a>
+                    <a href="javascript:;">新民路</a>
+                    <a href="javascript:;">香樟路/民政学院</a>
+                    <a href="javascript:;">东塘</a>
+                    <a href="javascript:;">黄兴路步行街</a>
+                    <a href="javascript:;">中山亭</a>
+                    <a href="javascript:;">芙蓉南路沿线</a>
+                    <a href="javascript:;">天心阁/白沙井</a>
+                </div>
+                <div class="item-s">
+                    <a href="javasccript:;">天心区</a>
+                    <a href="javasccript:;">开福区</a>
+                    <a href="javasccript:;">芙蓉区</a>
+                    <a href="javasccript:;">雨花区</a>
+                    <a href="javasccript:;">岳麓区</a>
+                    <a href="javasccript:;">望城区</a>
+                    <a href="javasccript:;">长沙县</a>
+                    <a href="javasccript:;">宁乡市</a>
+                    <a href="javasccript:;">浏阳</a>
+                </div>
+                <div class="item-s">
+                    <a href="javascript:;">4号线</a>
+                    <a href="javascript:;">1号线</a>
+                    <a href="javascript:;">2号线</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="big1 clearfix">
+        <div class="big11">
+            <div class="big12">
+                <div class="big22">
+                    <div class="son1">
+                        <span><a href="javascript:;">有团购</a></span>
+                        <span><a href="javascript:;">可订座</a></span>
+                    </div>
+                    <div class="son2">
+                        <ul>
+                            <li><a href="javascript:;">智能</a>
+                                <span>|</span></li>
+                            <li><a href="javascript:;">人气</a>
+                                <span>|</span></li>
+                            <li><a href="javascript:;">好评</a>
+                                <span>|</span></li>
+                            <li><a href="javascript:;">评分</a>
+                                <span>|</span></li>
+                            <li><a href="javascript:;">其他排序</a>
+                                <span>|</span></li>
+                            <li><a href="javascript:;">人均</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="big23">
+                    <div class="sun">
+                        <ul>
+                            <li>
+                                <img class="lazy" data-original="zz_img/01.jpg" alt="">
+                                <div class="txt">
+                                    <h4><a href="javascript:;">长沙东方方特神话</a></h4>
+                                    <span class="niuniu"></span>
+                                    <span>1674条点评|</span>
+                                    <span>人均￥330</span>
+                                    <span class="niu">总分9.3 环境9.3 服务9.3</span>
+                                    <br>
+                                    <span>游乐园|</span>
+                                    <span>宁乡市其他|</span>
+                                    <span>夏铎铺镇岳宁大道1号</span>
+                                </div>
+
+                            </li>
+                            <li>
+                                <img class="lazy" data-original="zz_img/02.jpg" alt="">
+                                <div class="txt">
+                                    <h4><a href="javascript:;">岳麓山风景名胜区</a></h4>
+                                    <span>★★★★★|</span>
+                                    <span>5544条点评|</span>
+                                    <span>人均￥49</span>
+                                    <span class="niu">总分7.7 环境7.3 服务7.2</span>
+                                    <br>
+                                    <span>自然风光|</span>
+                                    <span>河西大学城|</span>
+                                    <span>登高路58号</span>
+                                </div>
+
+                            </li>
+                            <li>
+                                <img class="lazy" data-original="zz_img/03.jpg" alt="">
+                                <div class="txt">
+                                    <h4><a href="javascript:;">橘子洲景区 </a></h4>
+                                    <span>★★★★★|</span>
+                                    <span>8332条点评|</span>
+                                    <span>人均￥32</span>
+                                    <span class="niu">总分6.6 环境7.0 服务5.3</span>
+                                    <br>
+                                    <span>自然风光|</span>
+                                    <span>橘子洲|</span>
+                                    <span>橘子洲街景</span>
+                                </div>
+
+                            </li>
+                            <li>
+                                <img class="lazy" data-original="zz_img/04.jpg" alt="">
+                                <div class="txt">
+                                    <h4><a href="javascript:;">长沙世界之窗</a></h4>
+                                    <span>★★★★★|</span>
+                                    <span>2802条点评|</span>
+                                    <span>人均￥160</span>
+                                    <span class="niu">总分8.8 环境7.8 服务8.3</span>
+                                    <br>
+                                    <span>主题乐园|</span>
+                                    <span>马栏山/月湖公园|</span>
+                                    <span>三一大道485号</span>
+                                </div>
+
+                            </li>
+                            <li>
+                                <img class="lazy" data-original="zz_img/05.jpg" alt="">
+                                <div class="txt">
+                                    <h4><a href="javascript:;">长沙摩天轮</a></h4>
+                                    <span>★★★★★|</span>
+                                    <span>847条点评|</span>
+                                    <span>人均￥80</span>
+                                    <span class="niu">总分7.7 环境6.8 服务6.4</span>
+                                    <br>
+                                    <span>高空观景|</span>
+                                    <span>书院路|</span>
+                                    <span>芙蓉中路二段170号</span>
+                                </div>
+
+                            </li>
+                            <li>
+                                <img class="lazy" data-original="zz_img/16.jpg" alt="">
+                                <div class="txt">
+                                    <h4><a href="javascript:;">贝拉小镇</a></h4>
+                                    <span>★★★★|</span>
+                                    <span>164条点评|</span>
+                                    <span>人均￥268</span>
+                                    <span class="niu">总分6.9 环境6.9 服务6.9</span>
+                                    <br>
+                                    <span>其他景点|</span>
+                                    <span>望城区|</span>
+                                    <span>金洲大道光明村贝拉路88号</span>
+                                </div>
+
+                            </li>
+                            <li>
+                                <img class="lazy" data-original="zz_img/07.jpg" alt="">
+                                <div class="txt">
+                                    <h4><a href="javascript:;">月亮岛</a></h4>
+                                    <span>★★★★★|</span>
+                                    <span>163条点评|</span>
+                                    <span>人均￥65</span>
+                                    <span class="niu">总分9.2 环境9.2 服务8.3</span>
+                                    <br>
+                                    <span>主题乐园|</span>
+                                    <span>望城区|</span>
+                                    <span>市区西北14公里的湘江西岸</span>
+                                </div>
+
+                            </li>
+                            <li>
+                                <img class="lazy" data-original="zz_img/08.jpg" alt="">
+                                <div class="txt">
+                                    <h4><a href="javascript:;">新华联铜官窑古镇</a></h4>
+                                    <span>★★★★★|</span>
+                                    <span>614条点评|</span>
+                                    <span>人均￥202</span>
+                                    <span class="niu">总分6.9 环境6.9 服务6.9</span>
+                                    <br>
+                                    <span>名胜古迹|</span>
+                                    <span>望城区|</span>
+                                    <span>铜官街道彩陶源村</span>
+                                </div>
+
+                            </li>
+                            <li>
+                                <img class="lazy" data-original="zz_img/17.jpg" alt="">
+                                <div class="txt">
+                                    <h4><a href="javascript:;">岳麓书院</a></h4>
+                                    <span>★★★★★|</span>
+                                    <span>2894条点评|</span>
+                                    <span>人均￥45</span>
+                                    <span class="niu">总分7.8 环境9.0 服务8.1</span>
+                                    <br>
+                                    <span>名胜古迹|</span>
+                                    <span>河西大学城|</span>
+                                    <span>岳麓南路273号</span>
+                                </div>
+
+                            </li>
+                            <li>
+                                <img class="lazy" data-original="zz_img/18.jpg" alt="">
+                                <div class="txt">
+                                    <h4><a href="javascript:;">关山古镇</a></h4>
+                                    <span>★★★★|</span>
+                                    <span>124条点评|</span>
+                                    <span>人均￥53</span>
+                                    <span class="niu">总分6.3 环境7.3 服务7.3</span>
+                                    <br>
+                                    <span>名胜古迹|</span>
+                                    <span>宁乡市其他|</span>
+                                    <span>金洲镇关山村旅游社区</span>
+                                </div>
+
+                            </li>
+                            <li>
+                                <img class="lazy" data-original="zz_img/11.jpg" alt="">
+                                <div class="txt">
+                                    <h4><a href="javascript:;">百果园</a></h4>
+                                    <span>★★★★|</span>
+                                    <span>44条点评|</span>
+                                    <span>人均￥102</span>
+                                    <span class="niu">总分6.9 环境6.9 服务6.9</span>
+                                    <br>
+                                    <span>其他景点|</span>
+                                    <span>长沙医学院|</span>
+                                    <span>望城县雷锋大道七公里处</span>
+                                </div>
+
+                            </li>
+                            <li>
+                                <img class="lazy" data-original="zz_img/19.jpg" alt="">
+                                <div class="txt">
+                                    <h4><a href="javascript:;">花明楼景区</a></h4>
+                                    <span>★★★★★|</span>
+                                    <span>124条点评|</span>
+                                    <span>人均￥28</span>
+                                    <span class="niu">总分9.3 环境9.3 服务9.3</span>
+                                    <br>
+                                    <span>名胜古迹|</span>
+                                    <span>宁乡市其他|</span>
+                                    <span>花明楼镇花明楼景区</span>
+                                </div>
+
+                            </li>
+                            <li>
+                                <img class="lazy" data-original="zz_img/20.jpg" alt="">
+                                <div class="txt">
+                                    <h4><a href="javascript:;">千龙湖生态旅游度假区</a></h4>
+                                    <span>★★★★★|</span>
+                                    <span>104条点评|</span>
+                                    <span>人均￥213</span>
+                                    <span class="niu">总分9.3 环境9.3 服务9.3</span>
+                                    <br>
+                                    <span>其他景点|</span>
+                                    <span>望城区|</span>
+                                    <span>格塘镇千龙湖</span>
+                                </div>
+
+                            </li>
+                            <li>
+                                <img class="lazy" data-original="zz_img/14.jpg" alt="">
+                                <div class="txt">
+                                    <h4><a href="javascript:;">石燕湖</a></h4>
+                                    <span>★★★★★|</span>
+                                    <span>724条点评|</span>
+                                    <span>人均￥182</span>
+                                    <span class="niu">总分7.0 环境7.5 服务7.3</span>
+                                    <br>
+                                    <span>自然风光|</span>
+                                    <span>雨花区|</span>
+                                    <span>跳马镇</span>
+                                </div>
+
+                            </li>
+                            <li>
+                                <img class="lazy" data-original="zz_img/15.jpg" alt="">
+                                <div class="txt">
+                                    <h4><a href="javascript:;">沩山风景名胜区</a></h4>
+                                    <span>★★★★|</span>
+                                    <span>27条点评|</span>
+                                    <span>人均—</span>
+                                    <span class="niu">总分7.3 环境7.5 服务6.3</span>
+                                    <br>
+                                    <span>自然风光|</span>
+                                    <span>宁乡市其他|</span>
+                                    <span>黄彩镇石龙洞村</span>
+                                </div>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="ziti">
+                <ul>
+                    <li><a href="javascript:;">1</a></li>
+                    <li><a href="javascript:;">2</a></li>
+                    <li><a href="javascript:;">3</a></li>
+                    <li><a href="javascript:;">4</a></li>
+                    <li><a href="javascript:;">5</a></li>
+                    <li><a href="javascript:;">6</a></li>
+                    <li><a href="javascript:;">7</a></li>
+                    <li><a href="javascript:;">8</a></li>
+                    <li><a href="javascript:;">9</a></li>
+                    <li class="ni">...</li>
+                    <li><a href="javascript:;">36</a></li>
+                    <li><a href="javascript:;">下一页</a></li>
+                </ul>
+            </div>
+            <div class="zimu">
+                <h4>商户没有被收录？</h4>
+                <span>添加商户</span>
+                <div class="zimuson">
+                    <b>你对商户满意程度？</b>
+                    <span><a href="javascript:;">满意</a></span>
+                    <span><a href="javascript:;">不满意</a></span>
+                </div>
+            </div>
+            <!-- <div class="DAda">
+                <div class="Dada1">
+                    <p>长沙景点大全：</p>
+                    <span>A</span>
+                    <span>B</span>
+                    <span>C</span>
+                    <span>D</span>
+                    <span>E</span>
+                    <span>F</span>
+                    <span>G</span>
+                    <span>H</span>
+                    <span>I</span>
+                    <span>J</span>
+                    <span>K</span>
+                    <span>L</span>
+                    <span>M</span>
+                    <span>N</span>
+                    <span>O</span>
+                    <span>P</span>
+                    <span>Q</span>
+                    <span>R</span>
+                    <span>S</span>
+                    <span>T</span>
+                    <span>U</span>
+                    <span>V</span>
+                    <span>W</span>
+                    <span>X</span>
+                    <span>Y</span>
+                    <span>Z</span></br>
+
+                </div>
+                <div class="Dada2">
+                    <p>景点排行榜：</p>
+
+                    <span>B</span>
+                    <span>C</span>
+                    <span>D</span>
+                    <span>E</span>
+                    <span>F</span>
+                    <span>G</span>
+                    <span>H</span>
+                    <span>I</span>
+                    <span>J</span>
+                    <span>K</span>
+                    <span>L</span>
+                    <span>M</span>
+                    <span>N</span>
+                    <span>O</span>
+                    <span>P</span>
+                    <span>Q</span>
+                    <span>R</span>
+                    <span>S</span>
+                    <span>T</span>
+                    <span>U</span>
+                    <span>V</span>
+                    <span>W</span>
+                    <span>X</span>
+                    <span>Y</span>
+                    <span>Z</span>
+                </div>
+                <div class="gou1">
+                    <p>长沙周边游:</p>
+                    <ul>
+                        <li><a href="javascript:;">长沙景点</a></li>
+                        <li><a href="javascript:;">长沙水上娱乐</a></li>
+                        <li><a href="javascript:;">长沙展馆/展览</a></li>
+                        <li><a href="javascript:;">长沙动植物园</a></li>
+                        <li><a href="javascript:;">长沙温泉</a></li>
+                    </ul>
+                    <div id="gouzi"><a href="javascript:;">更多</a></div>
+                </div>
+                <div class="gou2">
+                    <p>长沙生活导航:</p>
+                    <ul>
+                        <li><a href="javascript:;">长沙美食</a></li>
+                        <li><a href="javascript:;">长沙电影演出赛事</a></li>
+                        <li><a href="javascript:;">长沙休闲娱乐</a></li>
+                        <li><a href="javascript:;">长沙酒店</a></li>
+                        <li><a href="javascript:;">丽人</a></li>
+                    </ul>
+                    <div id="gouzi"><a href="javascript:;">更多</a></div>
+                </div>
+                <div class="gou3">
+                    <p>景点热门城市:</p>
+                    <ul>
+                        <li><a href="javascript:;">北京景点</a></li>
+                        <li><a href="javascript:;">上海景点</a></li>
+                        <li><a href="javascript:;">广州景点</a></li>
+                        <li><a href="javascript:;">深圳景点</a></li>
+                        <li><a href="javascript:;">天津景点</a></li>
+                    </ul>
+                    <div id="gouzi"><a href="javascript:;">更多</a></div>
+                </div>
+            </div> -->
+
+            <!--页面加载end-->
+            <div id="loader-wrapper">
+                <div id="loader"></div>
+                <!-- 背景遮盖层 -->
+                <div class="load_bg"></div>
+                <!-- <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+        <div class="load_title">正在加载大众点评<br><span>前端23期</span></div> -->
+            </div>
+
+        </div>
+        <div class="big2">
+            <div class="dag">
+                <span class="dagddd"><a href="javascript:;">专享优惠</a></span>
+                <img class="lazy" data-original="zz_img/1.png" alt="">
+                <span class="dagxxx"><a href="javascript:;">手机特价</a></span>
+
+            </div>
+            <div class="erg">
+                <div class="erg1">
+                    <h4>你可能喜欢</h4>
+                    <span>广告</span>
+                </div>
+                <div class="sang">
+                    <ul>
+                        <li>
+                            <img class="lazy" data-original="zz_img/12.png" alt="">
+                            <a href="javascript:;" class="dadada">至美会婚纱摄影</a>
+                            <div>★★★★</div>
+                            <span>函浦</span>
+                            <span class="dageg">人均-</span>
+                        </li>
+                        <li>
+                            <img class="lazy" data-original="zz_img/11.png" alt="">
+                            <a href="javascript:;">痘院士专业祛痘皮...</a>
+                            <div>★★★★</div>
+                            <span>黄兴路步行街</span>
+                            <span class="dageg">人均-</span>
+                        </li>
+                        <li>
+                            <img class="lazy" data-original="zz_img/13.png" alt="">
+                            <a href="javascript:;" class="dadada">美联英语</a>
+                            <div>★★★★</div>
+                            <span>体育新城</span>
+                            <span class="dageg">人均-</span>
+                        </li>
+                        <li>
+                            <img class="lazy" data-original="zz_img/15.png" alt="">
+                            <a href="javascript:;">斌弟卤味火锅</a>
+                            <div>★★★★</div>
+                            <span>红星</span>
+                            <span class="dageg">人均-</span>
+                        </li>
+                        <li>
+                            <img class="lazy" data-original="zz_img/14.png" alt="">
+                            <a href="javascript:;" class="dadada">Fancy Nup...</a>
+                            <div>★★★★</div>
+                            <span>银盆岭</span>
+                            <span class="dageg">人均-</span>
+                        </li>
+                        <li>
+                            <img class="lazy" data-original="zz_img/16.png" alt="">
+                            <a href="javascript:;" class="dadada">山水庄园农家乐聚..</a>
+                            <div>★★★★</div>
+                            <span>湘江世纪城</span>
+                            <span class="dageg">人均-</span>
+                        </li>
+                        <li>
+                            <img class="lazy" data-original="zz_img/17.png" alt="">
+                            <a href="javascript:;">橡皮筋少儿艺术</a>
+                            <div>★★★★</div>
+                            <span>星沙经济开发区</span>
+                            <span class="dageg">人均-</span>
+                        </li>
+                        <li>
+                            <img class="lazy" data-original="zz_img/18.png" alt="">
+                            <a href="javascript:;" class="dadada">虾小士·小龙虾轻...</a>
+                            <div>★★★★</div>
+                            <span>开福寺</span>
+                            <span class="dageg">人均-</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="weiba">
+        <p> 相关榜单:</p>
+    </div> -->
+    <!-- <div class="weibala">
+        <p>
+            <a href="javascript:;">关于我们</a>
+            <a href="javascript:;">商户诚信公约</a>
+            <a href="javascript:;">规则中心</a>
+            <a href="javascript:;">媒体报道</a>
+            <a href="javascript:;">商户入驻</a>
+            <a href="javascript:;">推广服务</a>
+            <a href="javascript:;">人才招聘</a>
+            <a href="javascript:;">最新咨询</a>
+            <a href="javascript:;">联系我们</a>
+            <a href="javascript:;">应用下载</a>
+        </p>
+        <p><span>©2003-2019 dianping.com, All Rights Reserved.</span>
+            <span>本站发布的所有内容，未经许可，不得转载，详见 <a href="javascript:;">《知识产权声明》</a>。</span></p>
+    </div> -->
+
+    <div id="shape">
+        <div class="shapeColor">
+            <div class="shapeFly">
+            </div>
+        </div>
+    </div>
+    <!-- 登陆表单 -->
+
+
+    <!-- 网站底部 -->
+    <div class="footer-container">
+        <div class="channel-footer">
+            <p class="links">
+                <a href="javascript:;">关于我们</a>
+                <a href="javascript:;">商户诚信公约</a>
+                <a href="javascript:;">规则中心</a>
+                <a href="javascript:;">媒体报道</a>
+                <a href="javascript:;">商户入驻</a>
+                <a href="javascript:;">推广服务</a>
+                <a href="javascript:;">人才招聘</a>
+                <a href="javascript:;">联系我们</a>
+                <a href="javascript:;">应用下载</a>
+            </p>
+            <p class="rights">
+                <span style="margin-right:10px;">©2003-2019 dianping.com, All Rights Reserved.</span>
+                <span>本站发布的所有内容，未经许可，不得转载，详见 <a href="javascript:;" class="G">《知识产权声明》</a> </span>
+            </p>
+        </div>
+    </div>
+
+
+    <!-- footer end -->
+    <script src="js/jquery.lazyload.js"></script>
+    <script src="js/jquery.scrollstop.js"></script>
+    <script type="text/javascript" charset="utf-8">
+        $(function () {
+            $("img.lazy").lazyload({
+                // placeholder: "./img/lazyload.gif", //用图片提前占位
+                // placeholder,值为某一图片路径.此图片用来占据将要加载的图片的位置,待图片加载时,占位图则会隐藏
+                effect: "slideDown", // 载入使用何种效果
+                // effect(特效),值有show(直接显示),fadeIn(淡入),slideDown(下拉)等,常用fadeIn
+                threshold: 20, // 提前开始加载
+                // threshold,值为数字,代表页面高度.如设置为200,表示滚动条在离目标位置还有200的高度时就开始加载图片,可以做到不让用户察觉
+                // event: 'scroll',  // 事件触发时才加载
+                // event,值有click(点击),mouseover(鼠标划过),sporty(运动的),foobar(…).可以实现鼠标莫过或点击图片才开始加载,后两个值未测试…
+                // container: $(".jiehun_container"),  // 对某容器中的图片实现效果
+                // container,值为某容器.lazyload默认在拉动浏览器滚动条时生效,这个参数可以让你在拉动某DIV的滚动条时依次加载其中的图片
+                failurelimit: 10 // 图片排序混乱时
+                // failurelimit,值为数字.lazyload默认在找到第一张不在可见区域里的图片时则不再继续加载,但当HTML容器混乱的时候可能出现可见区域内图片并没加载出来的情况,failurelimit意在加载N张可见区域外的图片,以避免出现这个问题.
+            });
+        });
+    </script>
+
+    <!-- 登录注册表单js文件 -->
+    <!-- <script src="js/canva_moving_effect.js"></script> -->
+
+    <!-- 引入input烟花文件 -->
+    <script src="js/activate-power-mode.js "></script>
+</body>
+
+</html>

@@ -1,0 +1,895 @@
+@font-face {
+    font-family: 'icomoon';
+    src: url('../lhj_fonts/icomoon.eot?7kkyc2');
+    src: url('../lhj_fonts/icomoon.eot?7kkyc2#iefix') format('embedded-opentype'), url('../lhj_fonts/icomoon.ttf?7kkyc2') format('truetype'), url('../lhj_fonts/icomoon.woff?7kkyc2') format('woff'), url('../lhj_fonts/icomoon.svg?7kkyc2#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/* 导航栏重置css样式 */
+.dropdown .dd {
+    display: none;
+}
+.ge {
+    color: #f63;
+}
+
+em {
+    font-style: normal;
+    color: #e0e0e0;
+}
+
+.lhj-life-service {
+    padding: 10px 0 10px 20px;
+    height: 20px;
+    font-size: 12px;
+    background-color: rgba(255,255,255,0.8);
+}
+
+.lhj-life-service span {
+    margin-right: 10px;
+    line-height: 20px;
+    color: #333333;
+}
+
+.lhj-listnav,
+.lhj-tabnav {
+    position: relative;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.lhj-listnav {
+    padding: 20px;
+    background-color: rgba(229,219,219,0.8);
+}
+
+.lhj-listnav h4,
+.lhj-tabnav h4 {
+    float: left;
+    font-size: 12px;
+    color: #999999;
+}
+
+.lhj-listnav span,
+.lhj-tabnav span {
+    float: left;
+    margin-left: 55px;
+    font-size: 12px;
+    color: #666;
+    cursor: pointer;
+}
+
+.lhj-listnav ul {
+    margin-left: 130px;
+    overflow: hidden;
+}
+
+.lhj-listnav ul li {
+    width: 109px;
+    float: left;
+}
+
+.lhj-listnav a {
+    padding: 0 5px;
+    float: left;
+    height: 20px;
+    line-height: 20px;
+    margin: 0 13px 10px;
+    font-size: 12px;
+    color: #666666;
+}
+
+.lhj-listnav a:hover {
+    color: #666666!important;
+}
+
+.pass-card {
+    background-color: #FF6633;
+    border-radius: 20px;
+    color: #fff!important;
+}
+
+.pass-card:hover {
+    color: #fff!important;
+}
+
+.lhj-listnav ol {
+    margin-left: 130px;
+    margin-top: 20px;
+    display: none;
+}
+
+.lhj-listnav ol li {
+    width: 104px;
+    float: left;
+}
+
+.lhj-listnav h5 {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    float: right;
+    width: 53px;
+    color: #666;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.lhj-listnav h5:hover {
+    color: #FF6633;
+}
+
+.lhj-tabnav {
+    padding: 0 20px 20px;
+    background-color: rgba(229,219,219,0.8);
+    margin-top: 10px;
+}
+
+.lhj-tabnav h4 {
+    line-height: 30px;
+}
+
+.lhj-tabnav span {
+    width: 40px;
+    line-height: 30px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.tabnav-list {
+    margin-left: 142px;
+    /* padding: 10px 10px 0; */
+    height: 30px;
+}
+
+.tabnav-list li {
+    width: 96px;
+    height: 30px;
+    line-height: 30px;
+    float: left;
+    text-align: center;
+    font-size: 12px;
+    color: #666666;
+    cursor: pointer;
+    border: solid 1px rgba(229,219,219,0.8);
+    border-bottom: solid 1px transparent;
+    box-sizing: border-box;
+}
+
+.card {
+    background-color: #F8F8F8;
+    color: #FF6633;
+}
+
+.lhj-tabnav-con {
+    margin-left: 142px;
+    box-sizing: border-box;
+}
+
+.item-s {
+    display: none;
+    font-size: 12px;
+    background-color: #F8F8F8;
+    text-overflow: initial;
+    overflow: initial;
+    white-space: initial;
+    border: solid 1px #f0f0f0;
+}
+
+.item-s a {
+    display: inline-block;
+    margin: 10px 23px 10px;
+    color: #666666;
+}
+
+
+/* 照相馆列表部分 */
+
+.lhj-listphoto {
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.lhj-shop-content {
+    float: left;
+    margin-right: 10px;
+    width: 950px;
+    /* background-color: #fff; */
+}
+
+.lhj-shop-nav {
+    position: relative;
+    padding: 0 45px 0 19px;
+    border-bottom: solid 1px #eee;
+    line-height: 44px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.tuangou i {
+    margin-right: 8px;
+}
+
+.tuangou a {
+    float: left;
+    width: 72px;
+    font-size: 12px;
+}
+
+.lhj-xiaonav {
+    float: right;
+}
+
+.lhj-xiaonav li {
+    position: relative;
+    float: left;
+    text-align: center;
+}
+
+.lhj-xiaonav li a {
+    display: block;
+    padding: 0 15px;
+    font-size: 12px;
+    color: #333;
+}
+
+.lhj-xiaonav li a:hover {
+    color: #ff6633;
+}
+
+.lhj-xiaonav li em {
+    position: absolute;
+    top: 0;
+    right: -1px;
+}
+
+i {
+    font-family: "icomoon";
+    font-style: normal;
+    display: inline-block;
+    width: 7px;
+    height: 9px;
+    margin-left: 3px;
+}
+
+.map {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 44px;
+    height: 44px;
+    border-left: solid 1px #eee;
+    text-align: center;
+}
+
+.map i {
+    display: inline-block;
+    top: 4px;
+    width: 20px;
+    height: 21px;
+    position: relative;
+    vertical-align: middle;
+    background: url(../lhj_img/下载) no-repeat;
+    background-size: 24px auto;
+    text-align: center;
+    line-height: 21px;
+}
+
+.lhj-shopnav-list ul {
+    margin-bottom: 10px;
+    background-color: #fff;
+}
+.lhj-shopnav-list ul li {
+    transition: all 0.3s;
+}
+
+.lhj-shopnav-list ul li:hover {
+    box-shadow: 0 7px 10px #f63;
+    transform: translate3d(0,-5px,0);
+    background-color: #ccc;
+}
+
+.lhj-shopnav-list li {
+    padding: 15px 15px 38px 20px;
+    position: relative;
+    border-bottom: 1px solid #ccc;
+    display: block;
+    overflow: hidden;
+    height: 171px;
+    box-sizing: border-box;
+}
+
+.lhj-shopnav-collecting {
+    position: absolute;
+    top: 10px;
+    right: 27px;
+    font-size: 12px;
+    height: 14px;
+    line-height: 14px;
+    display: none;
+}
+
+.loc {
+    color: #e8e8e8;
+    margin-right: 7px;
+}
+
+.lhj-shopnav-collecting i {
+    font-family: "icomoon";
+    position: relative;
+    top: 0px;
+    left: -6px;
+}
+
+.lhj-shopnav-collecting a {
+    margin-right: 5px;
+    color: #999;
+}
+
+.pic {
+    float: left;
+    margin-right: 14px;
+}
+
+.lhj-shopnav-list a img {
+    width: 170px;
+    height: 127px;
+    border: 1px solid #f0f0f0;
+}
+
+.lhj-shopnav-list .ad {
+    color: #e5e5e5;
+    font-size: 12px;
+    margin-left: 7px;
+    padding: 1px 3px;
+    line-height: 14px;
+    border: 1px solid #e5e5e5;
+}
+
+.phototxt {
+    margin-left: 193px;
+    width: 723px;
+    overflow: hidden;
+}
+
+.photoname,
+.comment {
+    width: 723px;
+    float: left;
+    margin-bottom: 7px;
+}
+
+.photoname a {
+    float: left;
+    margin-right: 5px;
+    font-size: 16px;
+    max-width: 380px;
+    color: #333;
+}
+
+.phototuan a {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url(../lhj_img/icon_sprite.png) no-repeat;
+    background-position: -80px 0;
+    background-size: 431px auto;
+}
+
+.comment span {
+    display: inline-block;
+    background: url(../lhj_img/star-rating.png) no-repeat;
+    background-position: 0 -15px;
+    width: 66px;
+    height: 12px;
+    vertical-align: -1px;
+    background-size: 86px auto;
+    margin-right: 10px;
+}
+
+.comment a,
+.photo-adress a,
+.packup a {
+    font-size: 12px;
+    color: #999;
+}
+
+.packup {
+    margin-top: 32px;
+}
+
+.packup span {
+    font-size: 12px;
+    color: #f63;
+}
+
+.lhj-list-page {
+    text-align: right;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #EFEFEF;
+}
+
+.cur {
+    background-color: #eaeaea!important;
+}
+
+.lhj-list-page a {
+    height: 24px;
+    line-height: 26px;
+    padding: 0 8px;
+    border: 1px solid #ddd;
+    display: inline-block;
+    margin-left: 3px;
+    color: #333;
+    font-size: 12px;
+    background-color: #fff;
+}
+
+.lhj-list-page a:hover {
+    background-color: #eaeaea;
+}
+
+.lhj-commercial-tenant {
+    position: relative;
+    height: 60px;
+    padding: 15px 0 10px 20px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    line-height: 38px;
+    background-color: #fff;
+    border: 1px solid #f0f0f0;
+}
+
+.lhj-commercial-tenant h4 {
+    line-height: 12px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.other-tenant {
+    height: 26px;
+    float: left;
+    display: block;
+    line-height: 26px;
+    border: 1px solid #ff8400;
+    width: 79px;
+    text-align: center;
+    background-color: #fffcf5;
+    font-size: 12px;
+    color: #f63;
+    margin-right: 20px;
+}
+
+.lhj-evaluation {
+    position: absolute;
+    right: 5px;
+    bottom: 15px;
+    font-size: 12px;
+}
+
+.lhj-evaluation a {
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+    width: 40px;
+    padding-left: 30px;
+    height: 26px;
+    line-height: 28px;
+    border: 1px solid #d7d7d7;
+    background-color: #fbfbfb;
+    font-size: 12px;
+    color: #333;
+}
+
+.lhj-evaluation i {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 10px;
+    overflow: hidden;
+    background: url(../lhj_img/icon_sprite.png);
+    background-size: 431px auto;
+    background-repeat: no-repeat;
+}
+
+.zan i {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    background-position: -224px 0;
+}
+
+.zan:hover i {
+    background-position: -240px 0;
+}
+
+.nozan i {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    background-position: -256px 0;
+}
+
+.nozan:hover i {
+    background-position: -272px 0;
+}
+
+.lhj-citylist,
+.lhj-photoranking,
+.lhj-life-service-s {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 5px;
+    align-items: flex-start;
+    border-bottom: 1px solid #f0f0f0;
+    line-height: 24px;
+    background-color: #fff;
+}
+
+.lhj-citylist {
+    border-top: 2px solid #f63;
+}
+
+.lhj-citylist dt,
+.lhj-photoranking dt,
+.lhj-life-service-s dt {
+    width: 124px;
+    text-align: right;
+    padding-right: 20px;
+    font-size: 12px;
+    color: #666;
+}
+
+.lhj-citylist .didian,
+.lhj-ranking {
+    flex: 1;
+}
+
+.didian-nav,
+.ranking-nav {
+    display: flex;
+    overflow: hidden;
+    height: 25px;
+}
+
+.didian-nav li,
+.ranking-nav li {
+    flex: 0 0 3%;
+    text-align: center;
+    margin-right: 4px;
+    line-height: 20px;
+}
+
+.ez {
+    color: #fff!important;
+    background-color: #808080!important;
+}
+
+.lhj-citylist .didian span,
+.lhj-ranking .ranking-nav span {
+    border: 1px solid #e0e0e0;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    border-radius: 2px;
+    font-size: 12px;
+    color: #999999;
+    cursor: pointer;
+}
+
+.lhj-city-content .lhj-citycon-list,
+.lhj-ranking-s .lhj-ranking-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    overflow: hidden;
+    height: 25px;
+    display: none;
+}
+
+.lhj-city-content,
+.lhj-ranking-s {
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+
+.lhj-citycon-list li,
+.lhj-ranking-list li {
+    -webkit-box-flex: 1;
+    flex: 0 0 20%;
+    width: 100px;
+    float: left;
+    box-sizing: border-box;
+    padding: 0 10px 0 0;
+    margin-right: 53px!important;
+}
+
+.lhj-citycon-list a,
+.lhj-ranking-list a {
+    display: inline-block;
+    width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    font-size: 12px;
+    color: #999;
+}
+
+.lhj-life-service-s {
+    overflow: hidden;
+}
+
+.lhj-life-service-s dd {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -o-box-flex: 1;
+    box-flex: 1;
+    flex: 1;
+}
+
+.lhj-service-list {
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.lhj-service-list li {
+    -webkit-box-flex: 1;
+    flex: 0 0 20%;
+    width: 100px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    line-height: 20px;
+    box-sizing: border-box;
+    padding: 0 10px 0 0;
+    text-align: left;
+    color: #999;
+}
+
+.lhj-service-list li a {
+    font-size: 12px;
+    color: #999;
+}
+
+.vertical-shop {
+    width: 230px;
+    float: left;
+}
+
+.lhj-shop-discounts {
+    width: 188px;
+    height: 84px;
+    margin-bottom: 10px;
+    border: 1px solid #f0f0f0;
+    background-color: #fff;
+    padding: 10px 20px;
+}
+
+.lhj-discounts-left {
+    width: 100px;
+    height: 84px;
+    float: left;
+    overflow: hidden;
+}
+
+.lhj-discounts-left p {
+    font-size: 12px;
+    height: 42px;
+    line-height: 42px;
+    color: #000;
+}
+
+.vn {
+    background-color: #ee6723;
+}
+
+.nami {
+    background-color: #ffa631;
+}
+
+.hish {
+    display: inline-block;
+    float: left;
+    width: 16px;
+    height: 16px;
+    margin: 13px 0;
+    padding: 0 1px;
+    text-align: center;
+    color: #fff;
+    margin-right: 10px;
+    line-height: 16px;
+}
+
+.lhj-discounts-right {
+    width: 84px;
+    height: 84px;
+    float: left;
+    overflow: hidden;
+    background: url(../lhj_img/zxg-qrcode.png) no-repeat;
+    background-size: 84px 84px;
+}
+
+.lhj-maybelike {
+    background-color: #fff;
+}
+
+.lhj-maybelike-title {
+    width: 188px;
+    padding: 15px 20px 0 20px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    border: 1px solid #e9e9e9;
+    border-bottom: none;
+}
+
+.lhj-maybelike-title h4 {
+    color: #333;
+    font-size: 14px;
+    font-weight: 400;
+    float: left;
+}
+
+.lhj-maybelike-title span {
+    float: right;
+    font-size: 12px;
+    color: #e5e5e5;
+    line-height: 14px;
+    border: 1px solid #e5e5e5;
+    padding: 1px 3px;
+}
+
+.lhj-kindof-list {
+    width: 100%;
+    font-size: 12px;
+}
+
+.lhj-kind-items {
+    margin-bottom: 6px;
+    padding-left: 28px;
+    padding-bottom: 20px;
+    padding-right: 31px;
+}
+
+.eva {
+    padding-top: 0;
+}
+
+.eva-shop-list {
+    width: 172px;
+    height: auto;
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+.eva-shop-list:hover img {
+    border: 1px solid #ffa631;
+}
+
+.eva-shop-list img {
+    width: 170px;
+    height: 127px;
+    border: 1px solid #f0f0f0;
+}
+
+.eva-shop-tit {
+    height: 18px;
+    font-size: 14px;
+    color: #333;
+}
+
+.timor {
+    display: inline-block;
+    margin-left: 6px;
+    width: 14px;
+    height: 14px;
+    background: url(../lhj_img/sprite.png) no-repeat;
+    background-position: -20px -30px;
+}
+
+.eva-star {
+    height: 15px;
+    margin: 6px 0 6px;
+}
+
+.eva-star span {
+    display: inline-block;
+    width: 66px;
+    height: 12px;
+    background: url(../lhj_img/star-rating.png) no-repeat;
+    background-size: 86px auto;
+    background-position: 0 -83px;
+    margin-right: 10px;
+}
+
+.eva-text {
+    margin: 0;
+    height: 15px;
+    color: #999;
+    font-size: 12px;
+    line-height: 12px;
+}
+
+.eva-text span:nth-child(1) {
+    float: right;
+}
+
+
+/* 网站底部 */
+
+.footer-container {
+    width: 100%;
+    min-width: 1190px;
+    background: #f8f8f8;
+    font-size: 12px;
+    margin-top: 20px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.channel-footer {
+    width: 1190px;
+    margin: 10px auto 0;
+    padding: 30px 0;
+}
+
+.channel-footer .links {
+    color: #ebebeb;
+    margin-bottom: 10px;
+}
+
+.channel-footer .links a {
+    margin: 0 7px;
+}
+
+.channel-footer .links a,
+.channel-footer .rights a {
+    color: #8c8c8c;
+}
+
+.channel-footer .link-items a,
+.channel-footer .links,
+.channel-footer .rights {
+    text-align: center;
+    font-size: 12px;
+    color: #8c8c8c;
+}
+#shape{
+
+	background: url("../img/rocket.png") no-repeat scroll 0 0  transparent;
+	display: block;
+	height: 250px;
+	width: 149px;
+	overflow: hidden;
+	border-color: red;
+	position: fixed;
+	margin:-125px 0 0;
+	right: 0;
+	top:80%;
+	z-index: 12;
+}
+#shape .shapeColor{
+	background: url("../img/rocket.png") no-repeat scroll -149px 0;
+	display:none; 
+    height:250px;
+    width: 149px;
+    z-index:11;
+    overflow: hidden;
+    position: absolute;
+}
+
+#shape .shapeColor .shapeFly{
+	background: url("../img/rocketFly.gif") no-repeat;
+	display:none; 
+    height:250px;
+    width: 149px;
+    z-index:10;
+    overflow: hidden;
+    position: absolute;
+}
