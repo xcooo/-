@@ -157,16 +157,16 @@ $(function () {
                         // 注册模块显示
                         $('.register_success').fadeIn(2000, function () {
                             // 切换到登陆页面
-                            $('.sub_login').stop().slideDown()
+                            $('.sub_login').show()
                             $('.sub_register').stop().slideUp()
                         })
                         // 登陆模块提示显示5秒后再隐藏
                         $('.login_success').fadeIn(10000).fadeOut(1000)
                     } else if (resp.code == "3") {
                         // 说明用户名已注册
-                        $('.register_success').html(resp.message).fadeIn().fadeOut(5000)
+                        $('.register_success').html(resp.message).show().hide(4000)
                     } else {
-                        $('.register_success').html('用户名或密码不符合要求').fadeIn().fadeOut(5000)
+                        $('.register_success').html('用户名或密码不符合要求').show().hide(4000)
                     }
                 }
             })

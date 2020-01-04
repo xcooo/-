@@ -1,0 +1,7 @@
+项目地址: https://github.com/xcooo/dzdp.git
+
+技术选型: 基于 Express + Mongodb数据库
+
+运行方式: 打开终端 运行命令  nodemon  app.js
+
+访问路径: http://127.0.0.1:5000

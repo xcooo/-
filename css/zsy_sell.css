@@ -292,7 +292,7 @@ a {
 	cursor: pointer;
 	z-index: 9999;
 	position: fixed;
-	left: 50px;
+	right: 50px;
 	bottom: 10px;
 	width: 65px;
 	height: 120px;

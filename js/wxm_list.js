@@ -17,10 +17,10 @@ $(function () {
     $(".tou .xinxi .ping2 a").click(function () {
         if ($(this).html() == '更多信息') {
             $(this).html('<p>营业时间：周五,周六 10:30-:23:30  修改</p>')
-            $(".tou .xinxi p").show()
+            $(".tou .xinxi p").stop().slideDown()
         } else {
             $(this).html("更多信息")
-            $(".tou .xinxi p").hide()
+            $(".tou .xinxi p").stop().slideUp()
         }
     })
 
