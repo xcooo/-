@@ -100,7 +100,7 @@ $(function () {
     // 读取本地用户名数据
     function getData_user() {
         var data = localStorage.getItem("data");
-        var data = JSON.parse(data);
+        var data = JSON.parse(data);        
         return data;
     }
 

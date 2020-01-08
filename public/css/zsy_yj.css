@@ -1,0 +1,236 @@
+/* 初始化 */
+#body {
+	/* height: 3000px !important; */
+}
+
+#content {
+	/* height: 1920px !important; */
+}
+
+/* 初始化 end*/
+
+#shop_wrap {
+	margin: 0 169px;
+}
+
+#yijia_show {
+	position: relative;
+	/* width: 1035px; */
+    height: 400px;
+	background-color: #ffffff;
+}
+.wrapper {
+    /* width: 100px; */
+    /* height: 100px; */
+    position: absolute;
+	right: 17px;
+	top: 0;
+}
+
+#yijia_show h2 {
+	font-weight: 400 !important;
+	margin: 13px 0;
+}
+
+#yijia_show .star {
+	display: inline-block;
+	width: 65px;
+	height: 15px;
+	background: url(../zsy_img/s_star.png) no-repeat;
+}
+
+/* 基础信息/会员点评样式 */
+#tab_list {
+	/* width: 1035px; */
+	height: 57px;
+	background-color: #FFF9F2;
+	margin: 20px 0;
+	border: 1px solid #FEE0C2;
+}
+
+#tab_list a,.business_time {
+	float: left;
+    padding: 21px 17px 17px;
+    line-height: 15px;
+    font-size: 14px;
+    color: #333;
+    bottom: -1px;
+    text-align: center;
+    border-bottom: 4px solid transparent;
+}
+.add-shop {
+	width: 1190px;
+	margin-top: 20px;
+}
+.nhj_content i {
+	position: absolute;
+	left: -4px;
+	top: 5px;
+}
+.nhj_close h3 {
+	font-size: 14px;
+	margin-left: 2px;
+}
+/* 商户评论 */
+#comment {
+	/* width: 1035px; */
+	height: 1345px;
+	background-color: #fff;
+}
+
+#comment .contentlist {
+	width: 942px;
+	height: 230px;
+}
+
+#comment .pic {
+	float: left;
+    margin-right: 10px;
+}
+
+#comment .pic img {
+	border-radius: 50%;
+}
+
+#comment .article {
+	width: 842px;
+	height: 230px;
+	float: left;
+	border-bottom: 1px solid #FC8111;
+	margin-bottom: 30px;
+	/* background-color: lightpink; */
+}
+
+#comment .article .user_info{
+	float: left;
+	width: 842px;
+	height: 39px;
+	margin-bottom: 2px;
+	font-size: 14px;
+	/* background-color: lightyellow; */
+}
+
+#comment .article .star {
+	margin-top: 5px;
+	display: inline-block;
+    width: 65px;
+    height: 15px;
+    background: url(../zsy_img/s_star.png) no-repeat;
+}
+
+#comment .article .emoji {
+	width: 15px;
+}
+
+#comment .article .desc {
+	font-size: 14px !important;
+}
+
+#comment .shop_pic {
+	margin: 10px 0;
+	width: 832px;
+	height: 83px;
+}
+
+#comment .shop_pic li {
+	width: 108px;
+	height: 82px;
+	margin-left: 5px;
+}
+
+#comment .shop_pic li img {
+	width: 100%;
+	height: 100%;
+}
+/* 商户评论 end */
+
+/* 侧边栏  年货节*/
+
+/* 鼠标hover特效 */
+.nhj_mask {
+	transition: opacity 0.3s linear;
+}
+
+.nhj_mask:hover {
+	opacity: 0.7;
+}
+/* 鼠标hover特效 end*/
+
+#nhj_siderbar .nhj_btn {
+	z-index: 999;
+	cursor: pointer;
+	position: fixed;
+	bottom: -5px;
+	left: 1438px;
+}
+/* 侧边栏 关闭按钮 */
+#nhj_siderbar .nhj_content .nhj_close {
+	background: url(../zsy_img/popup_guanbi.png) repeat 0px 0px;
+    width: 35px;
+    height: 35px;
+    display: block;
+    position: absolute;
+    top: 4px;
+    right: -2px;
+    cursor: pointer;
+}
+
+#nhj_siderbar .nhj_content {
+	position: fixed;
+    left: 1528px;
+    top: 0;
+    width: 270px;
+    height: 100%;
+    z-index: 2;
+    background: #333333;
+}
+
+#nhj_siderbar .nhj_content h3 {
+	letter-spacing: 0.15em;
+	margin-left: 19px;
+	width: 255px;
+    height: 40px;
+    line-height: 40px;
+    color: #9B9B9B;
+}
+
+#nhj_siderbar .nhj_content #nhj_nav1 {
+	width: 242px;
+	height: 120px;
+	margin: 10px auto;
+}
+
+#nhj_siderbar .nhj_content #nhj_nav2 {
+	margin-top: 10px;
+	margin-left: 4px;
+	width: 255px;
+	text-align: center;
+}
+
+/* 品质家电等tab栏导航 */
+#nhj_siderbar .nhj_content .nhj_tab {
+	width: 254px;
+	height: 45px;
+	text-align: center;
+}
+
+#nhj_siderbar .nhj_content .nhj_tab img {
+	margin-top: 15px;
+    margin-left: 10px;
+}
+
+#nhj_siderbar .nhj_content .nhj_tab .nhj_tab_text {
+	color: #ffffff;
+}
+/* 标题 */
+#nhj_siderbar .nhj_content #nhj_banner {
+	color: #9B9B9B;
+}
+
+/* 侧边栏  年货节 end*/
+
+/* 底部 */
+#footer {
+	margin: 0 auto;
+}
+

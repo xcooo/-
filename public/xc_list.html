@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="css/xc_list.css">
     <!-- 引入登陆css文件 -->
     <link rel="stylesheet" href="css/login.css">
+    <!-- 引入图片放大css文件 -->
+    <link rel="stylesheet" href="css/zoomit.css">
     <!-- 引入轮播图css文件 -->
     <link rel="stylesheet" href="css/banner.css">
     <!--页面加载start-->
@@ -25,6 +27,8 @@
     <script src="js/xc_common.js"></script>
     <!-- 引入列表页js文件 -->
     <script src="js/xc_list.js"></script>
+    <!-- 引入图片放大js文件 -->
+    <script src="js/jquery.zoomit.min.js"></script>
     <!-- 引入异步加载文件 -->
     <script src="js/ajax.js"></script>
 </head>
@@ -1304,6 +1308,7 @@
                             <p class="l2">抽免单享品质生活</p>
                             <a href="javascript:;" class="l3"></a>
                             <span class="logout">我要退出</span>
+                            <!-- <a href="javascript:;" class="logout">我要退出</a> -->
                             <p class="l4">温馨提示: 点击上方即可注册本站账号 !
                                 <!-- <a href="javascript:;">立即注册</a> -->
                             </p>
@@ -1448,7 +1453,7 @@
                         <li>
                             <a href="javascript:;">
                                 <div class="imgwrap">
-                                    <img class="lazy" data-original="./uploads/product44.jpg" alt="">
+                                    <img id="zoomit-target" class="lazy" data-original="./uploads/product44.jpg"  data-zoomed="./uploads/product44.jpg" alt="">
                                     <div class="a-type">电子券</div>
                                 </div>
                                 <div class="infos">
@@ -1463,7 +1468,7 @@
                         <li>
                             <a href="javascript:;">
                                 <div class="imgwrap">
-                                    <img class="lazy" data-original="./uploads/product29.png" alt="">
+                                    <img id="zoomit-target" class="lazy" data-original="./uploads/product29.png" data-zoomed="./uploads/product29.png" alt="">
                                     <div class="a-type">电子券</div>
                                 </div>
                                 <div class="infos">
@@ -2152,8 +2157,13 @@
         <div id="loader"></div>
         <div class="loader-section section-left"></div>
         <div class="loader-section section-right"></div>
-        <div class="load_title">正在加载 - 大众点评...<br><span></span></div>
+        <div class="load_title">正在加载 - 登录中心...<br><span></span></div>
     </div>
+
+    <!-- 图片放大 -->
+    <script type="text/javascript">
+        $('#zoomit-target').zoomIt();
+      </script>
 
     <!-- footer end -->
     <script src="js/jquery.lazyload.js"></script>

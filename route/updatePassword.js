@@ -1,7 +1,7 @@
 // 引入express框架
 const express = require('express');
-// 引入大众点评数据库对象
-const User = require('../app.js')
+// 引入大众点评数据库用户对象
+const User = require('../model/user.js')
 // 引入路由模块
 const updatePssword = express.Router()
 
@@ -21,6 +21,8 @@ updatePssword.post('/updatePssword', async (req, res, next) => {
     const username = req.body.username
     const oldpassword = req.body.oldpassword
     const newpassword = req.body.newpassword
+    const id = req.body.id
+
 
     // 2.判断账号密码是否为空
     if (!username) {
@@ -51,19 +53,28 @@ updatePssword.post('/updatePssword', async (req, res, next) => {
         return res.json(resData);
     }
 
-    // 4.查询数据库是否存在该用户, 检查原密码是否正确
-    User.findOneAndUpdate({ name: username, password: oldpassword }, { password: newpassword })
-        .then(userinfo => {
-            if (!userinfo) {
-                // 如果不存在, 返回用户名或密码不正确
-                resData.code = 6;
-                resData.message = '用户名或密码错误 !';
-                return res.json(resData);
-            }
-            console.log(userinfo.name + ' 密码修改成功');
-            // 返回成功的结果
-            res.status(200).send({ code: 0, message: '密码修改成功' });
-        })
+    // 4.使用id查询用户是否存在
+    let userinfo = await User.findOne({ _id: id })
+    // 说明不存在该用户  则不能改密码
+    if (!userinfo) {
+        resData.code = 6;
+        resData.message = '用户不存在 !'
+        return res.json(resData);
+    }
+
+    // 5.比对原密码是否正确
+    let passwords = await User.findOne({ _id: id }, { password: oldpassword })
+    if (!passwords) {
+        resData.code = 7;
+        resData.message = '用户名或密码错误 !'
+        return res.json(resData);
+    }
+
+    // 6.修改密码
+    await User.update({ _id: id }, { password: newpassword })
+
+    // 7.返回成功的结果  用户名和id
+    res.status(200).send({ code: 0, message: '密码修改成功'});
 
 })
 

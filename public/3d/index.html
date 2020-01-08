@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="zh" class="no-js">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>大众点评二楼商品年终狂欢季</title>
+
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="fonts/icomoon/icomoon.css" />
+		<link rel="stylesheet" type="text/css" href="css/default.css">
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<link rel="stylesheet" type="text/css" href="css/animations.css" />
+		<style type="text/css">
+			/* 小天使样式 */
+			#angel {
+				z-index: 999;
+				position: absolute;
+				width: 80px;
+				height: 80px;
+				cursor: pointer;
+				top: 0;
+				right: 41px;
+			}
+
+			#angel:hover {
+				/* color: #666;
+			    text-decoration: none; */
+				cursor: url('img/left_hand_128px_1237010_easyicon.net.ico');
+			}
+
+			#angel img {
+				width: 100%;
+				height: 100%;
+			}
+
+			/* 小天使的提示框 */
+			#angel_talk {
+				display: none;
+				z-index: 999;
+				position: absolute;
+				width: 285px;
+				height: 210px;
+				cursor: pointer;
+				top: 50px;
+				right: 75px;
+			}
+
+			#angel_talk img {
+				width: 100%;
+				height: 100%;
+			}
+
+			/* 小天使的提示 */
+			#talk {
+				display: none;
+				color: #F67B23;
+				font-weight: 800;
+				z-index: 999;
+				position: absolute;
+				width: 153px;
+				height: 50px;
+				cursor: pointer;
+				top: 120px;
+				right: 114px;
+			}
+
+			/* 返回主页 */
+			/* #door {
+				z-index: 999;
+				position: absolute;
+				top: 10px;
+				left: 10px;
+			} */
+
+			/* #door a {
+				z-index: 999;
+				position: absolute;
+				top: 10px;
+				left: 10px;
+				display: block;
+				width: 73px;
+				height: 96px;
+			} */
+		</style>
+		<script src="js/modernizr-custom.js"></script>
+		<script src="js/jquery.min.js"></script>
+	</head>
+	<body>
+
+		<p class="info info--size">放大页面可查看室内3D效果图</p>
+		<p class="info info--support">你的浏览器不支持 preserve-3d 功能!</p>
+		<div id="slideshow" class="slideshow">
+			<div class="slide">
+				<div class="scene">
+					<div class="views">
+						<div class="view">
+							<img class="view__img" src="img/bedroom/a.jpg" alt="Side" />
+							<div class="item item--horse">
+								<img class="item__img" src="img/bedroom/horse.jpg" alt="Horse" data-transform-z="60" />
+								<div class="item__info">
+									<h3 class="item__title">马到成功</h3>
+									<div class="item__price"><sup>¥</sup>59</div>
+									<button class="button button--buy"><i class="icon icon--shopping-cart"></i><span class="text-hidden">Add to
+											cart</span></button>
+								</div>
+								<button class="button button--close"><i class="icon icon--close"></i><span class="text-hidden">Close</span></button>
+							</div>
+						</div>
+						<div class="view view--rotate view--rotate-left">
+							<img class="view__img" src="img/bedroom/b.jpg" alt="Front" />
+							<div class="item item--blanket">
+								<img class="item__img" src="img/bedroom/blanket.jpg" alt="Blanket" data-transform-z="90" />
+								<div class="item__info">
+									<h3 class="item__title">加绒毛毯</h3>
+									<div class="item__price"><sup>¥</sup>129</div>
+									<button class="button button--buy"><i class="icon icon--shopping-cart"></i><span class="text-hidden">Add to
+											cart</span></button>
+								</div>
+								<button class="button button--close"><i class="icon icon--close"></i><span class="text-hidden">Close</span></button>
+							</div>
+							<div class="item item--picture">
+								<img class="item__img" src="img/bedroom/picture.jpg" alt="Picture" data-transform-z="80" />
+								<div class="item__info">
+									<h3 class="item__title">纹理相框</h3>
+									<div class="item__price"><sup>¥</sup>39</div>
+									<button class="button button--buy"><i class="icon icon--shopping-cart"></i><span class="text-hidden">Add to
+											cart</span></button>
+								</div>
+								<button class="button button--close"><i class="icon icon--close"></i><span class="text-hidden">Close</span></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="slide">
+				<div class="scene">
+					<div class="views">
+						<div class="view view--rotate view--rotate-right">
+							<img class="view__img" src="img/living/a.jpg" alt="Front" />
+							<div class="item item--pillow">
+								<img class="item__img" src="img/living/pillow.jpg" alt="Vase" data-transform-z="60" />
+								<div class="item__info">
+									<h3 class="item__title">弹性抱枕</h3>
+									<div class="item__price"><sup>¥</sup>29</div>
+									<button class="button button--buy"><i class="icon icon--shopping-cart"></i><span class="text-hidden">Add to
+											cart</span></button>
+								</div>
+								<button class="button button--close"><i class="icon icon--close"></i><span class="text-hidden">Close</span></button>
+							</div>
+							<div class="item item--lamp">
+								<img class="item__img" src="img/living/lamp.jpg" alt="Lamp" data-transform-z="60" />
+								<div class="item__info">
+									<h3 class="item__title">暖光灯</h3>
+									<div class="item__price"><sup>¥</sup>89</div>
+									<button class="button button--buy"><i class="icon icon--shopping-cart"></i><span class="text-hidden">Add to
+											cart</span></button>
+								</div>
+								<button class="button button--close"><i class="icon icon--close"></i><span class="text-hidden">Close</span></button>
+							</div>
+							<div class="item item--silvervase">
+								<img class="item__img" src="img/living/silvervase.jpg" alt="Silver Vase" data-transform-z="60" />
+								<div class="item__info">
+									<h3 class="item__title">磨砂花瓶</h3>
+									<div class="item__price"><sup>¥</sup>49</div>
+									<button class="button button--buy"><i class="icon icon--shopping-cart"></i><span class="text-hidden">Add to
+											cart</span></button>
+								</div>
+								<button class="button button--close"><i class="icon icon--close"></i><span class="text-hidden">Close</span></button>
+							</div>
+						</div>
+						<div class="view">
+							<img class="view__img" src="img/living/b.jpg" alt="Side" />
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="slide">
+				<div class="scene">
+					<div class="views">
+						<div class="view">
+							<img class="view__img" src="img/kitchen/a.jpg" alt="Side" />
+							<div class="item item--shakers">
+								<img class="item__img" src="img/kitchen/shakers.jpg" alt="Shakers" data-transform-z="80" />
+								<div class="item__info">
+									<h3 class="item__title">调酒器</h3>
+									<div class="item__price"><sup>¥</sup>59</div>
+									<button class="button button--buy"><i class="icon icon--shopping-cart"></i><span class="text-hidden">Add to
+											cart</span></button>
+								</div>
+								<button class="button button--close"><i class="icon icon--close"></i><span class="text-hidden">Close</span></button>
+							</div>
+							<div class="item item--coffeemachine">
+								<img class="item__img" src="img/kitchen/coffeemachine.jpg" alt="Coffee Machine" data-transform-z="60" />
+								<div class="item__info">
+									<h3 class="item__title">咖啡机</h3>
+									<div class="item__price"><sup>¥</sup>149</div>
+									<button class="button button--buy"><i class="icon icon--shopping-cart"></i><span class="text-hidden">Add to
+											cart</span></button>
+								</div>
+								<button class="button button--close"><i class="icon icon--close"></i><span class="text-hidden">Close</span></button>
+							</div>
+						</div>
+						<div class="view view--rotate view--rotate-left">
+							<img class="view__img" src="img/kitchen/b.jpg" alt="Front" />
+							<div class="item item--bowls">
+								<img class="item__img" src="img/kitchen/bowlset.jpg" alt="Bowl Set" data-transform-z="40" />
+								<div class="item__info">
+									<h3 class="item__title">时蔬碗</h3>
+									<div class="item__price"><sup>¥</sup>49</div>
+									<button class="button button--buy"><i class="icon icon--shopping-cart"></i><span class="text-hidden">Add to
+											cart</span></button>
+								</div>
+								<button class="button button--close"><i class="icon icon--close"></i><span class="text-hidden">Close</span></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="slide">
+				<div class="scene">
+					<div class="views">
+						<div class="view">
+							<img class="view__img" src="img/bathroom/a.jpg" alt="Side" />
+						</div>
+						<div class="view">
+							<img class="view__img" src="img/bathroom/b.jpg" alt="Front" />
+							<div class="item item--sink">
+								<img class="item__img" src="img/bathroom/sink.jpg" alt="Sink" data-transform-z="40" />
+								<div class="item__info">
+									<h3 class="item__title">洗漱套装</h3>
+									<div class="item__price"><sup>¥</sup>399</div>
+									<button class="button button--buy"><i class="icon icon--shopping-cart"></i><span class="text-hidden">Add to
+											cart</span></button>
+								</div>
+								<button class="button button--close"><i class="icon icon--close"></i><span class="text-hidden">Close</span></button>
+							</div>
+						</div>
+						<div class="view view--rotate view--rotate-left">
+							<img class="view__img" src="img/bathroom/c.jpg" alt="Front" />
+							<div class="item item--bidet">
+								<img class="item__img" src="img/bathroom/bidet.jpg" alt="Bidet" data-transform-z="90" />
+								<div class="item__info">
+									<h3 class="item__title">洗漱池</h3>
+									<div class="item__price"><sup>¥</sup>259</div>
+									<button class="button button--buy"><i class="icon icon--shopping-cart"></i><span class="text-hidden">Add to
+											cart</span></button>
+								</div>
+								<button class="button button--close"><i class="icon icon--close"></i><span class="text-hidden">Close</span></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<nav class="nav">
+				<a href="#" class="nav__item"><span class="text-hidden">The Master Bedroom</span></a>
+				<a href="#" class="nav__item"><span class="text-hidden">The Dining Room</span></a>
+				<a href="#" class="nav__item"><span class="text-hidden">The Bathroom</span></a>
+				<a href="#" class="nav__item"><span class="text-hidden">The Office</span></a>
+			</nav>
+			<div class="titles">
+				<h2 class="title">卧室<span class="title__sub">休闲风</span></h2>
+				<h2 class="title">客厅<span class="title__sub">聊天的好去处</span></h2>
+				<h2 class="title">厨房<span class="title__sub">创造美食</span></h2>
+				<h2 class="title">浴室<span class="title__sub">清新自己</span></h2>
+			</div>
+		</div><!-- /container -->
+
+		<!-- 小天使 -->
+		<div id="angel">
+			<img src="img/angel.gif">
+		</div>
+		<!-- 小天使的对话框 -->
+		<div id="angel_talk">
+			<img src="img/angel_talk.png">
+		</div>
+		<!-- 小天使的提示 -->
+		<div id="talk">
+			点按上方绿色小方格可调整房间哦!
+		</div>
+
+		<script src="js/classie.js"></script>
+		<script src="js/main.js"></script>
+		<script>
+			(function() {
+				var slideshow = new Slideshow(document.getElementById('slideshow'));
+			})();
+		</script>
+
+		<script type="text/javascript">
+			// 动画原理
+			// 1. 获得盒子当前位置  
+			// 2. 让盒子在当前位置加上1个移动距离
+			// 3. 利用定时器不断重复这个操作
+			// 4. 加一个结束定时器的条件
+			// 5. 注意此元素需要添加定位， 才能使用element.style.left
+
+			// 小天使的移动
+			fly();
+
+			function fly() {
+				var angel = document.querySelector('#angel');
+				console.log(angel);
+				var timer = setInterval(function() {
+					if (angel.offsetTop >= 217) {
+						// 停止动画 本质是停止定时器
+						clearInterval(timer);
+					}
+					angel.style.top = angel.offsetTop + 1.3 + 'px';
+				}, 10);
+			}
+
+			// 小天使的提示
+
+			talk();
+			function talk() {
+				var angel_talk =document.querySelector("#angel_talk");
+				var talk =document.querySelector("#talk");
+				console.log(angel_talk);
+				var timer = setTimeout(function() {
+					// 小天使的提示	淡入
+					$("#talk").fadeIn(3000,function(){
+						$("#angel_talk").fadeIn(1000);
+					});
+					angel_talk.style.display = "block";
+					talk.style.display = "block";
+				},2000)
+			}
+		</script>
+	</body>
+</html>

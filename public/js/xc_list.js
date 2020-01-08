@@ -95,6 +95,8 @@ $(function () {
         var data = getData();
         if (data) {
             // 设置本地存储的数据
+            // 获取用户名 
+            var data = getData()[0]   
             $('.l3').html(data)
             // 设置去向个人中心的连接
             // 获取当前目录

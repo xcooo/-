@@ -1,7 +1,7 @@
 // 引入express框架
 const express = require('express');
-// 引入大众点评数据库对象
-const User = require('../app.js')
+// 引入大众点评数据库用户对象
+const User = require('../model/user.js')
 // 引入路由模块
 const reg = express.Router()
 
@@ -33,23 +33,30 @@ reg.post('/reg', async (req, res, next) => {
         return res.json(resData);
     }
 
+    if (username.trim() === '' || password.trim() === '') {
+        resData.code = 3;
+        resData.message = '用户名或密码不能为空';
+        return res.json(resData);
+    }
+
     // 3. 查询数据库是否存在相同的用户名
-    User.findOne({ name: username })
-        .then(userinfo => { 
+    await User.findOne({ name: username })
+        .then(userinfo => {
             // 如果存在, 说明数据库有这条记录
             // console.log(userinfo);
             if (userinfo) {
-                resData.code = 3;
+                resData.code = 4;
                 resData.message = '用户名已经被注册 !';
                 return res.json(resData);
             }
-            // 保存用户的信息到数据库中
-            User.create({ name: username, password: password })
-                .then(doc => console.log(doc.name + ' 注册成功'))
-                .catch(err => console.log(err))
-            // 返回成功的结果
-            res.status(200).send({ code: 0, message: '注册成功' });
         })
+
+    // 保存用户的信息到数据库中
+    await  User.create({ name: username, password: password })
+        .then(doc => console.log(doc.name + ' 注册成功'))
+        .catch(err => console.log(err))
+    // 返回成功的结果
+    res.status(200).send({ code: 0, message: '注册成功' });
 })
 
 module.exports = reg;

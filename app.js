@@ -6,38 +6,14 @@ const path = require('path')
 var session = require('express-session')
 // 引入body-parse模块
 const bodyParser = require('body-parser');
-// 引入数据库模块
-const mongoose = require('mongoose')
+// 导入art-tempate模板引擎
+const template = require('art-template');
 
-//全局设置
-mongoose.set('useFindAndModify', false)
-// 数据库连接
-mongoose.connect('mongodb://localhost/xcooo', { useNewUrlParser: true, useUnifiedTopology: true })
-    // 连接成功
-    .then(() => console.log('数据库连接成功'))
-    // 连接失败
-    .catch(err => console.log(err, '数据库连接失败'))
 
-// 设定集合规则
-const DzdpSchema = new mongoose.Schema({
-    name: {
-        type: String,
-        // unique:true //字段是否唯一
-    },
-    password:{
-        type:String,
-        // set(val){
-        //     // 通过bcryptjs对密码加密返回值 第一个值返回值， 第二个密码强度
-        //     return require('bcryptjs').hashSync(val,10)
-        // }
-    } 
-  });
-
-// 创建集合并应用规则
-const Dzdp = mongoose.model('Dzdp', DzdpSchema);  // dzdps
-
-// 导出 Dzdp模块
-module.exports = Dzdp
+// 引入数据库连接
+require('./model/index.js')
+// 引入大众点评数据库用户对象
+const User = require('./model/user.js')
 
 // 创建网站服务器
 const app = express()
@@ -52,30 +28,44 @@ const app = express()
 //     next();
 // });
 
-
 // 启用 session 中间件
 app.use(session({
     secret: 'keyboard cat', // 相当于是一个加密密钥，值可以是任意字符串
     resave: false, // 强制session保存到session store中
-    saveUninitialized: false // 强制没有“初始化”的session保存到storage中
-    }))
+    saveUninitialized: false, // 强制没有“初始化”的session保存到storage中
+    cookie: {
+		maxAge: 24 * 60 * 60 * 1000
+	}
+}))
+
+// 告诉express框架模板所在的位置
+app.set('views', path.join(__dirname, 'views'));
+// 告诉express框架模板的默认后缀是什么
+app.set('view engine', 'art');
+// 当渲染后缀为art的模板时 所使用的模板引擎是什么
+app.engine('art', require('express-art-template'));
 
 // 实现静态资源访问功能
 app.use(express.static(path.join(__dirname, 'public')))
 
 // 配置body-parse模块
-const body = app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // 路由分发处理
 const reg = require('./route/reg')  // 注册
 const login = require('./route/login') // 登录
 const updatePassword = require('./route/updatePassword') // 修改密码
 const updateName = require('./route/updateName') // 修改昵称
+const car = require('./route/car') // 购物车模块
 
+// 用户路由
 app.use('/user', reg)
 app.use('/user', login)
-app.use('/user',updatePassword)
-app.use('/user',updateName)
+app.use('/user', updatePassword)
+app.use('/user', updateName)
+
+// 商品路由
+app.use('/goods', car)
 
 // 监听端口
 app.listen(5000, () => {

@@ -32,6 +32,11 @@ $(function () {
         }
     })
 
+    // 重置表单的函数
+    function formReset() {
+        $('#myform').val = ''
+    }
+
     // 登录注册表单请求
     // 实现前端注册验证逻辑
     var error_name = true; // 非法用户名
@@ -155,18 +160,22 @@ $(function () {
                 success: function (resp) {
                     if (resp.code == "0") {
                         // 注册模块显示
-                        $('.register_success').fadeIn(2000, function () {
+                        $('.register_success').fadeIn(1000, function () {
                             // 切换到登陆页面
-                            $('.sub_login').show()
+                            $('.sub_login').slideDown()
                             $('.sub_register').stop().slideUp()
+                            // 注册成功的提示也隐藏
+                            $('.register_success').hide()
                         })
                         // 登陆模块提示显示5秒后再隐藏
                         $('.login_success').fadeIn(10000).fadeOut(1000)
-                    } else if (resp.code == "3") {
-                        // 说明用户名已注册
-                        $('.register_success').html(resp.message).show().hide(4000)
+                    } else if (resp.code == "1" || resp.code == "2" || resp.code == "3" || resp.code == "4") {
+                        $('.register_success').html(resp.message).show()
+                        var timer = setTimeout(function () {
+                            $('.register_success').html(resp.message).hide()
+                        }, 3000)
                     } else {
-                        $('.register_success').html('用户名或密码不符合要求').show().hide(4000)
+                        $('.register_success').html('用户名或密码不符合要求').show().hide(3000)
                     }
                 }
             })
@@ -193,9 +202,9 @@ $(function () {
             // contentType: "application/json",
             success: function (resp) {
                 if (resp.code == "0") {
-                    // 当前文字发生变化, 需要使用本地存储 刷新页面
+                    // 当前文字发生变化, 需要使用本地存储 刷新页面                  
                     // 设置本地数据
-                    saveData(resp.message)   // message 后台传输过来的用户名
+                    saveData(resp.message)   // message 后台传输过来的用户名和id
                     // 读取本地数据
                     getData()
                     // 渲染当前数据
@@ -223,7 +232,9 @@ $(function () {
         // 读取本地存储的数据
         var data = getData();
         if (data) {
-            // 设置本地存储的数据
+            // 设置本地存储的数据 
+            // 获取用户名 
+            var data = getData()[0]
             $('.l3').html(data)
             $('.logout').show()
 
@@ -254,9 +265,9 @@ $(function () {
     // 保存本地图片数据
     function saveData_img() {
         data = getData_img()
-        if(data){
+        if (data) {
             localStorage.setItem("xcimg", JSON.stringify(data));
-        }else {
+        } else {
             var strPath = location.href.substring(0, location.href.lastIndexOf('/'))
             var src = strPath + '/img/tx.png'
             localStorage.setItem("xcimg", JSON.stringify(src));
@@ -291,11 +302,6 @@ $(function () {
         $('.hello').html(html_list)
     }
 
-    // 重置表单的函数
-    function formReset() {
-        $('#myform').val = ''
-    }
-
     // 修改密码
     $('.pwd_form form').submit(function (e) {
         e.preventDefault()
@@ -303,11 +309,14 @@ $(function () {
         var users = $('.pwd_form #users_name').html()
         var oldpassword = $('.pwd_form #userpassword').val()
         var newpassword = $('.pwd_form #userpassword1').val()
+        // 取到用户id
+        var id = getData()[1]     
 
         var params = {
             'username': users,
             "oldpassword": oldpassword,
             "newpassword": newpassword,
+            'id':id
         }
 
         $.ajax({
@@ -334,7 +343,8 @@ $(function () {
                             $('.modifly_pwd').val('修改成功, ' + num + '秒后返回登录页').css('backgroundColor', 'green')
                         }
                     }, 1000)
-                } else if (resp.code == '1' || resp.code == '2' || resp.code == '3' || resp.code == '4' || resp.code == '5' || resp.code == '6') {
+                } else if (resp.code == '1' || resp.code == '2' || resp.code == '3' || resp.code == '4' || resp.code == '5' || resp.code == '6' || resp.code == '6') {
+                    alert(resp.message)
                     $('.modifly_pwd').val(resp.message).css('backgroundColor', 'red')
                 } else {
                     // 说明用户名或密码错误
@@ -350,10 +360,13 @@ $(function () {
         // 取到用户输入的内容
         var oldname = $('.nc_form #oldname').html()
         var newUsername = $('.nc_form #newname').val()
+        // 取到用户id
+        var id = getData()[1]
 
         var params = {
             'username': oldname,
             "newUsername": newUsername,
+            'id': id
         }
 
         $.ajax({
@@ -363,20 +376,20 @@ $(function () {
             // contentType: "application/json",
             success: function (resp) {
                 if (resp.code == "0") {
-                    // 准备新昵称
-                    var name = $('.nc_form #newname').val()
-                    // 获取本地存储
-                    getData()
+                    var data = resp.message
                     // 删除本地存储
                     removeData()
-                    // 保存本地存储
-                    saveData(name)
+                    //保存本地存储
+                    saveData(data)
                     // 重新渲染页面
                     load_login()
                     // 刷新页面
                     location.reload()
-                } else if (resp.code == '1' || resp.code == '2' || resp.code == '3' || resp.code == '4' || resp.code == '5' || resp.code == '6' || resp.code == '7') {
+                } else if (resp.code == '1' || resp.code == '2' || resp.code == '3' || resp.code == '4' || resp.code == '5' || resp.code == '6' || resp.code == '7' || resp.code == '8') {
                     $('.modifly_name').val(resp.message).css('backgroundColor', 'red')
+                    var timer = setTimeout(function () {
+                        $('.modifly_name').val('修改昵称').css('backgroundColor', 'green')
+                    }, 2000)
                 } else {
                     // 说明用户名已存在
                     $('.modifly_name').val('用户名已存在').css('backgroundColor', 'red')
@@ -384,4 +397,13 @@ $(function () {
             }
         })
     })
+
+    // 添加购物车模块
+
+    // 获取商品id
+    // 获取商品名称
+    // 获取商品价格
+    // 获取商品价格
+    // 获取选中状态
+    // 获取商品关联的用户
 })

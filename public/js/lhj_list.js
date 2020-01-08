@@ -47,6 +47,16 @@ $(function () {
         $(this).children('.lhj-shopnav-collecting').hide();
     })
 
+    
+    // 全部分类显示隐藏功能
+    // 必须要给显示的父级元素添加事件
+    $('.dropdown').mouseenter(function () {
+        $(this).children('.dd').show()
+    })
+    $('.dropdown').mouseleave(function () {
+        $(this).children('.dd').hide()
+    })
+
     // 预加载
     setTimeout(function () {
         $('body').addClass('loaded');

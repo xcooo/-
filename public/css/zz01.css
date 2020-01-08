@@ -1,0 +1,459 @@
+
+body {
+    
+    width: 1200px;
+    margin: 0 auto;
+  
+}
+.baba {
+    width: 1200px;
+    background: url(../zz_img/1111.jpg) no-repeat ;
+    vertical-align: middle;
+  
+    background-size:1200px ;
+    position: absolute;
+}
+.tou{
+    width: 1200px;
+    height: 33px;
+    margin: auto;
+    padding-top: 20px;
+    margin-bottom: 10px;
+   
+}
+.tou img {
+    width: 86px;
+    height: 33px;
+    float: left;
+    margin-left: 50px;
+}
+.tou ul {
+    height: 33px;
+    float: right;
+    margin-right: 10px;
+}
+.tou ul li  {
+    float: left;
+    padding-left: 50px;
+    font-size: 12px;
+    
+}
+.tou ul li a{
+    color: aliceblue;
+}
+.tou ul li a:hover{
+    color: orange;
+}
+.baba h1 {
+    color: white;
+    text-align: center;
+    font-weight: 400;
+}
+#ying{
+    position: relative;
+    top: -150px;
+    left: -30px;
+}
+#ying a{
+    background-color: tomato;
+    color: white;
+    font-size: 12px;
+    border-radius: 8px ;
+    padding: 0px 2px;
+}
+#ying p {
+    font-size: 8px;
+    color: white;
+   margin: auto;
+    
+}
+#ying p a{
+    font-size: 8px;
+    color: white;
+    background-color: skyblue;
+}
+#tuan{
+    
+    
+    
+    position: relative;
+    top: 130px;
+    left: 240px;
+}
+#tuan a{
+    background-color: tomato;
+    color: white;
+    font-size: 12px;
+    border-radius: 8px ;
+    padding: 2px 5px;
+}
+#tuan p {
+    font-size: 8px;
+    color: white;
+   margin: auto;
+    
+}
+#tuan p a{
+    font-size: 8px;
+    color: white;
+    background-color: skyblue;
+}
+#xian{
+    position: relative;
+    top:150px;
+    left: 350px;
+}
+#xian a{
+    background-color: tomato;
+    color: white;
+    font-size: 12px;
+    border-radius: 8px ;
+    padding: 2px 5px;
+}
+#xian p {
+    font-size: 8px;
+    color: white;
+   margin: auto;
+    
+}
+#xian p a{
+    font-size: 8px;
+    color: white;
+    background-color: skyblue;
+}
+#hui{
+    position: relative;
+    top:-130px;
+    left: 50px;
+}
+#hui a{
+    background-color: tomato;
+    color: white;
+    font-size: 12px;
+    border-radius: 8px ;
+    padding: 2px 5px;
+}
+#hui p {
+    font-size: 8px;
+    color: white;
+   margin: auto;
+    
+}
+#hui p a{
+    font-size: 8px;
+    color: white;
+    background-color: skyblue;
+}
+#can{
+    position: relative;
+    top:-180px;
+    left: 120px;
+}
+#can a{
+    background-color: tomato;
+    color: white;
+    font-size: 12px;
+    border-radius: 8px ;
+    padding: 2px 5px;
+}
+#can p {
+    font-size: 8px;
+    color: white;
+   margin: auto;
+    
+}
+#can p a{
+    font-size: 8px;
+    color: white;
+    background-color: skyblue;
+}
+#dian{
+    position: relative;
+    top:-210px;
+    left: 220px;
+}
+#dian a{
+    background-color: tomato;
+    color: white;
+    font-size: 12px;
+    border-radius: 8px ;
+    padding: 0px 20px;
+}
+#dian p {
+    font-size: 8px;
+    color: white;
+   margin: auto;
+    
+}
+#dian p a{
+    font-size: 8px;
+    color: white;
+    background-color: skyblue;
+}
+#wai{
+    position: relative;
+    top:-140px;
+    left: 200px;
+}
+#wai a{
+    background-color: tomato;
+    color: white;
+    font-size: 12px;
+    border-radius: 8px ;
+    padding: 0px 20px;
+}
+#wai p {
+    font-size: 8px;
+    color: white;
+   margin: auto;
+    
+}
+#wai p a{
+    font-size: 8px;
+    color: white;
+    background-color: skyblue;
+}
+#ting{
+    position: relative;
+    top:-230px;
+    left: 270px;
+}
+#ting a{
+    background-color: tomato;
+    color: white;
+    font-size: 12px;
+    border-radius: 8px ;
+    padding: 2px 5px;
+}
+#ting p {
+    font-size: 8px;
+    color: white;
+   margin: auto;
+    
+}
+#ting p a{
+    font-size: 8px;
+    color: white;
+    background-color: skyblue;
+}
+#shou{
+    position: relative;
+    top:-240px;
+    left: 320px;
+}
+#shou a{
+    background-color: tomato;
+    color: white;
+    font-size: 12px;
+    border-radius: 8px ;
+    padding: 2px 5px;
+}
+#shou p {
+    font-size: 8px;
+    color: white;
+   margin: auto;
+    
+}
+#shou p a{
+    font-size: 8px;
+    color: white;
+    background-color: skyblue;
+}
+#shang{
+    position: relative;
+    top:-235px;
+    left: 350px;
+}
+#shang a{
+    background-color: tomato;
+    color: white;
+    font-size: 12px;
+    border-radius: 8px ;
+    padding: 2px 5px;
+}
+#shang p {
+    font-size: 8px;
+    color: white;
+   margin: auto;
+    
+}
+#shang p a{
+    font-size: 8px;
+    color: white;
+    background-color: skyblue;
+}
+#pai{
+    position: relative;
+    top:-230px;
+    left: 365px;
+}
+#pai a{
+    background-color: tomato;
+    color: white;
+    font-size: 12px;
+    border-radius: 8px ;
+    padding: 0px 20px;
+}
+#pai p {
+    font-size: 8px;
+    color: white;
+   margin: auto;
+    
+}
+#pai p a{
+    font-size: 8px;
+    color: white;
+    background-color: skyblue;
+}
+#jin{
+    position: relative;
+    top:-470px;
+    left: 400px;
+}
+#jin a{
+    background-color: tomato;
+    color: white;
+    font-size: 12px;
+    border-radius: 8px ;
+    padding: 2px 5px;
+}
+#jin p {
+    font-size: 8px;
+    color: white;
+   margin: auto;
+    
+}
+#jin p a{
+    font-size: 8px;
+    color: white;
+    background-color: skyblue;
+}
+#geng{
+    position: relative;
+    top:-540px;
+    left: 525px;
+}
+#geng a{
+    background-color: tomato;
+    color: white;
+    font-size: 12px;
+    border-radius: 8px ;
+    padding: 2px 5px;
+}
+#geng p {
+    font-size: 8px;
+    color: white;
+   margin: auto;
+    
+}
+#geng p a{
+    font-size: 8px;
+    color: white;
+    background-color: skyblue;
+}
+#rong{
+    position: relative;
+    top:-485px;
+    left: 545px;
+}
+#rong a{
+    background-color: tomato;
+    color: white;
+    font-size: 12px;
+    border-radius: 8px ;
+    padding: 2px 5px;
+}
+#rong p {
+    font-size: 8px;
+    color: white;
+   margin: auto;
+    
+}
+#rong p a{
+    font-size: 8px;
+    color: white;
+    background-color: skyblue;
+}
+.niuniu:hover{
+    background-color: orange;
+    color: black;
+}
+.erzi img{
+    width: 1200px;
+    margin-bottom: 50px;
+    
+}
+.erzi h2 {
+    font-weight: 400;
+    color: white;
+   margin: auto;
+   text-align: center;
+    margin-bottom: 20px;
+
+}
+.erge {
+    height:1036px ;
+    border-top:5px solid #ffc300 ;
+    background-color: #fff;
+}
+.erge h4 {
+    text-align: center;
+    color: #000000;;
+    font-weight: 400;
+    margin: 40px;
+    font-size: 20PX;
+}
+.erge h5 {
+    text-align: center;
+    color: #000000;;
+    font-weight: 400;
+    margin: 40px;
+    font-size: 20px;
+}
+.erge ul {
+    float: left;
+    
+}
+.erge ul li {
+    float: left;
+    margin-left:58px ;
+    margin-bottom: 40px;
+}
+.erge ul li:nth-child(1),
+.erge ul li:nth-child(4){
+    margin-left: 0px;
+}
+.erge ul li img {
+    height: 220px;
+    width: 361px;
+}
+li .logo {
+    width: 361px;
+    height: 47px;
+    padding: 14px 0px 0px;
+}
+ ul li .logo1 img {
+    height:32px;
+    width: 140px;
+   margin-left: 120px;
+    
+}
+.weibu {
+    
+    height: 286px;
+    background-color: #152427;
+    
+}
+
+ .weibu span {
+     margin-top: 100px;
+     margin-left: 5px;
+    display: inline-block;
+    width:588px;
+    height: 66px;
+    border: .5px solid #ccc;
+    line-height: 66px;
+    text-align: center;
+    color:white;
+    
+}

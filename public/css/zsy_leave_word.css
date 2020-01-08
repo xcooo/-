@@ -1,0 +1,25 @@
+#nhj_siderbar #leava_word {
+    width: 252px;
+    height: 98px;
+    margin-left: 18px;
+}
+
+#nhj_siderbar #leava_word textarea {
+    width: 200px;
+    height: 50px;
+    border: 1px solid pink;
+    outline: none;
+    resize: none;
+}
+
+#nhj_siderbar #leava_word ul {
+    margin-top: 20px;
+}
+
+#nhj_siderbar #leava_word li {
+    width: 202px;
+    background-color: #E3E4E5;
+    color: red;
+    font-size: 14px;
+    margin: 5px 0;
+}

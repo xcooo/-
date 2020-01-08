@@ -1,7 +1,7 @@
 // 引入express框架
 const express = require('express');
-// 引入大众点评数据库对象
-const User = require('../app.js')
+// 引入大众点评数据库用户对象
+const User = require('../model/user.js')
 // 引入路由模块
 const login = express.Router()
 
@@ -21,6 +21,7 @@ login.post('/login', async (req, res, next) => {
     const username = req.body.username
     const password = req.body.password
     
+
     // 2.判断账号密码是否为空
     if (!username || !password) {
         resData.code = 1;
@@ -33,19 +34,51 @@ login.post('/login', async (req, res, next) => {
         return res.json(resData);
     }
 
+    // 使用User集合查询和用户输入的用户名一致的那个信息
+    let userInfo = await User.findOne({ name: username })
+    console.log(userInfo);
+    
+
+    if (userInfo) {
+        //说明查找到了跟用户输入的用户名一致的信息
+        //  console.log(userInfo);
+        // 用户名正确的情况下，我们只需要再判断一下用户输入的密码是否正确
+        if (userInfo.password === password) {
+            //我们需要将用户的信息保存到session对象里面去，这样下一次访问服务器的时候才能看到信息
+            req.session.userInfo = userInfo;
+            //在express框架中可以通过app.locals来设置所有模板都能访问的数据
+            //在request对象中可以访问到服务器app对象
+            req.app.locals.userInfo = userInfo;
+
+            //返回成功的结果 (需要返回用户名和id)
+            res.status(200).send({ code: 0, message: [userInfo.name,userInfo._id]});
+        }else {
+            resData.code = 3;
+            resData.message = '用户名或密码错误 !';
+            return res.json(resData);
+        }
+    } else {
+        resData.code = 3;
+        resData.message = '用户名或密码错误 !';
+        return res.json(resData);
+    }
+
     // 3. 查询数据库是否存在相同的用户名
-    User.findOne({ name: username, password: password })
-        .then(userinfo => {
-            // 如果存在,说明数据库有这条记录
-            // console.log(userinfo);
-            if (!userinfo) {
-                resData.code = 3;
-                resData.message = '用户名或密码错误 !';
-                return res.json(resData);
-            }
-            // 返回成功的结果 (需要返回用户名)
-            res.status(200).send({ code: 0, message: userinfo.name });
-        })
+    // await User.findOne({ name: username, password: password })
+    //     .then(userinfo => {
+    //         // 如果存在,说明数据库有这条记录
+    //         // console.log(userinfo);
+    //         if (!userinfo) {
+    //             resData.code = 3;
+    //             resData.message = '用户名或密码错误 !';
+    //             return res.json(resData);
+    //         }
+    //         // 返回成功的结果 (需要返回用户名)
+    //         // res.status(200).send({ code: 0, message: userinfo.name });
+
+    //         //使用express框架提供的redirect方法进行页面重定向
+    //         res.redirect("/xc_list");
+    //     })
 })
 
 module.exports = login;

@@ -97,7 +97,7 @@ $(function () {
     // 读取本地存储的函数 登录名是否存在
     function getData_index() {
         var data = localStorage.getItem("data");
-        var data = JSON.parse(data);
+        var data = JSON.parse(data);       
         return data;
     }
 
@@ -115,6 +115,8 @@ $(function () {
         if (data) {
             // 公共顶部完成数据渲染
             // 登录按钮换成本地存储的数据
+            // 获取用户名 
+            var data = getData_index()[0]   
             $('.login_main').html(data);
             // 设置去向个人中心的连接
             // 获取当前目录
