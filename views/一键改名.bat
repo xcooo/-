@@ -1,0 +1,1 @@
+Ren *.html *.art

@@ -63,22 +63,6 @@ login.post('/login', async (req, res, next) => {
         return res.json(resData);
     }
 
-    // 3. 查询数据库是否存在相同的用户名
-    // await User.findOne({ name: username, password: password })
-    //     .then(userinfo => {
-    //         // 如果存在,说明数据库有这条记录
-    //         // console.log(userinfo);
-    //         if (!userinfo) {
-    //             resData.code = 3;
-    //             resData.message = '用户名或密码错误 !';
-    //             return res.json(resData);
-    //         }
-    //         // 返回成功的结果 (需要返回用户名)
-    //         // res.status(200).send({ code: 0, message: userinfo.name });
-
-    //         //使用express框架提供的redirect方法进行页面重定向
-    //         res.redirect("/xc_list");
-    //     })
 })
 
 module.exports = login;

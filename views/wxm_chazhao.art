@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>规则中心 - 长沙美食网</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/wxm_chazhao.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* body {
+            width: 1200px;
+            margin: 0 auto;
+            background-color: #F8F8F8;
+        } */
+
+        h4 {
+            margin-top: 0;
+            margin-bottom: 0;
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        h2 {
+            margin-top: 0;
+            margin-bottom: 34px;
+        }
+
+        a {
+            color: #333333;
+            text-decoration: none;
+        }
+
+        nav {
+            width: 100%;
+            height: 100px;
+            padding: 30px 0;
+            box-sizing: border-box;
+            background-color: #FFFFFF;
+        }
+
+        nav h2 {
+            float: left;
+            font-weight: 400;
+            display: inline-block;
+            margin-top: 0;
+            padding-left: 40px;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        nav span {
+            line-height: 31px;
+            margin-left: 25px;
+            font-weight: 700;
+            height: 63px;
+            display: inline-block;
+
+        }
+
+        nav ul li {
+            float: left;
+        }
+
+        button {
+            position: relative;
+        }
+
+        .i-search {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: url(./img/search.png) no-repeat;
+            position: absolute;
+            left: 33px;
+            top: 13px;
+        }
+
+        .sousuo {
+            width: 100%;
+            padding: 20px 0;
+            height: 70px;
+            margin-top: 15px;
+            background: url(img/nav.png) no-repeat;
+            background-size: 100%;
+        }
+
+        .juzhong {
+            width: 550px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .sousuo .juzhong input {
+            float: left;
+            display: block;
+            width: 470px;
+            height: 40px;
+            box-sizing: border-box;
+            border: none;
+            border-radius: 4px 0 0 4px;
+            padding-left: 10px;
+        }
+
+        .sousuo .juzhong button {
+            display: inline-block;
+            float: left;
+            width: 80px;
+            height: 40px;
+            background-color: #262214;
+            border: none;
+        }
+
+        .guize {
+            width: 100%;
+            height: 410px;
+            margin-top: 10px;
+        }
+
+        .guize .aside {
+            float: left;
+            width: 950px;
+            height: 410px;
+            padding: 20px 40px;
+            margin-right: 10px;
+            border: 1px solid #E5E5E5;
+            background-color: #FFFFFF;
+            border-radius: 3px;
+        }
+
+        .guize .aside ul {
+            float: left;
+            margin-right: 49px;
+        }
+
+        .guize .aside ul li {
+            font-size: 14px;
+            padding: 8px 0 0 2px;
+        }
+
+        .guize .bian {
+            width: 230px;
+            height: 410px;
+            float: left;
+        }
+
+        .guize .bian .bian1 {
+            width: 230px;
+            height: 225px;
+            padding: 20px;
+            border: 1px solid #E5E5E5;
+            margin-bottom: 10px;
+            border-radius: 3px;
+            background-color: #FFFFFF;
+        }
+
+        .guize .bian .bian1 h4 {
+            margin-bottom: 15px;
+        }
+
+        .guize .bian .bian1 ul li {
+            line-height: 31px;
+        }
+
+        .guize .bian .bian2 {
+            width: 230px;
+            height: 174px;
+            padding: 20px;
+            border: 1px solid #E5E5E5;
+            border-radius: 3px;
+            background-color: #FFFFFF;
+        }
+
+        footer {
+            display: flex;
+            margin-top: 15px;
+            color: #666666;
+            overflow: hidden;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px 40px;
+        }
+
+        footer h4 {
+            margin-bottom: 15px;
+        }
+
+        footer ul {
+            flex: 1;
+            float: left;
+            /* margin-right: 30px; */
+        }
+
+        footer ul li {
+            line-height: 30px;
+        }
+
+        footer ul li span {
+            margin-right: 10px;
+        }
+
+        /* 以上是盒子1 */
+        /* 下面盒子2 */
+        .box2 {
+            width: 100%;
+            overflow: hidden;
+            display: none;
+            background-color: #fff;
+        }
+
+        .sider {
+            float: left;
+            width: 230px;
+            height: 376px;
+            border: 1px solid #E5E5E5;
+            border-radius: 3px;
+            background-color: #FFFFFF;
+            margin: 15px 0;
+            padding: 20px 0;
+        }
+
+        .sider h3 {
+            margin-bottom: 10px;
+            padding-left: 18px;
+            border-left: 5px solid #FFC300;
+            color: #555555;
+            font-size: 18px;
+        }
+
+        .curent {
+            background-color: #F7F7F7;
+        }
+
+        .content {
+            float: left;
+            width: 960px;
+            margin: 15px 0 15px 10px;
+            height: 527px;
+            padding: 30px 40px;
+            border: 1px solid #E5E5E5;
+            border-radius: 3px;
+            background-color: #FFFFFF;
+
+        }
+
+        .content ol li {
+            list-style: initial;
+            line-height: 37px;
+        }
+
+        .content ol li a span {
+            display: inline-block;
+            float: right;
+            background-color: #B8B8B8;
+            line-height: 25px;
+            border-radius: 3px;
+            padding: 2px 3px;
+        }
+
+        /* 网站底部 */
+        .footer-container {
+            width: 100%;
+            min-width: 1190px;
+            background: #f6f6f6;
+            font-size: 12px;
+            margin-top: 20px;
+        }
+
+        .channel-footer {
+            width: 1190px;
+            margin: 10px auto 0;
+            padding: 30px 0;
+        }
+
+        .channel-footer .links {
+            color: #ebebeb;
+            margin-bottom: 10px;
+        }
+
+        .channel-footer .links a {
+            margin: 0 7px;
+        }
+
+        .channel-footer .links a,
+        .channel-footer .rights a {
+            color: #8c8c8c;
+        }
+
+        .channel-footer .link-items a,
+        .channel-footer .links,
+        .channel-footer .rights {
+            text-align: center;
+            font-size: 12px;
+            color: #8c8c8c;
+        }
+    </style>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "montserrat";
+            background-image: linear-gradient(125deg, #2c3e50, #27ae60, #2980b9, #e74c3c, #8e44ad);
+            background-size: 400%;
+            animation: bganimation 15s infinite;
+        }
+
+        .text {
+            color: white;
+            text-align: center;
+            text-transform: uppercase;
+            /* margin:350px 0; */
+            font-size: 22px;
+        }
+
+        @keyframes bganimation {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* .text {
+            position: relative;
+        }
+        .xc_body {
+            position: absolute;
+            z-index: 999;
+        } */
+        .w {
+            width: 1190px;
+            margin: 0 auto;
+        }
+    </style>
+        <!-- 引入公用css文件 -->
+        <link rel="stylesheet" href="css/xc_base.css">
+</head>
+
+<body>
+    <!-- 背景粒子特效模块 -->
+    <div class="animation-wrapper">
+        <div class="particle particle-1"></div>
+        <div class="particle particle-2"></div>
+        <div class="particle particle-3"></div>
+        <div class="particle particle-4"></div>
+    </div>
+
+    <div class="w">
+        <nav>
+            <h2>大众点评规则中心</h2>
+            <span style="border-bottom:5px solid #FFC300"><a href=" #">首页</a> </span>
+            <span><a href="#">规则目录</a></span>
+            <span><a href="#">规则议院</a></span>
+        </nav>
+        <div class="sousuo">
+            <div class="juzhong">
+                <input type="text" placeholder="搜索规则关键词,如:价格">
+                <button>
+                    <span class="i-search"></span>
+                </button>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box1">
+                <div class="guize">
+                    <div class="aside">
+                        <h2>规则目录</h2>
+                        <ul>
+                            <h4>平台基础规则</h4>
+                            <li>用户服务协议</li>
+                            <li>隐私政策</li>
+                            <li> 评价规则</li>
+                            <li> 美团点评用户诚信公约</li>
+                            <li> 美团金融隐私政策</li>
+                            <li> 美团点评网络订餐食品安全...</li>
+                            <li> 美团点评侵权投诉须知</li>
+                            <li> 美团点评知识产权声明</li>
+                            <li> 价格说明</li>
+                        </ul>
+                        <ul>
+                            <h4>美团平台规则</h4>
+                        </ul>
+
+                        <ul>
+                            <h4>大众点评平台规则</h4>
+                            <li> 大众点评基础规则</li>
+                            <li> 大众点评商户管理</li>
+                            <li> 大众点评运营规则</li>
+                        </ul>
+                        <ul>
+                            <h4>消费者权益保障
+                            </h4>
+                            <li>消费者权益保障</li>
+                        </ul>
+
+                        <ul>
+                            <h4>业务规则</h4>
+                            <li>美团外卖</li>
+                            <li> 团购业务</li>
+                            <li> 小象生鲜</li>
+                            <li> 美团买菜</li>
+                            <li> 美团打车</li>
+                            <li> 美团机票/火车票</li>
+                            <li> 美团旅行</li>
+                            <li> 摩拜单车</li>
+                            <li> 美团民宿</li>
+                            <li> 金融服务</li>
+                        </ul>
+                    </div>
+                    <div class="bian">
+                        <div class="bian1">
+                            <ul>
+                                <h4>最新公告</h4>
+                                <li>关于美团外卖药品网络销...</li>
+                                <li>关于美团点评网络订餐...</li>
+                                <li>严重违法行为平台服务停...</li>
+                                <li>新增食品安全自查制度...</li>
+                                <li>查看更多</li>
+                            </ul>
+                        </div>
+                        <div class="bian2">
+                            <ul>
+                                <h4>规则评议</h4>
+                            </ul>
+                            <p>暂无内容
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box2">
+                <div class="sider">
+                    <h3>全部</h3>
+                    <h3>平台基础规则</h3>
+                    <h3>美团平台规则</h3>
+                    <h3>大众点评平台规则</h3>
+                    <h3>业务规则</h3>
+                    <h3>消费者权益保障</h3>
+                    <h3>规则动态</h3>
+                </div>
+                <div class="content">
+                    <ol>
+                        <li><a href="javascript:;">美团点评团购用户服务条款</a></li>
+                        <li><a href="javascript:;">美团点评平台用户服务协议</a></li>
+                        <li><a href="javascript:;">美团点评隐私政策</a></li>
+                        <li><a href="javascript:;">美团点评点评规则</a></li>
+                        <li><a href="javascript:;">美团点评用户诚信公约</a></li>
+                        <li><a href="javascript:;">大众点评用户服务条款</a></li>
+                        <li><a href="javascript:;">大众点评争议调解处理规范</a></li>
+                        <li><a href="javascript:;">大众点评POI信息发布和认领规则</a></li>
+                    </ol>
+                </div>
+            </div>
+            <div class="box2">
+                <div class="sider">
+                    <h3>全部</h3>
+                    <h3>意见征集中</h3>
+                    <h3>等待公示</h3>
+                    <h3>结果已公示</h3>
+
+                </div>
+                <div class="content">
+                    <ol>
+                        <li><a href="javascript:;">关于新增《美团打车平台服务商规则》的公开征求意见公告<span>已公示</span></a></li>
+                        <li><a href="javascript:;">关于《美团点评网络订餐食品安全管理办法》调整公开征求意见<span>已公示</span></a></li>
+                        <li><a href="javascript:;"> 《美团点评点评规则》修订内容公开征求意见<span>已公示</span></a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <ul>
+                <h4>关于我们</h4>
+                <li>基本介绍</li>
+                <li>发展历史</li>
+                <li>管理团队</li>
+                <li>业务产品</li>
+                <li>社会企业</li>
+            </ul>
+            <ul>
+                <h4>企业文化</h4>
+                <li>企业理念</li>
+                <li>人才发展</li>
+                <li>工作在美团点评</li>
+            </ul>
+            <ul>
+                <h4>新闻中心</h4>
+                <li>公司新闻</li>
+                <li>美团研究院</li>
+                <li>媒体资料</li>
+            </ul>
+            <ul>
+                <h4>联系我们</h4>
+                <li>客户联系</li>
+                <li>合作融洽</li>
+                <li>监督举报</li>
+            </ul>
+            <ul>
+                <h4>加入我们</h4>
+                <li>美团点评招聘网</li>
+            </ul>
+            <ul>
+                <h4><img src="https://s3plus.meituan.net/v1/mss_e2821d7f0cfe4ac1bf9202ecf9590e67/cdn-prod/file:9528bfdf/img/f0afa21.svg"
+                        alt=""></h4>
+                <li><span class="
+        glyphicon glyphicon-envelope"></span>邮箱</li>
+                <li><span class="
+        glyphicon glyphicon-pencil"></span>写信</li>
+                <li><span class="glyphicon glyphicon-th-large"></span>更多</li>
+            </ul>
+        </footer>
+
+
+
+        <!-- 网站底部 -->
+        <div class="footer-container w">
+            <div class="channel-footer">
+                <p class="links">
+                    <a href="javascript:;">关于我们</a>
+                    <a href="javascript:;">商户诚信公约</a>
+                    <a href="javascript:;">规则中心</a>
+                    <a href="javascript:;">媒体报道</a>
+                    <a href="javascript:;">商户入驻</a>
+                    <a href="javascript:;">推广服务</a>
+                    <a href="javascript:;">人才招聘</a>
+                    <a href="javascript:;">联系我们</a>
+                    <a href="javascript:;">应用下载</a>
+                </p>
+                <p class="rights">
+                    <span style="margin-right:10px;">?2003-2019 dianping.com, All Rights Reserved.</span>
+                    <span>本站发布的所有内容，未经许可，不得转载，详见 <a href="javascript:;" class="G">《知识产权声明》</a> </span>
+                </p>
+            </div>
+        </div>
+
+
+    </div>
+
+
+</body>
+
+</html>

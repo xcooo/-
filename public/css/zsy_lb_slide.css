@@ -22,6 +22,8 @@
 
 #list img {
     float: left;
+    width: 600px;
+    height: 400px;
 }
 
 #buttons {

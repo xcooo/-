@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>酒店分类模块 - 长沙美食生活网</title>
+    <link rel="shortcut icon" href="favicon.ico" type="images/x-icon" />
+    <!-- <link rel="stylesheet" href="css/common.css"> -->
+    <!-- 引入公用css文件 -->
+    <link rel="stylesheet" href="css/xc_base.css">
+    <!-- 引入登陆css文件 -->
+    <link rel="stylesheet" href="css/login.css">
+    <!-- 引入预加载文件 -->
+    <link rel="stylesheet" href="css/loader_info.css">
+    <!-- 引入首页文件 -->
+    <link rel="stylesheet" href="css/lml_category.css">
+    <!-- 引入jquery文件 -->
+    <script src="js/jquery.min.js"></script>
+    <!-- 引入公用js文件 -->
+    <script src="js/xc_common.js"></script>
+    <!-- 引入首页js文件 -->
+    <script src="js/lml_category.js"></script>
+    <!-- 引入异步加载文件 -->
+    <script src="js/ajax.js"></script>
+
+</head>
+
+<body>
+    <!-- 顶部区域 -->
+    <!-- <div class="to-top">
+        ^
+    </div> -->
+    <div class="top">
+
+        <div class="w clearfix xctop">
+            <div class="top-page_r fr">
+                <ul class="nav">
+                    <li class="user_login">
+                        <a href="javascript:;" class="login_main">你好，请登录</a>
+                        <a href="javascript:;" class="register_main style_orange">免费注册</a>
+                        <a href="javascript:;" class="logout_main style_orange">我要退出</a>
+                    </li>
+                    <li class="spacer">|</li>
+                    <li class="item">
+                        <a href="javascript:;" class="user_center">个人中心<i class="icon i_arrow"></i></a>
+                        <ul class='down_menu'>
+                            <li><a href="javascript:;" class="user_center">我的资料</a></li>
+                            <li><a href="javascript:;" class="user_center">昵称修改</a></li>
+                            <li><a href="javascript:;" class="user_center">重置密码</a></li>
+                            <li><a href="javascript:;" class="user_center">修改头像</a></li>
+                            <li><a href="javascript:;" class="user_center">赞助本站</a></li>
+                        </ul>
+                    </li>
+                    <li class="spacer">|</li>
+                    <li class="item">
+                        <a href="#">商户服务<i class="icon i_arrow"></i></a>
+                        <ul class='down_menu canying'>
+                            <li><a href="#">商户中心</a></li>
+                            <li><a href="#">商户代理</a></li>
+                            <li><a href="#">招募餐饮代理</a></li>
+                            <li><a href="#">招募非餐饮代理</a></li>
+                            <li><a href="#">餐饮商户中心</a></li>
+                        </ul>
+                    </li>
+                    <li class="spacer">|</li>
+                    <li class="item" class="item">
+                        <a href="#">帮助中心<i class="icon i_arrow"></i></a>
+                        <ul class='down_menu'>
+                            <li><a href="#">平台规则</a></li>
+                            <li><a href="#">联系客服</a></li>
+                        </ul>
+                    </li>
+                    <li class="spacer">|</li>
+                    <li class="item">
+                        <a href="#">网站导航<i class="icon i_arrow"></i></a>
+                        <!-- 超级大菜单 -->
+                        <div class="big_menu">
+                            <ul class="maplist">
+                                <li>
+                                    <div class="list_container">
+                                        <span class="list_title">电影赛事演出</span>
+                                        <p class="list_item">
+                                            <a href="#">电影 <span>|</span></a>
+                                            <a href="#">演出<span>|</span></a>
+                                            <a href="#">赛事</a>
+                                        </p>
+                                    </div>
+                                    <div class="list_container">
+                                        <span class="list_title">丽人</span>
+                                        <p class="list_item">
+                                            <a href="#">美发 <span>|</span></a>
+                                            <a href="#">美甲美睫<span>|</span></a>
+                                            <a href="#">美容</a>
+                                        </p>
+                                    </div>
+                                    <div class="list_container">
+                                        <span class="list_title">旅游</span>
+                                        <p class="list_item">
+                                            <a href="#">周边游 <span>|</span></a>
+                                            <a href="#">酒店<span>|</span></a>
+                                            <a href="#">景点</a>
+                                        </p>
+                                    </div>
+                                    <div class="list_container">
+                                        <span class="list_title">运动健身</span>
+                                        <p class="list_item">
+                                            <a href="#">健身中心 <span>|</span></a>
+                                            <a href="#">游泳馆<span>|</span></a>
+                                            <a href="#">桌游馆</a>
+                                        </p>
+                                    </div>
+                                    <div class="list_container">
+                                        <span class="list_title">美食</span>
+                                        <p class="list_item">
+                                            <a href="#">火锅 <span>|</span></a>
+                                            <a href="#">川菜<span>|</span></a>
+                                            <a href="#">烧烤</a>
+                                        </p>
+                                    </div>
+                                    <div class="list_container">
+                                        <span class="list_title">休闲娱乐</span>
+                                        <p class="list_item">
+                                            <a href="#">KTV <span>|</span></a>
+                                            <a href="#">足疗按摩<span>|</span></a>
+                                            <a href="#">密室</a>
+                                        </p>
+                                        <p class="list_item">
+                                            <a href="#">酒吧 <span>|</span></a>
+                                            <a href="#">洗浴<span>|</span></a>
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list_container">
+                                        <span class="list_title">结婚</span>
+                                        <p class="list_item">
+                                            <a href="#">婚纱摄影 <span>|</span></a>
+                                            <a href="#">婚纱跟拍<span>|</span></a>
+                                            <a href="#">婚车租赁</a>
+                                        </p>
+                                        <p class="list_item">
+                                            <a href="#">婚纱预定 <span>|</span></a>
+                                            <a href="#">新娘彩妆<span>|</span></a>
+                                            <a href="#">司仪主持</a>
+                                        </p>
+                                    </div>
+                                    <div class="list_container">
+                                        <span class="list_title">亲子</span>
+                                        <p class="list_item">
+                                            <a href="#">亲子摄影 <span>|</span></a>
+                                            <a href="#">幼儿教育<span>|</span></a>
+                                            <a href="#">孕产护理</a>
+                                        </p>
+                                        <p class="list_item">
+                                            <a href="#">亲子游乐</a>
+                                        </p>
+                                    </div>
+                                    <div class="list_container">
+                                        <span class="list_title">学习培训</span>
+                                        <p class="list_item">
+                                            <a href="#">外语 <span>|</span></a>
+                                            <a href="#">音乐<span>|</span></a>
+                                            <a href="#">留学</a>
+                                        </p>
+                                    </div>
+                                    <div class="list_container">
+                                        <span class="list_title">家装</span>
+                                        <p class="list_item">
+                                            <a href="#">装修设计 <span>|</span></a>
+                                            <a href="#">装修图库<span>|</span></a>
+                                            <a href="#">装修建材</a>
+                                        </p>
+                                        <p class="list_item">
+                                            <a href="#">厨卫洁具 <span>|</span></a>
+                                            <a href="#">家具家具</a>
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list_container">
+                                        <span class="list_title">生活服务</span>
+                                        <p class="list_item">
+                                            <a href="#">快照冲印 <span>|</span></a>
+                                            <a href="#">搬家<span>|</span></a>
+                                            <a href="#">开锁</a>
+                                        </p>
+                                        <p class="list_item">
+                                            <a href="#">家电维修 <span>|</span></a>
+                                            <a href="#">房屋维修<span>|</span></a>
+                                            <a href="#">家政服务</a>
+                                        </p>
+                                    </div>
+                                    <div class="list_container">
+                                        <span class="list_title">爱车</span>
+                                        <p class="list_item">
+                                            <a href="#">4s店<span>|</span></a>
+                                            <a href="#">汽车美容<span>|</span></a>
+                                            <a href="#">维修保养</a>
+                                        </p>
+                                    </div>
+                                    <div class="list_container">
+                                        <span class="list_title">医疗健康</span>
+                                        <p class="list_item">
+                                            <a href="#">口腔齿科<span>|</span></a>
+                                            <a href="#">体检中心<span>|</span></a>
+                                            <a href="#">医院</a>
+                                        </p>
+                                        <p class="list_item">
+                                            <a href="#">药店<span>|</span></a>
+                                            <a href="#">中医<span>|</span></a>
+                                            <a href="#">男科医院</a>
+                                        </p>
+                                    </div>
+                                    <div class="list_container">
+                                        <span class="list_title">宠物</span>
+                                        <p class="list_item">
+                                            <a href="#">宠物店<span>|</span></a>
+                                            <a href="#">宠物医院</a>
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list_container">
+                                        <span class="list_title app_title">手机应用</span>
+                                        <div class="list_pic">
+                                            <p class="app_container">
+                                                <a href="javascript:;">
+                                                    <i class="app_icon dp_app"></i>
+                                                    <span>大众点评</span>
+                                                </a>
+                                            </p>
+                                            <p class="app_container">
+                                                <a href="javascript:;">
+                                                    <i class="app_icon gj_app"></i>
+                                                    <span>点评管家</span>
+                                                </a>
+                                            </p>
+                                        </div>
+                                        <div class="list_pic">
+                                            <p class="qrcode_container">
+                                                <i class="qrcode_icon wx_qrcode"></i>
+                                                <span>大众点评微信公众号</span>
+                                            </p>
+                                            <p class="qrcode_container">
+                                                <i class="qrcode_icon qq_qrcode"></i>
+                                                <span>大众点评QQ公众号</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- logo区域 -->
+    <div class="logo_container">
+        <div class="w logo_content clearfix">
+            <a href="#" class="logo" title="大众点评"></a>
+            <a href="#" class="city J-city">
+                <span class="map_icon"></span>
+                <span class="cs">长沙</span>
+                <i class="icon_city"></i>
+            </a>
+            <!-- input输入框 -->
+            <div class="search_box">
+                <div class="search-bar">
+                    <span class="search-container">
+
+                        <span>
+                            <i class="i-search"></i>
+                            <input type="text" placeholder="搜索商户名、地址、菜名、外卖等">
+                        </span>
+                        <span class="search-bnt-jd">
+                            <a href="javascript:;" class="search-btn">搜酒店</a>
+                        </span>
+                        <span class="search-bnt-qz">
+                            <a href="javascript:;" class="search-btn-a">搜全站</a>
+                        </span>
+                    </span>
+                    <p class="hot-search">
+                        <a href="javascript:;" class="hot-search-tips">大家都在搜:</a>
+                        <a href="javascript:;" class="search-word">五一广场</a>
+                        <a href="javascript:;" class="search-word">黄兴步行街</a>
+                        <a href="javascript:;" class="search-word">火宫殿</a>
+                        <a href="javascript:;" class="search-word">保利mall</a>
+                        <a href="javascript:;" class="search-word">和馨园</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 产品分类 -->
+    <div class="cate-container clearfix">
+        <div class="nav-header">
+            <div class="w navbar">
+                <div class="dropdown fl">
+                    <span class="all-cate">全部酒店分类 </span>
+                    <div class="dd">
+                        <ul>
+                            <li class="menu-item">
+                                <a href="javascript:;" class="first">高端酒店</a>
+                                <a href="javascript:;">五星级</a>
+                                <a href="javascript:;">四星级</a>
+
+
+                            </li>
+                            <li class="menu-item">
+                                <a href="list.html" class="first">优选酒店</a>
+                                <a href="javascript:;">三星</a>
+                                <a href="javascript:;">经济连锁</a>
+
+                            <li class="menu-item">
+                                <a href="javascript:;" class="first">特色酒店</a>
+                                <a href="javascript:;">商务酒店</a>
+                                <a href="javascript:;">情侣酒店</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="fl">
+                    <a target="_blank" href="xc_list.html" class="cate-item other-cate">霸王餐</a>
+                    <i class="hot-icon"></i>
+                    <a href="javascript:;" class="cate-item other-cate">社区论坛</a>
+                    <a href="javascript:;" class="cate-item other-cate">预约订座</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 登陆表单 -->
+    <div class="w list_login">
+        <div id="bg" class="login_bg">
+            <canvas></canvas>
+            <canvas></canvas>
+            <canvas></canvas>
+        </div>
+        <!-- title -->
+        <!-- <h1></h1> -->
+        <!-- //title -->
+        <!-- 注册 -->
+        <div class="sub-main-w3 sub_register">
+            <!-- 注册成功的模块 -->
+            <div class="register_success">注册成功 !</div>
+            <form AUTOCOMPLETE="OFF" id="myform">
+                <h2>欢迎注册 - 大众点评
+                    <i class="fa fa-long-arrow-down"></i>
+                </h2>
+                <div class="form-style-agile">
+                    <label>
+                        <i class="fa fa-user"></i>
+                        输入用户名:
+                    </label>
+                    <input placeholder="" name="Name" type="text" value="" required="" id="nc">
+                    <div class="input_tip">阁下尊姓大名</div>
+                    <span class=""></span>
+                </div>
+                <div class="form-style-agile">
+                    <label>
+                        <i class="fa fa-unlock-alt"></i>
+                        输入密码:
+                    </label>
+                    <input placeholder="" name="Password1" type="password" required="" id="pwd">
+                    <div class="input_tip">密码(不少于6位)</div>
+                    <span class=""></span>
+                </div>
+                <div class="form-style-agile">
+                    <label>
+                        <i class="fa fa-unlock-alt"></i>
+                        确认密码:
+                    </label>
+                    <input placeholder="" name="Password2" type="password" id="surepwd">
+                    <div class="input_tip">确认密码</div>
+                    <span class=""></span>
+                </div>
+                <!-- checkbox -->
+                <div class="wthree-text">
+                    <ul>
+                        <li>
+                            <label class="anim">
+                                <input type="checkbox" class="checkbox" required="" id="allow">
+                                <span>同意 <a href="javascript:;">(协议)</a> 并注册</span>
+                            </label>
+                        </li>
+                        <li>
+                            <a href="#">已有账号?&nbsp;<em>立即登陆</em></a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- //checkbox -->
+                <input type="submit" value="注册">
+            </form>
+            <div class="footer">
+                <p>Copyright &copy; 2019.前端23期 All rights.</p>
+            </div>
+        </div>
+
+        <!-- 登陆 -->
+        <div class="sub-main-w3 sub_login">
+            <div class="login_success">您已经到达登陆页 !</div>
+            <form AUTOCOMPLETE="OFF" id="myform">
+                <h2>欢迎登陆 - 大众点评
+                    <i class="fa fa-long-arrow-down"></i>
+                </h2>
+                <div class="form-style-agile">
+                    <label>
+                        <i class="fa fa-user"></i>
+                        用户名:
+                    </label>
+                    <input placeholder="" name="Name" type="text" value="" required="" id="nc_login">
+                    <div class="input_tip">阁下大名</div>
+                    <span class=""></span>
+                </div>
+                <div class="form-style-agile">
+                    <label>
+                        <i class="fa fa-unlock-alt"></i>
+                        密码:
+                    </label>
+                    <input placeholder="" name="Password" type="password" required="" id="pwd_login">
+                    <div class="input_tip">密码</div>
+                    <span class=""></span>
+                </div>
+                <!-- checkbox -->
+                <div class="wthree-text">
+                    <ul>
+                        <li>
+                            <label class="anim">
+                                <!-- <input type="checkbox" class="checkbox" required=""> -->
+                                <span>提示: 登录完成会自动跳转</span>
+                            </label>
+                        </li>
+                        <li>
+                            <a href="#">没有账号?&nbsp;<em>立即注册</em></a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- //checkbox -->
+                <input type="submit" value="登陆">
+            </form>
+            <div class="footer">
+                <p>Copyright &copy; 2019.前端23期 All rights.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="search-box w">
+        <label for="" class="input">
+            目的地 <input type="search" class=" 
+            Location" placeholder="宁乡市">
+            <label for="" class="box">
+                <div class="ru"><span>入住</span><input type="text"></div>
+                <div class="li"><span>离店</span><input type="text"></div>
+            </label>
+            关键词 <input type="text" class="keywords" placeholder="位置">
+            <a class="sou">搜索</a>
+        </label>
+    </div>
+
+    <div class="jd-main ">
+        <div class="crumb w">
+            <a href="javascript:;">长沙酒店预订</a>
+            <span>></span>
+            <a href="javascript:;">德政园</a>
+            <span>></span>
+            <a href="javascript:;">五星级/豪华型</a>
+            <span>></span>
+            <span>></span>
+            <a href="javascript:;">豪华型</a>
+            <span>></span>
+
+            <a href="javascript:;">万家丽国际大酒店</a>
+        </div>
+        <div class="detail w ">
+            <ul class="fl">
+                <li class="fl Choose">酒店</li>
+                <li class="fl"><a href="javascript:;">婚宴</a></li>
+            </ul>
+        </div>
+        <div class="jd-box w">
+            <div class="left-list fl">
+                <div class="ain-detail-left-top">
+                    <div class="title">
+                        <h1 class="fl">万家丽大酒店</h1>
+                        <a href="javascript:;" class="fr">下载APP预订</a>
+                    </div>
+                    <div class="address">
+                        <span class="fl">地址:万家丽中路99号</span>
+                        <h4 class="fl">距离万家丽广场地铁站150m</h4>
+                        <div class="hotel-detail-operation fr">
+                            <a href="javascript:;"></a>
+                            <a href="javascript:;"></a>
+                            <a href="javascript:;"></a>
+                            <div></div>
+                            <a href="javascript:;" class="yow"><span>写评论</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="fige">
+                    <ul>
+                        <li class="fige-first fl"><img class="lazy"
+                                data-original="./lml_img/8904a551a4a8ac48c27e84f0b7194a9094663.jpg" alt="">
+                        </li>
+                        <li class="fr"><img class="lazy"
+                                data-original="./lml_img/1d8eb0a0fc01f864ea6a6a1f8c3bbd1493674 (1).jpg" alt=""></li>
+                        <li class="fr"><img class="lazy"
+                                data-original="./lml_img/2c00b7fd7b1e26cdbf737afc70b8335c2826129.jpg" alt=""></li>
+                        <li class="fr"><img class="lazy"
+                                data-original="./lml_img/36dcd4f7543185aa74376c37d1a98e972821683.jpg" alt=""></li>
+                        <li class="fr"><img class="lazy"
+                                data-original="./lml_img/4ca0fea065b8e622d14421f4ac21314a2484955.jpg" alt=""></li>
+                        <li class="fr"><img class="lazy"
+                                data-original="./lml_img/527563cfa44371fa90b26f16479cf16c4531945.jpg" alt=""></li>
+                        <li class="fr"><img class="lazy"
+                                data-original="./lml_img/60c56f66442cfcc5a9c9aea7099d5d1a1757015.jpg" alt=""></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="wrapper wrapper-content fl">
+                <div class="hotel-scope">
+                    <span>4.9</span>
+                    /5分
+                    <div class="hotel-scope-more">
+                        <i></i>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-content">
+                                <form class="form-horizontal m-t" id="editCommanderForm">
+                                    <!-- <tr >
+                                            <th class="required" style="text-align: right;">经纬度</th>
+                                            <td><input id="lat" name="lat" class="form-control" type="text"
+                                                    value="112.938814,28.228209" /></td>
+                                        </tr> -->
+
+                                    <tr>
+                                        <td>
+                                            <div id="lmap" style="width: 402px; height: 255px;">
+                                                <i class="icon-spinner icon-spin icon-large"></i>֘地图加载中..
+                                            </div>
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <th></th>
+                                        <!-- <td>
+                                            <div class="input-group m-t-10">
+                                                <input id="selfAdd" name="selfAdd" class="form-control"
+                                                    placeholder="请输入地址" type="text">
+                                                <span class="input-group-addon"><a href="javascript:;"
+                                                        onclick="geoCode();"><i
+                                                            class="fa fa-location-arrow">点我地址定位</i></a></span>
+                                            </div>
+                                        </td> -->
+                                    </tr>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="deal-info w">
+        <ul class="fl">
+            <li class="fl"><a href="javascript:;">酒店信息</a></lif>
+            <li class="fl"><a href="javascript:;">位置交通</a></li>
+        </ul>
+    </div>
+    <div class="sub-content w">
+        <div class="jd-info fl"><span>酒店信息</span></div>
+
+    </div>
+    <div class="list-info w">
+        <table>
+            <tr>
+                <td class="info-key">开业装修时间：</td>
+                <td>2016年开业 2016年装修</td>
+            </tr>
+            <tr>
+                <td class="info-key">入离店时间：</td>
+                <td>请在14:00以后入住并于次日12:00前退房</td>
+            </tr>
+            <tr>
+                <td class="info-key">酒店设施：</td>
+                <td>送餐服务&nbsp;&nbsp;wifi叫车服务&nbsp;&nbsp;接送服务&nbsp;&nbsp;儿童乐园&nbsp;&nbsp;空调&nbsp;&nbsp;餐厅&nbsp;&nbsp;会议室&nbsp;&nbsp;24小时前台接待服务&nbsp;&nbsp;吹风机&nbsp;&nbsp;24h热水游泳池&nbsp;&nbsp;停车场&nbsp;&nbsp;叫醒服务&nbsp;&nbsp;健身中心&nbsp;&nbsp;行李寄存&nbsp;&nbsp;咖啡厅&nbsp;&nbsp;免费洗漱用品
+                </td>
+            </tr>
+            <tr>
+                <td class="info-key">酒店简介：</td>
+                <td>
+                    万家丽国际大酒店坐落于世界上大单体建筑内的以高设计标准、消费，客房均超55平方米设计的豪华酒店；处于湖南长、株、潭三市融城的核心商业圈—“万家丽商圈”，豪华客房1400套，房型多达21种。酒店以国学文化为核心，欧陆的古典风情结合传统中式风格，打造万家丽国际大酒店独有的文化特
+                    <div class="fr"><a href="javascript:;" class="fl">更多</a><span class="fl">></span></div>
+                </td>
+            </tr>
+            <tr>
+                <td class="info-key">酒店政策资质</td>
+                <td><a href="javascript:;" class="ck">点击查看</a></td>
+            </tr>
+        </table>
+        <div class="ugcinfo">
+            <span>今天连锁酒店共4546人浏览，最近一周31人浏览，共人收藏.</span>&nbsp;
+            <a href="javascript:;">查看更多商户</a>
+        </div>
+    </div>
+    <!-- info start -->
+    <div class="seo-nav-info w">
+        <table>
+            <tr>
+                <td class="col">酒店介绍：</td>
+                <td>为您推荐今天连锁酒店以及酒店预订、价格查询、酒店评论，今天连锁酒店信息，酒店地址：玉潭镇通益社区春城北路88号; 涵盖酒店周边设施，酒店交通地图，真实用户点评等信息。
+                    上海酒店预订，酒店团购，特价酒店，选点评更放心！</td>
+            </tr>
+            <tr>
+                <td class="col">热门商圈：
+                </td>
+                <td>
+                    <a href="javascript:;">人人乐酒店预订</a>
+                    <a href="javascript:;">步行街酒店预订</a>
+                    <a href="javascript:;">大润发酒店预订</a>
+                    <a href="javascript:;">大润发酒店预订</a>
+                    <a href="javascript:;">更多</a>
+                    <span>></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col">热门城市：</td>
+                <td> <a href="javascript:;">上海酒店预订</a>
+                    <a href="javascript:;">北京酒店预订</a>
+                    <a href="javascript:;">广州酒店预订</a>
+                    <a href="javascript:;">深圳酒店预订</a>
+                    <a href="javascript:;">更多</a>
+                    <span>></span></td>
+            </tr>
+        </table>
+    </div>
+    </div>
+    <!-- 页尾模块 -->
+    <!-- <div class="jd-footer">
+        <div class="channel-footer w">
+            <ul>
+                <li>关于我们</li>
+                <span>|</span>
+                <li>商户诚信公约</li>
+                <span>|</span>
+                <li>规则中心</li>
+                <span>|</span>
+                <li>媒体报道</li>
+                <span>|</span>
+                <li>商户入驻</li>
+                <span>|</span>
+                <li>推广服务</li>
+                <span>|</span>
+                <li>人才招聘</li>
+                <span>|</span>
+                <li>最新咨询</li>
+                <span>|</span>
+                <li>联系我们</li>
+                <span>|</span>
+                <li>应用下载</li>
+
+            </ul>
+            <div class="rights ">
+                <span>©2003-2019 dianping.com, All Rights Reserved.</span>
+                <span>本站发布的所有内容，未经许可，不得转载，详见 《知识产权声明》。</span>
+            </div>
+        </div>
+
+    </div> -->
+
+    <!-- 网站底部 -->
+    <div class="footer-container w">
+        <div class="channel-footer">
+            <p class="links">
+                <a href="javascript:;">关于我们</a>
+                <a href="javascript:;">商户诚信公约</a>
+                <a href="javascript:;">规则中心</a>
+                <a href="javascript:;">媒体报道</a>
+                <a href="javascript:;">商户入驻</a>
+                <a href="javascript:;">推广服务</a>
+                <a href="javascript:;">人才招聘</a>
+                <a href="javascript:;">联系我们</a>
+                <a href="javascript:;">应用下载</a>
+            </p>
+            <p class="rights">
+                <span style="margin-right:10px;">?2003-2019 dianping.com, All Rights Reserved.</span>
+                <span>本站发布的所有内容，未经许可，不得转载，详见 <a href="javascript:;" class="G">《知识产权声明》</a> </span>
+            </p>
+        </div>
+    </div>
+
+    <!--注意这个javascript urlkey 一定要在高德地图自己申请自己的key，如果不介意 也可以使用作者这里-->
+    <script type="text/javascript"
+        src="https://webapi.amap.com/maps?v=1.3&key=4108f8ba88e22880ce6544bbe4d7f028&plugin=AMap.Geocoder"></script>
+    <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+
+    <script type="text/javascript">
+        var centre = [];
+        var geocoder = new AMap.Geocoder();
+        var map = new AMap.Map('lmap', {
+            resizeEnable: true, //是否监控地图容器尺寸变化
+            zoom: 11, //初始化地图层级
+            center: [113.031698, 28.190659] //初始化地图中心点
+        });
+        // 创建一个 Marker 实例：
+        var marker = new AMap.Marker({
+            position: new AMap.LngLat(113.031698, 28.190659),   // 经纬度对象，也可以是经纬度构成的一维数组[116.39, 39.9]
+            title: 'chan sha',
+            draggable: true,
+        });
+        // 将创建的点标记添加到已有的地图实例：
+        map.add(marker);
+        map.on('rightclick', function (ev) {
+            var lnglat = ev.lnglat;
+            /*  $("#longitude").val(lnglat.getLng());
+             $("#latitude").val(lnglat.getLat()); */
+            $("#lat").val(lnglat.getLng() + "," + lnglat.getLat())
+            marker.setPosition(lnglat);
+            map.panTo(lnglat);
+        });
+        map.on('rightclick', function (ev) {
+            var lnglat = ev.lnglat;
+            /* $("#longitude").val(lnglat.getLng());
+            $("#latitude").val(lnglat.getLat()); */
+            $("#lat").val(lnglat.getLng() + "," + lnglat.getLat())
+            regeoCode(lnglat.getLng(), lnglat.getLat());
+            marker.setPosition(lnglat);
+            map.panTo(lnglat);
+        });
+        marker.on('dragend', function (ev) {
+            var lnglat = ev.lnglat;
+            /*  $("#longitude").val(lnglat.getLng());
+             $("#latitude").val(lnglat.getLat()); */
+            $("#lat").val(lnglat.getLng() + "," + lnglat.getLat())
+            regeoCode(lnglat.getLng(), lnglat.getLat());
+            marker.setPosition(lnglat);
+            map.panTo(lnglat);
+
+        });
+
+
+        function geoCode() {
+            var address = document.getElementById('selfAdd').value;
+            if (address == "") {
+                utiljs.alertToast("error", '请输入需要定位地址!', null);
+                return;
+            }
+            geocoder.getLocation(address, function (status, result) {
+                if (status === 'complete' && result.geocodes.length) {
+                    var lnglat = result.geocodes[0].location;
+                    /* $("#longitude").val(lnglat.getLng());
+                         $("#latitude").val(lnglat.getLat()); */
+                    $("#lat").val(lnglat.getLng() + "," + lnglat.getLat())
+                    marker.setPosition(lnglat);
+                    map.panTo(lnglat);
+                } else { alert("无法定位！") }
+            });
+        }
+
+
+
+
+        function regeoCode(longitude, latitude) {
+            var lnglat = [longitude, latitude];
+            if (!marker) {
+                marker = new AMap.Marker();
+                map.add(marker);
+            }
+            marker.setPosition(lnglat);
+
+            geocoder.getAddress(lnglat, function (status, result) {
+                if (status === 'complete' && result.regeocode) {
+                    var address = result.regeocode.formattedAddress;
+                    document.getElementById('selfAdd').value = address;
+                } else { alert("无法定位！") }
+            });
+        }
+
+    </script>
+    <script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var flag = $("#flag").val();
+            if (flag == 0) {
+                $('#centreId').searchableSelect();
+            }
+        });
+
+    </script>
+
+    <!--页面加载end-->
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+        <!-- 背景遮盖层 -->
+        <div class="load_bg"></div>
+        <!-- <div class="loader-section section-left"></div>
+                <div class="loader-section section-right"></div>
+                <div class="load_title">正在加载大众点评<br><span>前端23期</span></div> -->
+    </div>
+
+
+    <!-- 火箭 -->
+    <div id="shape">
+        <div class="shapeColor">
+            <div class="shapeFly">
+            </div>
+        </div>
+    </div>
+
+    <!-- footer end -->
+    <script src="js/jquery.lazyload.js"></script>
+    <script src="js/jquery.scrollstop.js"></script>
+    <script type="text/javascript" charset="utf-8">
+        $(function () {
+            $("img.lazy").lazyload({
+                // placeholder: "./img/lazyload.gif", //用图片提前占位
+                // placeholder,值为某一图片路径.此图片用来占据将要加载的图片的位置,待图片加载时,占位图则会隐藏
+                effect: "fadeIn", // 载入使用何种效果
+                // effect(特效),值有show(直接显示),fadeIn(淡入),slideDown(下拉)等,常用fadeIn
+                threshold: 20, // 提前开始加载
+                // threshold,值为数字,代表页面高度.如设置为200,表示滚动条在离目标位置还有200的高度时就开始加载图片,可以做到不让用户察觉
+                // event: 'scroll',  // 事件触发时才加载
+                // event,值有click(点击),mouseover(鼠标划过),sporty(运动的),foobar(…).可以实现鼠标莫过或点击图片才开始加载,后两个值未测试…
+                // container: $(".jiehun_container"),  // 对某容器中的图片实现效果
+                // container,值为某容器.lazyload默认在拉动浏览器滚动条时生效,这个参数可以让你在拉动某DIV的滚动条时依次加载其中的图片
+                failurelimit: 10 // 图片排序混乱时
+                // failurelimit,值为数字.lazyload默认在找到第一张不在可见区域里的图片时则不再继续加载,但当HTML容器混乱的时候可能出现可见区域内图片并没加载出来的情况,failurelimit意在加载N张可见区域外的图片,以避免出现这个问题.
+            });
+        });
+    </script>
+
+    <!-- 登录注册表单js文件 -->
+    <script src="js/canva_moving_effect.js"></script>
+
+    <!-- 引入input烟花文件 -->
+    <script src="js/activate-power-mode.js "></script>
+
+</body>
+
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>大众点评家装季</title>
+	<!-- 引入公用css文件 -->
+	<link rel="stylesheet" href="css/xc_base.css">
+	<!-- rotate_pic -->
+	<link rel="stylesheet" type="text/css" href="css/zsy_normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/zsy_var.css">
+	<link rel="shortcut icon" href="favicon.ico" type="images/x-icon" />
+	<!--页面加载start-->
+	<link rel="stylesheet" href="css/loader.css">
+	<style type="text/css">
+		html,
+		body {
+			height: 100%;
+		}
+
+		/* new */
+		/* a,a:hover,a:link,a:visited{
+				color:#666;text-decoration:none;cursor:url(../img/Swipe_Left_32px_1186515_easyicon.net.ico),pointer
+			} */
+
+		.pano {
+			width: 100%;
+			height: 100%;
+			margin: 0 auto;
+		}
+
+		.pano .controls {
+			position: relative;
+			top: 40%;
+		}
+
+		.pano .controls a {
+			position: absolute;
+			display: inline-block;
+			text-decoration: none;
+			color: #eee;
+			font-size: 3em;
+			width: 20px;
+			height: 20px;
+		}
+
+		.pano .controls a.left {
+			left: 10px;
+			bottom: 202px;
+		}
+
+		/* ???????????????? */
+		/* new */
+		.pano .controls img:hover {
+			cursor: url(./img/Swipe_Left_32px_1186515_easyicon.net.cur);
+		}
+
+		.pano .controls a.right {
+			right: 70px;
+			bottom: 202px;
+		}
+
+		.pano.moving .controls a {
+			opacity: 0.4;
+			color: #eee;
+		}
+
+		/* 公告牌 */
+		#billboard {
+			z-index: 999;
+			position: absolute;
+			width: 285px;
+			height: 210px;
+			cursor: pointer;
+			top: 0;
+			left: 0;
+		}
+
+		#billboard img {
+			width: 100%;
+			height: 100%;
+		}
+
+		/* 小天使的提示 */
+		#talk {
+			color: #F67B23;
+			font-weight: 800;
+			z-index: 999;
+			position: absolute;
+			width: 153px;
+			height: 50px;
+			cursor: pointer;
+			top: 130px;
+			left: 66px;
+		}
+
+		/* 左滑关闭 */
+		#left_close {
+			z-index: 999;
+			position: absolute;
+			left: 300px;
+			top: 30px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- 公告牌 -->
+	<div id="billboard">
+		<img src="zsy_img/billboard.gif">
+	</div>
+	<!-- 公告 -->
+	<div id="talk">
+		点按左右两边的气球可调整全景视野哦!
+	</div>
+	<!-- 左滑关闭 -->
+	<div id="left_close">
+		<img src="zsy_img/left_close.png">
+	</div>
+	<!-- 全景图 -->
+	<div id="myPano" class="pano">
+		<div class="htmleaf-container">
+			<header class="htmleaf-header">
+				<h1 style="color: #F97E1B;">精装程序员疗养屋&nbsp;<em>VR</em>&nbsp; 全景体验<span style="font-size: 18px;"><strong
+							style="letter-spacing: 2.5px;">猝死前可用床上的遥控器一键呼叫项目经理,程序员值得拥有!</strong></span></h1>
+				<div class="htmleaf-links">
+					<!-- <a class="htmleaf-icon icon-htmleaf-home-outline"
+						href="zsy_list.html" title="大众点评家装季"
+						target="_blank">
+						<span>
+						</span></a> -->
+				</div>
+			</header>
+		</div>
+		<div class="controls">
+			<a href="#" class="left">
+				<!-- &laquo; -->
+				<img src="zsy_img/left_ballon.jpg">
+			</a>
+			<a href="#" class="right">
+				<!-- &raquo; -->
+				<img src="zsy_img/right_ballon.jpg">
+			</a>
+		</div>
+	</div>
+
+	<!--页面加载end-->
+	<div id="loader-wrapper">
+		<div id="loader"></div>
+		<div class="loader-section section-left"></div>
+		<div class="loader-section section-right"></div>
+		<div class="load_title">VR 全景模式正在开启...<br><span></span></div>
+	</div>
+
+
+
+	<script src="js/jquery-1.11.0.min.js" type="text/javascript"></script>
+	<script>
+		window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')
+	</script>
+	<script src="js/jquery.pano.js"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function ($) {
+			$("#myPano").pano({
+				img: "./zsy_img/sphere.jpg"
+			});
+		});
+	</script>
+
+
+	<script type="text/javascript">
+			// 动画原理
+			// 1. 获得盒子当前位置  
+			// 2. 让盒子在当前位置加上1个移动距离
+			// 3. 利用定时器不断重复这个操作
+			// 4. 加一个结束定时器的条件
+			// 5. 注意此元素需要添加定位， 才能使用element.style.left
+			// var angel = document.querySelector('#angel');
+			// console.log(angel);
+			// var timer = setInterval(function() {
+			// 	if (angel.offsetLeft >= 600) {
+			// 		// alert(1);
+			// 		console.log(1);
+			// 		// 停止动画 本质是停止定时器
+			// 		clearInterval(timer);
+			// 	}
+			// 	angel.style.left = angel.offsetLeft + 1 + 'px';
+			// }, 30);
+	</script>
+</body>
+
+</html>

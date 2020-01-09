@@ -2,6 +2,13 @@ $(function () {
     // 渲染购物车数据
     load_cart()
 
+    // 预加载
+    setTimeout(function () {
+        $('body').addClass('loaded');
+        $('.load_bg').fadeOut()
+        // $('#loader-wrapper .load_title').remove();
+    }, 1200)
+
     // // 全部分类显示隐藏功能
     // // 必须要给显示的父级元素添加事件
     // $('.dropdown').mouseenter(function () {
@@ -11,123 +18,50 @@ $(function () {
     //     $(this).children('.dd').hide()
     // })
 
-    // 全选 全不选功能模块
-    // 1.就是把全选按钮(checkall)的状态赋值给 三个小的按钮(j-checkbox)就可以了
-    // 事件可以使用change
-    // $('.checkall').change(function () {
-    //     $('.j-checkbox, .checkall').prop('checked', $(this).prop('checked'));
-    //     if ($(this).prop('checked')) {
-    //         // 让所有的商品添加 check-cart-item 类名
-    //         $('.cart-item').addClass('check-cart-item');
-    //     } else {
-    //         // check-cart-item 移除
-    //         $('.cart-item').removeClass('check-cart-item');
-    //     }
-    // });
-    // // 2.如果小复选框被选中的个数等于3 就应该把全选按钮选上，否则全选按钮不选。
-    // $('.j-checkbox').change(function () {
-    //     if ($('.j-checkbox:checked').length === $('.j-checkbox').length) {
-    //         // 全选按钮勾上
-    //         $('.checkall').prop('checked', true);
-    //     } else {
-    //         // 全选按钮取消
-    //         $('.checkall').prop('checked', false);
-    //     }
-    //     if ($(this).prop('checked')) {
-    //         // 让当前的商品添加 check-cart-item 类名
-    //         $(this).parents('.cart-item').addClass('check-cart-item');
-    //     } else {
-    //         // check-cart-item 移除
-    //         $(this).parents('.cart-item').removeClass('check-cart-item');
-    //     }
-    // });
-    // // 3.增减商品数量  首先声明一个变量，当我们点击+号（increment），就让这个值++，然后赋值给文本框。
-    // $('.increment').click(function () {
-    //     // 得到当前兄弟文本框的值
-    //     var num = $(this).siblings('.itxt').val();
-    //     num++;
-    //     $(this).siblings('.itxt').val(num);
-    //     // 4.计算小计模块， 根据文本框的值 乘以 当前商品的价格  就是 商品的小计
-    //     // 获取当前商品的价格
-    //     var price = $(this).parent().parent().siblings('.p-price').html()
-    //     price = price.substr(1);
-    //     // 保留2位小数（不够位数，则用0替补）
-    //     total = (price * num).toFixed(2);
-    //     // 小计模块
-    //     $(this).parent().parent().siblings('.p-sum').html('￥' + total);
-    //     getSum();
-    // });
-    // $('.decrement').click(function () {
-    //     // 得到当前兄弟文本框的值
-    //     var num = $(this).siblings('.itxt').val();
-    //     if (num == 1) {
-    //         return false;
-    //     }
-    //     num--;
-    //     $(this).siblings('.itxt').val(num);
-    //     // 4.计算小计模块， 根据文本框的值 乘以 当前商品的价格  就是 商品的小计
-    //     // 获取当前商品的价格
-    //     var price = $(this).parent().parent().siblings('.p-price').html()
-    //     price = price.substr(1);
-    //     // 保留2位小数（不够位数，则用0替补）
-    //     total = (price * num).toFixed(2);
-    //     // 小计模块
-    //     $(this).parent().parent().siblings('.p-sum').html('￥' + total);
-    //     getSum();
-    // });
-    // // 5.用户修改文本框的值 计算 小计模块
-    // $('.itxt').change(function () {
-    //     // 取到当前文本框的值 乘以  单价
-    //     var num = $(this).val();
-    //     var price = $(this).parents('.p-num').siblings('.p-price').html()
-    //     price = price.substr(1);
-    //     // 保留2位小数（不够位数，则用0替补）
-    //     total = (price * num).toFixed(2);
-    //     // 小计模块
-    //     $(this).parent().parent().siblings('.p-sum').html('￥' + total);
-    //     getSum();
-    // });
-    // getSum();
-    // // 6.计算总计 和 总额
-    // function getSum() {
-    //     var count = 0; // 总计
-    //     var money = 0; // 总额
-    //     $('.itxt').each(function (i, ele) {
-    //         count += parseInt($(ele).val());
-    //     })
-    //     $('.amount-sum em').text(count);
-    //     $('.p-sum').each(function (i, ele) {
-    //         money += parseFloat($(ele).text().substr(1));
+    // 火箭返回顶部
+    var x = $(window);
+    var e = $("#shape");
 
-    //     })
-    //     $('.price-sum em').text('￥' + money.toFixed(2));
-    //     // 删除本地数据
-    //     remove_price()
-    //     // 获取本页面价格数据
-    //     var price = money.toFixed(2)
-    //     // 保存本地数据
-    //     save_price(price)
-    // };
-    // // 7.删除商品模块
-    // // 1.商品后面的删除按钮
-    // $('.p-action a').click(function () {
-    //     $(this).parents('.cart-item').remove();
-    //     getSum();
-    // })
-    // // 2.删除选中的商品： 先判断小的复选框按钮是否选中状态，如果是选中，则删除对应的商品
-    // $('.remove-batch').click(function () {
-    //     $('.j-checkbox:checked').parents('.cart-item').remove();
-    //     getSum();
-    // })
-    // // 3.清理购物车： 则是把所有的商品全部删掉
-    // $('.clear-all').click(function () {
-    //     $('.cart-item').remove();
-    //     getSum();
-    //     // 添加默认样式
-    //     $('.car_default').show()
-    // })
+    $("html,body").ready(function () {
+        var scrollbar = x.scrollTop();
+        var isClick = 0;
+
+        (scrollbar <= 0) ? ($("#shape").hide()) : ($("#shape").show());
+
+        $(window).scroll(function () {
+            scrollbar = x.scrollTop();
+            (scrollbar <= 0) ? ($("#shape").hide()) : ($("#shape").show());
+        })
+
+        $("#shape").hover(
+            function () {
+                $(".shapeColor").show();
+            },
+
+            function () {
+                $(".shapeColor").hide();
+            }
+        )
+
+        $(".shapeColor").click(
+            function () {
+                $(".shapeFly").show();
+                $("html,body").animate({ scrollTop: 0 }, "slow");
+                $("#shape").delay("200").animate({ marginTop: "-1000px" }, "slow", function () {
+                    $("#shape").css("margin-top", "-125px");
+                    $(".shapeFly").hide();
+                });
+
+            })
+    })
 
 
+    // 预加载
+    setTimeout(function () {
+        $('body').addClass('loaded');
+        $('.load_bg').fadeOut()
+        // $('#loader-wrapper .load_title').remove();
+    }, 1200)
 
     // 保存价格本地存储的函数
     function save_price(price) {
@@ -152,7 +86,7 @@ $(function () {
         var price = parseFloat(price.substr(1)).toFixed(2);
         if (price == 0) {
             $('.btn-area').html('当前没有要结算的商品')
-            $('.btn-area').css('backgroundColor', '#ccc')         
+            $('.btn-area').css('backgroundColor', '#ccc')
         }
         // 判断当前用户是否登录 已经商品是否为空
         if (price != 0 && data) {
@@ -161,8 +95,6 @@ $(function () {
             // alert('你需要登录')
             $('.login_main').click()
         }
-
-
     })
 
     // 保存本地存储数据
@@ -265,5 +197,13 @@ $(function () {
             $('.car_default').show()
         }
     }
+
+    // 图片高亮
+    $('.shop_cars').on('mouseenter', 'li', function () {
+        $(this).siblings().stop().fadeTo(400, 0.5);
+    })
+    $('.shop_cars').on('mouseleave', 'li', function () {
+        $(this).siblings().stop().fadeTo(400, 1);
+    })
 
 })

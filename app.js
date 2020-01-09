@@ -45,6 +45,7 @@ app.set('view engine', 'art');
 // 当渲染后缀为art的模板时 所使用的模板引擎是什么
 app.engine('art', require('express-art-template'));
 
+
 // 实现静态资源访问功能
 app.use(express.static(path.join(__dirname, 'public')))
 
@@ -56,7 +57,6 @@ const reg = require('./route/reg')  // 注册
 const login = require('./route/login') // 登录
 const updatePassword = require('./route/updatePassword') // 修改密码
 const updateName = require('./route/updateName') // 修改昵称
-const car = require('./route/car') // 购物车模块
 
 // 用户路由
 app.use('/user', reg)
@@ -64,9 +64,89 @@ app.use('/user', login)
 app.use('/user', updatePassword)
 app.use('/user', updateName)
 
-// 商品路由
-app.use('/goods', car)
+// 其他路由
+app.get("/",(req,res)=>{
+    res.render('index.art')
+})
 
+app.get("/lhj_list",(req,res)=>{
+    res.render("lhj_list.art")
+})
+app.get("/lml_category",(req,res)=>{
+    res.render("lml_category.art")
+})
+
+app.get("/lml_hotel",(req,res)=>{
+    res.render("lml_hotel.art")
+})
+
+app.get("/lml_hun",(req,res)=>{
+    res.render("lml_hun.art")
+})
+
+app.get("/wxm_chazhao",(req,res)=>{
+    res.render("wxm_chazhao.art")
+})
+
+app.get("/wxm_list",(req,res)=>{
+    res.render("wxm_list.art")
+})
+
+app.get("/xc_cart",(req,res)=>{
+    res.render("xc_cart.art")
+})
+
+app.get("/xc_control",(req,res)=>{
+    res.render("xc_control.art")
+})
+
+app.get("/xc_info",(req,res)=>{
+    res.render("xc_info.art")
+})
+
+app.get("/xc_info",(req,res)=>{
+    res.render("xc_info.art")
+})
+
+app.get("/xc_list",(req,res)=>{
+    res.render("xc_list.art")
+})
+
+app.get("/xc_order",(req,res)=>{
+    res.render("xc_order.art")
+})
+
+app.get("/zsy_lbtg",(req,res)=>{
+    res.render("zsy_lbtg.art")
+})
+
+app.get("/zsy_list",(req,res)=>{
+    res.render("zsy_list.art")
+})
+
+app.get("/zsy_sell",(req,res)=>{
+    res.render("zsy_sell.art")
+})
+
+app.get("/zsy_vr",(req,res)=>{
+    res.render("zsy_vr.art")
+})
+
+app.get("/zsy_yj",(req,res)=>{
+    res.render("zsy_yj.art")
+})
+
+app.get("/zz_list",(req,res)=>{
+    res.render("zz_list.art")
+})
+
+app.get("/zz-list2",(req,res)=>{
+    res.render("zz-list2.art")
+})
+
+app.get("/lhj_mixi",(req,res)=>{
+    res.render("lhj_mixi.art")
+})
 // 监听端口
 app.listen(5000, () => {
     console.log('大众点评服务器开启成功');

@@ -70,6 +70,7 @@
         nav ul li {
             float: left;
         }
+
         button {
             position: relative;
         }
@@ -201,7 +202,8 @@
         footer ul li {
             line-height: 30px;
         }
-        footer ul li  span {
+
+        footer ul li span {
             margin-right: 10px;
         }
 
@@ -238,10 +240,10 @@
         }
 
         .content {
-            float: left;
+            /* float: left; */
             width: 960px;
-            margin: 15px 0 15px 10px;
-            height: 527px;
+            margin: 15px 0 15px 226px;
+            height: 376px;
             padding: 30px 40px;
             border: 1px solid #E5E5E5;
             border-radius: 3px;
@@ -299,6 +301,16 @@
             font-size: 12px;
             color: #8c8c8c;
         }
+
+        .i-search1 {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: url(../img/search.png) no-repeat;
+            position: absolute;
+            left: 33px;
+            top: 11px;
+        }
     </style>
     <style>
         body {
@@ -344,9 +356,19 @@
             margin: 0 auto;
         }
     </style>
+    <!-- 引入公用css文件 -->
+    <link rel="stylesheet" href="css/xc_base.css">
 </head>
 
 <body>
+    <!-- 背景粒子特效模块 -->
+    <div class="animation-wrapper">
+        <div class="particle particle-1"></div>
+        <div class="particle particle-2"></div>
+        <div class="particle particle-3"></div>
+        <div class="particle particle-4"></div>
+    </div>
+
     <div class="w">
         <nav>
             <h2>大众点评规则中心</h2>
@@ -358,7 +380,7 @@
             <div class="juzhong">
                 <input type="text" placeholder="搜索规则关键词,如:价格">
                 <button>
-                    <span class="i-search"></span>
+                    <span class="i-search1"></span>
                 </button>
             </div>
         </div>
@@ -512,6 +534,8 @@
                 <li><span class="glyphicon glyphicon-th-large"></span>更多</li>
             </ul>
         </footer>
+
+
 
         <!-- 网站底部 -->
         <div class="footer-container w">
