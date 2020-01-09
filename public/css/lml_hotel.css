@@ -28,7 +28,7 @@
             box-sizing: border-box;
             width: 228px;
             height: 33px;
-            line-height: 33px;
+            line-height: 30px;
             border: 1px solid #e7e6e6;
             background-color: white;
         }
@@ -158,6 +158,9 @@
             font-size: 16px;
             border-left: 1px solid #fff;
         }
+        .search-btn-a:hover {
+            color: #fff!important;
+        }
         .contenr {
             overflow: hidden;
             margin-top: 20px;
@@ -283,6 +286,9 @@
             background-color: #fbfbfb;
             color: #333;
             text-align: center;
+        }
+        .evaluation a {
+            color: #666;
         }
         
         .sear-result .evaluation {

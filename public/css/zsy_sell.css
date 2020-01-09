@@ -21,20 +21,21 @@ a {
 /* 内容 */
 #content {
 	/* z-index: -1; */
-	width: 1528px;
+	/* width: 1528px; */
+	width: 1190px;
 	margin: 0 auto;
 }
 
 /* 面包屑导航 */
 .bread_nav {
-	width: 948px;
+	width: 1190px;
 	height: 37px;
 	line-height: 37px;
 	/* padding-top: 15px; */
 	font-size: 16px;
 	padding-left: 24px;
 	background-color: rgba(255, 255, 255, 0.7);
-	margin-left: 169px;
+	/* margin-left: 169px; */
 	box-sizing: border-box;
 	font-size: 14px;
 	/* background-color: lightpink; */
@@ -59,11 +60,11 @@ a {
 
 /* 筛选导航 */
 .filter {
-	width: 948px;
+	width: 1190px;
 	height: 170px;
 	/* background-color: lightskyblue; */
 	background-color: rgba(209, 186, 186, 0.6);
-	margin: 0 410px 0 169px;
+	margin: 0 410px 0 0;
 }
 .filter li {
 	font-size: 16px;
@@ -116,15 +117,16 @@ a {
 /* 默认筛选 */
 
 .acquiesce_filter {
-	width: 946px;
+	width: 1190px;
 	height: 42px;
 	/* padding: 0 25px 0 10px; */
-	margin: 14px 410px 14px 169px;
+	margin: 14px 410px 14px 0;
 	border: 1px solid #e1e1e1;
 	/* background-color: #8181F7; */
 	background-color: #FFFFFF;
 	line-height: 42px;
 	font-size: 13px;
+	box-sizing: border-box;
 }
 
 .acquiesce_filter ul li {
@@ -145,17 +147,18 @@ a {
 #content .shop_list {
 	width: 946px;
 	height: 2900px;
-	margin-left: 4px;
+	/* margin-left: 4px; */
 }
 
 /* 单个商户项目 */
 #content .shop_list .shop_list_item {
-	width: 946px;
+	width: 1190px;
 	height: 182px;
 	margin-bottom: 10px;
-	margin: 0 410px 10px 165px;
+	margin: 0 410px 10px 0;
 	border: 1px solid #FFFFFF;
-	background-color: rgba(255, 255, 255, 0.7)
+	background-color: rgba(255, 255, 255, 0.7);
+	box-sizing: border-box;
 }
 
 #content .shop_list .shop_list_item:hover {
@@ -200,9 +203,9 @@ a {
 
 /* 页码 */
 .pages {
-	width: 948px;
+	width: 1190px;
 	height: 58px;
-	margin: 0 410px 0 169px;
+	margin: 0 410px 0 0;
 	/* line-height: 58px; */
 	/* background-color: pink; */
 }
@@ -218,18 +221,19 @@ a {
 
 /* 添加商户 */
 .add-shop {
-	width: 909px;
-	height: 50px;
+	width: 1190px;
+	height: 80px;
 	padding: 13px 20px;
 	font-size: 14px;
 	/* background-color: lightyellow; */
 	line-height: 50px;
 	background-color: #FFFFFF;
 	margin-bottom: 10px!important;
+	box-sizing: border-box;
 }
 
 .zsy_w {
-	margin: 0 410px 0 169px;
+	/* margin: 0 410px 0 169px; */
 }
 
 .result-survey .btn {
