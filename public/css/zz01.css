@@ -378,10 +378,12 @@ body {
     background-color: orange;
     color: black;
 }
+.erzi {
+    overflow: hidden;
+}
 .erzi img{
     width: 1200px;
     margin-bottom: 50px;
-    
 }
 .erzi h2 {
     font-weight: 400;
