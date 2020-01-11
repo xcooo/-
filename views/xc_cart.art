@@ -1350,12 +1350,12 @@
     </div>
 
     <!-- 火箭 -->
-    <div id="shape">
+    <!-- <div id="shape">
         <div class="shapeColor">
             <div class="shapeFly">
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- 网站底部 -->
     <div class="footer-container">

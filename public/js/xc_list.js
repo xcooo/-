@@ -100,8 +100,8 @@ $(function () {
             $('.l3').html(data)
             // 设置去向个人中心的连接
             // 获取当前目录
-            var strPath = location.href.substring(0, location.href.lastIndexOf('/'));
-            $('.l3').attr({ 'href': strPath + '/xc_info.html', 'title': '点这里进入个人中心' })
+            // var strPath = location.href.substring(0, location.href.lastIndexOf('/'));
+            $('.l3').attr({ 'href': 'xc_info', 'title': '点这里进入个人中心' })
             $('.logout').show()
             // 获取当前本地图片
             xcimg = getData_img()

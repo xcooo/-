@@ -36,7 +36,6 @@ login.post('/login', async (req, res, next) => {
 
     // 使用User集合查询和用户输入的用户名一致的那个信息
     let userInfo = await User.findOne({ name: username })
-    console.log(userInfo);
     
 
     if (userInfo) {
@@ -52,6 +51,7 @@ login.post('/login', async (req, res, next) => {
 
             //返回成功的结果 (需要返回用户名和id)
             res.status(200).send({ code: 0, message: [userInfo.name,userInfo._id]});
+            // res.redirect('/xc_info.art',{ code: 0, message: [userInfo.name,userInfo._id]})
         }else {
             resData.code = 3;
             resData.message = '用户名或密码错误 !';

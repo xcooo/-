@@ -1420,112 +1420,130 @@
                                 <h4 class="jian">模块展示</h4>
                                 <ul class="clearfix">
                                     <li class="module-tab-link">
-                                        <a href="index.html" target="_blank">
+                                        <a href="index" target="_blank">
                                             <i class="icons icon-bdm"></i>
                                             <span>网站首页</span>
                                         </a>
                                     </li>
                                     <li class="module-tab-link">
-                                        <a href="xc_list.html" target="_blank">
+                                        <a href="xc_list" target="_blank">
                                             <i class="icons icon-bds"></i>
                                             <!-- <i class="icons">x</i> -->
                                             <span>登录注册页(xc)</span>
                                         </a>
                                     </li>
                                     <li class="module-tab-link">
-                                        <a href="xc_info.html" target="_blank">
+                                        <a href="xc_info" target="_blank">
                                             <i class="icons icon-bdx"></i>
                                             <span>个人中心(xc)</span>
                                         </a>
                                     </li>
                                     <li class="module-tab-link">
-                                        <a href="xc_control.html" target="_blank">
+                                        <a href="xc_control" target="_blank">
                                             <i class="icons icon-bdx"></i>
                                             <span>商品购物模块(xc)</span>
                                         </a>
                                     </li>
                                     <li class="module-tab-link">
-                                        <a href="xc_cart.html" target="_blank">
+                                        <a href="xc_cart" target="_blank">
                                             <i class="icons icon-bdx"></i>
                                             <span>购物车模块 (xc)</span>
                                         </a>
                                     </li>
                                     <li class="module-tab-link">
-                                        <a href="xc_order.html" target="_blank">
+                                        <a href="xc_order" target="_blank">
                                             <i class="icons icon-bdx"></i>
                                             <span>订单结算模块 (xc)</span>
                                         </a>
                                     </li>
                                     <li class="module-tab-link">
-                                        <a href="zsy_list.html" target="_blank">
+                                        <a href="zsy_list" target="_blank">
                                             <i class="icons icon-bdm"></i>
                                             <span>家装建材页(zsy)</span>
                                         </a>
                                     </li>
                                     <li class="module-tab-link">
-                                        <a href="zsy_lbtg.html" target="_blank">
+                                        <a href="zsy_lbtg" target="_blank">
                                             <i class="icons icon-bdm"></i>
                                             <span>立邦分店(zsy)</span>
                                         </a>
                                     </li>
                                     <li class="module-tab-link">
-                                        <a href="zsy_sell.html" target="_blank">
+                                        <a href="zsy_sell" target="_blank">
                                             <i class="icons icon-bdm"></i>
                                             <span>家装卖场(zsy)</span>
                                         </a>
                                     </li>
                                     <li class="module-tab-link">
-                                        <a href="zsy_yj.html" target="_blank">
+                                        <a href="zsy_yj" target="_blank">
                                             <i class="icons icon-bdm"></i>
                                             <span>宜家家居(zsy)</span>
                                         </a>
                                     </li>
                                     <li class="module-tab-link">
-                                        <a href="zz_list.html" target="_blank">
+                                        <a href="zz_list" target="_blank">
                                             <i class="icons icon-bdx"></i>
                                             <span>旅游景点(zz)</span>
                                         </a>
                                     </li>
                                     <li class="module-tab-link">
-                                        <a href="zz-list2.html" target="_blank">
+                                        <a href="zz-list2" target="_blank">
                                             <i class="icons icon-bdx"></i>
                                             <span>餐饮商户中心 (zz)</span>
                                         </a>
                                     </li>
                                     <li class="module-tab-link">
-                                        <a href="lhj_list.html" target="_blank">
+                                        <a href="lhj_list" target="_blank">
                                             <i class="icons icon-bdx"></i>
                                             <span>网红照相馆(lhj)</span>
                                         </a>
                                     </li>
                                     <li class="module-tab-link">
-                                        <a href="lml_hun.html" target="_blank">
+                                        <a href="lhj_mixi" target="_blank">
+                                            <i class="icons icon-bdx"></i>
+                                            <span>密西娅摄影团购(lhj)</span>
+                                        </a>
+                                    </li>
+                                    <li class="module-tab-link">
+                                        <a href="lml_hun" target="_blank">
                                             <i class="icons icon-bdx"></i>
                                             <span>婚庆页面(lml)</span>
                                         </a>
                                     </li>
                                     <li class="module-tab-link">
-                                        <a href="lml_hotel.html" target="_blank">
+                                        <a href="lml_hotel" target="_blank">
                                             <i class="icons icon-bdx"></i>
                                             <span>经济酒店模块(lml)</span>
                                         </a>
                                     </li>
                                     <li class="module-tab-link">
-                                        <a href="lml_category.html" target="_blank">
+                                        <a href="lml_category" target="_blank">
                                             <i class="icons icon-bdx"></i>
                                             <span>酒店分类模块(lml)</span>
                                         </a>
                                     </li>
                                     <li class="module-tab-link">
-                                        <a href="wxm_list.html" target="_blank">
+                                        <a href="wxm_list" target="_blank">
                                             <i class="icons icon-bds"></i>
                                             <span>茶颜悦色(wxm)</span>
                                         </a>
                                     </li>
                                     <li class="module-tab-link">
-                                        <a href="wxm_chazhao.html" target="_blank">
+                                        <a href="wxm_chazhao" target="_blank">
                                             <i class="icons icon-bdx"></i>
                                             <span>美团规则中心 (wxm)</span>
+                                        </a>
+                                    </li>
+                                    <li class="module-tab-link">
+                                        <a href="javascript:;" >
+                                            <i class="icons icon-bdx"></i>
+                                            <span>待添加</span>
+                                        </a>
+                                    </li>
+                                    <li class="module-tab-link">
+                                        <a href="javascript:;">
+                                            <i class="icons icon-bdx"></i>
+                                            <span>待添加</span>
                                         </a>
                                     </li>
                                 </ul>
@@ -3191,7 +3209,7 @@
             </div>
             <div class="bottom-list service-list">
                 <div class="list-item liner">
-                    <a href="javascript:;" class="shop-item-pic pure-pic simg">
+                    <a target="_blank" href="lhj_list.html" class="shop-item-pic pure-pic simg">
                         <img class="lazy" data-original="./uploads/product22.png" alt="">
                         <div class="pic-mark"></div>
                         <div class="pic-desc">快照</div>

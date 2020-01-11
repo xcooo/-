@@ -120,8 +120,8 @@ $(function () {
             $('.login_main').html(data);
             // 设置去向个人中心的连接
             // 获取当前目录
-            var strPath = location.href.substring(0, location.href.lastIndexOf('/'));
-            $('.login_main, .user_center').attr({ 'href': strPath + '/xc_info.html' })
+            // var strPath = location.href.substring(0, location.href.lastIndexOf('/'));
+            $('.login_main, .user_center').attr({ 'href':'xc_info'})
             // 注册模块隐藏
             $('.register_main').hide();
             // 我要退出模块显示

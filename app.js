@@ -68,6 +68,9 @@ app.use('/user', updateName)
 app.get("/",(req,res)=>{
     res.render('index.art')
 })
+app.get("/index",(req,res)=>{
+    res.render('index.art')
+})
 
 app.get("/lhj_list",(req,res)=>{
     res.render("lhj_list.art")
@@ -98,10 +101,6 @@ app.get("/xc_cart",(req,res)=>{
 
 app.get("/xc_control",(req,res)=>{
     res.render("xc_control.art")
-})
-
-app.get("/xc_info",(req,res)=>{
-    res.render("xc_info.art")
 })
 
 app.get("/xc_info",(req,res)=>{

@@ -1,6 +1,6 @@
 $(function () {
     // 定义全局主机地址和端口
-    var hosts = 'http://localhost:5000'
+    var hosts = 'http://192.168.31.39:5000'
 
     // 注册登陆输入框逻辑实现
     // 获得焦点  文字位置和大小发生变化
@@ -334,7 +334,7 @@ $(function () {
                             // 需要重新登录
                             // 获取当前目录
                             var strPath = location.href.substring(0, location.href.lastIndexOf('/'));
-                            location.assign(strPath + '/xc_list.html')
+                            location.assign('xc_list')
                             // 清除定时器
                             clearInterval(timer)
                             num = 3

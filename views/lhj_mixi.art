@@ -14,6 +14,8 @@
     <!-- 引入登陆css文件 -->
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/lhj-mxy.css">
+    <!-- 引入预加载文件 -->
+    <link rel="stylesheet" href="css/loader_info.css">
     <!-- 引入jquery文件 -->
     <script src="js/jquery.min.js"></script>
     <!-- 引入轮播图文件 -->
@@ -1788,6 +1790,16 @@
                 <span>本站发布的所有内容，未经许可，不得转载，详见 <a href="javascript:;" class="G">《知识产权声明》</a> </span>
             </p>
         </div>
+    </div>
+
+    <!--页面加载end-->
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+        <!-- 背景遮盖层 -->
+        <div class="load_bg"></div>
+        <!-- <div class="loader-section section-left"></div>
+            <div class="loader-section section-right"></div>
+            <div class="load_title">正在加载大众点评<br><span>前端23期</span></div> -->
     </div>
 
     <!-- 火箭 -->

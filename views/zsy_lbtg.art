@@ -319,7 +319,7 @@
           <div class="dropdown fl">
             <span style="cursor: pointer;" class="all-cate">
               家装
-              <i style="cursor: pointer; transform: rotate(90deg);font-size: 25px;margin-right: 11px;" class="fr">
+              <i style="cursor: pointer; transform: rotate(90deg);font-size: 25px;margin-right: 11px;font-style: normal;" class="fr">
                 >
               </i>
             </span>

@@ -94,7 +94,7 @@ $(function () {
             // 设置头像img
             $('.avatar img').attr("src", strPath + '/img/tx.png');
             // 只有登录的用户才能进入个人中心  需要重定向到登陆页
-            location.assign(strPath + '/xc_list.html')
+            location.assign('xc_list')
         }
     }
     // 读取本地用户名数据
