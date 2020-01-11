@@ -146,6 +146,10 @@ app.get("/zz-list2",(req,res)=>{
 app.get("/lhj_mixi",(req,res)=>{
     res.render("lhj_mixi.art")
 })
+
+app.get("/ml_index",(req,res)=>{
+    res.render("ml_index.art")
+})
 // 监听端口
 app.listen(5000, () => {
     console.log('大众点评服务器开启成功');

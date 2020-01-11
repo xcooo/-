@@ -1523,6 +1523,12 @@
                                         </a>
                                     </li>
                                     <li class="module-tab-link">
+                                        <a href="ml_index" target="_blank">
+                                            <i class="icons icon-bdx"></i>
+                                            <span>APP下载(lml)</span>
+                                        </a>
+                                    </li>
+                                    <li class="module-tab-link">
                                         <a href="wxm_list" target="_blank">
                                             <i class="icons icon-bds"></i>
                                             <span>茶颜悦色(wxm)</span>
@@ -1532,12 +1538,6 @@
                                         <a href="wxm_chazhao" target="_blank">
                                             <i class="icons icon-bdx"></i>
                                             <span>美团规则中心 (wxm)</span>
-                                        </a>
-                                    </li>
-                                    <li class="module-tab-link">
-                                        <a href="javascript:;" >
-                                            <i class="icons icon-bdx"></i>
-                                            <span>待添加</span>
                                         </a>
                                     </li>
                                     <li class="module-tab-link">
