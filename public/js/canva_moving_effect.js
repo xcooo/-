@@ -24,7 +24,7 @@
 		var bctx = background.getContext('2d'),
 			fctx1 = foreground1.getContext('2d'),
 			fctx2 = foreground2.getContext('2d'),
-			M = window.Math, // Cached Math
+			M = window.Math, 
 			degree = config.angle/360*M.PI*2,
 			circles = [],
 			lines = [],

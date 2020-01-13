@@ -9,15 +9,6 @@ $(function () {
         // $('#loader-wrapper .load_title').remove();
     }, 1200)
 
-    // // 全部分类显示隐藏功能
-    // // 必须要给显示的父级元素添加事件
-    // $('.dropdown').mouseenter(function () {
-    //     $(this).children('.dd').show()
-    // })
-    // $('.dropdown').mouseleave(function () {
-    //     $(this).children('.dd').hide()
-    // })
-
     // 火箭返回顶部
     var x = $(window);
     var e = $("#shape");
@@ -54,7 +45,6 @@ $(function () {
 
             })
     })
-
 
     // 预加载
     setTimeout(function () {
@@ -121,7 +111,6 @@ $(function () {
         var data = localStorage.getItem("data");
         return JSON.parse(data)
     }
-
 
     // 动态渲染购物车数据
     function load_cart() {

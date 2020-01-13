@@ -8,51 +8,40 @@
 	else
 		root["POWERMODE"] = factory();
 })(this, function() {
-return /******/ (function(modules) { // webpackBootstrap
-/******/ 	// The module cache
-/******/ 	var installedModules = {};
+return  (function(modules) {
 
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
+ 	var installedModules = {};
 
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId])
-/******/ 			return installedModules[moduleId].exports;
+ 	function __webpack_require__(moduleId) {
 
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			exports: {},
-/******/ 			id: moduleId,
-/******/ 			loaded: false
-/******/ 		};
+ 		if(installedModules[moduleId])
+ 			return installedModules[moduleId].exports;
 
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+ 		var module = installedModules[moduleId] = {
+ 			exports: {},
+ 			id: moduleId,
+ 			loaded: false
+ 		};
 
-/******/ 		// Flag the module as loaded
-/******/ 		module.loaded = true;
+ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
 
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
+ 		module.loaded = true;
 
+ 		return module.exports;
+ 	}
 
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = modules;
+ 	__webpack_require__.m = modules;
 
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = installedModules;
+ 	__webpack_require__.c = installedModules;
 
-/******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+ 	__webpack_require__.p = "";
 
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(0);
-/******/ })
-/************************************************************************/
-/******/ ([
-/* 0 */
-/***/ function(module, exports, __webpack_require__) {
+ 	return __webpack_require__(0);
+ })
+
+ ([
+
+ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -128,7 +117,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 	function POWERMODE() {
-	    { // spawn particles
+	    { 
 	        var caret = getCaret();
 	        var numParticles = 5 + Math.round(Math.random() * 10);
 	        while (numParticles--) {
@@ -136,7 +125,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            particlePointer = (particlePointer + 1) % 500;
 	        }
 	    }
-	    { // shake screen
+	    { 
 	        if (POWERMODE.shake) {
 	            var intensity = 1 + 2 * Math.random();
 	            var x = intensity * (Math.random() > 0.5 ? -1 : 1);
@@ -176,25 +165,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = POWERMODE;
 
 
-/***/ },
-/* 1 */
-/***/ function(module, exports) {
+ },
 
-	/* jshint browser: true */
+ function(module, exports) {
+
 
 	(function () {
 
-	// The properties that we copy into a mirrored div.
-	// Note that some browsers, such as Firefox,
-	// do not concatenate properties, i.e. padding-top, bottom etc. -> padding,
-	// so we have to do every single property specifically.
 	var properties = [
-	  'direction',  // RTL support
+	  'direction',  
 	  'boxSizing',
-	  'width',  // on Chrome and IE, exclude the scrollbar, so the mirror div wraps exactly as the textarea does
+	  'width', 
 	  'height',
 	  'overflowX',
-	  'overflowY',  // copy the scrollbar for IE
+	  'overflowY',  
 
 	  'borderTopWidth',
 	  'borderRightWidth',
@@ -207,7 +191,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	  'paddingBottom',
 	  'paddingLeft',
 
-	  // https://developer.mozilla.org/en-US/docs/Web/CSS/font
 	  'fontStyle',
 	  'fontVariant',
 	  'fontWeight',
@@ -220,7 +203,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  'textAlign',
 	  'textTransform',
 	  'textIndent',
-	  'textDecoration',  // might not make a difference, but better be safe
+	  'textDecoration', 
 
 	  'letterSpacing',
 	  'wordSpacing',
@@ -240,7 +223,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if ( el ) { el.parentNode.removeChild(el); }
 	  }
 
-	  // mirrored div
 	  var div = document.createElement('div');
 	  div.id = 'input-textarea-caret-position-mirror-div';
 	  document.body.appendChild(div);
@@ -248,41 +230,33 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var style = div.style;
 	  var computed = window.getComputedStyle? getComputedStyle(element) : element.currentStyle;  // currentStyle for IE < 9
 
-	  // default textarea styles
 	  style.whiteSpace = 'pre-wrap';
 	  if (element.nodeName !== 'INPUT')
-	    style.wordWrap = 'break-word';  // only for textarea-s
+	    style.wordWrap = 'break-word';  
 
-	  // position off-screen
-	  style.position = 'absolute';  // required to return coordinates properly
+	  style.position = 'absolute';  
 	  if (!debug)
-	    style.visibility = 'hidden';  // not 'display: none' because we want rendering
+	    style.visibility = 'hidden';  
 
-	  // transfer the element's properties to the div
 	  properties.forEach(function (prop) {
 	    style[prop] = computed[prop];
 	  });
 
 	  if (isFirefox) {
-	    // Firefox lies about the overflow property for textareas: https://bugzilla.mozilla.org/show_bug.cgi?id=984275
+	    
 	    if (element.scrollHeight > parseInt(computed.height))
 	      style.overflowY = 'scroll';
 	  } else {
-	    style.overflow = 'hidden';  // for Chrome to not render a scrollbar; IE keeps overflowY = 'scroll'
+	    style.overflow = 'hidden'; 
 	  }
 
 	  div.textContent = element.value.substring(0, position);
-	  // the second special handling for input type="text" vs textarea: spaces need to be replaced with non-breaking spaces - http://stackoverflow.com/a/13402035/1269037
+	
 	  if (element.nodeName === 'INPUT')
 	    div.textContent = div.textContent.replace(/\s/g, "\u00a0");
 
 	  var span = document.createElement('span');
-	  // Wrapping must be replicated *exactly*, including when a long word gets
-	  // onto the next line, with whitespace at the end of the line before (#7).
-	  // The  *only* reliable way to do that is to copy the *entire* rest of the
-	  // textarea's content into the <span> created at the caret position.
-	  // for inputs, just '.' would be enough, but why bother?
-	  span.textContent = element.value.substring(position) || '.';  // || because a completely empty faux span doesn't render at all
+	  span.textContent = element.value.substring(position) || '.'; 
 	  div.appendChild(span);
 
 	  var coordinates = {
@@ -307,7 +281,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	}());
 
-/***/ }
-/******/ ])
+ }
+ ])
 });
 ;

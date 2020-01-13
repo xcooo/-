@@ -41,19 +41,6 @@ $(function () {
         }
     })
 
-    // 下拉事件  选项卡变为固定定位
-    // var wrapTop = $(".news-container").offset().top;
-    // $(window).scroll(function () {
-    //     if ($(document).scrollTop() >= wrapTop) {
-    //         // 变为固定定位
-    //         $('.s-fix-wrap').css({ 'position': 'fixed', 'left': 170, 'top': 0, 'zIndex': 200, 'width': 871 })
-    //         $('.activity-lists-wraper').css({ 'marginTop': 95.5 })
-    //     } else {
-    //         $('.s-fix-wrap').css({ 'width': 871, 'backgroundColor': '#F6F6F6', 'position': 'static', 'width': 871 })
-    //         $('.activity-lists-wraper').css({ 'marginTop': 0 })
-    //     }
-    // });
-
     // 点击登陆按钮 显示表单和背景
     $('.l3').click(function () {
         if ($(this).html() == '立即登录') {

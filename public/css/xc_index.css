@@ -163,7 +163,7 @@
     box-sizing: border-box;
     border-radius: 5px;
     margin-right: 27px;
-    margin-top: 9px;
+    margin-top: 11px;
     overflow: hidden;
 }
 .module-tab-text .member {
@@ -489,6 +489,8 @@
     width: 770px;
     height: 200px;
     background-color: orange;
+    z-index: 888;
+    overflow: hidden;
 }
 /* 热门分类 */
 .cata-hot {

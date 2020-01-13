@@ -39,19 +39,14 @@ login.post('/login', async (req, res, next) => {
     
 
     if (userInfo) {
-        //说明查找到了跟用户输入的用户名一致的信息
-        //  console.log(userInfo);
         // 用户名正确的情况下，我们只需要再判断一下用户输入的密码是否正确
         if (userInfo.password === password) {
             //我们需要将用户的信息保存到session对象里面去，这样下一次访问服务器的时候才能看到信息
             req.session.userInfo = userInfo;
-            //在express框架中可以通过app.locals来设置所有模板都能访问的数据
-            //在request对象中可以访问到服务器app对象
             req.app.locals.userInfo = userInfo;
 
             //返回成功的结果 (需要返回用户名和id)
             res.status(200).send({ code: 0, message: [userInfo.name,userInfo._id]});
-            // res.redirect('/xc_info.art',{ code: 0, message: [userInfo.name,userInfo._id]})
         }else {
             resData.code = 3;
             resData.message = '用户名或密码错误 !';
